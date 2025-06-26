@@ -7,6 +7,8 @@
   padding: 0;
   display: inline-flex;
   align-items: center;
+  /* Ensure this matches other list items in the header */
+  list-style: none;
 }
 
 /* User account link */
@@ -14,20 +16,23 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit;
-  padding: 5px 10px;
+  color: #fff; /* Match cart color */
+  padding: 0;
   cursor: pointer;
   transition: all 0.2s ease;
+  /* Match the header link styles */
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .user-account-link:hover {
-  color: #cd9a2b;
+  color: #ebd7aa; /* Match cart hover color */
 }
 
 /* User icon */
 .user-icon {
   margin-right: 8px;
-  color: #cd9a2b;
+  color: #fff; /* Match cart text color */
   font-size: 18px;
 }
 
@@ -36,27 +41,27 @@
   margin-right: 5px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #333;
+  color: #fff; /* Match cart text color */
 }
 
 /* Dropdown arrow */
 .dropdown-arrow {
   transition: transform 0.3s ease;
   font-size: 12px;
-  color: #888;
+  color: #fff; /* Match cart text color */
 }
 
 .user-account-container:hover .dropdown-arrow,
 .user-account-container.active .dropdown-arrow {
   transform: rotate(180deg);
-  color: #cd9a2b;
+  color: #ebd7aa; /* Match cart hover color */
 }
 
 /* User dropdown menu */
 .user-dropdown {
   position: absolute;
-  top: calc(100% + 5px);
-  right: 0;
+  top: 25px;
+  left: 0;
   background-color: #ffffff;
   min-width: 220px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -101,14 +106,17 @@
   padding: 12px 15px;
   color: #333;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   font-size: 14px;
+  white-space: nowrap;
+  /* Force text color to be visible on white background */
+  color: #333 !important;
 }
 
 .user-dropdown li a i {
   margin-right: 10px;
   width: 16px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   color: #cd9a2b;
 }
@@ -117,6 +125,8 @@
   background-color: rgba(205, 154, 43, 0.08);
   color: #cd9a2b;
   padding-left: 18px;
+  /* Ensure hover state is visible */
+  color: #cd9a2b !important;
 }
 
 /* Logout item */
@@ -128,6 +138,8 @@
 .user-dropdown li.logout-item a {
   color: #f44336;
   font-weight: 500;
+  /* Logout text should be red */
+  color: #f44336 !important;
 }
 
 .user-dropdown li.logout-item a i {
@@ -138,6 +150,8 @@
   background-color: rgba(244, 67, 54, 0.08);
   color: #f44336;
   padding-left: 18px;
+  /* Logout hover state */
+  color: #f44336 !important;
 }
 
 /* Triangle indicator */
@@ -145,7 +159,7 @@
   content: '';
   position: absolute;
   top: -8px;
-  right: 20px;
+  left: 20px;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -158,11 +172,16 @@
   content: '';
   position: absolute;
   top: -9px;
-  right: 19px;
+  left: 19px;
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-bottom: 9px solid rgba(205, 154, 43, 0.15);
   z-index: 1;
+}
+
+/* Ensure the dropdown appears above other elements */
+.user-dropdown {
+  z-index: 9999 !important;
 }

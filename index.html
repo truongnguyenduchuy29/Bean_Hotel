@@ -11492,10 +11492,17 @@ Popup cart mobile
                 } else if (link.getAttribute('href') === 'login.html') {
                   loginItem = item;
                 }
-              } else if (item.innerHTML.includes('|')) {
-                separator = item;
               }
             });
+            
+            // Tìm tất cả các dấu phân cách giữa đăng ký và đăng nhập
+            if (registerItem && loginItem) {
+              // Lấy phần tử nằm giữa đăng ký và đăng nhập
+              const nextSibling = registerItem.nextElementSibling;
+              if (nextSibling && nextSibling.innerHTML.includes('|')) {
+                separator = nextSibling;
+              }
+            }
             
             if (registerItem && loginItem && separator) {
               // Tạo phần tử tài khoản người dùng mới
@@ -11519,16 +11526,24 @@ Popup cart mobile
                 </div>
               `;
               
+             
               // Xóa phần tử đăng ký và đăng nhập, thêm phần tử người dùng mới
               registerItem.parentNode.removeChild(registerItem);
               loginItem.parentNode.removeChild(loginItem);
-              separator.parentNode.removeChild(separator);
+              
+              // Xóa phần tử dấu gạch ngang giữa đăng ký và đăng nhập
+              if (separator) {
+                separator.parentNode.removeChild(separator);
+              }
               
               // Chèn phần tử user account vào đầu danh sách
               if (accountHeader.firstChild) {
                 accountHeader.insertBefore(userAccount, accountHeader.firstChild);
+                // Thêm phần tử separator sau user account
+                accountHeader.insertBefore(newSeparator, userAccount.nextSibling);
               } else {
                 accountHeader.appendChild(userAccount);
+                accountHeader.appendChild(newSeparator);
               }
               
               // Lấy tham chiếu đến các phần tử sau khi thêm vào DOM
@@ -11538,6 +11553,7 @@ Popup cart mobile
               // Thêm sự kiện click cho user account link
               userAccountLink.addEventListener('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
                 userAccount.classList.toggle('active');
               });
               
@@ -11546,6 +11562,11 @@ Popup cart mobile
                 if (!userAccount.contains(e.target)) {
                   userAccount.classList.remove('active');
                 }
+              });
+              
+              // Ngăn chặn sự kiện click từ dropdown lan ra ngoài
+              userDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
               });
               
               // Xử lý sự kiện đăng xuất
