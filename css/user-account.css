@@ -72,6 +72,8 @@
   transform: translateY(10px);
   transition: all 0.3s ease;
   border: 1px solid rgba(205, 154, 43, 0.15);
+  /* Ensure clickable when visible */
+  pointer-events: none;
 }
 
 .user-account-container:hover .user-dropdown,
@@ -79,6 +81,8 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  /* Enable pointer events when visible */
+  pointer-events: all;
 }
 
 /* Menu items */
@@ -184,4 +188,27 @@
 /* Ensure the dropdown appears above other elements */
 .user-dropdown {
   z-index: 9999 !important;
+}
+
+/* Ensure logout button is clickable */
+.user-dropdown li.logout-item a {
+  position: relative;
+  z-index: 10001 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  background: transparent !important;
+}
+
+/* Make sure all dropdown items are clickable */
+.user-dropdown li a {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+  cursor: pointer !important;
+}
+
+/* Special hover state for logout */
+.user-dropdown li.logout-item a:hover {
+  background-color: rgba(244, 67, 54, 0.08) !important;
+  cursor: pointer !important;
 }
