@@ -154,3 +154,106 @@ button:hover {
   align-items: center;
   gap: 5px;
 }
+
+/* Password toggle icon styles */
+.input-field i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-field i:hover {
+  color: #000;
+}
+
+/* Success message popup styles */
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.success-popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-popup i {
+  font-size: 60px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.success-popup h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.success-popup p {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #666;
+}
+
+/* Additional styles for registration page */
+.wrapper form .input-field + .input-field {
+  margin-top: 20px;
+}
+
+.forget a {
+  color: #efefef;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.forget a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Password match indicator */
+.password-match-indicator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.password-match-indicator.valid {
+  color: #4CAF50;
+}
+
+.password-match-indicator.invalid {
+  color: #f44336;
+}
+
+.password-match-indicator i {
+  margin-right: 5px;
+}
+
+/* Form validation visual feedback */
+input:focus:invalid {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+input:focus:valid {
+  border: 1px solid rgba(0, 255, 0, 0.5);
+}

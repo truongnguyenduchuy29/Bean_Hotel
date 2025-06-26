@@ -15,7 +15,8 @@
         <input type="email" value="email@gmail.com" required>
       </div>
       <div class="input-field">
-        <input type="password" value="***************" required>
+        <input type="password" id="password" value="***************" required>
+        <i class="fa-solid fa-eye" id="togglePassword"></i>
       </div>
       <div class="forget">
         <label for="remember">
@@ -24,14 +25,52 @@
         </label>
         <a href="#">Forgot password?</a>
       </div>
-      <button type="submit" onclick="window.location.href='index.html';">Log In</button>
+      <button type="submit" id="loginBtn">Log In</button>
       <div class="register">
-        <p>Don't have an account? <a href="Dki.html">Register</a></p>
+        <p>Don't have an account? <a href="Register.html">Register</a></p>
       </div>
       <div class="home-link">
         <a href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
       </div>
     </form>
   </div>
+
+  <!-- Success Popup -->
+  <div class="success-popup" id="successPopup">
+    <i class="fa-solid fa-circle-check"></i>
+    <h3>Đăng nhập thành công!</h3>
+    <p>Đang chuyển hướng...</p>
+  </div>
+
+  <script>
+    // Password toggle functionality
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      // Toggle icon
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
+    });
+
+    // Login button click event
+    const loginBtn = document.getElementById('loginBtn');
+    const successPopup = document.getElementById('successPopup');
+    
+    loginBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Show success popup
+      successPopup.classList.add('show');
+      
+      // Redirect to index.html after 2 seconds
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
