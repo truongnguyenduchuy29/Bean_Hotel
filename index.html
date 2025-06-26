@@ -100,6 +100,13 @@
       type="text/css"
       media="all"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- User Account CSS -->
+    <link rel="stylesheet" href="css/user-account.css">
     <link
       href="css/quickviews_popup_cart.scss.css"
       rel="stylesheet"
@@ -193,6 +200,7 @@
     </script>
   </head>
   <body>
+
     <div class="opacity_menu"></div>
     <header class="header">
       <div class="top-header">
@@ -11456,5 +11464,108 @@ Popup cart mobile
         alt="Messenger"
       />
     </a>
+    
+    <!-- Script xử lý đăng nhập và dropdown user account -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Kiểm tra xem người dùng đã đăng nhập hay chưa
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const username = localStorage.getItem('username');
+        
+        if (isLoggedIn && username) {
+          // Tìm phần account header
+          const accountHeader = document.querySelector('.account_header');
+          
+          if (accountHeader) {
+            // Tìm phần tử đăng ký và đăng nhập
+            let registerItem = null;
+            let loginItem = null;
+            let separator = null;
+            
+            // Tìm các phần tử dựa trên href
+            const items = accountHeader.querySelectorAll('li');
+            items.forEach(item => {
+              const link = item.querySelector('a');
+              if (link) {
+                if (link.getAttribute('href') === 'Register.html' || link.getAttribute('href') === 'register.html') {
+                  registerItem = item;
+                } else if (link.getAttribute('href') === 'login.html') {
+                  loginItem = item;
+                }
+              } else if (item.innerHTML.includes('|')) {
+                separator = item;
+              }
+            });
+            
+            if (registerItem && loginItem && separator) {
+              // Tạo phần tử tài khoản người dùng mới
+              const userAccount = document.createElement('li');
+              userAccount.className = 'user-account-container';
+              // Convert username to uppercase
+              const displayUsername = username.toUpperCase();
+              
+              userAccount.innerHTML = `
+                <a href="#" class="user-account-link">
+                  <i class="fas fa-user user-icon"></i>
+                  <span class="username-display">${displayUsername}</span>
+                  <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </a>
+                <div class="user-dropdown">
+                  <ul>
+                    <li><a href="#"><i class="fas fa-user-cog"></i> Thông tin tài khoản</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Lịch sử đặt phòng</a></li>
+                    <li class="logout-item"><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                  </ul>
+                </div>
+              `;
+              
+              // Xóa phần tử đăng ký và đăng nhập, thêm phần tử người dùng mới
+              registerItem.parentNode.removeChild(registerItem);
+              loginItem.parentNode.removeChild(loginItem);
+              separator.parentNode.removeChild(separator);
+              
+              // Chèn phần tử user account vào đầu danh sách
+              if (accountHeader.firstChild) {
+                accountHeader.insertBefore(userAccount, accountHeader.firstChild);
+              } else {
+                accountHeader.appendChild(userAccount);
+              }
+              
+              // Lấy tham chiếu đến các phần tử sau khi thêm vào DOM
+              const userAccountLink = userAccount.querySelector('.user-account-link');
+              const userDropdown = userAccount.querySelector('.user-dropdown');
+              
+              // Thêm sự kiện click cho user account link
+              userAccountLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                userAccount.classList.toggle('active');
+              });
+              
+              // Đóng dropdown khi click bên ngoài
+              document.addEventListener('click', function(e) {
+                if (!userAccount.contains(e.target)) {
+                  userAccount.classList.remove('active');
+                }
+              });
+              
+              // Xử lý sự kiện đăng xuất
+              const logoutBtn = document.getElementById('logoutBtn');
+              if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  
+                  // Xóa trạng thái đăng nhập
+                  localStorage.removeItem('isLoggedIn');
+                  localStorage.removeItem('username');
+                  
+                  // Tải lại trang
+                  window.location.reload();
+                });
+              }
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>

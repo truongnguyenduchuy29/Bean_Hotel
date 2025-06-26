@@ -21,7 +21,7 @@ body::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../img/N.NT-31.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../img/mau-khach-san-5-sao-05-decox-design.jpg");
   background-position: center;
   background-size: cover;
   z-index: -1;
@@ -256,4 +256,348 @@ input:focus:invalid {
 
 input:focus:valid {
   border: 1px solid rgba(0, 255, 0, 0.5);
+}
+
+/* User account styles */
+.user-account {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: #000 !important;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+}
+
+.user-account i {
+  font-size: 20px;
+  margin-right: 7px;
+  color: #cd9a2b;
+}
+
+.user-account span {
+  color: #000;
+}
+
+.user-account:hover span {
+  color: #cd9a2b;
+}
+
+.user-account-li {
+  position: relative;
+}
+
+/* Adjust position of user menu */
+.user-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: -10px;
+  width: 220px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.user-account:hover .user-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.user-menu li {
+  width: 100%;
+  padding: 0 !important;
+  display: block !important;
+}
+
+.user-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.user-menu li a:hover {
+  background: rgba(205, 154, 43, 0.1);
+  color: #cd9a2b;
+}
+
+#logoutBtn {
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  color: #e74c3c;
+}
+
+#logoutBtn:hover {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+/* User Account Dropdown Menu */
+/* Styles for top header links */
+.header .top-header {
+  background-color: #cd9a2b;
+  color: #fff;
+}
+
+.header .top-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .top-header a:hover {
+  text-decoration: underline;
+}
+
+.header .top-header .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Account header items */
+.account_header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.account_header li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.account_header li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Email link */
+.account_header li.email-link a {
+  display: flex;
+  align-items: center;
+}
+
+.account_header li.email-link i {
+  margin-right: 5px;
+}
+
+/* Shopping cart */
+.account_header li.cart-link a {
+  display: flex;
+  align-items: center;
+}
+
+.account_header li.cart-link i {
+  margin-right: 5px;
+}
+
+/* Search icon */
+.account_header li.search-link a {
+  display: flex;
+  align-items: center;
+}
+
+/* Booking button */
+.dat-phong {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #cd9a2b !important;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.dat-phong:hover {
+  background-color: #f5f5f5;
+}
+
+.dat-phong img {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+/* User account styles for logged-in state */
+.user-account-li {
+  position: relative;
+  display: inline-block;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-account i {
+  font-size: 20px;
+  margin-right: 7px;
+  color: #fff;
+}
+
+.user-account span {
+  color: #fff;
+}
+
+.user-account:hover span {
+  text-decoration: underline;
+}
+
+/* Adjust position of user menu */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: none;
+  z-index: 1000;
+  padding: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+
+.user-account-li:hover .user-menu {
+  display: block;
+}
+
+.user-menu li {
+  width: 100%;
+  padding: 0 !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.user-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  text-align: left;
+}
+
+.user-menu li a:hover {
+  background: rgba(205, 154, 43, 0.1);
+  color: #cd9a2b;
+}
+
+.user-menu li:last-child a {
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  color: #e74c3c;
+}
+
+.user-menu li:last-child a:hover {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+/* Add triangle pointer to dropdown */
+.user-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
+/* Top header styles */
+.header .top-header {
+  background-color: #cd9a2b;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.header .top-header a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header .top-header a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+/* Account links in header */
+.account_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.account_header li {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* Email icon in header */
+.email-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.email-icon i {
+  margin-right: 5px;
+}
+
+/* Shopping cart link */
+.cart-header {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.cart-header i {
+  margin-right: 5px;
+}
+
+/* Search form in header */
+.search-header {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-header i {
+  margin-right: 5px;
+}
+
+/* Booking button */
+.booking-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cd9a2b;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 15px;
+}
+
+.booking-button i {
+  margin-right: 8px;
 }

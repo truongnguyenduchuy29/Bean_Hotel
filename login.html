@@ -63,6 +63,15 @@
     loginBtn.addEventListener('click', function(e) {
       e.preventDefault();
       
+      // Get email value for username display
+      const emailInput = document.querySelector('input[type="email"]');
+      const email = emailInput.value;
+      const username = email.split('@')[0]; // Extract username from email
+      
+      // Store login state and username in localStorage
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', username);
+      
       // Show success popup
       successPopup.classList.add('show');
       

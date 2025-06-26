@@ -1,0 +1,168 @@
+/* User Account Dropdown Styles */
+
+/* User account container */
+.user-account-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* User account link */
+.user-account-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-account-link:hover {
+  color: #cd9a2b;
+}
+
+/* User icon */
+.user-icon {
+  margin-right: 8px;
+  color: #cd9a2b;
+  font-size: 18px;
+}
+
+/* Username display */
+.username-display {
+  margin-right: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  color: #888;
+}
+
+.user-account-container:hover .dropdown-arrow,
+.user-account-container.active .dropdown-arrow {
+  transform: rotate(180deg);
+  color: #cd9a2b;
+}
+
+/* User dropdown menu */
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(205, 154, 43, 0.15);
+}
+
+.user-account-container:hover .user-dropdown,
+.user-account-container.active .user-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Menu items */
+.user-dropdown ul {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.user-dropdown li {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.user-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.user-dropdown li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.user-dropdown li a i {
+  margin-right: 10px;
+  width: 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #cd9a2b;
+}
+
+.user-dropdown li a:hover {
+  background-color: rgba(205, 154, 43, 0.08);
+  color: #cd9a2b;
+  padding-left: 18px;
+}
+
+/* Logout item */
+.user-dropdown li.logout-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 5px;
+}
+
+.user-dropdown li.logout-item a {
+  color: #f44336;
+  font-weight: 500;
+}
+
+.user-dropdown li.logout-item a i {
+  color: #f44336;
+}
+
+.user-dropdown li.logout-item a:hover {
+  background-color: rgba(244, 67, 54, 0.08);
+  color: #f44336;
+  padding-left: 18px;
+}
+
+/* Triangle indicator */
+.user-dropdown:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  z-index: 2;
+}
+
+.user-dropdown:after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid rgba(205, 154, 43, 0.15);
+  z-index: 1;
+}
