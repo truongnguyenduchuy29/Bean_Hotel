@@ -10,11 +10,14 @@
     />
     <meta name="robots" content="noodp,index,follow" />
     <meta name="description" content="" />
-    <title>Bean Hotel</title>
-    <meta name="keywords" content="Cập nhật sau" />
+    <title>Đăng ký tài khoản</title>
+    <meta
+      name="keywords"
+      content="Đăng ký tài khoản, Bean Hotel"
+    />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bean Hotel" />
+    <meta property="og:title" content="Đăng ký tài khoản" />
     <meta
       property="og:image"
       content="img/logo.png"
@@ -57,18 +60,12 @@
     <script
       src="js/lazy.js"
       type="text/javascript"
-    ></script>    <link
-      rel="preload"
-      as="style"
-      type="text/css"
-      href="css/main.scss.css"
-    />
-
+    ></script>
     <link
       rel="preload"
       as="style"
       type="text/css"
-      href="css/index.scss.css"
+      href="css/main.scss.css"
     />
 
     <link
@@ -93,24 +90,25 @@
       type="text/css"
       media="all"
     />
+    <link
+      href="css/breadcrumb_style.scss.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
 
     <link
-      href="css/index.scss.css"
+      href="css/account_oder_style.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
-    <link
-      href="css/quickviews_popup_cart.scss.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
+
     <script>
       var Bizweb = Bizweb || {};
       Bizweb.id = 472947;
       Bizweb.theme = { id: 888072, name: "Bean Hotel", role: "main" };
-      Bizweb.template = "index";
+      Bizweb.template = "customers/register";
       if (!Bizweb.fbEventId)
         Bizweb.fbEventId = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
           /[xy]/g,
@@ -153,7 +151,37 @@
       }
     </script>
 
-    <script src="/dist/js/stats.min.js?v=96f2ff2"></script>
+    <script src="js/stats.min.js"></script>
+
+    <script
+      src="js/bizweb-api.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="js/common.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="js/customer.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "/",
+              "name": "Trang chủ"
+            }
+          }
+        ]
+      }
+    </script>
 
     <script type="application/ld+json">
       {
@@ -553,7 +581,7 @@
                 <div class="navigation-horizontal">
                   <nav class="header-nav">
                     <ul id="nav" class="nav">
-                      <li class="nav-item active">
+                      <li class="nav-item">
                         <a class="nav-link" href="/" title="Trang chủ"
                           >Trang chủ</a
                         >
@@ -710,2138 +738,268 @@
       </div>
     </header>
     <div class="bodywrap">
-      <h1 class="d-none">Bean Hotel -</h1>
-
-      <div class="section_slider swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="/collections/all" class="clearfix" title="Slider 1">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    img/slider_1.jpg
-                  "
-                />
-                <source
-                  media="(min-width: 992px)"
-                  srcset="
-                    img/slider_1.jpg
-                  "
-                />
-                <source
-                  media="(min-width: 569px)"
-                  srcset="
-                    img/slider_1.jpg
-                  "
-                />
-                <source
-                  media="(max-width: 480px)"
-                  srcset="
-                    img/slider_1.jpg
-                  "
-                />
-                <img
-                  width="1920"
-                  height="800"
-                  src="img/slider_1.jpg"
-                  alt="Slider 1"
-                  class="img-responsive center-block"
-                />
-              </picture>
-            </a>
-          </div>
-        </div>
-      </div>
-      <script>
-        var swiper = new Swiper(".section_slider", {
-          autoplay: {
-            delay: 4500,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
-
-      <section class="section_about">
+      <section class="bread-crumb">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <div class="img-about">
-                <img
-                  width="613"
-                  height="388"
-                  class="lazyload"
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                  data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/about.jpg?1749443141671"
-                  alt="Giới thiệu về chúng tôi"
-                />
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <div class="content-introduce">
-                <div class="title-frame">
-                  <span class="line-top"></span>
-                  <span class="line-right"></span>
-                  <span class="line-bottom"></span>
-                  <span class="line-left"></span>
-                  <span class="line-mask"></span>
-                  <div class="introduce-title-inner">
-                    <h3 class="entry-title">
-                      <span class="name-intr">Bean Hotel</span><br /><span
-                        class="title-intr"
-                        >Giới thiệu về chúng tôi
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-                <div class="introduce-wrap">
-                  <p>
-                    Là khách sạn 5 sao đẳng cấp quốc tế, tọa lạc tại giao điểm
-                    của bốn quận chính, nơi được xem như trái tim và trung tâm
-                    của TP. Hồ Chí Minh. Với hệ thống phòng tiêu chuẩn và phòng
-                    hạng sang thiết kế đẹp mắt và trang nhã được chú trọng tới
-                    từng chi tiết sẽ đem lại sự tiện nghi và thoải mái tối đa
-                    cho quý khách dù là thời gian nghỉ ngơi thư giãn hay trong
-                    chuyến công tác...
-                  </p>
-                  <div class="div-xem-them clearfix">
-                    <a href="/gioi-thieu" title="Xem thêm">Xem thêm</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section_room">
-        <div class="container">
-          <div class="title_module_index">
-            <h2 class="h2"><a href="phong" title="Phòng">Phòng</a></h2>
-          </div>
-
-          <div class="row row-room">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-don-tieu-chuan"
-                      title="Ph&#242;ng đơn ti&#234;u chuẩn"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1.jpg?v=1670338577307"
-                        alt="Ph&#242;ng đơn ti&#234;u chuẩn"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-don-tieu-chuan"
-                        title="Ph&#242;ng đơn ti&#234;u chuẩn"
-                        >Ph&#242;ng đơn ti&#234;u chuẩn</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>20m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">500.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-don-tieu-chuan"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-don-view-thanh-pho"
-                      title="Ph&#242;ng đơn view th&#224;nh phố"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp21.jpg?v=1670338576510"
-                        alt="Ph&#242;ng đơn view th&#224;nh phố"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-don-view-thanh-pho"
-                        title="Ph&#242;ng đơn view th&#224;nh phố"
-                        >Ph&#242;ng đơn view th&#224;nh phố</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>25m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">700.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-don-view-thanh-pho"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-don-view-san-vuon"
-                      title="Ph&#242;ng đơn view s&#226;n vườn"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11a713f0cbaa54ea595b6bb5e1b.jpg?v=1670338575473"
-                        alt="Ph&#242;ng đơn view s&#226;n vườn"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-don-view-san-vuon"
-                        title="Ph&#242;ng đơn view s&#226;n vườn"
-                        >Ph&#242;ng đơn view s&#226;n vườn</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Giây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>25m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">800.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-don-view-san-vuon"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-don-huong-bien"
-                      title="Ph&#242;ng đơn view biển"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1eb6eb86adb63474a819ab595ee.jpg?v=1670338574237"
-                        alt="Ph&#242;ng đơn view biển"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-don-huong-bien"
-                        title="Ph&#242;ng đơn view biển"
-                        >Ph&#242;ng đơn view biển</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>01 Khách</li>
-
-                        <li>25m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">900.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-don-huong-bien"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section_room section_room_double">
-        <div class="container">
-          <div class="title_module_index">
-            <h2 class="h2">
-              <a href="phong-doi" title="Phòng đôi">Phòng đôi</a>
-            </h2>
-          </div>
-
-          <div class="row row-room">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-doi-tieu-chuan"
-                      title="Ph&#242;ng đ&#244;i ti&#234;u chuẩn"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh12082233010354fb2894f5b1193.jpg?v=1670338573270"
-                        alt="Ph&#242;ng đ&#244;i ti&#234;u chuẩn"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-doi-tieu-chuan"
-                        title="Ph&#242;ng đ&#244;i ti&#234;u chuẩn"
-                        >Ph&#242;ng đ&#244;i ti&#234;u chuẩn</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_3.svg?1749443141671"
-                            alt="Bếp Nấu Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>25m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">950.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-doi-tieu-chuan"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-doi-view-thanh-pho"
-                      title="Ph&#242;ng đ&#244;i view th&#224;nh phố"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11ccbd4ad859c41ff9fda9cdd73.jpg?v=1670338572250"
-                        alt="Ph&#242;ng đ&#244;i view th&#224;nh phố"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-doi-view-thanh-pho"
-                        title="Ph&#242;ng đ&#244;i view th&#224;nh phố"
-                        >Ph&#242;ng đ&#244;i view th&#224;nh phố</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_3.svg?1749443141671"
-                            alt="Bếp Nấu Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>30m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">1.100.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-doi-view-thanh-pho"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-doi-view-san-vuon"
-                      title="Ph&#242;ng đ&#244;i view s&#226;n vườn"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1ada4b333e71e42408487c48089.jpg?v=1670338570513"
-                        alt="Ph&#242;ng đ&#244;i view s&#226;n vườn"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-doi-view-san-vuon"
-                        title="Ph&#242;ng đ&#244;i view s&#226;n vườn"
-                        >Ph&#242;ng đ&#244;i view s&#226;n vườn</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_3.svg?1749443141671"
-                            alt="Bếp Nấu Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>02 Khách</li>
-
-                        <li>30m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">1.200.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-doi-view-san-vuon"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="item_product_main">
-                <div class="alper-product-item">
-                  <div class="item-product-img">
-                    <a
-                      class="image_thumb"
-                      href="/phong-doi-2-giuong-doi"
-                      title="Ph&#242;ng đ&#244;i 2 giường đ&#244;i"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1120e24401b1a4fb7b5535ae97a.jpg?v=1670338569467"
-                        alt="Ph&#242;ng đ&#244;i 2 giường đ&#244;i"
-                    /></a>
-                  </div>
-                  <div class="info-room clearfix">
-                    <h3 class="name-room">
-                      <a
-                        href="/phong-doi-2-giuong-doi"
-                        title="Ph&#242;ng đ&#244;i 2 giường đ&#244;i"
-                        >Ph&#242;ng đ&#244;i 2 giường đ&#244;i</a
-                      >
-                    </h3>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_3.svg?1749443141671"
-                            alt="Bếp Nấu Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tag-rivew">
-                      <ul class="list_tag_review">
-                        <li>04 Khách</li>
-
-                        <li>32m²</li>
-                      </ul>
-                    </div>
-                    <div class="product-info-room">
-                      <div class="price-room">
-                        <span class="price">1.500.000₫/Đêm</span>
-                      </div>
-                      <div class="booking-room">
-                        <a
-                          href="/phong-doi-2-giuong-doi"
-                          title="Đặt phòng"
-                          class="btn-booking"
-                          >ÐẶT PHÒNG</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section_room_vip">
-        <div class="container">
-          <div class="title_module_index">
-            <h2 class="h2">
-              <a href="phong-vip" title="Phòng VIP">Phòng VIP</a>
-            </h2>
-          </div>
-
-          <div class="row">
-            <div
-              class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 col-sm-12"
-            >
-              <div class="item_vip_big">
-                <div class="img_vip_full">
-                  <a
-                    class="image_thumb"
-                    href="/phong-don-vip"
-                    title="Ph&#242;ng đơn vip"
-                    ><img
-                      width="480"
-                      height="272"
-                      class="lazyload"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                      data-src="img/anh1.jpg"
-                      alt="Ph&#242;ng đơn vip"
-                  /></a>
-                </div>
-                <div class="info-vip">
-                  <h3 class="name-room">
-                    <a href="/phong-don-vip" title="Ph&#242;ng đơn vip"
-                      >Ph&#242;ng đơn vip</a
-                    >
-                  </h3>
-                  <div class="info-room">
-                    <div class="tag-rivew-smal">
-                      <div class="tag-rivew">
-                        <img
-                          width="512"
-                          height="512"
-                          src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag-user.svg?1749443141671"
-                          title="02 Khách"
-                        />
-                        <p>02 Khách</p>
-                      </div>
-
-                      <div class="tag-rivew">
-                        <img
-                          width="512"
-                          height="512"
-                          src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag-meters.svg?1749443141671"
-                          title="35m²"
-                        />
-                        <p>35m²</p>
-                      </div>
-                    </div>
-                    <div class="tag-room">
-                      <ul class="list_tag_room">
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                            alt="Cafe Buổi Sáng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                            alt="Gọi Đồ Ăn Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_3.svg?1749443141671"
-                            alt="Bếp Nấu Tại Phòng"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                            alt="Bồn Tắm Hoa Sen"
-                          />
-                        </li>
-
-                        <li>
-                          <img
-                            width="32"
-                            height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                            alt="Internet Không Dây"
-                          />
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="content-room-small">
-                    Với tiêu chí ngày càng nâng cao và đáp ứng mọi nhu cầu của
-                    khách hàng chúng tôi cung cấp thêm loại phòng đơ...
-                  </div>
-                  <div class="vip-dat-hang">
-                    <a
-                      href="/phong-don-vip"
-                      title="Đặt phòng"
-                      class="btn-booking"
-                      >ÐẶT PHÒNG TỪ 2.500.000₫/Đêm</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 col-sm-12"
-            >
-              <div class="row row-room">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                  <div class="item-vip-small">
-                    <a
-                      class="image_thumb"
-                      href="/phong-gia-dinh"
-                      title="Ph&#242;ng gia đ&#236;nh"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1b11858800dc04b9b99c8ef13c0.jpg?v=1670338567667"
-                        alt="Ph&#242;ng gia đ&#236;nh"
-                    /></a>
-                    <div class="name_price clearfix">
-                      <h3 class="name-room">
-                        <a
-                          href="/phong-gia-dinh"
-                          title="Ph&#242;ng gia đ&#236;nh"
-                          >Ph&#242;ng gia đ&#236;nh</a
-                        >
-                      </h3>
-                      <span class="price">3.000.000₫/Đêm</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                  <div class="item-vip-small">
-                    <a
-                      class="image_thumb"
-                      href="/can-ho-chung-cu"
-                      title="Căn hộ chung cư"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh153bb971e15444fefa78e4ae22b.jpg?v=1670338566430"
-                        alt="Căn hộ chung cư"
-                    /></a>
-                    <div class="name_price clearfix">
-                      <h3 class="name-room">
-                        <a href="/can-ho-chung-cu" title="Căn hộ chung cư"
-                          >Căn hộ chung cư</a
-                        >
-                      </h3>
-                      <span class="price">2.700.000₫/Đêm</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                  <div class="item-vip-small">
-                    <a
-                      class="image_thumb"
-                      href="/phong-hang-sang"
-                      title="Ph&#242;ng hạng sang"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267"
-                        alt="Ph&#242;ng hạng sang"
-                    /></a>
-                    <div class="name_price clearfix">
-                      <h3 class="name-room">
-                        <a href="/phong-hang-sang" title="Ph&#242;ng hạng sang"
-                          >Ph&#242;ng hạng sang</a
-                        >
-                      </h3>
-                      <span class="price">3.500.000₫/Đêm</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                  <div class="item-vip-small">
-                    <a
-                      class="image_thumb"
-                      href="/phong-doi-noi-lien"
-                      title="Ph&#242;ng đ&#244;i nối liền"
-                      ><img
-                        width="480"
-                        height="272"
-                        class="lazyload"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                        data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh10baaa84820da4c20a93768986f.jpg?v=1670338563430"
-                        alt="Ph&#242;ng đ&#244;i nối liền"
-                    /></a>
-                    <div class="name_price clearfix">
-                      <h3 class="name-room">
-                        <a
-                          href="/phong-doi-noi-lien"
-                          title="Ph&#242;ng đ&#244;i nối liền"
-                          >Ph&#242;ng đ&#244;i nối liền</a
-                        >
-                      </h3>
-                      <span class="price">4.000.000₫/Đêm</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section_am_thuc">
-        <div class="container">
-          <div class="title_module_index">
-            <h2 class="h2">
-              <a href="am-thuc" title="Ẩm thực">Ẩm thực</a>
-            </h2>
-          </div>
-          <div
-            class="tabwrap not-dqtab e-tabs ajax-tab-1"
-            data-section="ajax-tab-1"
-          >
-            <div
-              class="twrap navbar-pills tabs tabs-title tabtitle1 link_tab_check_click closetab ajax clearfix"
-            >
-              <div
-                class="tab-link item has-content"
-                data-tab="tab-1"
-                data-url="mon-an"
+          <ul class="breadcrumb">
+            <li class="home">
+              <a href="/" title="Trang chủ"><span>Trang chủ</span></a>
+              <span class="mr_lr"
+                >&nbsp;<svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  class="svg-inline--fa fa-chevron-right fa-w-10"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                    class=""
+                  ></path></svg
+                >&nbsp;</span
               >
-                <span>Món ăn</span>
-              </div>
+            </li>
 
-              <div class="tab-link item" data-tab="tab-2" data-url="do-uong">
-                <span>Đồ uống</span>
-              </div>
-
-              <div class="tab-link item" data-tab="tab-3" data-url="banh-ngot">
-                <span>Bánh ngọt</span>
-              </div>
-            </div>
-            <div class="uwrap_tab">
-              <div class="tab-content tab-1">
-                <div class="row">
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829661"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/mi-xao-bo"
-                            title="M&#236; x&#224;o b&#242;"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp3c.jpg?v=1670338561717"
-                              alt="M&#236; x&#224;o b&#242;"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 20% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487981"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/mi-xao-bo"
-                              data-handle="mi-xao-bo"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a
-                              href="/mi-xao-bo"
-                              title="M&#236; x&#224;o b&#242;"
-                              >M&#236; x&#224;o b&#242;</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">80.000₫</span>
-                            <span class="compare-price">100.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829660"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/bun-xao-thit-heo"
-                            title="B&#250;n x&#224;o thịt heo"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp2.jpg?v=1670338560503"
-                              alt="B&#250;n x&#224;o thịt heo"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 17% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487980"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/bun-xao-thit-heo"
-                              data-handle="bun-xao-thit-heo"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a
-                              href="/bun-xao-thit-heo"
-                              title="B&#250;n x&#224;o thịt heo"
-                              >B&#250;n x&#224;o thịt heo</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">75.000₫</span>
-                            <span class="compare-price">90.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829659"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/bun-bo-hue"
-                            title="B&#250;n b&#242; Huế"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/1.jpg?v=1670338559480"
-                              alt="B&#250;n b&#242; Huế"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 5% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487979"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/bun-bo-hue"
-                              data-handle="bun-bo-hue"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a href="/bun-bo-hue" title="B&#250;n b&#242; Huế"
-                              >B&#250;n b&#242; Huế</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">95.000₫</span>
-                            <span class="compare-price">100.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829658"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/mi-xao-thit-heo"
-                            title="M&#236; x&#224;o thịt heo"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp167fa56fdc0284389beb60e9d924.jpg?v=1670338558650"
-                              alt="M&#236; x&#224;o thịt heo"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 12% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487978"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/mi-xao-thit-heo"
-                              data-handle="mi-xao-thit-heo"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a
-                              href="/mi-xao-thit-heo"
-                              title="M&#236; x&#224;o thịt heo"
-                              >M&#236; x&#224;o thịt heo</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">85.000₫</span>
-                            <span class="compare-price">97.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829657"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/banh-mi-op-la-trung"
-                            title="B&#225;nh m&#236; ốp la trứng"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp189e68372dd75426e94f7aeb12c7.jpg?v=1670338557597"
-                              alt="B&#225;nh m&#236; ốp la trứng"
-                          /></a>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487977"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/banh-mi-op-la-trung"
-                              data-handle="banh-mi-op-la-trung"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a
-                              href="/banh-mi-op-la-trung"
-                              title="B&#225;nh m&#236; ốp la trứng"
-                              >B&#225;nh m&#236; ốp la trứng</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">40.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829656"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/banh-mi-bo-kho"
-                            title="B&#225;nh m&#236; b&#242; kho"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/s1.jpg?v=1670338555590"
-                              alt="B&#225;nh m&#236; b&#242; kho"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 22% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487976"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/banh-mi-bo-kho"
-                              data-handle="banh-mi-bo-kho"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a
-                              href="/banh-mi-bo-kho"
-                              title="B&#225;nh m&#236; b&#242; kho"
-                              >B&#225;nh m&#236; b&#242; kho</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">70.000₫</span>
-                            <span class="compare-price">90.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829655"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/bun-bo-heo"
-                            title="B&#250;n b&#242; - heo"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/s107e04443cd1449c0918a96fad371.jpg?v=1670338554503"
-                              alt="B&#250;n b&#242; - heo"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 11% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487975"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/bun-bo-heo"
-                              data-handle="bun-bo-heo"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a href="/bun-bo-heo" title="B&#250;n b&#242; - heo"
-                              >B&#250;n b&#242; - heo</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">80.000₫</span>
-                            <span class="compare-price">90.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col"
-                  >
-                    <div class="item_product_main">
-                      <form
-                        action="/cart/add"
-                        method="post"
-                        class="variants product-action"
-                        data-id="product-actions-28829654"
-                        enctype="multipart/form-data"
-                      >
-                        <div class="product-thumbnail">
-                          <a
-                            class="image_thumb"
-                            href="/com-suon-trung"
-                            title="Cơm sườn trứng"
-                            ><img
-                              width="480"
-                              height="360"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/1f86c94ebf4b1483a9396ecbaf0c2d.jpg?v=1670338553500"
-                              alt="Cơm sườn trứng"
-                          /></a>
-
-                          <div class="sale-label">
-                            <span class="smart">- 17% </span>
-                          </div>
-
-                          <div class="group_action">
-                            <input
-                              type="hidden"
-                              name="variantId"
-                              value="77487974"
-                            />
-                            <button
-                              class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
-                              title="Mua ngay"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
-                                alt="Mua ngay"
-                              />
-                            </button>
-
-                            <a
-                              title="Xem nhanh"
-                              href="/com-suon-trung"
-                              data-handle="com-suon-trung"
-                              class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view"
-                            >
-                              <img
-                                width="24"
-                                height="24"
-                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671"
-                                alt="Xem nhanh"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        <div class="product-info">
-                          <h3 class="product-name">
-                            <a href="/com-suon-trung" title="Cơm sườn trứng"
-                              >Cơm sườn trứng</a
-                            >
-                          </h3>
-                          <div class="price-box">
-                            <span class="price">50.000₫</span>
-                            <span class="compare-price">60.000₫</span>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="show-more-pro">
-                  <a href="mon-an" title="Xem thêm" class="a-show-more"
-                    >Xem thêm</a
-                  >
-                </div>
-              </div>
-
-              <div class="tab-content tab-2"></div>
-
-              <div class="tab-content tab-3"></div>
-            </div>
-          </div>
+            <li>
+              <strong><span>Đăng ký tài khoản</span></strong>
+            </li>
+          </ul>
         </div>
       </section>
-
-      <section class="section_tab_restaurant">
+      <section class="section">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-xs-12">
-              <div class="pro-tabs not-dqtab">
-                <div class="e-tabs not-dqtab">
-                  <ul class="tabs tabs-title clearfix">
-                    <li class="tab-link" data-tab="tab-1-res">
-                      <div class="item-name">
-                        <img
-                          width="32"
-                          height="32"
-                          src="//bizweb.dktcdn.net/thumb/small/100/472/947/themes/888072/assets/cutlery.png?1749443141671"
-                          alt="Khách sạn"
-                        />
-                        <p>Khách sạn</p>
-                      </div>
-                    </li>
-                    <li class="tab-link" data-tab="tab-2-res">
-                      <div class="item-name">
-                        <img
-                          width="32"
-                          height="32"
-                          src="//bizweb.dktcdn.net/thumb/small/100/472/947/themes/888072/assets/meeting.png?1749443141671"
-                          alt="Phòng họp"
-                        />
-                        <p>Phòng họp</p>
-                      </div>
-                    </li>
-                    <li class="tab-link" data-tab="tab-3-res">
-                      <div class="item-name">
-                        <img
-                          width="32"
-                          height="32"
-                          src="//bizweb.dktcdn.net/thumb/small/100/472/947/themes/888072/assets/skin-care.png?1749443141671"
-                          alt="Làm đẹp"
-                        />
-                        <p>Làm đẹp</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="tab-float">
-                    <div id="tab-1-res" class="tab-content content_extab">
-                      <div class="row">
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
+          <div class="wrap_background_aside page_login">
+            <div class="wrap_background_aside">
+              <div class="row">
+                <div
+                  class="col-lg-4 col-md-6 col-sm-12 col-12 col-xl-4 offset-xl-4 offset-lg-4 offset-md-3 offset-xl-3"
+                >
+                  <div class="row">
+                    <div class="page-login pagecustome clearfix">
+                      <div class="wpx">
+                        <h1 class="title_heads a-center">
+                          <span>Đăng ký</span>
+                        </h1>
+                        <span class="block a-center dkm margin-top-10"
+                          >Đã có tài khoản, đăng nhập
+                          <a
+                            href="/account/login"
+                            class="btn-link-style btn-register"
+                            >tại đây</a
+                          ></span
                         >
-                          <div class="title_us">
-                            <p class="txt_1">Tiện nghi</p>
-                            <p class="txt_1 txt_2">Sang trọng</p>
-                          </div>
-                          <div class="img_nbox">
-                            <img
-                              width="395"
-                              height="499"
-                              alt="Khách sạn"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner1_tab1.jpg?1749443141671"
+                        <div id="login" class="section">
+                          <form
+                            method="post"
+                            action="/account/register"
+                            id="customer_register"
+                            accept-charset="UTF-8"
+                          >
+                            <input
+                              name="FormType"
+                              type="hidden"
+                              value="customer_register"
+                            /><input
+                              name="utf8"
+                              type="hidden"
+                              value="true"
+                            /><input
+                              type="hidden"
+                              id="Token-1fff7f731b4547c3ac6eb94f50e61c7e"
+                              name="Token"
                             />
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="title_cont_us">
-                            <p class="txt_title">Khách sạn</p>
-                            <p class="txt_title_1">
-                              Chúng tôi mang lại không gian thư giản và tiện
-                              nghi đáp ứng mọi nhu cầu cho bạn.
-                            </p>
-                            <p class="txt_title_2">
-                              Là khách sạn 5 sao đẳng cấp quốc tế, tọa lạc tại
-                              giao điểm của bốn quận chính, nơi được xem như
-                              trái tim và trung tâm của TP. Hồ Chí Minh. Với hệ
-                              thống phòng tiêu chuẩn và phòng hạng sang thiết kế
-                              đẹp mắt và trang nhã được chú trọng tới từng chi
-                              tiết sẽ đem lại sự tiện nghi và thoải mái tối đa
-                              cho quý khách dù là thời gian nghỉ ngơi thư giãn
-                              hay trong chuyến công tác...
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="img_nbo_2">
-                            <img
-                              width="395"
-                              height="567"
-                              alt="Khách sạn"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner2_tab1.jpg?1749443141671"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="tab-2-res" class="tab-content content_extab">
-                      <div class="row">
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="title_us">
-                            <p class="txt_1">Rộng rãi</p>
-                            <p class="txt_1 txt_2">Thanh lịch</p>
-                          </div>
-                          <div class="img_nbox">
-                            <img
-                              width="395"
-                              height="499"
-                              alt="Phòng họp"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner1_tab2.jpg?1749443141671"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="title_cont_us">
-                            <p class="txt_title">Phòng họp</p>
-                            <p class="txt_title_1">
-                              Chúng tôi mang lại không gian thư giản và tiện
-                              nghi đáp ứng mọi nhu cầu cho bạn.
-                            </p>
-                            <p class="txt_title_2">
-                              Là khách sạn 5 sao đẳng cấp quốc tế, tọa lạc tại
-                              giao điểm của bốn quận chính, nơi được xem như
-                              trái tim và trung tâm của TP. Hồ Chí Minh. Với hệ
-                              thống phòng tiêu chuẩn và phòng hạng sang thiết kế
-                              đẹp mắt và trang nhã được chú trọng tới từng chi
-                              tiết sẽ đem lại sự tiện nghi và thoải mái tối đa
-                              cho quý khách dù là thời gian nghỉ ngơi thư giãn
-                              hay trong chuyến công tác...
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="img_nbo_2">
-                            <img
-                              width="395"
-                              height="567"
-                              alt="Phòng họp"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner2_tab2.jpg?1749443141671"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="tab-3-res" class="tab-content content_extab">
-                      <div class="row">
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="title_us">
-                            <p class="txt_1">Khỏe và đẹp</p>
-                            <p class="txt_1 txt_2">Thư giản</p>
-                          </div>
-                          <div class="img_nbox">
-                            <img
-                              width="395"
-                              height="499"
-                              alt="Làm đẹp"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner1_tab3.jpg?1749443141671"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="title_cont_us">
-                            <p class="txt_title">Làm đẹp</p>
-                            <p class="txt_title_1">
-                              Chúng tôi mang lại không gian thư giản và tiện
-                              nghi đáp ứng mọi nhu cầu cho bạn.
-                            </p>
-                            <p class="txt_title_2">
-                              Là khách sạn 5 sao đẳng cấp quốc tế, tọa lạc tại
-                              giao điểm của bốn quận chính, nơi được xem như
-                              trái tim và trung tâm của TP. Hồ Chí Minh. Với hệ
-                              thống phòng tiêu chuẩn và phòng hạng sang thiết kế
-                              đẹp mắt và trang nhã được chú trọng tới từng chi
-                              tiết sẽ đem lại sự tiện nghi và thoải mái tối đa
-                              cho quý khách dù là thời gian nghỉ ngơi thư giãn
-                              hay trong chuyến công tác...
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"
-                        >
-                          <div class="img_nbo_2">
-                            <img
-                              width="395"
-                              height="567"
-                              alt="Làm đẹp"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/banner2_tab3.jpg?1749443141671"
-                            />
+                            <script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+                            <script>
+                              grecaptcha.ready(function () {
+                                grecaptcha
+                                  .execute(
+                                    "6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK",
+                                    { action: "customer_register" }
+                                  )
+                                  .then(function (token) {
+                                    document.getElementById(
+                                      "Token-1fff7f731b4547c3ac6eb94f50e61c7e"
+                                    ).value = token;
+                                  });
+                              });
+                            </script>
+                            <div class="form-signup" style="color: red"></div>
+                            <div class="form-signup clearfix">
+                              <div class="row">
+                                <div
+                                  class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                >
+                                  <fieldset class="form-group">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="lastName"
+                                      id="lastName"
+                                      placeholder="Họ"
+                                      required
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                >
+                                  <fieldset class="form-group">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="firstName"
+                                      id="firstName"
+                                      placeholder="Tên"
+                                      required
+                                    />
+                                  </fieldset>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                >
+                                  <fieldset class="form-group">
+                                    <input
+                                      type="email"
+                                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="email"
+                                      id="email"
+                                      placeholder="Email"
+                                      required=""
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                >
+                                  <fieldset class="form-group">
+                                    <input
+                                      placeholder="Số điện thoại"
+                                      type="text"
+                                      pattern="\d+"
+                                      class="form-control form-control-comment form-control-lg"
+                                      name="PhoneNumber"
+                                      required
+                                    />
+                                  </fieldset>
+                                </div>
+                                <div
+                                  class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                >
+                                  <fieldset class="form-group">
+                                    <input
+                                      type="password"
+                                      class="form-control form-control-lg"
+                                      value=""
+                                      name="password"
+                                      id="password"
+                                      placeholder="Mật khẩu"
+                                      required
+                                    />
+                                  </fieldset>
+                                </div>
+                              </div>
+                              <div class="section">
+                                <button
+                                  type="submit"
+                                  value="Đăng ký"
+                                  class="btn btn-style btn_50"
+                                >
+                                  Đăng ký
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <div
+                            class="block social-login--facebooks margin-top-15"
+                          >
+                            <p class="a-center">Hoặc đăng nhập bằng</p>
+                            <script>
+                              function loginFacebook() {
+                                var a = {
+                                    client_id: "947410958642584",
+                                    redirect_uri:
+                                      "https://store.mysapo.net/account/facebook_account_callback",
+                                    state: JSON.stringify({
+                                      redirect_url: window.location.href,
+                                    }),
+                                    scope: "email",
+                                    response_type: "code",
+                                  },
+                                  b =
+                                    "https://www.facebook.com/v3.2/dialog/oauth" +
+                                    encodeURIParams(a, !0);
+                                window.location.href = b;
+                              }
+                              function loginGoogle() {
+                                var a = {
+                                    client_id:
+                                      "997675985899-pu3vhvc2rngfcuqgh5ddgt7mpibgrasr.apps.googleusercontent.com",
+                                    redirect_uri:
+                                      "https://store.mysapo.net/account/google_account_callback",
+                                    scope:
+                                      "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+                                    access_type: "online",
+                                    state: JSON.stringify({
+                                      redirect_url: window.location.href,
+                                    }),
+                                    response_type: "code",
+                                  },
+                                  b =
+                                    "https://accounts.google.com/o/oauth2/v2/auth" +
+                                    encodeURIParams(a, !0);
+                                window.location.href = b;
+                              }
+                              function encodeURIParams(a, b) {
+                                var c = [];
+                                for (var d in a)
+                                  if (a.hasOwnProperty(d)) {
+                                    var e = a[d];
+                                    null != e &&
+                                      c.push(
+                                        encodeURIComponent(d) +
+                                          "=" +
+                                          encodeURIComponent(e)
+                                      );
+                                  }
+                                return 0 == c.length
+                                  ? ""
+                                  : (b ? "?" : "") + c.join("&");
+                              }
+                            </script>
+                            <a
+                              href="javascript:void(0)"
+                              class="social-login--facebook"
+                              onclick="loginFacebook()"
+                              ><img
+                                width="129px"
+                                height="37px"
+                                alt="facebook-login-button"
+                                src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg"
+                            /></a>
+                            <a
+                              href="javascript:void(0)"
+                              class="social-login--google"
+                              onclick="loginGoogle()"
+                              ><img
+                                width="129px"
+                                height="37px"
+                                alt="google-login-button"
+                                src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg"
+                            /></a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="secttion_blogs">
-        <div class="container">
-          <div class="title_module_index">
-            <h2 class="h2">
-              <a href="tin-tuc" title="Hiểu biết khách sạn"
-                >Hiểu biết khách sạn</a
-              >
-            </h2>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row row-room">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-12">
-              <div class="item_blog_index clearfix">
-                <div class="img-blog">
-                  <a
-                    class="image-blog"
-                    href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
-                    title="10 xu hướng thịnh hành trong ngành khách sạn 2022"
-                  >
-                    <img
-                      width="480"
-                      height="288"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                      data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/articles/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2021.jpg?v=1670342054747"
-                      alt="10 xu hướng thịnh hành trong ngành khách sạn 2022"
-                      class="lazyload img-responsive"
-                    />
-                  </a>
-                </div>
-                <div class="blog_content">
-                  <h3>
-                    <a
-                      href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
-                      title="10 xu hướng thịnh hành trong ngành khách sạn 2022"
-                      >10 xu hướng thịnh hành trong ngành khách sạn 2022</a
-                    >
-                  </h3>
-                  <p class="blog_description">
-                    Không gian ngoài trời mở rộng hơn, nâng cấp công nghệ để hạn
-                    chế tối đa tiếp xúc là những xu hướng mới nhiều khách...
-                  </p>
-                  <p class="update_date clearfix">
-                    <span class="user_name">By Bean Hotel</span>
-                    <span class="user_date"> 06/12/2022</span>
-                  </p>
-                  <a
-                    class="btn blog_read_more"
-                    href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
-                    title="Đọc thêm"
-                    >Ðọc Thêm</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-12">
-              <div class="item_blog_index clearfix">
-                <div class="img-blog">
-                  <a
-                    class="image-blog"
-                    href="/nhung-dieu-kieng-ki-khi-o-khach-san-ma-ban-nen-biet"
-                    title="Những điều kiêng kị khi ở khách sạn mà bạn nên biết"
-                  >
-                    <img
-                      width="480"
-                      height="288"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                      data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/articles/nhung-dieu-kieng-ky-khi-o-khach-san-ma-ban-can-biet.jpg?v=1670340419703"
-                      alt="Những điều kiêng kị khi ở khách sạn mà bạn nên biết"
-                      class="lazyload img-responsive"
-                    />
-                  </a>
-                </div>
-                <div class="blog_content">
-                  <h3>
-                    <a
-                      href="/nhung-dieu-kieng-ki-khi-o-khach-san-ma-ban-nen-biet"
-                      title="Những điều kiêng kị khi ở khách sạn mà bạn nên biết"
-                      >Những điều kiêng kị khi ở khách sạn mà bạn nên biết</a
-                    >
-                  </h3>
-                  <p class="blog_description">
-                    Để không gặp nhiều phiền toái và giữ an toàn cho chính bản
-                    thân trong mỗi chuyến đi, bạn nên cẩn thận tìm hiểu một...
-                  </p>
-                  <p class="update_date clearfix">
-                    <span class="user_name">By Bean Hotel</span>
-                    <span class="user_date"> 06/12/2022</span>
-                  </p>
-                  <a
-                    class="btn blog_read_more"
-                    href="/nhung-dieu-kieng-ki-khi-o-khach-san-ma-ban-nen-biet"
-                    title="Đọc thêm"
-                    >Ðọc Thêm</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-12">
-              <div class="item_blog_index clearfix">
-                <div class="img-blog">
-                  <a
-                    class="image-blog"
-                    href="/y-nghia-viec-khach-san-de-chocolate-len-goi-khi-don-phong"
-                    title="Ý nghĩa việc khách sạn để chocolate lên gối khi dọn phòng"
-                  >
-                    <img
-                      width="480"
-                      height="288"
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                      data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/articles/y-nghia-viec-khach-san-de-chocolate-len-goi-khi-don-phong.jpg?v=1670340914720"
-                      alt="Ý nghĩa việc khách sạn để chocolate lên gối khi dọn phòng"
-                      class="lazyload img-responsive"
-                    />
-                  </a>
-                </div>
-                <div class="blog_content">
-                  <h3>
-                    <a
-                      href="/y-nghia-viec-khach-san-de-chocolate-len-goi-khi-don-phong"
-                      title="Ý nghĩa việc khách sạn để chocolate lên gối khi dọn phòng"
-                      >Ý nghĩa việc khách sạn để chocolate lên gối khi dọn
-                      phòng</a
-                    >
-                  </h3>
-                  <p class="blog_description">
-                    Các quản lý khách sạn phát hiện ra dịch vụ này nhận được
-                    nhiều lời khen từ khách thuê phòng hơn bất kỳ hoạt động...
-                  </p>
-                  <p class="update_date clearfix">
-                    <span class="user_name">By Bean Hotel</span>
-                    <span class="user_date"> 06/12/2022</span>
-                  </p>
-                  <a
-                    class="btn blog_read_more"
-                    href="/y-nghia-viec-khach-san-de-chocolate-len-goi-khi-don-phong"
-                    title="Đọc thêm"
-                    >Ðọc Thêm</a
-                  >
                 </div>
               </div>
             </div>
@@ -2851,9 +1009,9 @@
 
       <footer
         class="footer lazyload"
-        data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1749443141671"
+        data-src="img/bg_footer_1.jpg"
         style="
-          background-image: url('//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1749443141671');
+          background-image: url('img/bg_footer_1.jpg');
         "
       >
         <div class="footer-top hidden-sm hidden-xs">
@@ -3378,7 +1536,7 @@
                       width="220"
                       height="68"
                       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                      data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo_foo.png?1749443141671"
+                      data-src="img/logo.png"
                       alt="Bean Hotel"
                       class="lazyload"
                   /></a>
@@ -3496,13 +1654,7 @@
 
                   <span class="opacity1">Cung cấp bởi</span>
 
-                  <a
-                    href="https://www.sapo.vn/?utm_campaign=cpn:kho_theme-plm:footer&utm_source=Tu_nhien&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=kho_theme-sapo"
-                    rel="nofollow"
-                    title="Sapo"
-                    target="_blank"
-                    >Sapo</a
-                  >
+                  <a href="javascript:;" title="Sapo">Sapo</a>
                 </span>
               </div>
             </div>
@@ -3518,11 +1670,11 @@
     <link
       rel="preload"
       as="style"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/ajaxcart.scss.css?1749443141671"
+      href="css/ajaxcart.scss.css"
       type="text/css"
     />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/ajaxcart.scss.css?1749443141671"
+      href="css/ajaxcart.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -9589,7 +7741,7 @@ Popup cart mobile
         var imagepop = Bizweb.resizeImage(line_item.image, "compact");
         if (imagepop == "null" || imagepop == "" || imagepop == null) {
           imagepop =
-            "img/anh1.jpg";
+            "https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif";
         }
         var variant_title = line_item.variant_title;
         if (variant_title === "Default Title") variant_title = "";
@@ -9875,7 +8027,7 @@ Popup cart mobile
             var prodImg = Bizweb.resizeImage(cartItem.image, "compact");
             if (prodImg == "null" || prodImg == "" || prodImg == null) {
               prodImg =
-                "img/anh1.jpg";
+                "https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif";
             }
 
             // lấy properties cart
@@ -10706,398 +8858,13 @@ Popup cart mobile
         </div>
       </div>
     </div>
-
-    <div
-      id="quick-view-product"
-      class="quickview-product"
-      style="display: none"
-    >
-      <div
-        class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"
-      ></div>
-      <div class="quick-view-product"></div>
-      <div id="quickview-modal" style="display: none">
-        <div class="block-quickview primary_block details-product">
-          <div class="row">
-            <div
-              class="product-left-column product-images col-xs-12 col-sm-4 col-md-4 col-lg-5 col-xl-4"
-            >
-              <div class="image-block large-image col_large_default">
-                <span class="view_full_size">
-                  <a
-                    class="img-product"
-                    title="Ảnh sản phẩm"
-                    href="javascript:;"
-                  >
-                    <img
-                      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
-                      id="product-featured-image-quickview"
-                      class="img-responsive product-featured-image-quickview"
-                      alt="quickview"
-                    />
-                  </a>
-                </span>
-                <div class="loading-imgquickview" style="display: none"></div>
-              </div>
-              <div class="more-view-wrapper clearfix">
-                <div
-                  class="thumbs_quickview owl_nav_custome1 swiper-container"
-                  id="thumbs_list_quickview"
-                >
-                  <ul
-                    class="product-photo-thumbs quickview-more-views-owlslider not-thuongdq swiper-wrapper"
-                    id="thumblist_quickview"
-                  ></ul>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="product-center-column product-info product-item col-xs-12 col-sm-6 col-md-8 col-lg-7 col-xl-8 details-pro style_product style_border"
-            >
-              <div class="head-qv group-status">
-                <h3 class="qwp-name title-product">abc</h3>
-                <div class="vend-qv group-status">
-                  <div class="left_vend">
-                    <div class="first_status">
-                      Thương hiệu:
-                      <span class="vendor_ status_name"></span>
-                    </div>
-                    <span class="line_tt">|</span>
-                    <div class="top_sku first_status">
-                      Mã sản phẩm:
-                      <span class="sku_ status_name"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="quickview-info">
-                <span class="prices price-box">
-                  <span class="price product-price"></span>
-                  <del class="old-price"></del>
-                </span>
-              </div>
-
-              <div class="product-description product-summary">
-                <div class="rte"></div>
-              </div>
-
-              <form
-                action="/cart/add"
-                method="post"
-                enctype="multipart/form-data"
-                class="quick_option variants form-ajaxtocart form-product"
-              >
-                <span class="price-product-detail d-none" style="opacity: 0">
-                  <span class=""></span>
-                </span>
-                <select
-                  name="variantId"
-                  class="d-none"
-                  style="display: none"
-                ></select>
-                <div class="form_product_content">
-                  <div class="count_btn_style quantity_wanted_p">
-                    <div class="soluong1 clearfix">
-                      <div class="input_number_product">
-                        <a
-                          class="btn_num num_1 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;"
-                          >-</a
-                        >
-                        <input
-                          type="text"
-                          id="quantity-detail"
-                          name="quantity"
-                          value="1"
-                          maxlength="2"
-                          class="form-control prd_quantity"
-                          onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-                          onchange="if(this.value == 0)this.value=1;"
-                        />
-                        <a
-                          class="btn_num num_2 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;"
-                          >+</a
-                        >
-                      </div>
-                    </div>
-                    <div class="button_actions clearfix">
-                      <button
-                        type="submit"
-                        class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail"
-                      >
-                        <span class="btn-content text_1"
-                          >Thêm vào giỏ hàng</span
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <a
-          title="Close"
-          class="quickview-close close-window"
-          href="javascript:;"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="far"
-            data-icon="times"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            class="svg-inline--fa fa-times fa-w-10"
-          >
-            <path
-              fill="currentColor"
-              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
-              class=""
-            ></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      Bizweb.doNotTriggerClickOnThumb = false;
-      function changeImageQuickView(img, selector) {
-        var src = $(img).attr("src");
-        src = src.replace("_compact", "");
-        $(selector).attr("src", src);
-      }
-      function validate(evt) {
-        var theEvent = evt || window.event;
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-        var regex = /[0-9]|\./;
-        if (!regex.test(key)) {
-          theEvent.returnValue = false;
-          if (theEvent.preventDefault) theEvent.preventDefault();
-        }
-      }
-      var selectCallbackQuickView = function (variant, selector) {
-        $("#quick-view-product form").show();
-        var productItem = jQuery(".quick-view-product .product-item"),
-          addToCart = productItem.find(".add_to_cart_detail"),
-          productPrice = productItem.find(".price"),
-          comparePrice = productItem.find(".old-price"),
-          form2 = jQuery(".soluong1"),
-          status = productItem.find(".soluong"),
-          sku = productItem.find(".sku_"),
-          totalPrice = productItem.find(".total-price span");
-
-        if (variant && variant.sku) {
-          sku.text(variant.sku);
-        } else {
-          sku.text("Đang cập nhật");
-        }
-        if (variant && variant.available) {
-          var form = jQuery("#" + selector.domIdPrefix).closest("form");
-          for (var i = 0, length = variant.options.length; i < length; i++) {
-            var radioButton = form.find(
-              '.swatch[data-option-index="' +
-                i +
-                '"] :radio[value="' +
-                variant.options[i] +
-                '"]'
-            );
-          }
-          addToCart.removeClass("disabled").removeAttr("disabled");
-          addToCart
-            .html('<span class="btn-content text_1">Thêm vào giỏ hàng</span>')
-            .removeAttr("disabled");
-          status.text("Còn hàng");
-          if (variant.price < 1) {
-            $("#quick-view-product .price").html("Liên hệ");
-            $(
-              "#quick-view-product del, #quick-view-product .quantity_wanted_p"
-            ).hide();
-            $("#quick-view-product .prices .old-price").hide();
-            form2.hide();
-          } else {
-            productPrice.html(
-              Bizweb.formatMoney(
-                variant.price,
-                "{{amount_no_decimals_with_comma_separator}}₫"
-              )
-            );
-            if (variant.compare_at_price > variant.price) {
-              comparePrice
-                .html(
-                  Bizweb.formatMoney(
-                    variant.compare_at_price,
-                    "{{amount_no_decimals_with_comma_separator}}₫"
-                  )
-                )
-                .show();
-              productPrice.addClass("on-sale");
-            } else {
-              comparePrice.hide();
-              productPrice.removeClass("on-sale");
-            }
-
-            $(".quantity_wanted_p").show();
-            $(".input_qty_qv_").show();
-            form2.show();
-          }
-
-          updatePricingQuickView();
-
-          /*begin variant image*/
-          if (variant && variant.featured_image) {
-            var originalImage = $("#product-featured-image-quickview");
-            var newImage = variant.featured_image;
-            var element = originalImage[0];
-            Bizweb.Image.switchImage(
-              newImage,
-              element,
-              function (newImageSizedSrc, newImage, element) {
-                $("#thumblist_quickview img").each(function () {
-                  var parentThumbImg = $(this).parent();
-                  var productImage = $(this).parent().data("image");
-                  if (newImageSizedSrc.includes(productImage)) {
-                    $(this).parent().trigger("click");
-                    return false;
-                  }
-                });
-              }
-            );
-            $("#product-featured-image-quickview").attr(
-              "src",
-              variant.featured_image.src
-            );
-          }
-        } else {
-          addToCart.addClass("disabled").attr("disabled", "disabled");
-          addToCart
-            .removeClass("d-none")
-            .addClass("btn_buy")
-            .attr("disabled", "disabled")
-            .html('<div class="disabled">Hết hàng</div>')
-            .show();
-          status.text("Hết hàng");
-          $(".quantity_wanted_p").show();
-          if (variant) {
-            if (variant.price < 1) {
-              $("#quick-view-product .price").html("Liên hệ");
-              $("#quick-view-product del").hide();
-              $("#quick-view-product .quantity_wanted_p").hide();
-              $("#quick-view-product .prices .old-price").hide();
-              form2.hide();
-              comparePrice.hide();
-              productPrice.removeClass("on-sale");
-              addToCart.addClass("disabled").attr("disabled", "disabled");
-              addToCart
-                .removeClass("d-none")
-                .addClass("btn_buy")
-                .attr("disabled", "disabled")
-                .html('<div class="disabled">Hết hàng</div>')
-                .show();
-            } else {
-              if (variant.compare_at_price > variant.price) {
-                comparePrice
-                  .html(
-                    Bizweb.formatMoney(
-                      variant.compare_at_price,
-                      "{{amount_no_decimals_with_comma_separator}}₫"
-                    )
-                  )
-                  .show();
-                productPrice.addClass("on-sale");
-              } else {
-                comparePrice.hide();
-                productPrice.removeClass("on-sale");
-                $("#quick-view-product .prices .old-price").html("");
-              }
-              $("#quick-view-product .price").html(
-                Bizweb.formatMoney(
-                  variant.price,
-                  "{{amount_no_decimals_with_comma_separator}}₫"
-                )
-              );
-              $("#quick-view-product del ").hide();
-              $("#quick-view-product .prices .old-price").show();
-              $(".input_qty_qv_").hide();
-              form2.hide();
-              addToCart.addClass("disabled").attr("disabled", "disabled");
-              addToCart
-                .removeClass("d-none")
-                .addClass("btn_buy")
-                .attr("disabled", "disabled")
-                .html('<div class="disabled">Hết hàng</div>')
-                .show();
-            }
-          } else {
-            $("#quick-view-product .price").html("Liên hệ");
-            $("#quick-view-product del").hide();
-            $("#quick-view-product .quantity_wanted_p").hide();
-            $("#quick-view-product .prices .old-price").hide();
-            form2.hide();
-            comparePrice.hide();
-            productPrice.removeClass("on-sale");
-            addToCart.addClass("disabled").attr("disabled", "disabled");
-            addToCart
-              .removeClass("d-none")
-              .addClass("btn_buy")
-              .attr("disabled", "disabled")
-              .html('<div class="disabled">Hết hàng</div>')
-              .show();
-          }
-        }
-        /*begin variant image*/
-        if (variant && variant.featured_image) {
-          var originalImage = $("#product-featured-image-quickview");
-          var newImage = variant.featured_image;
-          var element = originalImage[0];
-          Bizweb.Image.switchImage(
-            newImage,
-            element,
-            function (newImageSizedSrc, newImage, element) {
-              $("#thumblist_quickview img").each(function () {
-                var parentThumbImg = $(this).parent();
-                var productImage = $(this).parent().data("image");
-                if (newImageSizedSrc.includes(productImage)) {
-                  $(this).parent().trigger("click");
-                  return false;
-                }
-              });
-            }
-          );
-          $("#product-featured-image-quickview").attr(
-            "src",
-            variant.featured_image.src
-          );
-        }
-      };
-    </script>
     <link
       rel="preload"
       as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickview.js?1749443141671"
+      href="js/main.js"
     />
     <script
-      type="text/javascript"
-      defer
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickview.js?1749443141671"
-    ></script>
-
-    <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/index.js?1749443141671"
-      type="text/javascript"
-    ></script>
-
-    <link
-      rel="preload"
-      as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.js?1749443141671"
-    />
-    <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.js?1749443141671"
+      src="js/main.js"
       type="text/javascript"
     ></script>
     <div id="popupCartModal" class="modal fade" role="dialog"></div>
@@ -11126,7 +8893,7 @@ Popup cart mobile
       collection[2] =
         "<a href='/phong-doi-tieu-chuan' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đôi tiêu chuẩn'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-doi-tieu-chuan' title='Phòng đôi tiêu chuẩn'>Đã đặt Phòng đôi tiêu chuẩn</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[3] =
-        "<a href='/phong-don-vip' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đơn vip'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-vip' title='Phòng đơn vip'>Đã đặt Phòng đơn vip</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-don-vip' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đơn vip'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-vip' title='Phòng đôn vip'>Đã đặt Phòng đơn vip</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[4] =
         "<a href='/phong-gia-dinh' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng gia đình'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-gia-dinh' title='Phòng gia đình'>Đã đặt Phòng gia đình</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[5] =
@@ -11409,6 +9176,15 @@ Popup cart mobile
       });
     </script>
     
+    <script>
+      $(".popup-sapo .icon").click(function () {
+        $(".popup-sapo").toggleClass("active");
+      });
+      $(".close-popup-sapo").click(function () {
+        $(".popup-sapo").toggleClass("active");
+      });
+    </script>
+
     <div class="popup-ngonngu">
       <div class="icon">
         <svg
@@ -11452,7 +9228,7 @@ Popup cart mobile
 
     <a target="_blank" class="livechat-mes" href="https://m.me/sapo.vn">
       <img
-        src="img/messenger.svg"
+        src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/messenger.svg?1749443141671"
         alt="Messenger"
       />
     </a>
