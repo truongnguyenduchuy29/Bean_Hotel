@@ -92,9 +92,12 @@
         }
         
         if (registerItem && loginItem) {
-            // Create new separator for user account
-            const newSeparator = document.createElement('li');
-            newSeparator.innerHTML = '<span>|</span>';
+            // Don't create new separator, just reuse existing one after login if it exists
+            let reuseableSeparator = null;
+            const loginNextSibling = loginItem.nextElementSibling;
+            if (loginNextSibling && loginNextSibling.innerHTML.includes('|')) {
+                reuseableSeparator = loginNextSibling;
+            }
             
             // Create user account element exactly like index.html
             const userAccount = document.createElement('li');
@@ -125,7 +128,7 @@
             registerItem.parentNode.removeChild(registerItem);
             loginItem.parentNode.removeChild(loginItem);
             
-            // Remove separator if exists
+            // Remove separator between register and login if exists
             if (separator) {
                 separator.parentNode.removeChild(separator);
             }
@@ -133,10 +136,21 @@
             // Insert user account at the beginning
             if (accountHeader.firstChild) {
                 accountHeader.insertBefore(userAccount, accountHeader.firstChild);
-                accountHeader.insertBefore(newSeparator, userAccount.nextSibling);
+                // Only add separator if we don't already have one that we can reuse
+                if (reuseableSeparator) {
+                    accountHeader.insertBefore(reuseableSeparator, userAccount.nextSibling);
+                } else {
+                    const newSeparator = document.createElement('li');
+                    newSeparator.innerHTML = '<span>&nbsp;|&nbsp;</span>';
+                    accountHeader.insertBefore(newSeparator, userAccount.nextSibling);
+                }
             } else {
                 accountHeader.appendChild(userAccount);
-                accountHeader.appendChild(newSeparator);
+                if (!reuseableSeparator) {
+                    const newSeparator = document.createElement('li');
+                    newSeparator.innerHTML = '<span>&nbsp;|&nbsp;</span>';
+                    accountHeader.appendChild(newSeparator);
+                }
             }
             
             // Add click event for user account link to toggle dropdown
