@@ -6,6 +6,10 @@
   <title>Bean Hotel - Login</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- User Account CSS -->
+  <link rel="stylesheet" href="css/user-account.css">
+  <!-- Auth Management System -->
+  <script src="js/auth.js" type="text/javascript"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -43,6 +47,8 @@
   </div>
 
   <script>
+    // Check if user is already logged in (this will be handled by auth.js)
+    
     // Password toggle functionality
     const togglePassword = document.getElementById('togglePassword');
     const passwordInput = document.getElementById('password');
@@ -66,6 +72,13 @@
       // Get email value for username display
       const emailInput = document.querySelector('input[type="email"]');
       const email = emailInput.value;
+      
+      // Basic validation
+      if (!email || !passwordInput.value) {
+        alert('Vui lòng nhập đầy đủ email và mật khẩu!');
+        return;
+      }
+      
       const username = email.split('@')[0]; // Extract username from email
       
       // Store login state and username in localStorage
@@ -74,6 +87,13 @@
       
       // Show success popup
       successPopup.classList.add('show');
+      
+      // Use notification from auth.js if available
+      if (window.BeanHotelAuth && window.BeanHotelAuth.showNotification) {
+        setTimeout(function() {
+          window.BeanHotelAuth.showNotification('Đăng nhập thành công!');
+        }, 500);
+      }
       
       // Redirect to index.html after 2 seconds
       setTimeout(function() {
