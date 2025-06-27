@@ -1,17 +1,23 @@
 /* Contact Page Styles */
 .layout-contact {
-    padding: 50px 0;  /* Giảm padding theo chiều dọc */
+    padding: 60px 0;
     background-color: #f8f9fa;
 }
 
 .bg-white {
     background-color: white !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    border-radius: 0;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
-    min-height: 400px;  /* Giảm chiều cao tối thiểu */
-    width: 100%;  /* Đảm bảo chiều rộng tối đa */
+    min-height: 500px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .bg-pading {
@@ -27,6 +33,7 @@
     background: #D4A73A;
     z-index: 1;
     border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 .div-pos-pa::after {
@@ -37,65 +44,78 @@
     width: 60px;
     height: 60px;
     background: #D4A73A;
-    border-radius: 0;
+    border-radius: 50%;
+    opacity: 0.5;
 }
 
 /* Left side - Contact Form */
 .layout-contact .row .col-xl-7:first-child {
-    padding: 40px 50px;
+    padding: 50px;
     background-color: white;
     position: relative;
     z-index: 2;
+    border-radius: 10px 0 0 10px;
 }
 
 .title-contact .title {
-    font-size: 22px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.title-contact .title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background: #D4A73A;
 }
 
 .title-contact p {
     color: #666;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.form-group {
+    line-height: 1.6;
     margin-bottom: 30px;
-    position: relative;
+    font-size: 15px;
 }
 
-/* Form styles - không có hiệu ứng */
 .form-group {
+    margin-bottom: 25px;
     position: relative;
-    margin-bottom: 20px;
 }
 
-.form-group.focused .form-control {
-    border-bottom-color: #D4A73A;
-}
-
-.form-group.focused .form-control::placeholder {
-    color: transparent;
-}
-
-.form-group label {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    color: #999;
-    font-size: 16px;
-    pointer-events: none;
+/* Form styles - improved */
+.form-control {
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
     transition: all 0.3s ease;
-    transform-origin: left top;
 }
 
-.form-group.focused label,
-.form-group .form-control:not(:placeholder-shown) + label {
-    transform: translateY(-20px) scale(0.85);
-    color: #D4A73A;
+.form-control:focus {
+    border-color: #D4A73A;
+    box-shadow: 0 0 0 2px rgba(212, 167, 58, 0.2);
+}
+
+textarea.form-control {
+    height: 120px;
+    resize: none;
+}
+
+.form-control::placeholder {
+    color: #999;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.form-control:focus::placeholder {
+    opacity: 0.5;
 }
 
 .form-control {
