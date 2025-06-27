@@ -1,0 +1,440 @@
+/* Contact Page Styles */
+.layout-contact {
+    padding: 50px 0;  /* Giảm padding theo chiều dọc */
+    background-color: #f8f9fa;
+}
+
+.bg-white {
+    background-color: white !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;  /* Giảm chiều cao tối thiểu */
+    width: 100%;  /* Đảm bảo chiều rộng tối đa */
+}
+
+.bg-pading {
+    padding: 0;
+}
+
+.div-pos-pa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background: #D4A73A;
+    z-index: 1;
+    border-radius: 0;
+}
+
+.div-pos-pa::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #D4A73A;
+    border-radius: 0;
+}
+
+/* Left side - Contact Form */
+.layout-contact .row .col-xl-7:first-child {
+    padding: 40px 50px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.title-contact .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.title-contact p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Form styles - không có hiệu ứng */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group.focused .form-control {
+    border-bottom-color: #D4A73A;
+}
+
+.form-group.focused .form-control::placeholder {
+    color: transparent;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+.form-group.focused label,
+.form-group .form-control:not(:placeholder-shown) + label {
+    transform: translateY(-20px) scale(0.85);
+    color: #D4A73A;
+}
+
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #D4A73A;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #777;
+    font-weight: 400;
+}
+
+.content-area {
+    min-height: 100px;
+    max-height: 150px;
+    resize: vertical;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.btn-lienhe {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lienhe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-lienhe:hover::before {
+    left: 100%;
+}
+
+.btn-lienhe:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side - Contact Info */
+.layout-contact .row .col-xl-5:last-child {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.div-info-contact {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+}
+
+.div-pos-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: #D4A73A;
+    z-index: 1;
+}
+
+.div-pos-child::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    background: #D4A73A;
+}
+
+.title_info {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateX(10px);
+}
+
+.contact-box .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contact-box .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+.contact-box .content {
+    color: white;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.contact-box .content a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-box .content a:hover {
+    color: #D4A73A;
+}
+
+.contact-box .content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Map section */
+.map {
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map iframe {
+    width: 100% !important;
+    height: 400px !important;
+    border: none;
+}
+
+/* Success Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+    z-index: 9999;
+    transform: translateX(400px);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.notification .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+.notification .content {
+    flex: 1;
+}
+
+.notification .content h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notification .content p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.notification .close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.notification .close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Loading animation for submit button */
+.btn-lienhe.loading {
+    pointer-events: none;
+    position: relative;
+}
+
+.btn-lienhe.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-lienhe.loading span {
+    opacity: 0;
+}
+
+/* Form validation styles */
+.form-control.error {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Điều chỉnh container để rộng hơn */
+.layout-contact .container {
+    max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .layout-contact .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Breadcrumb styles */
+.bread-crumb {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+    color: #D4A73A;
+}
+
+.breadcrumb li strong {
+    color: #333;
+}
+
+.mr_lr svg {
+    width: 12px;
+    height: 12px;
+    margin: 0 10px;
+    fill: #999;
+}
