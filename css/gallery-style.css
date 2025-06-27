@@ -1,0 +1,91 @@
+/* Gallery Styles */
+.page_thu_vien_anh .img-tva {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.page_thu_vien_anh .img-tva:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page_thu_vien_anh .img-tva img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.page_thu_vien_anh .img-tva:hover img {
+  transform: scale(1.05);
+}
+
+.page_thu_vien_anh a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.title_module_index {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title_module_index .h2 {
+  font-size: 2.5rem;
+  color: #cd9a2b;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.title_module_index .h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #cd9a2b;
+}
+
+.wrap_background_aside {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page_thu_vien_anh .img-tva img {
+    height: 200px;
+  }
+  
+  .title_module_index .h2 {
+    font-size: 2rem;
+  }
+  
+  .wrap_background_aside {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page_thu_vien_anh .img-tva img {
+    height: 180px;
+  }
+  
+  .title_module_index .h2 {
+    font-size: 1.8rem;
+  }
+  
+  .wrap_background_aside {
+    padding: 15px;
+  }
+}
