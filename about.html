@@ -16,18 +16,18 @@
     <title>Về chúng tôi</title>
     <meta
       name="keywords"
-      content="Về chúng tôi, Bean Hotel, bean-hotel.mysapo.net"
+      content="Về chúng tôi, Bean Hotel"
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Về chúng tôi" />
     <meta
       property="og:image"
-      content="https://bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
+      content="img/logo.png"
     />
     <meta
       property="og:image:secure_url"
-      content="https://bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
+      content="img/logo.png"
     />
 
     <meta
@@ -118,7 +118,7 @@
     />
     <script>
       var Bizweb = Bizweb || {};
-      Bizweb.store = "bean-hotel.mysapo.net";
+      Bizweb.store = "localhost";
       Bizweb.id = 472947;
       Bizweb.theme = { id: 888072, name: "Bean Hotel", role: "main" };
       Bizweb.template = "page";
@@ -175,7 +175,7 @@
             "@type": "ListItem",
             "position": 1,
             "item": {
-              "@id": "https://bean-hotel.mysapo.net",
+              "@id": "/",
               "name": "Trang chủ"
             }
           },
@@ -196,7 +196,7 @@
         "@context": "http://schema.org",
         "@type": "Organization",
         "legalName": "Bean Hotel",
-        "url": "https://bean-hotel.mysapo.net",
+        "url": "/",
         "contactPoint": [
           {
             "@type": "ContactPoint",
@@ -213,7 +213,7 @@
         "@context": "http://schema.org",
         "@type": "WebSite",
         "name": "Bean Hotel",
-        "url": "https://bean-hotel.mysapo.net",
+        "url": "/",
         "potentialAction": {
           "@type": "SearchAction",
           "query-input": "required name=search_term"
@@ -888,7 +888,7 @@
                   <h3 class="title_sup">Đăng ký nhận tin</h3>
                   <div class="subscribe_form">
                     <form
-                      action="https://facebook.us7.list-manage.com/subscribe/post?u=97ba6d3ba28239250923925a8&id=4ef3a755a8"
+                      action="#"
                       method="post"
                       id="mc-embedded-subscribe-form"
                       name="mc-embedded-subscribe-form"
@@ -7583,7 +7583,7 @@ Popup cart mobile
         var imagepop = Bizweb.resizeImage(line_item.image, "compact");
         if (imagepop == "null" || imagepop == "" || imagepop == null) {
           imagepop =
-            "https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif";
+            "img/noimage.gif";
         }
         var variant_title = line_item.variant_title;
         if (variant_title === "Default Title") variant_title = "";
@@ -7869,7 +7869,7 @@ Popup cart mobile
             var prodImg = Bizweb.resizeImage(cartItem.image, "compact");
             if (prodImg == "null" || prodImg == "" || prodImg == null) {
               prodImg =
-                "https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif";
+                "img/noimage.gif";
             }
 
             // lấy properties cart
@@ -8729,19 +8729,19 @@ Popup cart mobile
       }
       var collection = new Array();
       collection[0] =
-        "<a href='/phong-don-tieu-chuan' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh1.jpg?v=1670338577307' alt='Phòng đơn tiêu chuẩn'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-tieu-chuan' title='Phòng đơn tiêu chuẩn'>Đã đặt Phòng đơn tiêu chuẩn</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-don-tieu-chuan' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đơn tiêu chuẩn'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-tieu-chuan' title='Phòng đơn tiêu chuẩn'>Đã đặt Phòng đơn tiêu chuẩn</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[1] =
-        "<a href='/phong-don-huong-bien' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh1eb6eb86adb63474a819ab595ee.jpg?v=1670338574237' alt='Phòng đơn view biển'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-huong-bien' title='Phòng đơn view biển'>Đã đặt Phòng đơn view biển</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-don-huong-bien' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đơn view biển'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-huong-bien' title='Phòng đơn view biển'>Đã đặt Phòng đơn view biển</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[2] =
-        "<a href='/phong-doi-tieu-chuan' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh12082233010354fb2894f5b1193.jpg?v=1670338573270' alt='Phòng đôi tiêu chuẩn'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-doi-tieu-chuan' title='Phòng đôi tiêu chuẩn'>Đã đặt Phòng đôi tiêu chuẩn</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-doi-tieu-chuan' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đôi tiêu chuẩn'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-doi-tieu-chuan' title='Phòng đôi tiêu chuẩn'>Đã đặt Phòng đôi tiêu chuẩn</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[3] =
-        "<a href='/phong-don-vip' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh1a6283d038ec94b4abbca2d4e02.jpg?v=1670338568540' alt='Phòng đơn vip'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-vip' title='Phòng đơn vip'>Đã đặt Phòng đơn vip</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-don-vip' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đơn vip'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-don-vip' title='Phòng đơn vip'>Đã đặt Phòng đơn vip</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[4] =
-        "<a href='/phong-gia-dinh' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh1b11858800dc04b9b99c8ef13c0.jpg?v=1670338567667' alt='Phòng gia đình'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-gia-dinh' title='Phòng gia đình'>Đã đặt Phòng gia đình</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-gia-dinh' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng gia đình'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-gia-dinh' title='Phòng gia đình'>Đã đặt Phòng gia đình</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[5] =
-        "<a href='/phong-hang-sang' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267' alt='Phòng hạng sang'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-hang-sang' title='Phòng hạng sang'>Đã đặt Phòng hạng sang</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-hang-sang' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng hạng sang'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-hang-sang' title='Phòng hạng sang'>Đã đặt Phòng hạng sang</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       collection[6] =
-        "<a href='/phong-doi-noi-lien' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='https://bizweb.dktcdn.net/100/472/947/products/anh10baaa84820da4c20a93768986f.jpg?v=1670338563430' alt='Phòng đôi nối liền'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-doi-noi-lien' title='Phòng đôi nối liền'>Đã đặt Phòng đôi nối liền</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
+        "<a href='/phong-doi-noi-lien' class='jas-sale-pop-img mr__20'><img width='370' height='480' src='img/anh1.jpg' alt='Phòng đôi nối liền'/></a><div class='jas-sale-pop-content'><h4 class='fs__12 fwm mg__0 jas-sale-name'>Sản phẩm</h4><h3 class='mg__0 mt__5 mb__5 fs__18'><a href='/phong-doi-noi-lien' title='Phòng đôi nối liền'>Đã đặt Phòng đôi nối liền</a></h3><span class='fs__12 jas-sale-pop-timeago'></span></div><span class='pe-7s-close pa fs__20'></span>";
       fisherYates(collection);
       function SalesPop() {
         if ($(".jas-sale-pop").length < 0) return;
@@ -8873,7 +8873,7 @@ Popup cart mobile
           <li class="addThis_item">
             <a
               class="addThis_item--icon"
-              href="https://zalo.me/19006750"
+              href="#"
               target="_blank"
               rel="nofollow noreferrer"
               aria-label="zalo"
@@ -9045,7 +9045,7 @@ Popup cart mobile
               />
             </svg>
             <a
-              href="https://apps.sapo.vn/danh-gia-san-pham-v2"
+              href="#"
               target="_blank"
               title="Đánh giá sản phẩm"
               >Đánh giá sản phẩm</a
@@ -9064,7 +9064,7 @@ Popup cart mobile
               />
             </svg>
             <a
-              href="https://apps.sapo.vn/ae-da-ngon-ngu"
+              href="#"
               target="_blank"
               title="Đa ngôn ngữ"
               >Đa ngôn ngữ</a
