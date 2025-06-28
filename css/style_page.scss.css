@@ -76,7 +76,6 @@
     #b88a27 0%,
     #cd9a2b 52%,
     #b88a27 100%
-  )
   );
 }
 .page-store .col-left .option-chos .group {
@@ -164,37 +163,15 @@
 .page-store .col-left .option-chos .info-store .store-list .store-name span a {
   color: #747474;
 }
-.page-store
-  .col-left
-  .option-chos
-  .info-store
-  .store-list
-  .store-name
-  span
-  a:hover {
+.page-store .col-left .option-chos .info-store .store-list .store-name span a:hover {
   color: #cd9a2b;
 }
-.page-store
-  .col-left
-  .option-chos
-  .info-store
-  .store-list
-  .store-name
-  span
-  .icon {
+.page-store .col-left .option-chos .info-store .store-list .store-name span .icon {
   top: -1px;
   left: 0;
   position: absolute;
 }
-.page-store
-  .col-left
-  .option-chos
-  .info-store
-  .store-list
-  .store-name
-  span
-  .icon
-  svg {
+.page-store .col-left .option-chos .info-store .store-list .store-name span .icon svg {
   width: 13px;
   height: auto;
 }
