@@ -9703,7 +9703,7 @@
         <img src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/messenger.svg?1749443141671" alt="Messenger" />
     </a>
 
-    <!-- Script để render dữ liệu phòng từ room.json -->
+    <!-- Script để render dữ liệu phòng từ room.json và xử lý phân trang -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Fetch dữ liệu từ room.json
@@ -9717,79 +9717,224 @@
                     // Xóa dữ liệu cũ
                     roomContainer.innerHTML = '';
 
-                    // Render từng phòng
-                    rooms.forEach(room => {
-                        // Trích xuất thông tin từ dữ liệu
-                        const url = room.url;
-                        const id = room.id; // Sử dụng id trực tiếp từ JSON
-                        const capacity = room.details[0]; // Lấy thông tin số khách từ mảng details
-                        const size = room.details[1]; // Lấy thông tin diện tích từ mảng details
+                    // Thiết lập phân trang - trang 1: tất cả các phòng ngoại trừ "phòng đôi nối liền"
+                    // trang 2: chỉ hiển thị "phòng đôi nối liền"
+                    const roomsPerPage = 12;
+                    const currentPage = 1; // Mặc định hiển thị trang 1
+                    let totalPages = 2; // Cố định 2 trang
 
-                        // Giữ nguyên giá từ dữ liệu JSON
-                        const price = room.price;
+                    // Phân loại phòng theo trang
+                    const roomsByPage = {
+                        1: rooms.filter(room => room.id !== 'phong-doi-noi-lien'),
+                        2: rooms.filter(room => room.id === 'phong-doi-noi-lien')
+                    };
 
-                        // Tạo mã HTML cho mỗi phòng
-                        const roomHtml = `
-                            <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                                <div class="item_product_main">
-                                    <div class="alper-product-item">
-                                        <div class="item-product-img">
-                                            <a class="image_thumb" href="${url}" title="${room.name}">
-                                                <img width="480" height="272" class="lazyload"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="${room.image}"
-                                                    alt="${room.name}" />
-                                            </a>
-                                        </div>
-                                        <div class="info-room clearfix">
-                                            <h3 class="name-room">
-                                                <a href="${url}" title="${room.name}">${room.name}</a>
-                                            </h3>
-                                            <div class="tag-room">
-                                                <ul class="list_tag_room">
-                                                    ${room.features && room.features.slice(0, 5).map((feature, index) => `
-                                                        <li>
-                                                            <img width="32" height="32"
-                                                                src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${index + 1}.svg?1749443141671"
-                                                                alt="${feature}" />
-                                                        </li>
-                                                    `).join('')}
-                                                </ul>
+                    // Hàm scroll lên đầu trang
+                    function scrollToTop() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Hàm render phòng theo trang
+                    function renderRoomsByPage(pageNumber) {
+                        // Scroll lên đầu trang
+                        scrollToTop();
+
+                        // Xóa danh sách phòng hiện tại
+                        roomContainer.innerHTML = '';
+
+                        // Lấy danh sách phòng của trang hiện tại
+                        const currentRooms = roomsByPage[pageNumber] || [];
+
+                        // Render từng phòng
+                        currentRooms.forEach(room => {
+                            // Trích xuất thông tin từ dữ liệu
+                            const url = room.url;
+                            const id = room.id; // Sử dụng id trực tiếp từ JSON
+                            const capacity = room.details[0]; // Lấy thông tin số khách từ mảng details
+                            const size = room.details[1]; // Lấy thông tin diện tích từ mảng details
+
+                            // Giữ nguyên giá từ dữ liệu JSON
+                            const price = room.price;
+
+                            // Tạo mã HTML cho mỗi phòng
+                            const roomHtml = `
+                                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                    <div class="item_product_main" data-room-id="${id}">
+                                        <div class="alper-product-item">
+                                            <div class="item-product-img">
+                                                <a class="image_thumb" href="${url}" title="${room.name}">
+                                                    <img width="480" height="272" class="lazyload"
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                        data-src="${room.image}"
+                                                        alt="${room.name}" />
+                                                </a>
                                             </div>
-                                            <div class="tag-rivew">
-                                                <ul class="list_tag_review">
-                                                    <li>${capacity}</li>
-                                                    <li>${size}</li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-info-room">
-                                                <div class="price-room">
-                                                    <span class="price">${price}</span>
+                                            <div class="info-room clearfix">
+                                                <h3 class="name-room">
+                                                    <a href="${url}" title="${room.name}">${room.name}</a>
+                                                </h3>
+                                                <div class="tag-room">
+                                                    <ul class="list_tag_room">
+                                                        ${room.features && room.features.slice(0, 5).map((feature, index) => `
+                                                            <li>
+                                                                <img width="32" height="32"
+                                                                    src="/img/tag_icon_${index + 1}.svg"
+                                                                    alt="${feature}" />
+                                                            </li>
+                                                        `).join('')}
+                                                    </ul>
                                                 </div>
-                                                <div class="booking-room">
-                                                    <a href="${url}" title="Đặt phòng" class="btn-booking">ĐẶT PHÒNG</a>
+                                                <div class="tag-rivew">
+                                                    <ul class="list_tag_review">
+                                                        <li>${capacity}</li>
+                                                        <li>${size}</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-info-room">
+                                                    <div class="price-room">
+                                                        <span class="price">${price}</span>
+                                                    </div>
+                                                    <div class="booking-room">
+                                                        <a href="${url}" title="Đặt phòng" class="btn-booking">ĐẶT PHÒNG</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            `;
+
+                            // Thêm HTML vào container
+                            roomContainer.innerHTML += roomHtml;
+                        });
+
+                        // Khởi tạo lại lazy load cho các hình ảnh
+                        if (window.awe_lazyloadImage && typeof window.awe_lazyloadImage === 'function') {
+                            window.awe_lazyloadImage();
+                        }
+
+                        // Cập nhật UI phân trang
+                        updatePaginationUI(pageNumber);
+                    }
+
+                    // Hàm cập nhật UI phân trang
+                    function updatePaginationUI(currentPage) {
+                        const paginationContainer = document.getElementById('pagination-container');
+                        if (!paginationContainer) return;
+
+                        // Xóa phân trang cũ
+                        paginationContainer.innerHTML = '';
+
+                        // Tạo nút trang trước
+                        const prevButton = document.createElement('a');
+                        prevButton.href = '#';
+                        prevButton.className = 'pagination-link prev-page' + (currentPage === 1 ? ' disabled' : '');
+                        prevButton.innerHTML = '&laquo;';
+                        prevButton.onclick = function (e) {
+                            e.preventDefault();
+                            if (currentPage > 1) {
+                                renderRoomsByPage(currentPage - 1);
+                            }
+                        };
+                        paginationContainer.appendChild(prevButton);
+
+                        // Tạo các nút số trang
+                        for (let i = 1; i <= totalPages; i++) {
+                            const pageButton = document.createElement('a');
+                            pageButton.href = '#';
+                            pageButton.className = 'pagination-link page-number' + (i === currentPage ? ' active' : '');
+                            pageButton.textContent = i;
+                            pageButton.onclick = function (e) {
+                                e.preventDefault();
+                                renderRoomsByPage(i);
+                            };
+                            paginationContainer.appendChild(pageButton);
+                        }
+
+                        // Tạo nút trang sau
+                        const nextButton = document.createElement('a');
+                        nextButton.href = '#';
+                        nextButton.className = 'pagination-link next-page' + (currentPage === totalPages ? ' disabled' : '');
+                        nextButton.innerHTML = '&raquo;';
+                        nextButton.onclick = function (e) {
+                            e.preventDefault();
+                            if (currentPage < totalPages) {
+                                renderRoomsByPage(currentPage + 1);
+                            }
+                        };
+                        paginationContainer.appendChild(nextButton);
+                    }
+
+                    // Tạo phần tử chứa phân trang nếu chưa có
+                    if (!document.getElementById('pagination-container')) {
+                        const paginationDiv = document.createElement('div');
+                        paginationDiv.className = 'pagination';
+                        paginationDiv.innerHTML = `
+                            <div id="pagination-container" class="pagination-links"></div>
                         `;
 
-                        // Thêm HTML vào container
-                        roomContainer.innerHTML += roomHtml;
-                    });
-
-                    // Khởi tạo lại lazy load cho các hình ảnh
-                    if (window.awe_lazyloadImage && typeof window.awe_lazyloadImage === 'function') {
-                        window.awe_lazyloadImage();
+                        // Thêm vào sau container sản phẩm
+                        const productsContainer = document.querySelector('.products-view');
+                        if (productsContainer) {
+                            productsContainer.appendChild(paginationDiv);
+                        }
                     }
+
+                    // Render trang đầu tiên
+                    renderRoomsByPage(currentPage);
                 })
                 .catch(error => {
                     console.error('Lỗi khi tải dữ liệu phòng:', error);
                 });
         });
     </script>
+
+    <style>
+        /* CSS cho phân trang */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .pagination-links {
+            display: flex;
+            gap: 5px;
+        }
+
+        .pagination-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 5px 10px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+
+        .pagination-link:hover {
+            background-color: #eee;
+        }
+
+        .pagination-link.active {
+            background-color: #cd9a2b;
+            color: white;
+            border-color: #cd9a2b;
+        }
+
+        .pagination-link.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    </style>
 </body>
 
 </html>
