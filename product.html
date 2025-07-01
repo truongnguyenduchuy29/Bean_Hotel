@@ -1403,29 +1403,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pagenav">
-                                    <nav class="collection-paginate clearfix relative nav_pagi w_100">
-                                        <ul class="pagination clearfix">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#">&laquo;</a>
-                                            </li>
-
-                                            <li class="active page-item disabled">
-                                                <a class="page-link" href="javascript:;"
-                                                    style="pointer-events: none">1</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link" onclick="doSearch(2)" href="javascript:;">2</a>
-                                            </li>
-
-                                            <li class="page-item">
-                                                <a class="page-link link-next-pre" onclick="doSearch(2)"
-                                                    href="javascript:;" title="2">&raquo;</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -9768,7 +9745,7 @@
                                                 <a class="image_thumb" href="${url}" title="${room.name}">
                                                     <img width="480" height="272" class="lazyload"
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                        data-src="${room.image}"
+                                                        data-src="${room.image[0]}"
                                                         alt="${room.name}" />
                                                 </a>
                                             </div>

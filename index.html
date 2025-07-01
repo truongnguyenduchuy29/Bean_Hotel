@@ -10074,6 +10074,208 @@ Ajax Bizweb Add To Cart
         });
       });
     </script>
+
+    <!-- Script xử lý hiển thị dữ liệu phòng từ JSON -->
+    <script>
+      // Hàm để tải dữ liệu phòng từ JSON và hiển thị
+      async function loadAndDisplayRooms() {
+        try {
+          const response = await fetch('data/room.json');
+          const rooms = await response.json();
+
+          // Lọc phòng theo loại
+          const singleRooms = rooms.filter(room => room.type.includes('single') && !room.type.includes('vip'));
+          const doubleRooms = rooms.filter(room => room.type.includes('double') || room.type.includes('twin'));
+          const vipRooms = rooms.filter(room => room.type.includes('vip') || room.type.includes('luxury') || room.type.includes('family') || room.type.includes('apartment') || room.type === 'connecting');
+
+          // Hiển thị phòng đơn
+          const singleRoomContainer = document.querySelector('.section_room .row-room');
+          if (singleRoomContainer) {
+            singleRoomContainer.innerHTML = '';
+            singleRooms.forEach(room => {
+              singleRoomContainer.innerHTML += createRoomHTML(room);
+            });
+          }
+
+          // Hiển thị phòng đôi
+          const doubleRoomContainer = document.querySelector('.section_room_double .row-room');
+          if (doubleRoomContainer) {
+            doubleRoomContainer.innerHTML = '';
+            doubleRooms.forEach(room => {
+              doubleRoomContainer.innerHTML += createRoomHTML(room);
+            });
+          }
+
+          // Hiển thị phòng VIP
+          displayVIPRooms(vipRooms);
+
+        } catch (error) {
+          console.error('Lỗi khi tải dữ liệu phòng:', error);
+        }
+      }
+
+      // Hàm tạo HTML cho mỗi phòng đơn và phòng đôi
+      function createRoomHTML(room) {
+        const features = room.features.map(feature => {
+          let iconSrc = '';
+          if (feature.includes('Cafe')) iconSrc = 'img/tag_icon_1.svg';
+          else if (feature.includes('Gọi Đồ Ăn')) iconSrc = 'img/tag_icon_2.svg';
+          else if (feature.includes('Bếp Nấu')) iconSrc = 'img/tag_icon_3.svg';
+          else if (feature.includes('Bồn Tắm')) iconSrc = 'img/tag_icon_4.svg';
+          else if (feature.includes('Internet')) iconSrc = 'img/tag_icon_5.svg';
+
+          return `
+            <li>
+              <img width="32" height="32" src="${iconSrc}" alt="${feature}" />
+            </li>
+          `;
+        }).join('');
+
+        const details = room.details.map(detail => {
+          return `<li>${detail}</li>`;
+        }).join('');
+
+        let imageSrc = room.image[0]; // Lấy hình ảnh đầu tiên từ mảng image trong JSON
+
+        return `
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="item_product_main">
+              <div class="alper-product-item">
+                <div class="item-product-img">
+                  <a class="image_thumb" href="${room.url}" title="${room.name}"><img
+                      width="480" height="272" 
+                      src="${imageSrc}" alt="${room.name}" /></a>
+                </div>
+                <div class="info-room clearfix">
+                  <h3 class="name-room">
+                    <a href="${room.url}" title="${room.name}">${room.name}</a>
+                  </h3>
+                  <div class="tag-room">
+                    <ul class="list_tag_room">
+                      ${features}
+                    </ul>
+                  </div>
+                  <div class="tag-rivew">
+                    <ul class="list_tag_review">
+                      ${details}
+                    </ul>
+                  </div>
+                  <div class="product-info-room">
+                    <div class="price-room">
+                      <span class="price">${room.price}</span>
+                    </div>
+                    <div class="booking-room">
+                      <a href="${room.url}" title="Đặt phòng" class="btn-booking">ÐẶT PHÒNG</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Hàm hiển thị phòng VIP
+      function displayVIPRooms(vipRooms) {
+        if (vipRooms.length === 0) return;
+
+        // Phòng VIP chính
+        const mainVipRoom = vipRooms[0];
+        const mainVipContainer = document.querySelector('.section_room_vip .item_vip_big');
+
+        if (mainVipContainer) {
+          let mainImageSrc = mainVipRoom.image[0];
+
+          const featuresMain = mainVipRoom.features.map(feature => {
+            let iconSrc = '';
+            if (feature.includes('Cafe')) iconSrc = 'img/tag_icon_1.svg';
+            else if (feature.includes('Gọi Đồ Ăn')) iconSrc = 'img/tag_icon_2.svg';
+            else if (feature.includes('Bếp Nấu')) iconSrc = 'img/tag_icon_3.svg';
+            else if (feature.includes('Bồn Tắm')) iconSrc = 'img/tag_icon_4.svg';
+            else if (feature.includes('Internet')) iconSrc = 'img/tag_icon_5.svg';
+
+            return `
+              <li>
+                <img width="32" height="32" src="${iconSrc}" alt="${feature}" />
+              </li>
+            `;
+          }).join('');
+
+          const mainVipHTML = `
+            <div class="img_vip_full">
+              <a class="image_thumb" href="${mainVipRoom.url}" title="${mainVipRoom.name}"><img width="480" height="272"
+                  
+                  src="${mainImageSrc}" alt="${mainVipRoom.name}" /></a>
+            </div>
+            <div class="info-vip">
+              <h3 class="name-room">
+                <a href="${mainVipRoom.url}" title="${mainVipRoom.name}">${mainVipRoom.name}</a>
+              </h3>
+              <div class="info-room">
+                <div class="tag-rivew-smal">
+                  <div class="tag-rivew">
+                    <img width="512" height="512" src="img/tag-user.svg" title="${mainVipRoom.details[0]}" />
+                    <p>${mainVipRoom.details[0]}</p>
+                  </div>
+                  <div class="tag-rivew">
+                    <img width="512" height="512" src="img/tag-meters.svg" title="${mainVipRoom.details[1]}" />
+                    <p>${mainVipRoom.details[1]}</p>
+                  </div>
+                </div>
+                <div class="tag-room">
+                  <ul class="list_tag_room">
+                    ${featuresMain}
+                  </ul>
+                </div>
+              </div>
+              <div class="content-room-small">
+                Với tiêu chí ngày càng nâng cao và đáp ứng mọi nhu cầu của
+                khách hàng chúng tôi cung cấp thêm loại phòng đẳng cấp...
+              </div>
+              <div class="vip-dat-hang">
+                <a href="${mainVipRoom.url}" title="Đặt phòng" class="btn-booking">ÐẶT PHÒNG TỪ ${mainVipRoom.price}</a>
+              </div>
+            </div>
+          `;
+
+          mainVipContainer.innerHTML = mainVipHTML;
+        }
+
+        // Các phòng VIP phụ
+        const otherVipContainer = document.querySelector('.section_room_vip .row.row-room');
+        if (otherVipContainer && vipRooms.length > 1) {
+          otherVipContainer.innerHTML = '';
+
+          // Hiển thị các phòng VIP còn lại
+          for (let i = 1; i < vipRooms.length && i < 5; i++) {
+            const room = vipRooms[i];
+
+            // Sửa đường dẫn hình ảnh
+            let imageSrc = room.image[0];
+
+
+            otherVipContainer.innerHTML += `
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="item-vip-small">
+                  <a class="image_thumb" href="${room.url}" title="${room.name}"><img width="480"
+                      height="272"
+                      src="${imageSrc}" alt="${room.name}" /></a>
+                  <div class="name_price clearfix">
+                    <h3 class="name-room">
+                      <a href="${room.url}" title="${room.name}">${room.name}</a>
+                    </h3>
+                    <span class="price">${room.price}</span>
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+        }
+      }
+
+      // Gọi hàm khi trang đã tải xong
+      document.addEventListener('DOMContentLoaded', loadAndDisplayRooms);
+    </script>
 </body>
 
 </html>
