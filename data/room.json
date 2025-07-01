@@ -1,6 +1,6 @@
 [
     {
-        "name": "Phòng đơn                                                            tiêu chuẩn",
+        "name": "Phòng đơn tiêu chuẩn",
         "url": "/phong-don-tieu-chuan",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1.jpg?v=1670338577307",
         "price": "500.000₫/Đêm",
@@ -15,7 +15,7 @@
         ]
     },
     {
-        "name": "Phòng                                                              đơn view thành phố",
+        "name": "Phòng đơn view thành phố",
         "url": "/phong-don-view-thanh-pho",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp21.jpg?v=1670338576510",
         "price": "700.000₫/Đêm",
@@ -31,7 +31,7 @@
         ]
     },
     {
-        "name": "Phòng đơn                                                                view sân vườn",
+        "name": "Phòng đơn view sân vườn",
         "url": "/phong-don-view-san-vuon",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11a713f0cbaa54ea595b6bb5e1b.jpg?v=1670338575473",
         "price": "800.000₫/Đêm",
@@ -43,11 +43,11 @@
             "Cafe Buổi Sáng",
             "Gọi Đồ Ăn Tại Phòng",
             "Bồn Tắm Hoa Sen",
-            "Internet Không Giây"
+            "Internet Không Dây"
         ]
     },
     {
-        "name": "Phòng đơn view                                                                biển",
+        "name": "Phòng đơn view biển",
         "url": "/phong-don-huong-bien",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1eb6eb86adb63474a819ab595ee.jpg?v=1670338574237",
         "price": "900.000₫/Đêm",
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "name": "Phòng                                                               đôi tiêu chuẩn",
+        "name": "Phòng đôi tiêu chuẩn",
         "url": "/phong-doi-tieu-chuan",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh12082233010354fb2894f5b1193.jpg?v=1670338573270",
         "price": "950.000₫/Đêm",
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "name": "Phòng                                                               đôi view thành phố",
+        "name": "Phòng đôi view thành phố",
         "url": "/phong-doi-view-thanh-pho",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11ccbd4ad859c41ff9fda9cdd73.jpg?v=1670338572250",
         "price": "1.100.000₫/Đêm",
@@ -97,7 +97,7 @@
         ]
     },
     {
-        "name": "Phòng                                                               đôi view sân vườn",
+        "name": "Phòng đôi view sân vườn",
         "url": "/phong-doi-view-san-vuon",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1ada4b333e71e42408487c48089.jpg?v=1670338570513",
         "price": "1.200.000₫/Đêm",
@@ -114,7 +114,7 @@
         ]
     },
     {
-        "name": "Phòng                                                                đôi 2 giường đôi",
+        "name": "Phòng đôi 2 giường đôi",
         "url": "/phong-doi-2-giuong-doi",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1120e24401b1a4fb7b5535ae97a.jpg?v=1670338569467",
         "price": "1.500.000₫/Đêm",
@@ -148,7 +148,7 @@
         ]
     },
     {
-        "name": "Phòng gia\n                                                                đình",
+        "name": "Phòng gia đình",
         "url": "/phong-gia-dinh",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1b11858800dc04b9b99c8ef13c0.jpg?v=1670338567667",
         "price": "3.000.000₫/Đêm",
@@ -165,7 +165,7 @@
         ]
     },
     {
-        "name": "Căn hộ                                                               chung cư",
+        "name": "Căn hộ chung cư",
         "url": "/can-ho-chung-cu",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh153bb971e15444fefa78e4ae22b.jpg?v=1670338566430",
         "price": "2.700.000₫/Đêm",
@@ -197,9 +197,9 @@
             "Bồn Tắm Hoa Sen",
             "Internet Không Dây"
         ]
-    }
+    },
     {
-        "name": "Phòng đôi nối liềnliền",
+        "name": "Phòng đôi nối liền",
         "url": "/phong-doi-noi-lien",
         "image": "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267",
         "price": "4.000.000₫/Đêm",
