@@ -1,0 +1,74 @@
+/* Room filter styles */
+.room-type-filter {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-weight: 400;
+    color: #333;
+}
+
+.room-type-filter:hover {
+    background-color: #f8f9fa;
+    border-left-color: #cd9a2b;
+    color: #cd9a2b;
+}
+
+.room-type-filter.active {
+    border-left-color: #cd9a2b;
+    font-weight: 600;
+    color: #cd9a2b;
+    background-color: #f8f9fa;
+}
+
+/* Header menu highlight styles */
+.nav-item-lv2 a.active {
+    color: #cd9a2b !important;
+    font-weight: 600;
+}
+
+.nav-item-lv2 a:hover {
+    color: #cd9a2b !important;
+}
+
+.room-highlights {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.room-highlights li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.room-highlights li i {
+    color: #cd9a2b;
+    margin-right: 5px;
+}
+
+.btn-view-detail, .btn-book {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+/* Add loading spinner for rooms */
+.room-container.loading:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #cd9a2b;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

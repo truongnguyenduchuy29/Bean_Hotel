@@ -10142,13 +10142,13 @@ Ajax Bizweb Add To Cart
             <div class="item_product_main">
               <div class="alper-product-item">
                 <div class="item-product-img">
-                  <a class="image_thumb" href="${room.url}" title="${room.name}"><img
+                  <a class="image_thumb" href="room_detail.html?id=${room.id}" title="${room.name}"><img
                       width="480" height="272" 
                       src="${imageSrc}" alt="${room.name}" /></a>
                 </div>
                 <div class="info-room clearfix">
                   <h3 class="name-room">
-                    <a href="${room.url}" title="${room.name}">${room.name}</a>
+                    <a href="room_detail.html?id=${room.id}" title="${room.name}">${room.name}</a>
                   </h3>
                   <div class="tag-room">
                     <ul class="list_tag_room">
@@ -10165,7 +10165,7 @@ Ajax Bizweb Add To Cart
                       <span class="price">${room.price}</span>
                     </div>
                     <div class="booking-room">
-                      <a href="${room.url}" title="Đặt phòng" class="btn-booking">ÐẶT PHÒNG</a>
+                      <a href="room_detail.html?id=${room.id}" title="Đặt phòng" class="btn-booking">ÐẶT PHÒNG</a>
                     </div>
                   </div>
                 </div>
@@ -10275,7 +10275,134 @@ Ajax Bizweb Add To Cart
 
       // Gọi hàm khi trang đã tải xong
       document.addEventListener('DOMContentLoaded', loadAndDisplayRooms);
+
+      // Thêm chức năng lọc phòng theo loại
+      document.addEventListener('DOMContentLoaded', function () {
+        const roomFilters = document.querySelectorAll('.room-filter');
+
+        // Thêm sự kiện click cho mỗi liên kết lọc
+        roomFilters.forEach(filter => {
+          filter.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Lấy loại phòng từ thuộc tính data-type
+            const roomType = this.getAttribute('data-type');
+
+            // Xóa class active từ tất cả các bộ lọc
+            roomFilters.forEach(f => f.parentElement.classList.remove('active'));
+
+            // Thêm class active cho bộ lọc được chọn
+            this.parentElement.classList.add('active');
+
+            // Lọc và hiển thị phòng theo loại
+            filterRoomsByType(roomType);
+          });
+        });
+      });
+
+      // Hàm lọc và hiển thị phòng theo loại
+      async function filterRoomsByType(roomType) {
+        try {
+          const response = await fetch('data/room.json');
+          const rooms = await response.json();
+
+          let filteredRooms = [];
+
+          // Lọc phòng theo loại được chọn
+          if (roomType === 'single') {
+            filteredRooms = rooms.filter(room => room.type.includes('single') && !room.type.includes('vip'));
+            // Hiển thị tiêu đề "Phòng đơn"
+            document.querySelector('.title_module_index h2 a').textContent = 'Phòng đơn';
+          } else if (roomType === 'double') {
+            filteredRooms = rooms.filter(room => room.type.includes('double') || room.type.includes('twin'));
+            // Hiển thị tiêu đề "Phòng đôi"
+            document.querySelector('.title_module_index h2 a').textContent = 'Phòng đôi';
+          } else if (roomType === 'vip') {
+            filteredRooms = rooms.filter(room => room.type.includes('vip') || room.type.includes('luxury') || room.type.includes('family') || room.type.includes('apartment') || room.type === 'connecting');
+            // Hiển thị tiêu đề "Phòng VIP"
+            document.querySelector('.title_module_index h2 a').textContent = 'Phòng VIP';
+          } else {
+            // Nếu không có loại nào được chọn, hiển thị tất cả phòng
+            filteredRooms = rooms;
+            document.querySelector('.title_module_index h2 a').textContent = 'Phòng';
+          }
+
+          // Hiển thị phòng đã lọc
+          const roomContainer = document.querySelector('.section_room .row-room');
+          if (roomContainer) {
+            roomContainer.innerHTML = '';
+            filteredRooms.forEach(room => {
+              roomContainer.innerHTML += createRoomHTML(room);
+            });
+          }
+
+          // Cuộn lên phần hiển thị phòng
+          document.querySelector('.section_room').scrollIntoView({ behavior: 'smooth' });
+
+        } catch (error) {
+          console.error('Lỗi khi lọc phòng:', error);
+        }
+      }
     </script>
+  <!-- Script cập nhật liên kết phòng -->
+  <script>
+    $(document).ready(function() {
+      console.log("Đang cập nhật các liên kết phòng...");
+      
+      // Hàm cập nhật liên kết
+      function updateRoomLinks() {
+        // Cập nhật tất cả liên kết phòng để trỏ về room_detail.html với ID phù hợp
+        $('a').each(function() {
+          const href = $(this).attr('href');
+          
+          // Bỏ qua nếu không có href hoặc đã là đường dẫn đúng
+          if (!href || href.includes('room_detail.html') || href.includes('product.html?type=')) return;
+          
+          // Xử lý liên kết bắt đầu bằng "/phong-" hoặc "phong-"
+          if (href.startsWith('/phong-') || href.startsWith('phong-')) {
+            // Đối với các liên kết danh mục như /phong-don, /phong-doi, /phong-vip
+            if (href === '/phong-don' || href === '/phong-doi' || href === '/phong-vip' ||
+                href === 'phong-don' || href === 'phong-doi' || href === 'phong-vip') {
+              // Trỏ đến product.html với tham số type
+              const type = href.startsWith('/') ? href.substring(1) : href;
+              $(this).attr('href', `product.html?type=${type}`);
+              console.log(`Đã cập nhật liên kết danh mục: ${href} -> product.html?type=${type}`);
+              return;
+            }
+            
+            // Trích xuất id phòng từ href
+            const roomId = href.startsWith('/') ? href.substring(1) : href;
+            
+            // Cập nhật href mới trỏ đến room_detail.html với id phù hợp
+            $(this).attr('href', `room_detail.html?id=${roomId}`);
+            console.log(`Đã cập nhật liên kết: ${href} -> room_detail.html?id=${roomId}`);
+          }
+        });
+      }
+
+      // Chạy cập nhật ban đầu
+      updateRoomLinks();
+      
+      // Thiết lập MutationObserver để theo dõi thay đổi DOM
+      // Điều này sẽ bắt các phần tử mới được thêm vào DOM sau khi trang đã tải
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+            // Các phần tử mới đã được thêm vào DOM, cập nhật lại các liên kết
+            updateRoomLinks();
+          }
+        });
+      });
+      
+      // Bắt đầu quan sát toàn bộ document với các tùy chọn cấu hình
+      observer.observe(document.body, {
+        childList: true, // quan sát thêm/xóa các phần tử con
+        subtree: true    // áp dụng cho toàn bộ cây DOM
+      });
+      
+      console.log("Đã thiết lập theo dõi DOM để cập nhật liên kết phòng");
+    });
+  </script>
 </body>
 
 </html>

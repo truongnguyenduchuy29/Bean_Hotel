@@ -582,7 +582,7 @@
                                 </div>
 
                                 <div class="products-view products-view-grid list_hover_pro">
-                                    <div class="row">
+                                    <div class="row room-container">
                                         <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                                             <div class="item_product_main">
                                                 <div class="alper-product-item">
@@ -9728,8 +9728,8 @@
                         // Render từng phòng
                         currentRooms.forEach(room => {
                             // Trích xuất thông tin từ dữ liệu
-                            const url = room.url;
                             const id = room.id; // Sử dụng id trực tiếp từ JSON
+                            const dynamicUrl = `room_detail.html?id=${id}`; // Tạo URL động trỏ đến room_detail.html
                             const capacity = room.details[0]; // Lấy thông tin số khách từ mảng details
                             const size = room.details[1]; // Lấy thông tin diện tích từ mảng details
 
@@ -9742,7 +9742,7 @@
                                     <div class="item_product_main" data-room-id="${id}">
                                         <div class="alper-product-item">
                                             <div class="item-product-img">
-                                                <a class="image_thumb" href="${url}" title="${room.name}">
+                                                <a class="image_thumb" href="${dynamicUrl}" title="${room.name}">
                                                     <img width="480" height="272" class="lazyload"
                                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
                                                         data-src="${room.image[0]}"
@@ -9751,7 +9751,7 @@
                                             </div>
                                             <div class="info-room clearfix">
                                                 <h3 class="name-room">
-                                                    <a href="${url}" title="${room.name}">${room.name}</a>
+                                                    <a href="${dynamicUrl}" title="${room.name}">${room.name}</a>
                                                 </h3>
                                                 <div class="tag-room">
                                                     <ul class="list_tag_room">
@@ -9775,7 +9775,7 @@
                                                         <span class="price">${price}</span>
                                                     </div>
                                                     <div class="booking-room">
-                                                        <a href="${url}" title="Đặt phòng" class="btn-booking">ĐẶT PHÒNG</a>
+                                                        <a href="${dynamicUrl}" title="Đặt phòng" class="btn-booking">ĐẶT PHÒNG</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -9912,6 +9912,74 @@
             pointer-events: none;
         }
     </style>
+    <!-- Script filter phòng -->
+    <script src="js/room-filter.js"></script>
+    
+    <!-- Script cập nhật liên kết phòng -->
+    <script>
+        $(document).ready(function() {
+            console.log("Đang cập nhật các liên kết phòng trong product.html...");
+            
+            // Hàm cập nhật các liên kết phòng
+            function updateRoomLinks() {
+                // Cập nhật tất cả liên kết phòng trên trang
+                $('a').each(function() {
+                    const href = $(this).attr('href');
+                    
+                    // Bỏ qua nếu không có href hoặc đã là room_detail.html hoặc product.html?type=
+                    if (!href || href.includes('room_detail.html') || href.includes('product.html?type=')) return;
+                    
+                    // Xử lý liên kết bắt đầu bằng "/phong-" hoặc "phong-" hoặc "/can-ho-"
+                    if (href.startsWith('/phong-') || href.startsWith('phong-') || 
+                        href.startsWith('/can-ho-') || href.startsWith('can-ho-')) {
+                        
+                        // Xử lý các liên kết danh mục
+                        if (href === '/phong-don' || href === '/phong-doi' || href === '/phong-vip' ||
+                            href === 'phong-don' || href === 'phong-doi' || href === 'phong-vip') {
+                            // Trỏ đến product.html với tham số type
+                            const type = href.startsWith('/') ? href.substring(1) : href;
+                            $(this).attr('href', `product.html?type=${type}`);
+                            console.log(`Đã cập nhật liên kết danh mục: ${href} -> product.html?type=${type}`);
+                            return;
+                        }
+                        
+                        // Trích xuất id phòng từ href
+                        const roomId = href.startsWith('/') ? href.substring(1) : href;
+                        
+                        // Cập nhật href mới trỏ đến room_detail.html với id phù hợp
+                        $(this).attr('href', `room_detail.html?id=${roomId}`);
+                        console.log(`Đã cập nhật liên kết: ${href} -> room_detail.html?id=${roomId}`);
+                    }
+                });
+            }
+            
+            // Chạy lần đầu khi trang tải xong
+            updateRoomLinks();
+            
+            // Tạo MutationObserver để theo dõi các thay đổi DOM
+            // Đảm bảo các liên kết được cập nhật ngay cả khi được thêm động
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        // Khi có node mới được thêm vào, cập nhật lại các liên kết
+                        updateRoomLinks();
+                    }
+                });
+            });
+            
+            // Cấu hình và bắt đầu observer để theo dõi toàn bộ cây DOM
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+            
+            console.log("Đã thiết lập theo dõi thay đổi DOM để cập nhật liên kết phòng động.");
+        });
+    </script>
+            
+            console.log("Đã hoàn tất cập nhật các liên kết phòng");
+        });
+    </script>
 </body>
 
 </html>
