@@ -136,7 +136,7 @@ $(document).ready(function() {
         room.image.forEach((imgSrc, index) => {
             const slide = `
                 <div class="swiper-slide">
-                    <img height="600" width="340" src="${imgSrc}" alt="${room.name} - Ảnh ${index + 1}" class="img-responsive center-block">
+                    <img src="${imgSrc}" alt="${room.name} - Ảnh ${index + 1}" class="img-responsive center-block">
                 </div>
             `;
             swiperWrapper.append(slide);

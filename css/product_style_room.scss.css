@@ -1,0 +1,159 @@
+/* Product Style Room CSS */
+.product-room {
+  margin-bottom: 30px;
+}
+
+.product-room-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-room-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-room-img:hover img {
+  transform: scale(1.05);
+}
+
+.product-room-info {
+  padding: 15px 0;
+}
+
+.product-room-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product-room-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.product-room-title a:hover {
+  color: #cd9a2b;
+}
+
+.product-room-price {
+  font-size: 16px;
+  color: #cd9a2b;
+  font-weight: 600;
+}
+
+.product-room-meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.meta-item img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Room Detail Page */
+.room-gallery {
+  margin-bottom: 30px;
+}
+
+.room-detail-info h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.room-detail-price {
+  font-size: 22px;
+  color: #cd9a2b;
+  margin-bottom: 20px;
+}
+
+.room-detail-description {
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.room-features {
+  margin-bottom: 20px;
+}
+
+.room-features-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.room-features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.room-features-item {
+  display: flex;
+  align-items: center;
+}
+
+.room-features-item img {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.room-booking-btn {
+  background-color: #cd9a2b;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.room-booking-btn:hover {
+  background-color: #b88a24;
+}
+
+/* Related Rooms */
+.related-rooms {
+  margin-top: 50px;
+}
+
+.related-rooms-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.swiper-container {
+  padding: 10px 0 30px;
+}
+
+@media (max-width: 768px) {
+  .room-features-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .room-detail-info h1 {
+    font-size: 20px;
+  }
+}
