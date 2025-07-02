@@ -64,8 +64,7 @@ $(document).ready(function() {
 
     // Filter rooms based on type
     function filterRooms(type) {
-        if (!type || type === 'all') {
-            renderRooms(allRooms);
+        if (!type) {
             return;
         }
 
@@ -204,27 +203,9 @@ $(document).ready(function() {
         }
     });
     
-    // Add "All rooms" option to the nav menu if it doesn't exist
-    if ($('.nav-link[data-type="all"]').length === 0) {
-        $('.has-childs.active .dropdown-menu').prepend(
-            '<li class="nav-item-lv2">' +
-            '<a class="nav-link" href="#" data-type="all">Tất cả phòng</a>' +
-            '</li>'
-        );
-    }
+    // Removed "All rooms" option
     
-    // Handle the "All rooms" option
-    $(document).on('click', '.nav-link[data-type="all"]', function(e) {
-        e.preventDefault();
-        if (window.location.pathname === '/phong' || window.location.pathname === '/product.html') {
-            $('.nav-item-lv2 a').removeClass('active');
-            $(this).addClass('active');
-            filterRooms('all');
-            
-            // Update URL without the type parameter
-            history.pushState({}, '', window.location.pathname);
-        }
-    });
+    // Removed handler for "All rooms" option
     
     // Call this after loading rooms
     initializeMenuHighlighting();

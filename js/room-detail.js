@@ -223,14 +223,14 @@ $(document).ready(function() {
             basicInfoContainer.append(sizeInfo);
         }
         
-        // Thêm các tính năng đặc biệt nếu cần
-        if (room.features && room.features.length > 0) {
-            room.features.forEach((feature, index) => {
-                if (index < 3) { // Giới hạn số lượng feature hiển thị ở phần này
+        // Thêm các dịch vụ miễn phí nổi bật
+        if (room.freeServices && room.freeServices.length > 0) {
+            room.freeServices.forEach((service, index) => {
+                if (index < 3) { // Giới hạn số lượng dịch vụ hiển thị ở phần này
                     const featureInfo = `
                         <div class="item_tag_info">
-                            <img width="32" height="32" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${(index % 5) + 1}.svg?1749443141671" alt="${feature}" />
-                            ${feature}
+                            <img width="32" height="32" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${(index % 5) + 1}.svg?1749443141671" alt="${service}" />
+                            ${service}
                         </div>
                     `;
                     basicInfoContainer.append(featureInfo);

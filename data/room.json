@@ -15,48 +15,30 @@
             "02 Khách",
             "20m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 1,
         "size": "20m²",
         "description": "Các phòng trang nhã và dãy phòng trang nghiêm của chúng tôi gợi nhớ về một thời đại đã qua. Mỗi tính năng như đường cong, thảm sang trọng, trần nhà cao, phòng tắm lát đá cẩm thạch, thiết bị làm sạch và nhiều không gian đều được bố trí một cách chu đáo để gọi cho riêng bạn. Tông màu nâu phong phú và gỗ sồi tự nhiên tạo nên những khu bảo tồn yên tĩnh và yên tĩnh, được tôn lên một cách tuyệt vời bởi đồ nội thất trang nhã.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích ngoài trời",
-                "items": [
-                    "Karaoke",
-                    "Truyền hình cáp free",
-                    "BBQ",
-                    "Bàn ghế ngoài trời",
-                    "Ban công",
-                    "Sân hiên",
-                    "Sân vườn & Cây xanh",
-                    "Sân thượng"
-                ]
+                "items": ["Karaoke", "Truyền hình cáp free", "BBQ", "Bàn ghế ngoài trời", "Ban công", "Sân hiên", "Sân vườn & Cây xanh", "Sân thượng"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -76,47 +58,31 @@
             "02 Khách",
             "25m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 1,
         "size": "25m²",
         "description": "Phòng đơn view thành phố của chúng tôi mang đến trải nghiệm tuyệt vời với tầm nhìn tuyệt đẹp ra khu vực đô thị sôi động. Căn phòng được thiết kế hiện đại với nội thất sang trọng, ánh sáng tự nhiên, tạo không gian nghỉ ngơi lý tưởng. Phòng được trang bị đầy đủ tiện nghi cao cấp, bao gồm TV màn hình phẳng, minibar và phòng tắm riêng với bồn tắm hoa sen.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích ngoài trời",
-                "items": [
-                    "Karaoke",
-                    "Truyền hình cáp free",
-                    "BBQ",
-                    "Bàn ghế ngoài trời",
-                    "Ban công view thành phố"
-                ]
+                "items": ["Karaoke", "Truyền hình cáp free", "BBQ", "Bàn ghế ngoài trời", "Ban công view thành phố"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -128,7 +94,7 @@
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11a713f0cbaa54ea595b6bb5e1b.jpg?v=1670338575473",
             "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh4.jpg?v=1670338575473",
-            "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh38ef96029f15247fd8b1eed40ec.jpg?v=1670338574237"
+           "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh38ef96029f15247fd8b1eed40ec.jpg?v=1670338574237"
         ],
         "price": "800.000₫/Đêm",
         "priceValue": 800000,
@@ -136,50 +102,31 @@
             "02 Khách",
             "25m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 1,
         "size": "25m²",
         "description": "Phòng đơn view sân vườn tại Bean Hotel là không gian yên bình và thư giãn với cửa sổ hướng ra khu vườn xanh mát của khách sạn. Phòng được thiết kế tinh tế với nội thất ấm cúng, tạo cảm giác gần gũi với thiên nhiên. Quý khách có thể tận hưởng bữa sáng tự chọn, dịch vụ phòng 24/7 và các tiện ích cao cấp khác để có kỳ nghỉ thoải mái nhất.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Trà và cà phê miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích ngoài trời",
-                "items": [
-                    "Karaoke",
-                    "Truyền hình cáp free",
-                    "BBQ",
-                    "Bàn ghế ngoài trời",
-                    "Ban công view vườn",
-                    "Sân hiên",
-                    "Sân vườn & Cây xanh"
-                ]
+                "items": ["Karaoke", "Truyền hình cáp free", "BBQ", "Bàn ghế ngoài trời", "Ban công view vườn", "Sân hiên", "Sân vườn & Cây xanh"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -199,53 +146,35 @@
             "01 Khách",
             "25m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 1,
         "children": 1,
         "size": "25m²",
         "description": "Phòng đơn view biển tại Bean Hotel mang đến trải nghiệm đẳng cấp với tầm nhìn tuyệt đẹp ra đại dương xanh biếc. Căn phòng được thiết kế tinh tế với gam màu nhẹ nhàng, thư thái, tạo cảm giác hài hòa với thiên nhiên. Quý khách có thể ngắm nhìn cảnh biển tuyệt đẹp từ ban công riêng, tận hưởng làn gió biển mát lành mỗi sáng khi thức dậy.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Đón tiễn sân bay với đặt phòng từ 3 đêm"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Đón tiễn sân bay với đặt phòng từ 3 đêm"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích ngoài trời",
-                "items": [
-                    "Karaoke",
-                    "Truyền hình cáp free",
-                    "BBQ",
-                    "Ban công view biển",
-                    "Ghế tắm nắng"
-                ]
+                "items": ["Karaoke", "Truyền hình cáp free", "BBQ", "Ban công view biển", "Ghế tắm nắng"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Lối đi riêng ra bãi biển",
-                    "Dịch vụ đặt tour"
-                ]
+                "items": ["Lối đi riêng ra bãi biển", "Dịch vụ đặt tour"]
             }
         ]
     },
@@ -265,47 +194,32 @@
             "02 Khách",
             "25m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 2,
         "size": "25m²",
         "description": "Phòng đôi tiêu chuẩn tại Bean Hotel là lựa chọn hoàn hảo cho cặp đôi hoặc gia đình nhỏ. Không gian phòng rộng rãi với 25m², thiết kế hiện đại và ấm cúng, được trang bị đầy đủ tiện nghi để đảm bảo sự thoải mái tối đa cho quý khách. Phòng được bố trí một giường đôi cỡ lớn, chăn ga gối đệm cao cấp, đảm bảo giấc ngủ ngon và sâu.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Trà và cà phê miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "TV màn hình phẳng",
-                    "Ấm đun nước điện"
-                ]
+                "items": ["Minibar", "Két sắt trong phòng", "Điều hòa nhiệt độ", "TV màn hình phẳng", "Ấm đun nước điện"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -317,7 +231,7 @@
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11ccbd4ad859c41ff9fda9cdd73.jpg?v=1670338572250",
             "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh324342fe21ce74c62b7988acf31.jpg?v=1670338572250",
-            "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh2c74a688474af47adb57266fef4.jpg?v=1670338572250"
+            "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/anh2c74a688474af47adb57266fef4.jpg?v=1670338572250" 
         ],
         "price": "1.100.000₫/Đêm",
         "priceValue": 1100000,
@@ -325,49 +239,32 @@
             "02 Khách",
             "30m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 2,
         "size": "30m²",
         "description": "Phòng đôi view thành phố mang đến trải nghiệm khó quên với tầm nhìn toàn cảnh đô thị sôi động. Căn phòng rộng 30m² được thiết kế sang trọng với nội thất hiện đại, ánh sáng tự nhiên tràn ngập từ cửa sổ lớn, tạo cảm giác thoáng đãng và thư giãn. Ban công riêng cho phép bạn ngắm nhìn nhịp sống thành phố từ trên cao, đặc biệt là vào buổi tối khi ánh đèn lên rực rỡ.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Đậu xe miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7", "Đậu xe miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "TV màn hình phẳng",
-                    "Ban công view thành phố",
-                    "Bàn làm việc"
-                ]
+                "items": ["Minibar", "Két sắt trong phòng", "Điều hòa nhiệt độ", "TV màn hình phẳng", "Ban công view thành phố", "Bàn làm việc"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -387,59 +284,36 @@
             "02 Khách",
             "30m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 2,
         "size": "30m²",
         "description": "Phòng đôi view sân vườn là lựa chọn hoàn hảo cho những ai yêu thích không gian xanh và yên bình. Căn phòng rộng rãi 30m² với thiết kế tinh tế, hài hòa cùng thiên nhiên, mang đến cảm giác thư thái tuyệt đối. Cửa sổ và ban công riêng hướng ra khu vườn xanh mát của khách sạn, nơi bạn có thể thưởng thức không khí trong lành và âm thanh du dương của thiên nhiên.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Trà và cà phê miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích ngoài trời",
-                "items": [
-                    "Ban công view vườn",
-                    "Bàn ghế ngoài trời",
-                    "BBQ",
-                    "Sân hiên",
-                    "Sân vườn & Cây xanh"
-                ]
+                "items": ["Ban công view vườn", "Bàn ghế ngoài trời", "BBQ", "Sân hiên", "Sân vườn & Cây xanh"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "TV màn hình phẳng",
-                    "Bếp nhỏ",
-                    "Tủ lạnh"
-                ]
+                "items": ["Minibar", "Két sắt trong phòng", "Điều hòa nhiệt độ", "TV màn hình phẳng", "Bếp nhỏ", "Tủ lạnh"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             }
         ]
     },
@@ -459,57 +333,36 @@
             "04 Khách",
             "32m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 4,
         "children": 2,
         "size": "32m²",
         "description": "Phòng đôi 2 giường đôi là lựa chọn lý tưởng cho gia đình hoặc nhóm bạn đến nghỉ dưỡng. Với diện tích 32m², phòng được bố trí hai giường đôi cỡ lớn, tạo không gian thoải mái cho tối đa 4 người lớn. Phòng được thiết kế hiện đại với đầy đủ tiện nghi cao cấp bao gồm TV màn hình phẳng, minibar, bếp nhỏ và phòng tắm riêng với bồn tắm hoa sen.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Trà và cà phê miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7", "Trà và cà phê miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "TV màn hình phẳng",
-                    "Bếp nhỏ",
-                    "Tủ lạnh",
-                    "Bàn làm việc"
-                ]
+                "items": ["Minibar", "Két sắt trong phòng", "Điều hòa nhiệt độ", "TV màn hình phẳng", "Bếp nhỏ", "Tủ lạnh", "Bàn làm việc"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Phòng tắm rộng rãi",
-                    "Phòng kết nối có thể yêu cầu"
-                ]
+                "items": ["Phòng tắm rộng rãi", "Phòng kết nối có thể yêu cầu"]
             }
         ]
     },
@@ -529,64 +382,36 @@
             "02 Khách",
             "35m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 2,
         "children": 1,
         "size": "35m²",
         "description": "Phòng đơn VIP là sự lựa chọn hoàn hảo cho những ai tìm kiếm trải nghiệm lưu trú đẳng cấp và sang trọng. Với diện tích rộng 35m², phòng được thiết kế tinh tế với nội thất cao cấp, tạo không gian sống đẳng cấp. Phòng bao gồm khu vực nghỉ ngơi với giường đôi cỡ lớn và khu vực tiếp khách riêng biệt, cùng với các tiện nghi VIP đặc biệt.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Dịch vụ đưa đón sân bay",
-            "Đồ uống chào đón"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7", "Dịch vụ đưa đón sân bay", "Đồ uống chào đón"],
         "checkoutTime": "14h00 hàng ngày (trễ hơn giờ thường)",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn",
-                    "Dịch vụ đỗ xe"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn", "Dịch vụ đỗ xe"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar cao cấp",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "Smart TV màn hình phẳng",
-                    "Máy pha cà phê Espresso",
-                    "Áo choàng tắm",
-                    "Bồn tắm spa",
-                    "Ban công riêng"
-                ]
+                "items": ["Minibar cao cấp", "Két sắt trong phòng", "Điều hòa nhiệt độ", "Smart TV màn hình phẳng", "Máy pha cà phê Espresso", "Áo choàng tắm", "Bồn tắm spa", "Ban công riêng"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hai lần/ngày",
-                    "Dịch vụ đánh giày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hai lần/ngày", "Dịch vụ đánh giày"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Quyền sử dụng phòng chờ VIP",
-                    "Ưu tiên đặt bàn nhà hàng",
-                    "Trái cây tươi hàng ngày",
-                    "Dịch vụ quản gia riêng"
-                ]
+                "items": ["Quyền sử dụng phòng chờ VIP", "Ưu tiên đặt bàn nhà hàng", "Trái cây tươi hàng ngày", "Dịch vụ quản gia riêng"]
             }
         ]
     },
@@ -606,61 +431,36 @@
             "04 Khách",
             "40m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 4,
         "children": 2,
         "size": "40m²",
         "description": "Phòng gia đình là lựa chọn lý tưởng cho kỳ nghỉ cùng người thân. Với không gian rộng rãi 40m², phòng có thể phục vụ thoải mái cho 4 người lớn và 2 trẻ em. Phòng được thiết kế thông minh với khu vực ngủ và khu vực sinh hoạt riêng biệt, mang lại sự riêng tư và thoải mái cho cả gia đình. Phòng tắm lớn với bồn tắm và vòi sen riêng biệt, cùng nhiều tiện nghi đặc biệt dành cho gia đình.",
-        "freeServices": [
-            "Ăn sáng tự chọn cho cả gia đình",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Giường phụ miễn phí cho trẻ dưới 6 tuổi"
-        ],
+        "freeServices": ["Ăn sáng tự chọn cho cả gia đình", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7", "Giường phụ miễn phí cho trẻ dưới 6 tuổi"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Minibar",
-                    "Két sắt trong phòng",
-                    "Điều hòa nhiệt độ",
-                    "TV màn hình phẳng",
-                    "Bếp mini đầy đủ",
-                    "Tủ lạnh lớn",
-                    "Bàn ăn gia đình",
-                    "Ghế trẻ em theo yêu cầu"
-                ]
+                "items": ["Minibar", "Két sắt trong phòng", "Điều hòa nhiệt độ", "TV màn hình phẳng", "Bếp mini đầy đủ", "Tủ lạnh lớn", "Bàn ăn gia đình", "Ghế trẻ em theo yêu cầu"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             },
             {
                 "name": "Tiện ích dành cho trẻ em",
-                "items": [
-                    "Góc chơi cho trẻ",
-                    "Dịch vụ trông trẻ theo yêu cầu",
-                    "Bộ đồ dùng trẻ em",
-                    "Menu đặc biệt cho trẻ em"
-                ]
+                "items": ["Góc chơi cho trẻ", "Dịch vụ trông trẻ theo yêu cầu", "Bộ đồ dùng trẻ em", "Menu đặc biệt cho trẻ em"]
             }
         ]
     },
@@ -680,61 +480,36 @@
             "04 Khách",
             "40m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 4,
         "children": 2,
         "size": "40m²",
         "description": "Căn hộ chung cư tại Bean Hotel mang đến không gian sống đầy đủ tiện nghi như một ngôi nhà thứ hai. Với diện tích 40m², căn hộ được thiết kế theo phong cách hiện đại với phòng khách rộng rãi, phòng ngủ riêng biệt và bếp đầy đủ tiện nghi. Đây là lựa chọn hoàn hảo cho những ai muốn ở dài ngày hoặc cần không gian riêng tư để làm việc kết hợp nghỉ dưỡng.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ dọn phòng",
-            "Đỗ xe miễn phí"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ dọn phòng", "Đỗ xe miễn phí"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Bếp đầy đủ thiết bị",
-                    "Tủ lạnh cỡ lớn",
-                    "Máy giặt riêng",
-                    "TV màn hình phẳng",
-                    "Điều hòa nhiệt độ",
-                    "Khu vực làm việc",
-                    "Ban công/sân thượng riêng",
-                    "Phòng khách riêng biệt"
-                ]
+                "items": ["Bếp đầy đủ thiết bị", "Tủ lạnh cỡ lớn", "Máy giặt riêng", "TV màn hình phẳng", "Điều hòa nhiệt độ", "Khu vực làm việc", "Ban công/sân thượng riêng", "Phòng khách riêng biệt"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng theo lịch linh hoạt"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng theo lịch linh hoạt"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Quyền sử dụng các tiện ích chung của tòa nhà",
-                    "Hỗ trợ đặt các dịch vụ địa phương",
-                    "Dịch vụ mua sắm theo yêu cầu",
-                    "Giảm giá cho lưu trú dài ngày"
-                ]
+                "items": ["Quyền sử dụng các tiện ích chung của tòa nhà", "Hỗ trợ đặt các dịch vụ địa phương", "Dịch vụ mua sắm theo yêu cầu", "Giảm giá cho lưu trú dài ngày"]
             }
         ]
     },
@@ -754,68 +529,36 @@
             "06 Khách",
             "40m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 6,
         "children": 2,
         "size": "40m²",
         "description": "Phòng hạng sang là đỉnh cao của sự sang trọng và tiện nghi tại Bean Hotel. Với diện tích rộng lớn 40m² và không gian được thiết kế bởi các kiến trúc sư hàng đầu, phòng mang đến trải nghiệm lưu trú đẳng cấp quốc tế. Phòng bao gồm khu vực tiếp khách riêng, phòng ngủ sang trọng với giường cỡ lớn, và phòng tắm spa với bồn tắm đứng độc lập và vòi sen mưa nhiệt đới.",
-        "freeServices": [
-            "Ăn sáng tự chọn cao cấp",
-            "Minibar miễn phí (nạp lại hàng ngày)",
-            "Dịch Internet không dây tốc độ cao",
-            "Dịch vụ phòng 24/7",
-            "Đưa đón sân bay miễn phí",
-            "Trà chiều tại phòng chờ VIP"
-        ],
+        "freeServices": ["Ăn sáng tự chọn cao cấp", "Minibar miễn phí (nạp lại hàng ngày)", "Dịch Internet không dây tốc độ cao", "Dịch vụ phòng 24/7", "Đưa đón sân bay miễn phí", "Trà chiều tại phòng chờ VIP"],
         "checkoutTime": "14h00 hàng ngày (linh hoạt)",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn",
-                    "Dịch vụ đỗ xe",
-                    "Giữ xe ưu tiên"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn", "Dịch vụ đỗ xe", "Giữ xe ưu tiên"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Thiết bị giải trí cao cấp",
-                    "Hệ thống âm thanh Bose",
-                    "Smart TV màn hình lớn",
-                    "Máy pha cà phê Espresso cao cấp",
-                    "Minibar premium",
-                    "Két sắt điện tử",
-                    "Đồ dùng phòng tắm cao cấp",
-                    "Áo choàng tắm và dép đi trong phòng"
-                ]
+                "items": ["Thiết bị giải trí cao cấp", "Hệ thống âm thanh Bose", "Smart TV màn hình lớn", "Máy pha cà phê Espresso cao cấp", "Minibar premium", "Két sắt điện tử", "Đồ dùng phòng tắm cao cấp", "Áo choàng tắm và dép đi trong phòng"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hai lần/ngày",
-                    "Dịch vụ đánh giày",
-                    "Dịch vụ giặt ủi ưu tiên"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hai lần/ngày", "Dịch vụ đánh giày", "Dịch vụ giặt ủi ưu tiên"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Phòng chờ Club Lounge",
-                    "Dịch vụ quản gia riêng",
-                    "Dịch vụ spa trong phòng theo yêu cầu",
-                    "Ưu tiên đặt chỗ nhà hàng và spa",
-                    "Bữa tối riêng tư theo yêu cầu",
-                    "Lối vào riêng"
-                ]
+                "items": ["Phòng chờ Club Lounge", "Dịch vụ quản gia riêng", "Dịch vụ spa trong phòng theo yêu cầu", "Ưu tiên đặt chỗ nhà hàng và spa", "Bữa tối riêng tư theo yêu cầu", "Lối vào riêng"]
             }
         ]
     },
@@ -835,61 +578,36 @@
             "06 Khách",
             "40m²"
         ],
+        "features": [
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
+        ],
         "adults": 6,
         "children": 3,
         "size": "40m² x 2 phòng",
         "description": "Phòng đôi nối liền là giải pháp lý tưởng cho gia đình lớn hoặc nhóm bạn đông người. Bao gồm hai phòng ngủ riêng biệt được kết nối bởi cửa thông bên trong, mang lại sự riêng tư nhưng vẫn giữ được sự tiện lợi. Mỗi phòng đều được trang bị đầy đủ với phòng tắm riêng, TV, minibar và khu vực làm việc. Phòng nối liền này có thể phục vụ thoải mái cho 6 người lớn và 3 trẻ em.",
-        "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Giường phụ miễn phí theo yêu cầu"
-        ],
+        "freeServices": ["Ăn sáng tự chọn", "Nước khoáng trên phòng nghỉ", "Dịch Internet không dây (wifi)", "Dịch vụ phòng 24/7", "Giường phụ miễn phí theo yêu cầu"],
         "checkoutTime": "12h00 hàng ngày",
-        "paymentMethods": [
-            "Tiền mặt (VND, USD, EURO, ...)",
-            "Thẻ tín dụng Visa và Master",
-            "Chuyển khoản ngân hàng",
-            "Ví điện tử"
-        ],
+        "paymentMethods": ["Tiền mặt (VND, USD, EURO, ...)", "Thẻ tín dụng Visa và Master", "Chuyển khoản ngân hàng", "Ví điện tử"],
         "additionalAmenities": [
             {
                 "name": "Chỗ đậu xe",
-                "items": [
-                    "Chỗ đậu xe miễn phí",
-                    "Có chỗ đỗ xe riêng, an toàn",
-                    "Bãi đỗ xe rộng rãi"
-                ]
+                "items": ["Chỗ đậu xe miễn phí", "Có chỗ đỗ xe riêng, an toàn", "Bãi đỗ xe rộng rãi"]
             },
             {
                 "name": "Tiện ích phòng",
-                "items": [
-                    "Hai phòng tắm riêng biệt",
-                    "Hai TV màn hình phẳng",
-                    "Hai minibar",
-                    "Hai bộ đồ uống miễn phí",
-                    "Điều hòa nhiệt độ độc lập",
-                    "Bàn làm việc trong mỗi phòng"
-                ]
+                "items": ["Hai phòng tắm riêng biệt", "Hai TV màn hình phẳng", "Hai minibar", "Hai bộ đồ uống miễn phí", "Điều hòa nhiệt độ độc lập", "Bàn làm việc trong mỗi phòng"]
             },
             {
                 "name": "Dịch vụ lau dọn",
-                "items": [
-                    "Giặt khô",
-                    "Giặt ủi",
-                    "Dọn phòng hàng ngày"
-                ]
+                "items": ["Giặt khô", "Giặt ủi", "Dọn phòng hàng ngày"]
             },
             {
                 "name": "Tiện ích đặc biệt",
-                "items": [
-                    "Cửa thông nội bộ có thể khóa",
-                    "Lựa chọn giường linh hoạt",
-                    "Có thể yêu cầu thêm giường phụ",
-                    "Giảm giá cho đặt phòng dài ngày",
-                    "Khu vực sinh hoạt chung"
-                ]
+                "items": ["Cửa thông nội bộ có thể khóa", "Lựa chọn giường linh hoạt", "Có thể yêu cầu thêm giường phụ", "Giảm giá cho đặt phòng dài ngày", "Khu vực sinh hoạt chung"]
             }
         ]
     }
