@@ -138,7 +138,7 @@ $(document).ready(function() {
                                 ${room.details.map(detail => `<li><i class="fa fa-check"></i> ${detail}</li>`).join('')}
                             </ul>
                             <ul class="product-features">
-                                ${room.features.map(feature => `<li>${feature}</li>`).join('')}
+                                ${room.freeServices ? room.freeServices.map(service => `<li>${service}</li>`).join('') : ''}
                             </ul>
                             <div class="product-actions">
                                 <a href="room_detail.html?id=${room.id}" class="btn btn-primary btn-view-detail" title="Xem chi tiết">
