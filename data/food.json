@@ -1,0 +1,39 @@
+{
+    "id": "mi-xao-bo",
+    "name": "Mì xào bò",
+    "price": "90.000₫",
+    "type": "food",
+    "url": "mi-xao-bo",
+    "image": [
+        "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/sp3c.jpg?v=1670338561717",
+        "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/sp1c.jpg?v=1670338561717",
+        "//bizweb.dktcdn.net/thumb/medium/100/472/947/products/sp2c.jpg?v=1670338561717"
+    ],
+    "shortDescription": "Đĩa mì xào thơm ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Mì",
+        "Mì xào bò"
+    ],
+    "description": "Mì xào bò là món ăn được chế biến kết hợp từ nhiều loại thực phẩm khác nhau. Đó là trứng, thịt, rau và gia vị. Vì kết hợp nhiều nguyên liệu nên món ăn này có hương vị thơm ngon, hấp dẫn. Và chế biến nhanh, đơn giản nên được nhiều gia đình lựa chọn cho bữa sáng.\n\nNhiều người khá lăn tăn về hàm lượng calo trong một đĩa mì xào. Bởi món ăn là sự kết hợp của nhiều gia vị, nguyên liệu. Do đó để chính xác một đĩa mì này chứa bao nhiêu calo là rất khó. Nhưng theo bảng tính giá trị calo của thực phẩm nói chung thì một đĩa mì xào bò có khoảng 638 calo.",
+    "nutritionalInfo": {
+        "calories": 638
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Hàm lượng calo trong mì tôm xào bò là khá cao. Nếu như bạn đang giảm cân hoặc thể trạng béo, hãy hạn chế ăn món này nhé. Ngoài ra, ăn nhiều món ăn này cũng dẫn đến gây nóng, nổi mụn, sỏi thận, dễ bị loãng xương, răng yếu,… Dù món mì xào bò thơm ngon, dễ ăn, chế biến không cầu kỳ nhưng bạn cũng không nên ăn quá nhiều. Vì bổ sung nhiều năng lượng nên món mì xào bò bạn có thể chế biến vào bữa sáng để cả ngày tràn đầy năng lượng làm việc.",
+    "cookingTip": "Mì gói xào bò là món ăn nhanh gọn, nhưng chế biến thế nào để vừa thơm ngon mà không mất quá nhiều thời gian. Cùng tham khảo ngay cách chế biến mì xào bò dưới đây."
+}
