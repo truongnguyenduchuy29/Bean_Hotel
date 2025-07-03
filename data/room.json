@@ -25,9 +25,9 @@
         "size": "20m²",
         "description": "Các phòng trang nhã và dãy phòng trang nghiêm của chúng tôi gợi nhớ về một thời đại đã qua. Mỗi tính năng như đường cong, thảm sang trọng, trần nhà cao, phòng tắm lát đá cẩm thạch, thiết bị làm sạch và nhiều không gian đều được bố trí một cách chu đáo để gọi cho riêng bạn. Tông màu nâu phong phú và gỗ sồi tự nhiên tạo nên những khu bảo tồn yên tĩnh và yên tĩnh, được tôn lên một cách tuyệt vời bởi đồ nội thất trang nhã.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)"
+            "Cafe Buổi Sáng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -92,10 +92,10 @@
         "size": "25m²",
         "description": "Phòng đơn view thành phố của chúng tôi mang đến trải nghiệm tuyệt vời với tầm nhìn tuyệt đẹp ra khu vực đô thị sôi động. Căn phòng được thiết kế hiện đại với nội thất sang trọng, ánh sáng tự nhiên, tạo không gian nghỉ ngơi lý tưởng. Phòng được trang bị đầy đủ tiện nghi cao cấp, bao gồm TV màn hình phẳng, minibar và phòng tắm riêng với bồn tắm hoa sen.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -158,10 +158,10 @@
         "size": "25m²",
         "description": "Phòng đơn view sân vườn tại Bean Hotel là không gian yên bình và thư giãn với cửa sổ hướng ra khu vườn xanh mát của khách sạn. Phòng được thiết kế tinh tế với nội thất ấm cúng, tạo cảm giác gần gũi với thiên nhiên. Quý khách có thể tận hưởng bữa sáng tự chọn, dịch vụ phòng 24/7 và các tiện ích cao cấp khác để có kỳ nghỉ thoải mái nhất.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -227,10 +227,10 @@
         "size": "25m²",
         "description": "Phòng đơn view biển tại Bean Hotel mang đến trải nghiệm đẳng cấp với tầm nhìn tuyệt đẹp ra đại dương xanh biếc. Căn phòng được thiết kế tinh tế với gam màu nhẹ nhàng, thư thái, tạo cảm giác hài hòa với thiên nhiên. Quý khách có thể ngắm nhìn cảnh biển tuyệt đẹp từ ban công riêng, tận hưởng làn gió biển mát lành mỗi sáng khi thức dậy.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Đón tiễn sân bay với đặt phòng từ 3 đêm"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -300,10 +300,11 @@
         "size": "25m²",
         "description": "Phòng đôi tiêu chuẩn tại Bean Hotel là lựa chọn hoàn hảo cho cặp đôi hoặc gia đình nhỏ. Không gian phòng rộng rãi với 25m², thiết kế hiện đại và ấm cúng, được trang bị đầy đủ tiện nghi để đảm bảo sự thoải mái tối đa cho quý khách. Phòng được bố trí một giường đôi cỡ lớn, chăn ga gối đệm cao cấp, đảm bảo giấc ngủ ngon và sâu.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -367,11 +368,11 @@
         "size": "30m²",
         "description": "Phòng đôi view thành phố mang đến trải nghiệm khó quên với tầm nhìn toàn cảnh đô thị sôi động. Căn phòng rộng 30m² được thiết kế sang trọng với nội thất hiện đại, ánh sáng tự nhiên tràn ngập từ cửa sổ lớn, tạo cảm giác thoáng đãng và thư giãn. Ban công riêng cho phép bạn ngắm nhìn nhịp sống thành phố từ trên cao, đặc biệt là vào buổi tối khi ánh đèn lên rực rỡ.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Đậu xe miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -436,10 +437,11 @@
         "size": "30m²",
         "description": "Phòng đôi view sân vườn là lựa chọn hoàn hảo cho những ai yêu thích không gian xanh và yên bình. Căn phòng rộng rãi 30m² với thiết kế tinh tế, hài hòa cùng thiên nhiên, mang đến cảm giác thư thái tuyệt đối. Cửa sổ và ban công riêng hướng ra khu vườn xanh mát của khách sạn, nơi bạn có thể thưởng thức không khí trong lành và âm thanh du dương của thiên nhiên.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Trà và cà phê miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -515,11 +517,11 @@
         "size": "32m²",
         "description": "Phòng đôi 2 giường đôi là lựa chọn lý tưởng cho gia đình hoặc nhóm bạn đến nghỉ dưỡng. Với diện tích 32m², phòng được bố trí hai giường đôi cỡ lớn, tạo không gian thoải mái cho tối đa 4 người lớn. Phòng được thiết kế hiện đại với đầy đủ tiện nghi cao cấp bao gồm TV màn hình phẳng, minibar, bếp nhỏ và phòng tắm riêng với bồn tắm hoa sen.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Trà và cà phê miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -592,12 +594,11 @@
         "size": "35m²",
         "description": "Phòng đơn VIP là sự lựa chọn hoàn hảo cho những ai tìm kiếm trải nghiệm lưu trú đẳng cấp và sang trọng. Với diện tích rộng 35m², phòng được thiết kế tinh tế với nội thất cao cấp, tạo không gian sống đẳng cấp. Phòng bao gồm khu vực nghỉ ngơi với giường đôi cỡ lớn và khu vực tiếp khách riêng biệt, cùng với các tiện nghi VIP đặc biệt.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Dịch vụ đưa đón sân bay",
-            "Đồ uống chào đón"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "14h00 hàng ngày (trễ hơn giờ thường)",
         "paymentMethods": [
@@ -676,11 +677,11 @@
         "size": "40m²",
         "description": "Phòng gia đình là lựa chọn lý tưởng cho kỳ nghỉ cùng người thân. Với không gian rộng rãi 40m², phòng có thể phục vụ thoải mái cho 4 người lớn và 2 trẻ em. Phòng được thiết kế thông minh với khu vực ngủ và khu vực sinh hoạt riêng biệt, mang lại sự riêng tư và thoải mái cho cả gia đình. Phòng tắm lớn với bồn tắm và vòi sen riêng biệt, cùng nhiều tiện nghi đặc biệt dành cho gia đình.",
         "freeServices": [
-            "Ăn sáng tự chọn cho cả gia đình",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Giường phụ miễn phí cho trẻ dưới 6 tuổi"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -757,11 +758,11 @@
         "size": "40m²",
         "description": "Căn hộ chung cư tại Bean Hotel mang đến không gian sống đầy đủ tiện nghi như một ngôi nhà thứ hai. Với diện tích 40m², căn hộ được thiết kế theo phong cách hiện đại với phòng khách rộng rãi, phòng ngủ riêng biệt và bếp đầy đủ tiện nghi. Đây là lựa chọn hoàn hảo cho những ai muốn ở dài ngày hoặc cần không gian riêng tư để làm việc kết hợp nghỉ dưỡng.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ dọn phòng",
-            "Đỗ xe miễn phí"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [
@@ -838,12 +839,11 @@
         "size": "40m²",
         "description": "Phòng hạng sang là đỉnh cao của sự sang trọng và tiện nghi tại Bean Hotel. Với diện tích rộng lớn 40m² và không gian được thiết kế bởi các kiến trúc sư hàng đầu, phòng mang đến trải nghiệm lưu trú đẳng cấp quốc tế. Phòng bao gồm khu vực tiếp khách riêng, phòng ngủ sang trọng với giường cỡ lớn, và phòng tắm spa với bồn tắm đứng độc lập và vòi sen mưa nhiệt đới.",
         "freeServices": [
-            "Ăn sáng tự chọn cao cấp",
-            "Minibar miễn phí (nạp lại hàng ngày)",
-            "Dịch Internet không dây tốc độ cao",
-            "Dịch vụ phòng 24/7",
-            "Đưa đón sân bay miễn phí",
-            "Trà chiều tại phòng chờ VIP"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "14h00 hàng ngày (linh hoạt)",
         "paymentMethods": [
@@ -926,11 +926,11 @@
         "size": "40m² x 2 phòng",
         "description": "Phòng đôi nối liền là giải pháp lý tưởng cho gia đình lớn hoặc nhóm bạn đông người. Bao gồm hai phòng ngủ riêng biệt được kết nối bởi cửa thông bên trong, mang lại sự riêng tư nhưng vẫn giữ được sự tiện lợi. Mỗi phòng đều được trang bị đầy đủ với phòng tắm riêng, TV, minibar và khu vực làm việc. Phòng nối liền này có thể phục vụ thoải mái cho 6 người lớn và 3 trẻ em.",
         "freeServices": [
-            "Ăn sáng tự chọn",
-            "Nước khoáng trên phòng nghỉ",
-            "Dịch Internet không dây (wifi)",
-            "Dịch vụ phòng 24/7",
-            "Giường phụ miễn phí theo yêu cầu"
+            "Cafe Buổi Sáng",
+            "Gọi Đồ Ăn Tại Phòng",
+            "Bếp Nấu Tại Phòng",
+            "Bồn Tắm Hoa Sen",
+            "Internet Không Dây"
         ],
         "checkoutTime": "12h00 hàng ngày",
         "paymentMethods": [

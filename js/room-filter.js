@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Load rooms data from JSON file
     let allRooms = [];
     let currentFilter = '';
-    
+
     // Check if we're on the product page or any room category page
-    if (window.location.pathname === '/phong' || 
+    if (window.location.pathname === '/phong' ||
         window.location.pathname === '/product.html' ||
         window.location.pathname === '/phong-don' ||
         window.location.pathname === '/phong-doi' ||
@@ -28,14 +28,14 @@ $(document).ready(function() {
         const roomContainer = $('.room-container');
         roomContainer.addClass('loading');
         roomContainer.empty().append('<div class="col-12 text-center"><h3>Đang tải dữ liệu phòng...</h3></div>');
-        
-        $.getJSON('/data/room.json', function(data) {
+
+        $.getJSON('/data/room.json', function (data) {
             allRooms = data;
             renderRooms(allRooms);
             applyFilterIfNeeded();
             initializeMenuHighlighting();
             roomContainer.removeClass('loading');
-        }).fail(function() {
+        }).fail(function () {
             console.error('Error loading room data');
             roomContainer.removeClass('loading');
             roomContainer.html('<div class="col-12 text-center"><h3>Không thể tải dữ liệu phòng</h3></div>');
@@ -69,42 +69,42 @@ $(document).ready(function() {
         }
 
         let filteredRooms = [];
-        
+
         // Map the Vietnamese filter names from the menu to the type values in the JSON
         // Based on the room.json data and the header menu items
-        switch(type) {
+        switch (type) {
             case 'phong-don':
                 // Filter for single room types (all types that contain 'single' except 'single-vip')
-                filteredRooms = allRooms.filter(room => 
-                    room.type === 'single' || 
+                filteredRooms = allRooms.filter(room =>
+                    room.type === 'single' ||
                     (room.id.includes('phong-don') && !room.id.includes('vip'))
                 );
                 break;
-                
+
             case 'phong-doi':
                 // Filter for double room types (all types that contain 'double' or are connecting rooms)
-                filteredRooms = allRooms.filter(room => 
-                    room.type.includes('double') || 
+                filteredRooms = allRooms.filter(room =>
+                    room.type.includes('double') ||
                     room.type === 'connecting' ||
                     room.id.includes('phong-doi')
                 );
                 break;
-                
+
             case 'phong-vip':
                 // Filter for VIP room types (includes single-vip, luxury, and rooms with 'vip' in the id)
-                filteredRooms = allRooms.filter(room => 
-                    room.type === 'single-vip' || 
+                filteredRooms = allRooms.filter(room =>
+                    room.type === 'single-vip' ||
                     room.type === 'luxury' ||
                     room.id.includes('vip')
                 );
                 break;
-                
+
             default:
                 // If none of the above, try to match the exact type
                 filteredRooms = allRooms.filter(room => room.type === type);
                 break;
         }
-        
+
         renderRooms(filteredRooms);
     }
 
@@ -112,16 +112,16 @@ $(document).ready(function() {
     function renderRooms(rooms) {
         const roomContainer = $('.room-container');
         roomContainer.empty();
-        
+
         if (rooms.length === 0) {
             roomContainer.html('<div class="col-12 text-center"><h3>Không tìm thấy phòng phù hợp</h3></div>');
             updateRoomCount(0);
             return;
         }
-        
+
         // Update room count display
         updateRoomCount(rooms.length);
-        
+
         rooms.forEach(room => {
             let roomHtml = `
                 <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
@@ -154,7 +154,7 @@ $(document).ready(function() {
             roomContainer.append(roomHtml);
         });
     }
-    
+
     // Update the room count display
     function updateRoomCount(count) {
         // Update count in the title if it exists
@@ -168,7 +168,7 @@ $(document).ready(function() {
             } else if (currentFilter === 'phong-vip') {
                 title = "Phòng vip";
             }
-            
+
             titleElement.text(`${title} (${count} phòng)`);
         }
     }
@@ -182,31 +182,31 @@ $(document).ready(function() {
     }
 
     // Handle navigation menu item clicks for filtering
-    $('.nav-item-lv2 a').click(function(e) {
+    $('.nav-item-lv2 a').click(function (e) {
         const hrefPath = $(this).attr('href');
         if (hrefPath === '/phong-don' || hrefPath === '/phong-doi' || hrefPath === '/phong-vip') {
             // Only prevent default if we're already on the product page
             if (window.location.pathname === '/phong' || window.location.pathname === '/product.html') {
                 e.preventDefault();
                 const type = hrefPath.replace('/', '');
-                
+
                 // Update active state for menu items
                 $('.nav-item-lv2 a').removeClass('active');
                 $(this).addClass('active');
-                
+
                 filterRooms(type);
-                
+
                 // Update URL without reloading the page
                 const newUrl = window.location.pathname + '?type=' + type;
                 history.pushState({}, '', newUrl);
             }
         }
     });
-    
+
     // Removed "All rooms" option
-    
+
     // Removed handler for "All rooms" option
-    
+
     // Call this after loading rooms
     initializeMenuHighlighting();
 });
