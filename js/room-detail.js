@@ -286,57 +286,24 @@ $(document).ready(function () {
 
     // Cập nhật thông tin dịch vụ miễn phí
     function updateFreeServices(room) {
-        const freeServicesContainer = $('.free-services-list');
-        freeServicesContainer.empty();
+        // Xóa nội dung cũ
+        const roomServicesSection = $('.room_services');
+        roomServicesSection.empty();
 
-        // Thêm CSS để hiển thị dịch vụ phòng thành nhiều cột
-        const servicesCss = `
-            .free-services-list {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 15px;
-            }
-            
-            @media (min-width: 576px) {
-                .free-services-list {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            
-            @media (min-width: 992px) {
-                .free-services-list {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            
-            .free-services-list li {
-                margin-bottom: 10px;
-            }
-            
-            .item_ser {
-                display: flex;
-                align-items: center;
-                background-color: #f9f9f9;
-                padding: 10px;
-                border-radius: 5px;
-                transition: all 0.3s ease;
-            }
-            
-            .item_ser:hover {
-                background-color: #f0f0f0;
-                transform: translateY(-2px);
-                box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            }
-            
-            .item_ser img {
-                margin-right: 10px;
-            }
+        // Tạo cấu trúc HTML mới
+        const servicesHtml = `
+            <div class="title_services">Dịch vụ phòng</div>
+            <div class="box_services" style="padding: 20px; border: 1px solid #eaeaea; border-radius: 10px; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <!-- Các dịch vụ sẽ được thêm vào đây -->
+                </div>
+            </div>
         `;
 
-        // Thêm CSS vào trang nếu chưa có
-        if ($('#services-custom-css').length === 0) {
-            $('<style id="services-custom-css">').html(servicesCss).appendTo('head');
-        }
+        roomServicesSection.html(servicesHtml);
+
+        // Thêm các dịch vụ vào grid
+        const servicesGrid = roomServicesSection.find('.services-grid');
 
         if (room.freeServices && room.freeServices.length > 0) {
             room.freeServices.forEach((service) => {
@@ -359,16 +326,35 @@ $(document).ready(function () {
                     iconIndex = 3; // Icon đón tiễn
                 }
 
-                const serviceHtml = `
-                    <li>
-                        <div class="item_ser">
-                            <img width="32" height="32" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${iconIndex}.svg?1749443141671" alt="${service}" />
+                const serviceItemHtml = `
+                    <div class="service-item" style="display: flex;">
+                        <div class="item_ser" style="display: flex; align-items: center; background-color: #f5f5f5; padding: 10px 12px; border-radius: 8px; transition: all 0.3s ease; height: 100%; width: 100%; box-sizing: border-box; font-size: 14px;">
+                            <img width="22" height="22" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${iconIndex}.svg?1749443141671" alt="${service}" style="margin-right: 10px; flex-shrink: 0;" />
                             ${service}
                         </div>
-                    </li>
+                    </div>
                 `;
-                freeServicesContainer.append(serviceHtml);
+                servicesGrid.append(serviceItemHtml);
             });
+        }
+
+        // Thêm media query cho responsive
+        const responsiveStyle = `
+            @media (max-width: 767px) {
+                .services-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+            }
+            @media (max-width: 480px) {
+                .services-grid {
+                    grid-template-columns: repeat(1, 1fr) !important;
+                }
+            }
+        `;
+
+        // Thêm CSS vào trang nếu chưa có
+        if ($('#services-responsive-css').length === 0) {
+            $('<style id="services-responsive-css" type="text/css">').html(responsiveStyle).appendTo('head');
         }
     }
 
