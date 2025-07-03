@@ -8693,8 +8693,6 @@ Popup cart mobile
                 d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"
                 fill="#ffffff"
                 data-original="#000000"
-                style=""
-                class=""
               />
             </g></svg
         ></a>
@@ -9587,8 +9585,8 @@ Popup cart mobile
                             <div class="item_product_main">
                                 <form action="/cart/add" method="post" class="variants product-action" enctype="multipart/form-data">
                                     <div class="product-thumbnail">
-                                        <a class="image_thumb" href="/${
-                                          item.url
+                                        <a class="image_thumb" href="food_detail.html?id=${
+                                          item.id
                                         }" title="${item.name}">
                                             <img width="480" height="360" class="lazyload" 
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
@@ -9622,8 +9620,8 @@ Popup cart mobile
                                                 <img width="24" height="24" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671" alt="Mua ngay" />
                                             </button>
                                             
-                                            <a title="Xem nhanh" href="/${
-                                              item.url
+                                            <a title="Xem nhanh" href="food_detail.html?id=${
+                                              item.id
                                             }" data-handle="${
               item.url
             }" class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view">
@@ -9633,7 +9631,7 @@ Popup cart mobile
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">
-                                            <a href="/${item.url}" title="${
+                                            <a href="food_detail.html?id=${item.id}" title="${
               item.name
             }">${item.name}</a>
                                         </h3>
