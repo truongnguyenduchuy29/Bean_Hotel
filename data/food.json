@@ -497,8 +497,8 @@
     "brand": "Bean Hotel",
     "status": "Còn hàng",
     "image": [
-      "img/cf.jpg",
-    "img/cf2.jpg"
+      "img/cf1.jpg",
+      "img/cf2.jpg"
     ],
     "shortDescription": "Cafe dừa đặc biệt được làm từ hạt cà phê Robusta nguyên chất kết hợp cùng kem sữa dừa béo ngậy tạo nên hương vị đặc trưng khó quên. Với hương thơm nồng nàn của cà phê và vị béo ngọt của dừa, đây là thức uống hoàn hảo cho những ngày mệt mỏi cần tỉnh táo và thư giãn.",
     "tags": [
@@ -537,9 +537,9 @@
     "brand": "Bean Hotel",
     "status": "Còn hàng",
     "image": [
-        "img/dao.jpg",
-        "img/dao2.jpg",
-        "img/dao3.jpg"
+        "img/đào.jpg",
+        "img/đào2.jpg",
+        "img/đào3.jpg"
     ],
     "shortDescription": "Trà yogurt đào là sự kết hợp tuyệt vời giữa trà đen thơm ngon, vị chua thanh của sữa chua và hương thơm ngọt ngào của đào chín mọng. Thức uống này không chỉ ngon miệng mà còn rất tốt cho sức khỏe, giúp giải nhiệt hiệu quả trong những ngày hè nóng bức.",
     "tags": [
