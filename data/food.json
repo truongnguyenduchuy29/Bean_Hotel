@@ -1,13 +1,17 @@
-{
+[
+    {
     "id": "mi-xao-bo",
     "name": "Mì xào bò",
-    "price": "90.000₫",
+    "price": "80.000₫",
+    "oldPrice": "100.000₫",
     "type": "food",
     "url": "mi-xao-bo",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
     "image": [
-        "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/sp3c.jpg?v=1670338561717",
-        "//bizweb.dktcdn.net/thumb/1024x1024/100/472/947/products/sp1c.jpg?v=1670338561717",
-        "//bizweb.dktcdn.net/thumb/medium/100/472/947/products/sp2c.jpg?v=1670338561717"
+        "https://bizweb.dktcdn.net/100/472/947/products/sp3c.jpg?v=1670338561717",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp1c.jpg?v=1670338561717",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2c.jpg?v=1670338561717"
     ],
     "shortDescription": "Đĩa mì xào thơm ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
     "tags": [
@@ -36,4 +40,572 @@
     },
     "healthNotes": "Hàm lượng calo trong mì tôm xào bò là khá cao. Nếu như bạn đang giảm cân hoặc thể trạng béo, hãy hạn chế ăn món này nhé. Ngoài ra, ăn nhiều món ăn này cũng dẫn đến gây nóng, nổi mụn, sỏi thận, dễ bị loãng xương, răng yếu,… Dù món mì xào bò thơm ngon, dễ ăn, chế biến không cầu kỳ nhưng bạn cũng không nên ăn quá nhiều. Vì bổ sung nhiều năng lượng nên món mì xào bò bạn có thể chế biến vào bữa sáng để cả ngày tràn đầy năng lượng làm việc.",
     "cookingTip": "Mì gói xào bò là món ăn nhanh gọn, nhưng chế biến thế nào để vừa thơm ngon mà không mất quá nhiều thời gian. Cùng tham khảo ngay cách chế biến mì xào bò dưới đây."
-}
+    },
+    {
+    "id": "bun-xao-thit-heo",
+    "name": "Bún xào thịt heo",
+    "price": "75.000₫",
+    "oldPrice": "90.000₫",
+    "type": "food",
+    "url": "bun-xao-thit-heo",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2.jpg?v=1670338560503",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp1.jpg?v=1670338560503",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp3.jpg?v=1670338560503"
+    ],
+    "shortDescription": "Tô bún xào thịt heo ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Bún xào thịt heo",
+        "Thịt heo"
+    ],
+    "description": "Bún xào thịt heo là món ăn được chế biến kết hợp từ nhiều loại thực phẩm khác nhau. Đó là bún, thịt heo, rau và gia vị. Vì kết hợp nhiều nguyên liệu nên món ăn này có hương vị thơm ngon, hấp dẫn. Và chế biến nhanh, đơn giản nên được nhiều gia đình lựa chọn cho bữa sáng.",
+    "nutritionalInfo": {
+        "calories": 520
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Bún xào thịt heo là món ăn cung cấp nhiều dinh dưỡng, tuy nhiên nếu như bạn đang giảm cân hoặc thể trạng béo, hãy hạn chế ăn món này nhé. Vì bổ sung nhiều năng lượng nên món bún xào thịt heo bạn có thể chế biến vào bữa sáng để cả ngày tràn đầy năng lượng làm việc.",
+    "cookingTip": "Bún xào thịt heo là món ăn nhanh gọn, nhưng chế biến thế nào để vừa thơm ngon mà không mất quá nhiều thời gian. Cùng tham khảo ngay cách chế biến bún xào thịt heo."
+    },
+    {
+    "id": "bun-bo-hue",
+    "name": "Bún bò Huế",
+    "price": "95.000₫",
+    "oldPrice": "100.000₫",
+    "type": "food",
+    "url": "bun-bo-hue",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/1.jpg?v=1670338559480",
+        "https://bizweb.dktcdn.net/100/472/947/products/2.jpg?v=1670338559480",
+        "https://bizweb.dktcdn.net/100/472/947/products/3.jpg?v=1670338559480"
+    ],
+    "shortDescription": "Tô bún bò Huế ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Bún bò",
+        "Bún bò Huế"
+    ],
+    "description": "Bún bò Huế là một món ăn truyền thống nổi tiếng của xứ Huế. Món ăn này có vị cay nồng đặc trưng, nước dùng đậm đà từ xương heo và bắp bò, thêm vào đó là các gia vị đặc trưng như sả, gừng, ớt, mắm ruốc và các loại rau thơm. Món ăn không chỉ thơm ngon mà còn cung cấp nhiều năng lượng và dinh dưỡng cho cơ thể.",
+    "nutritionalInfo": {
+        "calories": 550
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Bún bò Huế là món ăn giàu dinh dưỡng, cung cấp nhiều năng lượng và protein. Tuy nhiên, món này khá cay nồng nên những người bị viêm loét dạ dày, trào ngược axit hoặc dễ bị nóng trong người nên thận trọng khi ăn. Ngoài ra, vì nước dùng có thể chứa nhiều muối và mỡ, nên những người bị cao huyết áp hoặc có vấn đề về tim mạch nên ăn vừa phải.",
+    "cookingTip": "Để nấu được một tô bún bò Huế ngon đúng vị, bạn cần ninh xương heo thật kỹ để có nước dùng ngọt thanh, thêm vào đó là các gia vị đặc trưng như sả, gừng, ớt, mắm ruốc. Đặc biệt không thể thiếu màu đỏ đặc trưng từ ớt bột và mắm ruốc Huế."
+    },
+    {
+    "id": "banh-mi-op-la-trung",
+    "name": "Bánh mì ốp la trứng",
+    "price": "40.000₫",
+    "type": "food",
+    "url": "banh-mi-op-la-trung",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp189e68372dd75426e94f7aeb12c7.jpg?v=1670338557597",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2b713aa0f7d99498abb23f6ae193.jpg?v=1670338557597",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp37de02d1cbcd14985b9ff88a201f.jpg?v=1670338557597"
+    ],
+    "shortDescription": "Đĩa bánh mì ốp la trứng ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Bánh mì",
+        "Bánh mì trứng"
+    ],
+    "description": "Bánh mì ốp la trứng là một món ăn phổ biến và yêu thích của nhiều người Việt Nam. Món ăn bao gồm bánh mì giòn, trứng chiên, kèm với các loại rau sống như dưa leo, cà chua, ngò, và các loại nước sốt. Bánh mì ốp la trứng có hương vị thơm ngon, giàu dinh dưỡng và là lựa chọn lý tưởng cho bữa sáng hoặc bữa ăn nhẹ.",
+    "nutritionalInfo": {
+        "calories": 350
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Bánh mì ốp la trứng là món ăn giàu protein từ trứng, carbohydrate từ bánh mì, và vitamin từ các loại rau sống kèm theo. Tuy nhiên, do có lượng tinh bột từ bánh mì và dầu mỡ từ quá trình chiên trứng, người ăn kiêng cần lưu ý khi sử dụng. Ngoài ra, món này còn cung cấp năng lượng dồi dào cho một ngày làm việc hiệu quả.",
+    "cookingTip": "Để làm một đĩa bánh mì ốp la trứng ngon, bạn nên chọn bánh mì tươi, giòn. Khi chiên trứng, chú ý không chiên quá kỹ để lòng đào vẫn còn mềm, vàng óng, thêm một chút muối và tiêu để tăng hương vị. Có thể thêm một chút pate, chả lụa, rau sống và nước tương để tăng hương vị."
+    },
+    {
+    "id": "banh-mi-bo-kho",
+    "name": "Bánh mì bò kho",
+    "price": "70.000₫",
+    "oldPrice": "90.000₫",
+    "type": "food",
+    "url": "banh-mi-bo-kho",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/s1.jpg?v=1670338555590",
+        "https://bizweb.dktcdn.net/100/472/947/products/s2.jpg?v=1670338555590",
+        "https://bizweb.dktcdn.net/100/472/947/products/s3.jpg?v=1670338555590"
+    ],
+    "shortDescription": "Tô bánh mì bò kho ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Bánh mì",
+        "Bành mì bò kho"
+    ],
+    "description": "Bánh mì bò kho là món ăn truyền thống kết hợp giữa bánh mì giòn và bò kho đậm đà, thơm ngon. Món ăn này đặc trưng bởi thịt bò mềm, nước dùng đậm đà với các gia vị như sả, gừng, quế, hồi và các loại rau thơm. Bánh mì bò kho không chỉ là món ăn sáng phổ biến mà còn là lựa chọn tuyệt vời cho bữa trưa nhẹ.",
+    "nutritionalInfo": {
+        "calories": 450
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Bánh mì bò kho cung cấp lượng protein dồi dào từ thịt bò và carbohydrate từ bánh mì. Tuy nhiên, món này thường chứa nhiều muối và có thể chứa nhiều dầu mỡ, vì vậy những người bị cao huyết áp, tim mạch hoặc đang ăn kiêng nên hạn chế. Món ăn này cung cấp năng lượng dồi dào, phù hợp cho những người cần nhiều năng lượng cho một ngày dài hoạt động.",
+    "cookingTip": "Để nấu một nồi bò kho ngon, bạn nên ninh thịt bò với các gia vị như sả, gừng, quế, hồi, ngũ vị hương và nước mắm trong thời gian dài để thịt mềm và nước dùng đậm đà. Thêm cà rốt và khoai tây để tăng độ ngọt tự nhiên cho nước dùng. Nên dùng bánh mì tươi, nóng giòn để chấm với bò kho để có trải nghiệm ẩm thực tốt nhất."
+    },
+    {
+    "id": "bun-bo-heo",
+    "name": "Bún bò - heo",
+    "price": "80.000₫",
+    "oldPrice": "90.000₫",
+    "type": "food",
+    "url": "bun-bo-heo",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/s107e04443cd1449c0918a96fad371.jpg?v=1670338554503",
+        "https://bizweb.dktcdn.net/100/472/947/products/s2186129536cbc47d6ba7de30e2f85.jpg?v=1670338554503",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp3jpeg.jpg?v=1670338554503"
+    ],
+    "shortDescription": "Bún bò - heo ngon nóng hổi sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Bún bò - heo"
+    ],
+    "description": "Bún bò - heo là món ăn kết hợp giữa thịt bò và thịt heo, tạo nên hương vị đặc biệt và đậm đà. Món ăn này bao gồm bún tươi, thịt bò, thịt heo được chế biến kỹ càng cùng với nước dùng ngọt thanh từ xương hầm và các loại gia vị đặc trưng. Kèm theo đó là các loại rau sống, giá đỗ và bánh tráng, tạo nên một món ăn đầy đủ dinh dưỡng và hương vị hài hòa.",
+    "nutritionalInfo": {
+        "calories": 500
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Bún bò - heo là món ăn cung cấp nhiều protein từ thịt bò và thịt heo, cùng với carbohydrate từ bún. Món ăn này giàu dinh dưỡng, nhưng cũng chứa một lượng đáng kể muối và chất béo, do đó những người có vấn đề về huyết áp, tim mạch hoặc đang trong chế độ ăn kiêng nên hạn chế. Bún bò - heo là một lựa chọn tốt cho bữa sáng hoặc bữa trưa, cung cấp năng lượng dồi dào cho các hoạt động trong ngày.",
+    "cookingTip": "Để nấu bún bò - heo ngon, bạn cần ninh xương heo và bò kỹ để nước dùng ngọt thanh. Thịt bò nên chọn phần nạc, thái mỏng và thịt heo nên chọn phần có cả nạc và mỡ để tạo độ béo. Không quên thêm các loại gia vị đặc trưng như sả, hành, tỏi, và một chút nước mắm để tăng hương vị. Khi ăn, nhớ kèm theo rau sống và bánh tráng để món ăn thêm phần hấp dẫn."
+    },
+    {
+    "id": "com-suon-trung",
+    "name": "Cơm sườn trứng",
+    "price": "50.000₫",
+    "oldPrice": "60.000₫",
+    "type": "food",
+    "url": "com-suon-trung",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/1f86c94ebf4b1483a9396ecbaf0c2d.jpg?v=1670338553500",
+        "https://bizweb.dktcdn.net/100/472/947/products/223dd7fd7e9964b87bfd17d7b0e9c7.jpg?v=1670338553500",
+        "https://bizweb.dktcdn.net/100/472/947/products/38ae6fbe6b06d4b32953d3de4d1e88.jpg?v=1670338553500"
+    ],
+    "shortDescription": "Cơm sườn trứng sẽ cung cấp bữa sáng tuyệt vời, đầy đủ dinh dưỡng, năng lượng cho một ngày dài. Sự hòa quyện vị ngọt tự nhiên của rau củ, thịt và gia vị sẽ giúp món mì thêm đậm đà, đượm vị.",
+    "tags": [
+        "Cơm sườn",
+        "Cơm sườn trứng",
+        "Sườn trứng"
+    ],
+    "description": "Cơm sườn trứng là món ăn truyền thống, phổ biến và được nhiều người yêu thích. Đây là sự kết hợp hoàn hảo giữa cơm trắng dẻo thơm, sườn nướng thơm ngon và trứng chiên béo ngậy. Món ăn thường được phục vụ kèm theo dưa chuột, cà chua và nước mắm pha chua ngọt, tạo nên hương vị đậm đà, hài hòa và đầy đủ dinh dưỡng.",
+    "nutritionalInfo": {
+        "calories": 650
+    },
+    "returnPolicy": {
+        "conditions": [
+            "Sản phẩm lỗi, hỏng do quá trình sản xuất hoặc vận chuyện",
+            "Nằm trong chính sách đổi trả sản phẩm của Bean",
+            "Sản phẩm còn nguyên tem mác chưa qua sử dụng và chưa giặt là",
+            "Thời gian đổi trả nhỏ hơn 15 ngày kể từ ngày nhận hàng",
+            "Chi phí bảo hành về sản phẩm, vận chuyển khách hàng chịu chi phí"
+        ],
+        "timeFrame": "Trong vòng 01 ngày kể từ khi nhận được hàng và phải liên hệ gọi ngay cho chúng tôi theo số điện thoại trên để được xác nhận đổi trả hàng.",
+        "requirements": [
+            "Sản phẩm gửi lại phải còn nguyên đai nguyên kiện",
+            "Phiếu bảo hành (nếu có) và tem của công ty trên sản phẩm còn nguyên vẹn",
+            "Sản phẩm đổi/trả phải còn đầy đủ hộp, giấy Hướng dẫn sử dụng và chưa qua sử dụng",
+            "Quý khách chịu chi phí vận chuyển, đóng gói, thu hộ tiền, chi phí liên lạc tối đa tương đương 20% giá trị đơn hàng"
+        ]
+    },
+    "healthNotes": "Cơm sườn trứng là món ăn giàu năng lượng, cung cấp đầy đủ carbohydrate từ cơm, protein từ thịt sườn và trứng, cùng với chất béo và nhiều vitamin, khoáng chất từ các loại rau ăn kèm. Tuy nhiên, món ăn này có lượng calo khá cao và có thể chứa nhiều muối, dầu mỡ, vì vậy những người đang ăn kiêng, người mắc bệnh tim mạch, cao huyết áp hoặc béo phì nên hạn chế. Nên ăn cơm sườn trứng vào buổi trưa để có đủ thời gian tiêu hóa và sử dụng năng lượng.",
+    "cookingTip": "Để làm món cơm sườn trứng ngon, bạn nên ướp sườn với các gia vị như hành, tỏi, nước mắm, đường, hạt nêm và dầu hào trong khoảng 30 phút đến 1 giờ để thịt thấm đều gia vị. Nướng sườn trên lửa vừa để sườn chín đều và không bị khô. Trứng nên chiên vừa chín, lòng đào còn hơi sống để giữ được vị béo ngậy. Cơm nên nấu vừa chín tới, hạt cơm tơi và không bị nhão. Nước mắm pha chua ngọt đi kèm với tỏi, ớt băm nhuyễn sẽ giúp món ăn thêm đậm đà và kích thích vị giác."
+    },
+    {
+    "id": "tra-dao-cam-sa",
+    "name": "Trà đào cam sả",
+    "price": "30.000₫",
+    "oldPrice": "40.000₫",
+    "type": "drink",
+    "url": "tra-dao-cam-sa",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "img/cam.jpg",
+        "img/cam2.jpg"
+    ],
+    "shortDescription": "Mang lại cho bạn sự sảng khoái và mát mẻ trong cơ thể với những loại thực uống cao cấp của khách sạn chúng tôi.",
+    "tags": [
+        "Trà đào",
+        "Trà đào cam sả"
+    ],
+    "description": "Trà đào cam sả là một thức uống giải nhiệt tuyệt vời, được pha chế từ những nguyên liệu tự nhiên, tươi mát. Hương vị ngọt thanh của đào, vị chua dịu của cam và hương thơm đặc trưng của sả hòa quyện với trà đen đậm đà, tạo nên một thức uống thơm ngon, bổ dưỡng. Trà đào cam sả của Bean Hotel được chế biến công phu, sử dụng các nguyên liệu chất lượng cao nhất, mang đến cho khách hàng trải nghiệm thưởng thức tuyệt vời nhất.",
+    "nutritionalInfo": {
+        "calories": "120 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 30g",
+            "Sugar: 25g",
+            "Vitamin C: 40% RDA",
+            "Caffeine: 45mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Trà đào cam sả chứa nhiều chất chống oxy hóa từ trà, vitamin C từ cam và đào, cùng với các hợp chất có lợi từ sả. Thức uống này giúp tăng cường hệ miễn dịch, hỗ trợ tiêu hóa và có tác dụng làm mát cơ thể. Tuy nhiên, do có chứa caffeine từ trà và đường, người bị mất ngủ, tim mạch hoặc tiểu đường nên thận trọng khi sử dụng.",
+    "cookingTip": "Để pha chế một ly trà đào cam sả hoàn hảo, nên dùng trà đen loại tốt, đào tươi ngọt và mọng nước, cam tươi mọng nước và sả tươi. Pha trà với nước sôi và để nguội trước khi thêm đường, đá và các nguyên liệu khác để giữ hương vị thơm ngon nhất. Có thể thêm một chút mật ong thay đường để tăng vị ngọt tự nhiên và lợi ích sức khỏe."
+    },
+    {
+    "id": "cam-vat",
+    "name": "Cam vắt",
+    "price": "45.000₫",
+    "type": "drink",
+    "url": "cam-vat",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp1f231696ea90f4f41a22f63551b1.jpg?v=1670338550470",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2a6ee418b1c1c406999625d8e958.jpg?v=1670338550470",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp3febabd605d7a4bfbafad345ecb9.jpg?v=1670338550470"
+    ],
+    "shortDescription": "Những quả cam có vỏ mỏng, vị ngọt đậm và tép mọng nước sẽ thích hợp để làm nước ép cam hơn so với những loại cam chua, ít nước. Cam sành, cam xoàn và cam vinh là 3 loại cam nên lựa chọn để vắt nước uống ngày hè. Chúng cho ra những cốc nước cam thơm ngon, ngọt, thanh, mát lạnh.",
+    "tags": [
+        "Cam vắt",
+        "Nước cam"
+    ],
+    "description": "Cam vắt là thức uống được làm từ việc ép lấy nước từ những trái cam tươi. Thức uống này không chỉ mang hương vị thơm ngon, ngọt thanh tự nhiên mà còn chứa nhiều vitamin C và các dưỡng chất có lợi cho sức khỏe. Cam vắt của Bean Hotel được chế biến từ những trái cam tươi ngon nhất, đảm bảo giữ lại đầy đủ hương vị và dưỡng chất tự nhiên, mang đến cho khách hàng một thức uống bổ dưỡng và sảng khoái.",
+    "nutritionalInfo": {
+        "calories": "110 kcal",
+        "servingSize": "1 ly (250ml)",
+        "nutrients": [
+            "Carbohydrates: 26g",
+            "Sugar: 21g",
+            "Vitamin C: 124% RDA",
+            "Folate: 15% RDA",
+            "Potassium: 14% RDA"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Cam vắt là nguồn cung cấp vitamin C dồi dào, giúp tăng cường hệ miễn dịch, chống oxy hóa và ngăn ngừa lão hóa da. Thức uống này còn chứa folate, kali và các chất chống oxy hóa khác có lợi cho sức khỏe tim mạch và hệ tiêu hóa. Tuy nhiên, vì hàm lượng đường tự nhiên khá cao, người mắc bệnh tiểu đường nên thận trọng khi uống nước cam tươi.",
+    "cookingTip": "Để có một ly cam vắt ngon, bạn nên chọn những quả cam có vỏ mỏng, tép mọng nước và vị ngọt đậm như cam sành, cam xoàn hoặc cam Vinh. Trước khi vắt, nên rửa sạch cam và lăn nhẹ cam trên mặt phẳng để các tép cam dễ dàng giải phóng nước hơn. Uống ngay sau khi vắt để đảm bảo hàm lượng vitamin C không bị mất đi."
+    },
+    {
+    "id": "matcha-da-xay",
+    "name": "Matcha đá xay",
+    "price": "55.000₫",
+    "type": "drink",
+    "url": "matcha-da-xay",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp16b39bdb3f0124cb3baa29962783.jpg?v=1670338551617",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2c7889c2bba764fd19d03c9d37e6.jpg?v=1670338551617",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp3a3e957a69e3745e3add9e413b7f.jpg?v=1670338551617"
+    ],
+    "shortDescription": "Trà xanh đá xay hay Matcha Ice Blended là thức uống được kết hợp giữa kem tươi béo ngậy, sữa ngọt ngào và lá trà xanh Nhật Bản. Matcha đá xay có vị chát nhẹ và hương thơm quyến rũ đặc trưng của lá trà xanh.",
+    "tags": [
+        "Matcha",
+        "Matcha đá xay"
+    ],
+    "description": "Matcha đá xay là thức uống đặc trưng của Nhật Bản, được làm từ bột trà xanh matcha nguyên chất kết hợp với sữa, đá và đường. Matcha không chỉ mang hương vị đặc biệt với vị chát nhẹ, hương thơm đặc trưng mà còn chứa nhiều chất chống oxy hóa và các dưỡng chất có lợi cho sức khỏe. Matcha đá xay của Bean Hotel được chế biến từ loại bột matcha cao cấp, kết hợp với sữa tươi và đường, tạo nên một thức uống thơm ngon, mát lạnh và bổ dưỡng.",
+    "nutritionalInfo": {
+        "calories": "180 kcal",
+        "servingSize": "1 ly (350ml)",
+        "nutrients": [
+            "Carbohydrates: 30g",
+            "Sugar: 25g",
+            "Fat: 6g",
+            "Protein: 5g",
+            "Caffeine: 70mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Matcha là nguồn cung cấp các chất chống oxy hóa dồi dào, đặc biệt là các catechin giúp ngăn ngừa lão hóa và bảo vệ tế bào. Matcha còn có tác dụng tăng cường trao đổi chất, giảm cholesterol và giúp tỉnh táo, tập trung. Tuy nhiên, do hàm lượng caffeine khá cao, người mắc bệnh tim mạch, cao huyết áp hoặc khó ngủ nên thận trọng khi sử dụng.",
+    "cookingTip": "Để có một ly matcha đá xay ngon, bạn nên sử dụng bột matcha chất lượng cao và tươi. Trước khi pha chế, nên sàng bột matcha để tránh vón cục. Khi xay, nên thêm đá từ từ để đạt được độ sánh mịn lý tưởng. Có thể điều chỉnh lượng đường tùy theo khẩu vị, và thêm một chút kem tươi phủ bên trên để tăng độ béo ngậy."
+    },
+    {
+    "id": "tra-que-cam-thao",
+    "name": "Trà quế cam thảo",
+    "price": "80.000₫",
+    "oldPrice": "90.000₫",
+    "type": "drink",
+    "url": "tra-que-cam-thao",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp37180694c0240419a993f6392327.jpg?v=1670338549453",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp187db2f6203094bb9b23c06773c9.jpg?v=1670338549453",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp28198a5b0fd0043da85579e85138.jpg?v=1670338549453"
+    ],
+    "shortDescription": "Giữ ấm cơ thể, giảm các triệu trứng khó chịu do đau họng, cảm lạnh, Hỗ trợ detox, Chống lão hóa, da hồng hào, sáng mịn, Tăng cường đề kháng của cơ thể",
+    "tags": [
+        "Trà quế cam thảo"
+    ],
+    "description": "Trà quế cam thảo là thức uống thảo mộc truyền thống có nguồn gốc từ y học cổ truyền, kết hợp giữa quế, cam thảo và các thảo mộc quý khác. Thức uống này không chỉ có hương vị đặc biệt với vị ngọt nhẹ của cam thảo, hương thơm ấm áp của quế mà còn có nhiều công dụng tốt cho sức khỏe. Trà quế cam thảo của Bean Hotel được chế biến từ các nguyên liệu tự nhiên, không chất bảo quản, mang đến cho khách hàng một thức uống vừa thơm ngon vừa bổ dưỡng.",
+    "nutritionalInfo": {
+        "calories": "85 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 22g",
+            "Sugar: 18g",
+            "Fiber: 2g",
+            "Protein: 0g",
+            "Caffeine: 0mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Trà quế cam thảo có nhiều công dụng tốt cho sức khỏe như hỗ trợ hệ tiêu hóa, giảm viêm họng và các triệu chứng cảm lạnh, hỗ trợ detox cơ thể, giúp da sáng mịn và chống lão hóa. Thức uống này còn có tác dụng làm ấm cơ thể, tăng cường hệ miễn dịch và giảm căng thẳng, mệt mỏi. Tuy nhiên, không nên uống quá nhiều trà quế cam thảo, đặc biệt là người bị cao huyết áp hoặc đang sử dụng một số loại thuốc đặc biệt.",
+    "cookingTip": "Để pha một ly trà quế cam thảo ngon, bạn nên kết hợp quế, cam thảo cùng một số thảo mộc khác như gừng, hoa cúc hoặc táo khô. Nên hãm trà với nước sôi 85-90 độ C và để trong khoảng 5-7 phút để các dưỡng chất từ thảo mộc ngấm vào nước. Có thể thêm một chút mật ong hoặc đường phèn để tăng vị ngọt tự nhiên và công dụng của trà."
+    },
+    {
+    "id": "tra-xanh-hoa-nhai",
+    "name": "Trà xanh hoa nhài",
+    "price": "60.000₫",
+    "oldPrice": "80.000₫",
+    "type": "drink",
+    "url": "tra-xanh-hoa-nhai",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "https://bizweb.dktcdn.net/100/472/947/products/sp1fc77b8d640324c8aa2d62a91e47.jpg?v=1670338548440",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp2c4379df117a04e0096d34ee4b5c.jpg?v=1670338548440",
+        "https://bizweb.dktcdn.net/100/472/947/products/sp31c8c0e347e3b46e89c4e0269c78.jpg?v=1670338548440"
+    ],
+    "shortDescription": "Thư giản hiệu quả và giảm stress đây cũng chính là một trong những công dụng tuyệt vời mà trà nhài mang lại cho sức khỏe. Nhờ những dưỡng chất chứa trong trà xanh cùng với tinh dầu hương thơm trong hoa nhài giúp thần kinh được thư giãn, tinh thần sảng khoái hơn, nên rất tốt cho những người làm việc căng thẳng.",
+    "tags": [
+        "Trà xanh",
+        "Trà xanh hoa nhài"
+    ],
+    "description": "Trà xanh hoa nhài là loại trà kết hợp giữa lá trà xanh tự nhiên và hoa nhài thơm ngát. Sự hòa quyện giữa hương vị chát nhẹ của trà xanh và hương thơm dịu nhẹ của hoa nhài tạo nên một thức uống thanh mát, thư giãn và có nhiều lợi ích cho sức khỏe. Trà xanh hoa nhài của Bean Hotel được chọn lọc từ những búp trà non và hoa nhài tươi, mang đến cho khách hàng trải nghiệm thưởng thức trọn vẹn và tinh tế nhất.",
+    "nutritionalInfo": {
+        "calories": "95 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 0g",
+            "Sugar: 0g",
+            "Fiber: 0g",
+            "Protein: 0g",
+            "Caffeine: 35mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Trà xanh hoa nhài chứa nhiều chất chống oxy hóa, giúp tăng cường hệ miễn dịch, cải thiện sức khỏe tim mạch và giảm stress. Hương thơm của hoa nhài có tác dụng thư giãn tinh thần, giúp ngủ ngon và cải thiện tâm trạng. Thức uống này còn có thể giúp tăng cường trao đổi chất, hỗ trợ giảm cân và làm đẹp da. Tuy nhiên, do có chứa caffeine, người bị mất ngủ hoặc nhạy cảm với caffeine không nên uống vào buổi tối.",
+    "cookingTip": "Để pha một tách trà xanh hoa nhài ngon, nên dùng nước nóng 80-85 độ C, không nên dùng nước sôi để tránh làm mất hương vị đặc trưng và các dưỡng chất có trong trà. Nên ủ trà khoảng 3-5 phút, không quá lâu để tránh vị chát đắng. Có thể thêm một chút mật ong hoặc đường phèn nếu muốn trà có vị ngọt nhẹ."
+    },
+    {
+    "id": "cafe-dua-sala",
+    "name": "Cafe dừa Sala",
+    "price": "75.000₫",
+    "oldPrice": "85.000₫",
+    "type": "drink",
+    "url": "cafe-dua-sala",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+      "img/cf.jpg",
+    "img/cf2.jpg"
+    ],
+    "shortDescription": "Cafe dừa đặc biệt được làm từ hạt cà phê Robusta nguyên chất kết hợp cùng kem sữa dừa béo ngậy tạo nên hương vị đặc trưng khó quên. Với hương thơm nồng nàn của cà phê và vị béo ngọt của dừa, đây là thức uống hoàn hảo cho những ngày mệt mỏi cần tỉnh táo và thư giãn.",
+    "tags": [
+        "Cafe",
+        "Cafe dừa",
+        "Đồ uống đặc biệt"
+    ],
+    "description": "Cafe dừa Sala là sự kết hợp độc đáo giữa cà phê espresso đậm đà và kem sữa dừa béo ngậy, tạo nên một thức uống hài hòa giữa vị đắng của cà phê và vị ngọt ngào của dừa. Được chế biến từ những hạt cà phê Robusta chất lượng cao và nước cốt dừa tươi nguyên chất, Cafe dừa Sala mang đến trải nghiệm thưởng thức độc đáo, khác biệt so với các loại cà phê thông thường. Đây là một trong những thức uống đặc trưng của Bean Hotel, được nhiều khách hàng yêu thích và lựa chọn.",
+    "nutritionalInfo": {
+        "calories": "180 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 22g",
+            "Sugar: 18g",
+            "Fat: 8g",
+            "Protein: 2g",
+            "Caffeine: 150mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Cafe dừa Sala chứa caffeine giúp tăng cường tỉnh táo và cải thiện tâm trạng. Nước cốt dừa trong thức uống này chứa các axit béo có lợi cho sức khỏe tim mạch và hỗ trợ chức năng não bộ. Tuy nhiên, do có hàm lượng đường và chất béo tương đối cao, nên uống với lượng vừa phải, đặc biệt là người đang theo chế độ ăn kiêng, người bị tiểu đường hoặc có vấn đề về tim mạch. Không nên uống vào buổi tối nếu bạn nhạy cảm với caffeine.",
+    "cookingTip": "Để làm một ly cafe dừa Sala ngon, cần pha cà phê espresso đậm đặc, sau đó kết hợp với kem sữa dừa đã được đánh bông nhẹ. Có thể thêm một chút syrup dừa hoặc đường nâu để tăng vị ngọt. Nên uống ngay sau khi pha chế để cảm nhận được hương vị thơm ngon nhất. Có thể trang trí với một ít bột quế hoặc dừa nạo lên trên bề mặt để tăng thêm hương vị và độ hấp dẫn."
+    },
+    {
+    "id": "tra-yogurt-dao",
+    "name": "Trà yogurt đào",
+    "price": "70.000₫",
+    "oldPrice": "85.000₫",
+    "type": "drink",
+    "url": "tra-yogurt-dao",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+        "img/dao.jpg",
+        "img/dao2.jpg",
+        "img/dao3.jpg"
+    ],
+    "shortDescription": "Trà yogurt đào là sự kết hợp tuyệt vời giữa trà đen thơm ngon, vị chua thanh của sữa chua và hương thơm ngọt ngào của đào chín mọng. Thức uống này không chỉ ngon miệng mà còn rất tốt cho sức khỏe, giúp giải nhiệt hiệu quả trong những ngày hè nóng bức.",
+    "tags": [
+        "Trà yogurt",
+        "Trà yogurt đào",
+        "Đồ uống trái cây"
+    ],
+    "description": "Trà yogurt đào là một thức uống đặc biệt kết hợp giữa trà đen thơm ngon, sữa chua tươi mát và hương vị đậm đà của quả đào chín mọng. Vị chua nhẹ của sữa chua hòa quyện với vị ngọt tự nhiên của đào và hương thơm của trà tạo nên một hương vị hài hòa, thanh mát và dễ uống. Thức uống này được phục vụ cùng với những miếng đào tươi và đá viên, mang lại cảm giác sảng khoái và tươi mới, đặc biệt thích hợp cho những ngày hè nóng bức. Trà yogurt đào của Bean Hotel được làm từ những nguyên liệu tự nhiên, không chất bảo quản, mang lại không chỉ hương vị thơm ngon mà còn nhiều lợi ích cho sức khỏe.",
+    "nutritionalInfo": {
+        "calories": "135 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 25g",
+            "Sugar: 20g",
+            "Fat: 2g",
+            "Protein: 3g",
+            "Caffeine: 25mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Trà yogurt đào chứa probiotics từ sữa chua, giúp cải thiện hệ tiêu hóa và tăng cường hệ miễn dịch. Trà đen trong thức uống có chứa chất chống oxy hóa, giúp bảo vệ tế bào khỏi tác hại của gốc tự do. Đào tươi bổ sung vitamin C, A và khoáng chất như kali, giúp tăng cường sức khỏe và làm đẹp da. Thức uống này còn có tác dụng giải nhiệt, cấp nước và tăng cường năng lượng. Tuy nhiên, do có chứa đường, người đang ăn kiêng hoặc bị tiểu đường nên uống với lượng vừa phải.",
+    "cookingTip": "Để làm một ly trà yogurt đào ngon, nên pha trà đen đậm đặc và để nguội trước khi kết hợp với sữa chua và đào xay nhuyễn. Sử dụng đào chín mọng để có hương vị ngọt tự nhiên và thơm nhất. Để tăng thêm độ béo và mịn, có thể thêm một ít kem tươi hoặc sữa đặc. Nên uống ngay sau khi pha chế và thêm đá viên để tăng thêm cảm giác mát lạnh. Có thể trang trí bằng một vài lát đào tươi hoặc lá bạc hà để tăng thêm hương vị và độ hấp dẫn."
+    },
+    {
+    "id": "tra-hoa-hong-kem",
+    "name": "Trà hoa hồng kem",
+    "price": "65.000₫",
+    "oldPrice": "75.000₫",
+    "type": "drink",
+    "url": "tra-hoa-hong-kem",
+    "brand": "Bean Hotel",
+    "status": "Còn hàng",
+    "image": [
+    "img/kem.jpg",
+    "img/kem2.jpg"
+    ],
+    "shortDescription": "Trà hoa hồng kem là thức uống thanh tao, tinh tế với hương thơm quyến rũ của hoa hồng và vị béo ngậy của kem. Thức uống này không chỉ là sự lựa chọn hoàn hảo cho những buổi trà chiều sang trọng mà còn mang lại nhiều lợi ích cho sức khỏe và sắc đẹp.",
+    "tags": [
+        "Trà hoa",
+        "Trà hoa hồng",
+        "Đồ uống đặc biệt"
+    ],
+    "description": "Trà hoa hồng kem là một thức uống sang trọng và tinh tế, được làm từ những cánh hoa hồng tươi hãm cùng trà đen thượng hạng và kết hợp với lớp kem tươi béo ngậy ở trên. Hương thơm dịu nhẹ, quyến rũ của hoa hồng hòa quyện với vị chát nhẹ của trà và vị béo ngọt của kem tạo nên một trải nghiệm thưởng thức đặc biệt. Không chỉ là một thức uống ngon miệng, trà hoa hồng kem còn mang lại nhiều lợi ích cho sức khỏe và sắc đẹp. Đây là một trong những thức uống đặc trưng của Bean Hotel, thường được phục vụ trong những buổi trà chiều hoặc các dịp đặc biệt.",
+    "nutritionalInfo": {
+        "calories": "120 kcal",
+        "servingSize": "1 ly (300ml)",
+        "nutrients": [
+            "Carbohydrates: 15g",
+            "Sugar: 12g",
+            "Fat: 5g",
+            "Protein: 2g",
+            "Caffeine: 30mg"
+        ]
+    },
+    "returnPolicy": [
+        "Quý khách vui lòng liên hệ với bộ phận phục vụ ngay sau khi nhận thức uống nếu có bất kỳ vấn đề gì",
+        "Bean Hotel chỉ đổi sản phẩm mới cho khách trong trường hợp thức uống không đạt tiêu chuẩn chất lượng",
+        "Không áp dụng trả hàng với các sản phẩm đồ uống đã qua sử dụng",
+        "Quý khách vui lòng giữ hóa đơn để được hỗ trợ đổi/trả"
+    ],
+    "healthNotes": "Trà hoa hồng kem chứa nhiều chất chống oxy hóa từ hoa hồng và trà đen, giúp chống lại các gốc tự do, làm chậm quá trình lão hóa và bảo vệ sức khỏe tim mạch. Tinh dầu hoa hồng trong thức uống có tác dụng làm dịu tinh thần, giảm căng thẳng và cải thiện tâm trạng. Ngoài ra, hoa hồng còn có tính kháng khuẩn, giúp cải thiện hệ tiêu hóa và làm đẹp da từ bên trong. Tuy nhiên, do có chứa caffeine và kem, người nhạy cảm với caffeine hoặc đang ăn kiêng nên uống với lượng vừa phải.",
+    "cookingTip": "Để làm một ly trà hoa hồng kem ngon, nên chọn những cánh hoa hồng tươi, không phun thuốc trừ sâu. Hãm trà với nước nóng 85-90 độ C trong khoảng 3-5 phút, sau đó lọc bỏ cặn và để nguội. Đánh kem tươi với một chút đường bột và tinh dầu hoa hồng đến khi mịn và có độ bông nhẹ. Rót trà vào ly và nhẹ nhàng thêm lớp kem lên trên. Có thể trang trí bằng một vài cánh hoa hồng tươi hoặc khô và một chút bột quế để tăng thêm hương vị và độ hấp dẫn."
+    }
+]
