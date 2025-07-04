@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#cd9a2b" />
-    
+
     <meta name="revisit-after" content="2 days" />
     <meta
       name="viewport"
@@ -15,39 +15,16 @@
       content="Mì xào bò là món ăn được chế biến kết hợp từ nhiều loại thực phẩm khác nhau. Đó là trứng, thịt, rau và gia vị. Vì kết hợp nhiều nguyên liệu nên món ăn này có hương vị thơm ngon, hấp dẫn. Và chế biến nhanh, đơn giản nên được nhiều gia đình lựa chọn cho bữa sáng. Nhiều người khá lăn tăn về hàm lượng calo trong một đĩa mì"
     />
     <title>Mì xào bò</title>
-    <meta
-      name="keywords"
-      content="Ẩm thực Bean Hotel, "
-    />
+    <meta name="keywords" content="Ẩm thực Bean Hotel, " />
 
-   
+    <meta property="og:image" content="img/sp21.webp" />
+    <meta property="og:image:secure_url" content="img/sp21.webp" />
 
-    <meta
-      property="og:image"
-      content="img/sp21.webp"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="img/sp21.webp"
-    />
+    <meta property="og:image" content="img/sp21.webp" />
+    <meta property="og:image:secure_url" content="img/sp21.webp" />
 
-    <meta
-      property="og:image"
-      content="img/sp21.webp"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="img/sp21.webp"
-    />
-
-    <meta
-      property="og:image"
-      content="img/sp21.webp"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="img/sp21.webp"
-    />
+    <meta property="og:image" content="img/sp21.webp" />
+    <meta property="og:image:secure_url" content="img/sp21.webp" />
 
     <meta property="og:price:amount" content="80.000" />
     <meta property="og:price:currency" content="VND" />
@@ -58,44 +35,14 @@
     />
     <meta property="og:url" content="mi-xao-bo" />
     <meta property="og:site_name" content="Bean Hotel" />
-    <link
-      rel="icon"
-      href="img/favicon.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="preload"
-      as="script"
-      href="js/jquery.js"
-    />
-    <script
-      src="js/jquery.js"
-      type="text/javascript"
-    ></script>
-    <link
-      rel="preload"
-      as="script"
-      href="js/swiper.js"
-    />
-    <script
-      src="js/swiper.js"
-      type="text/javascript"
-    ></script>
-    <link
-      rel="preload"
-      as="script"
-      href="js/lazy.js"
-    />
-    <script
-      src="js/lazy.js"
-      type="text/javascript"
-    ></script>
-    <link
-      rel="preload"
-      as="style"
-      type="text/css"
-      href="css/main.scss.css"
-    />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="preload" as="script" href="js/jquery.js" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="preload" as="script" href="js/swiper.js" />
+    <script src="js/swiper.js" type="text/javascript"></script>
+    <link rel="preload" as="script" href="js/lazy.js" />
+    <script src="js/lazy.js" type="text/javascript"></script>
+    <link rel="preload" as="style" type="text/css" href="css/main.scss.css" />
 
     <link
       rel="preload"
@@ -109,10 +56,7 @@
       type="text/css"
       href="css/quickviews_popup_cart.scss.css"
     />
-    <link
-      rel="stylesheet"
-      href="css/bootstrap-4-3-min.css"
-    />
+    <link rel="stylesheet" href="css/bootstrap-4-3-min.css" />
     <link
       href="css/main.scss.css"
       rel="stylesheet"
@@ -139,12 +83,7 @@
       type="text/css"
       media="all"
     />
-    <link
-      href="css/food.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
+    <link href="css/food.css" rel="stylesheet" type="text/css" media="all" />
     <script>
       var Bizweb = Bizweb || {};
       Bizweb.store = "bean-hotel.mysapo.net";
@@ -277,28 +216,28 @@
       }
       window.awe_lazyloadImage = awe_lazyloadImage;
     </script>
-    
+
     <!-- Script để thay đổi dữ liệu động từ food.json -->
     <script src="js/food-dynamic.js"></script>
-    
+
     <!-- Script để load danh sách phòng cho phần "Có thể bạn thích" -->
     <script>
       // Function để load danh sách phòng
       function loadRoomSuggestions() {
-        fetch('data/room.json')
-          .then(response => response.json())
-          .then(rooms => {
-            const container = document.getElementById('room-suggestions');
+        fetch("data/room.json")
+          .then((response) => response.json())
+          .then((rooms) => {
+            const container = document.getElementById("room-suggestions");
             if (!container) return;
-            
+
             // Lấy 4 phòng đầu tiên
             const suggestedRooms = rooms.slice(0, 4);
-            
-            let html = '';
+
+            let html = "";
             suggestedRooms.forEach((room, index) => {
               const roomId = room.id; // Sử dụng ID thực từ JSON
-              const imageUrl = room.image?.[0] || ''; // Sử dụng hình ảnh từ JSON
-              
+              const imageUrl = room.image?.[0] || ""; // Sử dụng hình ảnh từ JSON
+
               html += `
                 <div class="product-view">
                   <a
@@ -327,28 +266,28 @@
                 </div>
               `;
             });
-            
+
             container.innerHTML = html;
-            
+
             // Trigger lazy loading cho hình ảnh mới
-            if (typeof LazyLoad !== 'undefined') {
+            if (typeof LazyLoad !== "undefined") {
               const lazyLoadInstance = new LazyLoad({
-                elements_selector: ".lazyload"
+                elements_selector: ".lazyload",
               });
             }
           })
-          .catch(error => {
-            console.error('Lỗi khi load danh sách phòng:', error);
+          .catch((error) => {
+            console.error("Lỗi khi load danh sách phòng:", error);
             // Fallback: hiển thị nội dung mặc định
-            const container = document.getElementById('room-suggestions');
+            const container = document.getElementById("room-suggestions");
             if (container) {
-              container.innerHTML = '<p>Không thể tải danh sách phòng</p>';
+              container.innerHTML = "<p>Không thể tải danh sách phòng</p>";
             }
           });
       }
-      
+
       // Load khi DOM ready
-      document.addEventListener('DOMContentLoaded', loadRoomSuggestions);
+      document.addEventListener("DOMContentLoaded", loadRoomSuggestions);
     </script>
   </head>
   <body>
@@ -579,21 +518,15 @@
                           >
                         </li>
                         <li>
-                          <a href="product.html" title="Hội nghị"
-                            >Hội nghị</a
-                          >
+                          <a href="product.html" title="Hội nghị">Hội nghị</a>
                         </li>
                         <li>
-                          <a
-                            href="product.html"
-                            title="Dịch vụ spa"
+                          <a href="product.html" title="Dịch vụ spa"
                             >Dịch vụ spa</a
                           >
                         </li>
                         <li>
-                          <a
-                            href="food.html"
-                            title="Ẩm thực khách sạn"
+                          <a href="food.html" title="Ẩm thực khách sạn"
                             >Ẩm thực khách sạn</a
                           >
                         </li>
@@ -812,7 +745,7 @@
                       </li>
 
                       <li class="nav-item">
-                        <a class="nav-link" href="/dich-vu" title="Dịch vụ"
+                        <a class="nav-link" href="service.html" title="Dịch vụ"
                           >Dịch vụ</a
                         >
                       </li>
@@ -967,10 +900,7 @@
           <link itemprop="availability" href="http://schema.org/InStock" />
           <meta itemprop="priceCurrency" content="VND" />
           <meta itemprop="price" content="80000" />
-          <meta
-            itemprop="url"
-            content="mi-xao-bo"
-          />
+          <meta itemprop="url" content="mi-xao-bo" />
           <span
             itemprop="UnitPriceSpecification"
             itemscope
@@ -1757,7 +1687,10 @@
                         <nav class="nav-category">
                           <ul class="nav navbar-pills">
                             <li class="nav-item relative">
-                              <a title="Trang chủ" class="nav-link" href="index.html"
+                              <a
+                                title="Trang chủ"
+                                class="nav-link"
+                                href="index.html"
                                 >Trang chủ
                               </a>
                             </li>
@@ -10037,7 +9970,6 @@ Popup cart mobile
                 d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"
                 fill="#ffffff"
                 data-original="#000000"
-               
               />
             </g></svg
         ></a>
