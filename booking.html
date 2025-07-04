@@ -10,67 +10,17 @@
     />
     <meta name="robots" content="noodp,index,follow" />
     <meta name="description" content="" />
-    <title>Bean Hotel - Chi tiết phòng</title>
-    <meta name="keywords" content="Bean Hotel, phòng khách sạn" />
+    <title>Đặt phòng</title>
 
-    <meta property="og:type" content="product" />
-    <meta property="og:title" content="" />
-    <meta property="og:price:currency" content="VND" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:title" content="Đặt phòng" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:image:secure_url" content="img/logo.png" />
+
     <meta property="og:description" content="" />
-    <meta
-      property="og:url"
-      content="phong-don-tieu-chuan"
-    />
+    <meta property="og:url" content="https://bean-hotel.mysapo.net/dat-phong" />
     <meta property="og:site_name" content="Bean Hotel" />
-    <!-- CSS để sửa lỗi kích thước ảnh -->
-    <style>
-      /* Điều chỉnh kích thước ảnh trong trang chi tiết phòng */
-      #slide_pro_room .swiper-slide img {
-        width: 100%;
-        height: auto;
-        max-height: 500px;
-        object-fit: cover;
-      }
-
-      /* Điều chỉnh kích thước ảnh trong các phòng liên quan */
-      .item-product-img img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-        object-fit: cover;
-      }
-
-      /* Đảm bảo ảnh không bị vỡ trong gallery */
-      .list-gallery-room img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        object-fit: cover;
-      }
-
-      /* Đảm bảo ảnh không bị vỡ trong carousel */
-      .carousel-inner img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      /* Đảm bảo ảnh nhỏ trong gallery */
-      .product-thumb img {
-        width: 100%;
-        height: auto;
-        max-height: 100px;
-        object-fit: cover;
-      }
-
-      /* Đảm bảo biểu tượng dịch vụ không bị ảnh hưởng */
-      .list_tag_room img,
-      .tag-rivew img {
-        width: 32px !important;
-        height: 32px !important;
-        object-fit: contain;
-      }
-    </style>
     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="preload" as="script" href="js/jquery.js" />
     <script src="js/jquery.js" type="text/javascript"></script>
@@ -94,27 +44,27 @@
     />
     <link rel="stylesheet" href="css/bootstrap-4-3-min.css" />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.scss.css?1749443141671"
+      href="css/main.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/breadcrumb_style.scss.css?1749443141671"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-
-    <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/product_style_room.scss.css?1749443141671"
+      href="css/breadcrumb_style.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
 
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickviews_popup_cart.scss.css?1749443141671"
+      href="css/style_page.scss.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      href="css/quickviews_popup_cart.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -124,7 +74,7 @@
       Bizweb.store = "bean-hotel.mysapo.net";
       Bizweb.id = 472947;
       Bizweb.theme = { id: 888072, name: "Bean Hotel", role: "main" };
-      Bizweb.template = "product.room";
+      Bizweb.template = "page.dat-phong";
       if (!Bizweb.fbEventId)
         Bizweb.fbEventId = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
           /[xy]/g,
@@ -162,25 +112,12 @@
 
       var meta = {};
 
-      meta.product = {
-        id: 0,
-        vendor: "",
-        name: "",
-        type: "",
-        price: 0,
-      };
-
       for (var attr in meta) {
         window.BizwebAnalytics.meta[attr] = meta[attr];
       }
     </script>
 
-    <script src="/dist/js/stats.min.js?v=96f2ff2"></script>
-
-    <script>
-      var ProductReviewsAppUtil = ProductReviewsAppUtil || {};
-      ProductReviewsAppUtil.store = { name: "Bean Hotel" };
-    </script>
+    <script src="js/stats.min.js"></script>
 
     <script type="application/ld+json">
       {
@@ -200,8 +137,8 @@
             "@type": "ListItem",
             "position": 2,
             "item": {
-              "@id": "phong-don-tieu-chuan",
-              "name": "Phòng đơn tiêu chuẩn"
+              "@id": "https://bean-hotel.mysapo.net/dat-phong",
+              "name": "Đặt phòng"
             }
           }
         ]
@@ -221,7 +158,7 @@
             "contactType": "customer service"
           }
         ],
-        "logo": "//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671",
+        "logo": "img/logo.png",
         "sameAs": ["#", "#"]
       }
     </script>
@@ -233,7 +170,7 @@
         "url": "https://bean-hotel.mysapo.net",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "search?query={search_term}",
+          "target": "https://bean-hotel.mysapo.net/search?query={search_term}",
           "query-input": "required name=search_term"
         }
       }
@@ -252,7 +189,6 @@
       window.awe_lazyloadImage = awe_lazyloadImage;
     </script>
   </head>
-
   <body>
     <div class="opacity_menu"></div>
     <header class="header">
@@ -278,7 +214,7 @@
                     <img
                       width="24"
                       height="24"
-                      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671"
+                      src="img/cart-add.svg"
                       alt="Giỏ hàng"
                     />Giỏ hàng (<span class="count_item count_item_pr"></span
                     >)</a
@@ -549,7 +485,7 @@
                     width="220"
                     height="68"
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                    data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
+                    data-src="img/logo.png"
                     alt="Bean Hotel"
                     class="lazyload"
                 /></a>
@@ -615,7 +551,7 @@
                   <nav class="header-nav">
                     <ul id="nav" class="nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="/" title="Trang chủ"
+                        <a class="nav-link" href="index.html" title="Trang chủ"
                           >Trang chủ</a
                         >
                       </li>
@@ -623,7 +559,7 @@
                       <li class="nav-item">
                         <a
                           class="nav-link"
-                          href="/ve-chung-toi"
+                          href="about.html"
                           title="Về chúng tôi"
                           >Về chúng tôi</a
                         >
@@ -648,7 +584,7 @@
                           <li class="nav-item-lv2">
                             <a
                               class="nav-link"
-                              href="product.html?type=phong-don"
+                              href="/phong-don"
                               title="Phòng đơn"
                               >Phòng đơn</a
                             >
@@ -657,7 +593,7 @@
                           <li class="nav-item-lv2">
                             <a
                               class="nav-link"
-                              href="product.html?type=phong-doi"
+                              href="/phong-doi"
                               title="Phòng đôi"
                               >Phòng đôi</a
                             >
@@ -666,7 +602,7 @@
                           <li class="nav-item-lv2">
                             <a
                               class="nav-link"
-                              href="product.html?type=phong-vip"
+                              href="/phong-vip"
                               title="Phòng vip"
                               >Phòng vip</a
                             >
@@ -691,13 +627,13 @@
                         <i class="open_mnu down_icon"></i>
                         <ul class="dropdown-menu">
                           <li class="nav-item-lv2">
-                            <a class="nav-link" href="food.html" title="Món ăn"
+                            <a class="nav-link" href="/mon-an" title="Món ăn"
                               >Món ăn</a
                             >
                           </li>
 
                           <li class="nav-item-lv2">
-                            <a class="nav-link" href="food.html" title="Đồ uống"
+                            <a class="nav-link" href="/do-uong" title="Đồ uống"
                               >Đồ uống</a
                             >
                           </li>
@@ -705,7 +641,7 @@
                           <li class="nav-item-lv2">
                             <a
                               class="nav-link"
-                              href="food.html"
+                              href="/banh-ngot"
                               title="Bánh ngọt"
                               >Bánh ngọt</a
                             >
@@ -720,22 +656,22 @@
                       </li>
 
                       <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="/thu-vien-anh"
-                          title="Thư viện ảnh"
+                        <a class="nav-link" href="img.html" title="Thư viện ảnh"
                           >Thư viện ảnh</a
                         >
                       </li>
 
                       <li class="nav-item">
-                        <a class="nav-link" href="/lien-he" title="Liên hệ"
+                        <a class="nav-link" href="contact.html" title="Liên hệ"
                           >Liên hệ</a
                         >
                       </li>
 
                       <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="dat-phong" title="Đặt phòng"
+                        <a
+                          class="nav-link"
+                          href="booking.html"
+                          title="Đặt phòng"
                           >Đặt phòng</a
                         >
                       </li>
@@ -775,7 +711,7 @@
         <div class="container">
           <ul class="breadcrumb">
             <li class="home">
-              <a href="index.html" title="Trang chủ"><span>Trang chủ</span></a>
+              <a href="/" title="Trang chủ"><span>Trang chủ</span></a>
               <span class="mr_lr"
                 >&nbsp;<svg
                   aria-hidden="true"
@@ -797,1089 +733,466 @@
             </li>
 
             <li>
-              <a
-                class="changeurl"
-                href="product.html?type=phong-don"
-                title="Phòng đơn"
-                ><span>Phòng đơn</span></a
-              >
-              <span class="mr_lr"
-                >&nbsp;<svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="chevron-right"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 320 512"
-                  class="svg-inline--fa fa-chevron-right fa-w-10"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
-                    class=""
-                  ></path></svg
-                >&nbsp;</span
-              >
+              <strong><span>Đặt phòng</span></strong>
             </li>
-
-            <li>
-              <strong><span>Phòng đơn tiêu chuẩn</span></strong>
-            </li>
-            <li></li>
           </ul>
         </div>
       </section>
-
-      <link
-        rel="preload"
-        href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/moment-min.js?1749443141671"
-        as="script"
-      />
-      <script
-        src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/moment-min.js?1749443141671"
-        type="text/javascript"
-      ></script>
-      <script
-        src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bootstrap-notify.js?1749443141671"
-        type="text/javascript"
-      ></script>
-      <section
-        class="product layout-product"
-        itemscope
-        itemtype="https://schema.org/Product"
-      >
-        <meta itemprop="category" content="Phòng đơn" />
-        <meta
-          itemprop="url"
-          content="//bean-hotel.mysapo.net/phong-don-tieu-chuan"
-        />
-        <meta itemprop="name" content="Phòng đơn tiêu chuẩn" />
-        <meta
-          itemprop="image"
-          content="http://bizweb.dktcdn.net/thumb/grande/100/472/947/products/anh1.jpg?v=1670338577307"
-        />
-        <meta
-          itemprop="description"
-          content="Các phòng trang nhã và dãy phòng trang nghiêm của chúng tôi gợi nhớ về một thời đại đã qua.&nbsp;Mỗi tính năng như đường cong, thảm sang trọng, trần nhà cao, phòng tắm lát đá cẩm thạch, thiết bị làm sạch và nhiều không gian đều được bố trí một cách chu đáo để gọi cho riêng bạn.&nbsp;Tông màu nâu phong phú và gỗ sồi tự nhiên tạo nên những khu bảo tồn yên tĩnh và yên tĩnh, được tôn lên một cách tuyệt vời bởi đồ nội thất trang nhã."
-        />
-        <meta itemprop="model" content="" />
-        <div
-          class="d-none hidden"
-          itemprop="offers"
-          itemscope
-          itemtype="http://schema.org/Offer"
-        >
-          <div
-            class="inventory_quantity hidden"
-            itemscope
-            itemtype="http://schema.org/ItemAvailability"
-          >
-            <span class="a-stock" itemprop="supersededBy"> Còn hàng </span>
-          </div>
-          <link itemprop="availability" href="http://schema.org/InStock" />
-          <meta itemprop="priceCurrency" content="VND" />
-          <meta itemprop="price" content="500000" />
-          <meta
-            itemprop="url"
-            content="phong-don-tieu-chuan"
-          />
-          <span
-            itemprop="UnitPriceSpecification"
-            itemscope
-            itemtype="https://schema.org/Downpayment"
-          >
-            <meta itemprop="priceType" content="500000" />
-          </span>
-          <meta itemprop="priceValidUntil" content="2099-01-01" />
-        </div>
-        <div
-          class="d-none hidden"
-          id="https://bean-hotel.mysapo.net"
-          itemprop="seller"
-          itemtype="http://schema.org/Organization"
-          itemscope
-        >
-          <meta itemprop="name" content="Bean Hotel" />
-          <meta itemprop="url" content="https://bean-hotel.mysapo.net" />
-          <meta
-            itemprop="logo"
-            content="http://bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
-          />
-        </div>
+      <link rel="preload" href="js/moment-min.js" as="script" />
+      <script src="js/moment-min.js" type="text/javascript"></script>
+      <script src="js/bootstrap-notify.js" type="text/javascript"></script>
+      <section class="page page-dat-phong">
         <div class="container">
-          <div class="details-product">
+          <div class="pg_page padding-top-15">
             <div class="row">
-              <div
-                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 margin-room"
-              >
-                <div
-                  id="slide_pro_room"
-                  class="swiper-container product-image-detail"
-                >
-                  <div class="swiper-wrapper"></div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
+              <div class="col-12">
+                <div class="page-title category-title">
+                  <h1 class="title-head">
+                    <a href="/dat-phong" title="Đặt phòng">Đặt phòng</a>
+                  </h1>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                <h1 class="title-product product-title"></h1>
-
-                <div class="tag_info_room room-basic-info">
-                  <!-- Thông tin cơ bản sẽ được tải động từ JS -->
-                </div>
-
-                <div class="product-summary">
-                  <!-- Mô tả phòng sẽ được tải động từ JS -->
-                </div>
-
-                <div class="room_services">
-                  <div class="title_services">Dịch vụ phòng</div>
-                  <div class="box_services">
-                    <ul class="list_tag_room free-services-list">
-                      <!-- Dịch vụ phòng sẽ được tải động từ JS -->
-                    </ul>
+                <div class="content-page rte row">
+                  <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                    <div class="banner_booking">
+                      <img src="img/Apricot-Hotel.jpg" alt="Bean Hotel" />
+                      <div class="content_booking">
+                        Để lại thông tin đặt phòng và chúng tôi sẽ liên hệ bạn
+                        sớm nhất có thể. Cảm ơn bạn đã tin tưởng chúng tôi.
+                        <br />
+                        Bean Hotel trân trọng!
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 details-pro callmeback-form"
-              >
-                <form
-                  method="post"
-                  action="/postcontact"
-                  id="contact"
-                  accept-charset="UTF-8"
-                >
-                  <input name="FormType" type="hidden" value="contact" /><input
-                    name="utf8"
-                    type="hidden"
-                    value="true"
-                  /><input
-                    type="hidden"
-                    id="Token-158dcb9b762c43008b5c43cb7ee06089"
-                    name="Token"
-                  />
-                  <script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
-                  <script>
-                    grecaptcha.ready(function () {
-                      grecaptcha
-                        .execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {
-                          action: "contact",
-                        })
-                        .then(function (token) {
-                          document.getElementById(
-                            "Token-158dcb9b762c43008b5c43cb7ee06089"
-                          ).value = token;
-                        });
-                    });
-                  </script>
-
-                  <div class="price-box clearfix">
-                    <div class="bost-price hidden"></div>
-
-                    <div class="special-price">
-                      <span class="price product-price"></span>
-                      <meta itemprop="price" content="" />
-                      <meta itemprop="priceCurrency" content="VND" />
-                    </div>
-                    <!-- Giá -->
-                  </div>
-
-                  <div class="row pad-room">
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
+                  <div
+                    class="callmeback-form col-xl-6 col-lg-5 col-md-12 col-sm-12 col-xs-12"
+                  >
+                    <form
+                      method="post"
+                      action="/postcontact"
+                      id="contact"
+                      accept-charset="UTF-8"
                     >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
-                      >
-                        <label class="title-date">Họ và tên*</label>
-                      </div>
-                      <div class="form-booking">
-                        <input
-                          required
-                          type="text"
-                          value="Ph&#242;ng đơn ti&#234;u chuẩn"
-                          placeholder="Tên phòng"
-                          name="contact[Tên phòng]"
-                          class="hidden"
-                        />
-                        <input
-                          required
-                          type="text"
-                          value="500.000₫"
-                          name="contact[Giá phòng]"
-                          class="hidden"
-                        />
-                        <input
-                          placeholder="Email *"
-                          type="email"
-                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                          required
-                          id="email1"
-                          class="form-control form-control-lg hidden"
-                          value="default@gmail.com"
-                          name="contact[email]"
-                        />
-                        <input
-                          required
-                          type="text"
-                          value=""
-                          placeholder="Họ và tên"
-                          name="contact[Name]"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
-                    >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
-                      >
-                        <label class="title-date">Số điện thoại*</label>
-                      </div>
-                      <div class="form-booking">
-                        <input
-                          placeholder="Số điện thoại"
-                          type="number"
-                          id="phone"
-                          class="form-control phone-booking form-control-lg"
-                          autocomplete="off"
-                          required
-                          pattern="\d+"
-                          name="contact[Phone]"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
-                    >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 no-padding"
-                      >
-                        <label class="title-date">Ngày nhận</label>
-                      </div>
-                      <div class="form-booking">
-                        <div class="form-booking-icon">
-                          <svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            x="0px"
-                            y="0px"
-                            viewBox="0 0 36.447 36.447"
-                            style="enable-background: new 0 0 36.447 36.447"
-                            xml:space="preserve"
-                          >
-                            <g>
-                              <g>
-                                <path
-                                  d="M30.224,3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75c-1.474,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75 c0-1.517-1.197-2.75-2.67-2.75c-1.473,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75 c-1.473,0-2.67,1.233-2.67,2.75v1.197H6.224c-2.343,0-4.25,1.907-4.25,4.25v24c0,2.343,1.907,4.25,4.25,4.25h24 c2.344,0,4.25-1.907,4.25-4.25v-24C34.474,5.855,32.567,3.948,30.224,3.948z M25.286,2.75c0-0.689,0.525-1.25,1.17-1.25 c0.646,0,1.17,0.561,1.17,1.25v4.896c0,0.689-0.524,1.25-1.17,1.25c-0.645,0-1.17-0.561-1.17-1.25V2.75z M17.206,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M9.125,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M31.974,32.198c0,0.965-0.785,1.75-1.75,1.75h-24c-0.965,0-1.75-0.785-1.75-1.75v-22h27.5V32.198z"
-                                ></path>
-                                <rect
-                                  x="6.724"
-                                  y="14.626"
-                                  width="4.595"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="14.626"
-                                  width="4.596"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="14.626"
-                                  width="4.595"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="14.626"
-                                  width="4.596"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="6.724"
-                                  y="20.084"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="20.084"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="20.084"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="20.084"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="6.724"
-                                  y="25.54"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="25.54"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="25.54"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="25.54"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                              </g>
-                            </g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                          </svg>
-                        </div>
-                        <div class="form-booking-date">
-                          <input
-                            type="text"
-                            id="fromDate"
-                            placeholder="YYYY-MM-DD"
-                            name="contact[Ngày nhận]"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
-                    >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
-                      >
-                        <label class="title-date">Ngày trả</label>
-                      </div>
-                      <div class="form-booking">
-                        <div class="form-booking-icon">
-                          <svg
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            x="0px"
-                            y="0px"
-                            viewBox="0 0 36.447 36.447"
-                            style="enable-background: new 0 0 36.447 36.447"
-                            xml:space="preserve"
-                          >
-                            <g>
-                              <g>
-                                <path
-                                  d="M30.224,3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75c-1.474,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75 c0-1.517-1.197-2.75-2.67-2.75c-1.473,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75 c-1.473,0-2.67,1.233-2.67,2.75v1.197H6.224c-2.343,0-4.25,1.907-4.25,4.25v24c0,2.343,1.907,4.25,4.25,4.25h24 c2.344,0,4.25-1.907,4.25-4.25v-24C34.474,5.855,32.567,3.948,30.224,3.948z M25.286,2.75c0-0.689,0.525-1.25,1.17-1.25 c0.646,0,1.17,0.561,1.17,1.25v4.896c0,0.689-0.524,1.25-1.17,1.25c-0.645,0-1.17-0.561-1.17-1.25V2.75z M17.206,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M9.125,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M31.974,32.198c0,0.965-0.785,1.75-1.75,1.75h-24c-0.965,0-1.75-0.785-1.75-1.75v-22h27.5V32.198z"
-                                ></path>
-                                <rect
-                                  x="6.724"
-                                  y="14.626"
-                                  width="4.595"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="14.626"
-                                  width="4.596"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="14.626"
-                                  width="4.595"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="14.626"
-                                  width="4.596"
-                                  height="4.089"
-                                ></rect>
-                                <rect
-                                  x="6.724"
-                                  y="20.084"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="20.084"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="20.084"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="20.084"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="6.724"
-                                  y="25.54"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="12.857"
-                                  y="25.54"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="18.995"
-                                  y="25.54"
-                                  width="4.595"
-                                  height="4.086"
-                                ></rect>
-                                <rect
-                                  x="25.128"
-                                  y="25.54"
-                                  width="4.596"
-                                  height="4.086"
-                                ></rect>
-                              </g>
-                            </g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                          </svg>
-                        </div>
-                        <div class="form-booking-date">
-                          <input
-                            type="text"
-                            id="toDate"
-                            placeholder="YYYY-MM-DD"
-                            name="contact[Ngày trả]"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
-                    >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
-                      >
-                        <label class="title-date">Người lớn</label>
-                      </div>
-                      <div class="form-booking">
-                        <input
-                          required
-                          id="bigPle"
-                          type="number"
-                          min="1"
-                          value="1"
-                          placeholder="Người lớn"
-                          name="contact[Người lớn]"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 margin-bottom-5"
-                    >
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
-                      >
-                        <label class="title-date">Trẻ em</label>
-                      </div>
-                      <div class="form-booking">
-                        <input
-                          required
-                          id="smallPle"
-                          type="number"
-                          min="0"
-                          value="0"
-                          placeholder="Trẻ em"
-                          name="contact[Trẻ em]"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                      <textarea
-                        placeholder="Nội dung *"
-                        name="contact[body]"
-                        id="comment"
-                        class="form-control content-area form-control-lg hidden"
-                        rows="5"
-                        required
-                      >
-Nội dung mặc định</textarea
-                      >
                       <input
-                        required
-                        type="text"
-                        id="myprice"
-                        value=""
-                        name="contact[Tổng tiền]"
-                        class="hidden"
+                        name="FormType"
+                        type="hidden"
+                        value="contact"
+                      /><input name="utf8" type="hidden" value="true" /><input
+                        type="hidden"
+                        id="Token-097c6ad415484ce5b07fc9c35cc11477"
+                        name="Token"
                       />
-                      <div id="roototal"></div>
-                      <div class="div-tem-price">
-                        <a class="a-btn a-tam-tinh" onclick="temporary()">
-                          Tạm tính
-                        </a>
-                        <button type="submit" class="a-btn a-dat-phong">
-                          Ðặt phòng
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="product-tab e-tabs not-dqtab">
-                  <ul class="tabs tabs-title clearfix">
-                    <li class="tab-link active" data-tab="#tab-1">Mô tả</li>
-                    <li class="tab-link" data-tab="#tab-2">Tiện nghi</li>
-                  </ul>
-                  <div class="tab-float">
-                    <div id="tab-1" class="tab-content active content_extab">
-                      <div class="rte product_getcontent">
-                        <div id="content">
-                          <p>
-                            Với cảnh quan tuyệt đẹp, bạn sẽ tận hưởng đầy đủ kỳ
-                            nghỉ với các dịch vụ hoàn hảo. Ngoài ra khách đặt
-                            phòng còn được miễn phí ăn sáng. Tiện ích phòng đầy
-                            đủ máy lạnh,&nbsp;tivi màn hình phẳng và nhiều tiện
-                            ích khác nữa.
-                          </p>
-                          <p>
-                            <strong>Dịch vụ miễn phí:</strong>&nbsp;Ăn sáng tự
-                            chọn, Nước khoáng trên phòng nghỉ, Dịch Internet
-                            không dây (wifi)&nbsp;
-                          </p>
-                          <p><strong>Giờ trả phòng: </strong>12h00 hàng ngày</p>
-                          <p>
-                            <strong>Hình thức Thanh toán:</strong>&nbsp;Tiền mặt
-                            (VND, USD, EURO, …) thẻ tín dụng Visa và Master
-                          </p>
-                          <p>
-                            * Nếu Quý khách thanh toán bằng ngoại tệ thì theo tỷ
-                            giá hối đoái của Ngân hàng hiện thời.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                      <script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+                      <script>
+                        grecaptcha.ready(function () {
+                          grecaptcha
+                            .execute(
+                              "6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK",
+                              { action: "contact" }
+                            )
+                            .then(function (token) {
+                              document.getElementById(
+                                "Token-097c6ad415484ce5b07fc9c35cc11477"
+                              ).value = token;
+                            });
+                        });
+                      </script>
 
-                    <div id="tab-2" class="tab-content content_extab">
-                      <div class="rte">
-                        <div class="contant_pro">
-                          Liên hệ hotline:
-                          <a title="1900 6750" href="tel:19006750">1900 6750</a>
-                          để nhận được ưu đãi đặt phòng sớm nhất !
-                        </div>
-                        <div class="title_tien_nghi">
-                          Các tiện nghi của Bean Hotel
-                        </div>
-                        <div class="row">
+                      <div class="row pad-room">
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
                           <div
-                            class="col-xl-6 col-md-6 col-sm-12 col-xs-12 col-12"
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
                           >
-                            <div class="item_tien_nghi">
-                              <h3>
-                                <i
-                                  class="facilityGroupIcon tuda_icon mask_icon parking"
-                                ></i>
-                                Tiện nghi
-                              </h3>
-                              <ul class="additional-amenities-list">
-                                <!-- Sẽ được tải động từ JS -->
-                              </ul>
-                            </div>
+                            <label class="title-date">Họ và tên*</label>
                           </div>
+                          <div class="form-booking">
+                            <input
+                              required
+                              type="text"
+                              value=""
+                              placeholder="Họ và tên"
+                              name="contact[Name]"
+                            />
+                            <input
+                              placeholder="Email *"
+                              type="email"
+                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                              required
+                              id="email1"
+                              class="form-control form-control-lg hidden"
+                              value="default@gmail.com"
+                              name="contact[email]"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
                           <div
-                            class="col-xl-6 col-md-6 col-sm-12 col-xs-12 col-12"
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
                           >
-                            <div class="item_tien_nghi">
-                              <h3>
-                                <i
-                                  class="facilityGroupIcon tuda_icon mask_icon guest"
-                                ></i>
-                                Phương thức thanh toán
-                              </h3>
-                              <ul class="payment-methods-list">
-                                <!-- Sẽ được tải động từ JS -->
-                              </ul>
-                            </div>
+                            <label class="title-date">Số điện thoại*</label>
                           </div>
+                          <div class="form-booking">
+                            <input
+                              placeholder="Số điện thoại"
+                              type="number"
+                              id="phone"
+                              class="form-control phone-booking form-control-lg"
+                              autocomplete="off"
+                              required
+                              pattern="\d+"
+                              name="contact[Phone]"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
                           <div
-                            class="col-xl-6 col-md-6 col-sm-12 col-xs-12 col-12"
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 no-padding"
                           >
-                            <div class="item_tien_nghi">
-                              <h3>
-                                <i
-                                  class="facilityGroupIcon tuda_icon mask_icon time"
-                                ></i>
-                                Thời gian trả phòng
-                              </h3>
-                              <ul>
-                                <li class="checkout-time">12h00 hàng ngày</li>
-                              </ul>
-                            </div>
+                            <label class="title-date">Ngày nhận</label>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                <div class="productRelate">
-                  <div class="block-title">
-                    <h2>
-                      <a
-                        href="product.html?type=phong-don"
-                        title="Phòng tương tự"
-                        >Phòng tương tự</a
-                      >
-                    </h2>
-                  </div>
-
-                  <div class="product-relate-swiper swiper-container">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="alper-product-item">
-                          <div class="item-product-img">
-                            <a
-                              class="image_thumb"
-                              href="room_detail.html?id=phong-don-view-thanh-pho"
-                              title="Ph&#242;ng đơn view th&#224;nh phố"
-                              ><img
-                                width="480"
-                                height="272"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp21.jpg?v=1670338576510"
-                                alt="Ph&#242;ng đơn view th&#224;nh phố"
-                            /></a>
-                          </div>
-                          <div class="info-room clearfix">
-                            <h3 class="name-room">
-                              <a
-                                href="room_detail.html?id=phong-don-view-thanh-pho"
-                                title="Ph&#242;ng đơn view th&#224;nh phố"
-                                >Ph&#242;ng đơn view th&#224;nh phố</a
+                          <div class="form-booking">
+                            <div class="form-booking-icon">
+                              <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 36.447 36.447"
+                                style="enable-background: new 0 0 36.447 36.447"
+                                xml:space="preserve"
                               >
-                            </h3>
-                            <div class="tag-room">
-                              <ul class="list_tag_room">
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                                    alt="Cafe Buổi Sáng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                                    alt="Gọi Đồ Ăn Tại Phòng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                                    alt="Bồn Tắm Hoa Sen"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                                    alt="Internet Không Dây"
-                                  />
-                                </li>
-                              </ul>
+                                <g>
+                                  <g>
+                                    <path
+                                      d="M30.224,3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75c-1.474,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75 c0-1.517-1.197-2.75-2.67-2.75c-1.473,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75 c-1.473,0-2.67,1.233-2.67,2.75v1.197H6.224c-2.343,0-4.25,1.907-4.25,4.25v24c0,2.343,1.907,4.25,4.25,4.25h24 c2.344,0,4.25-1.907,4.25-4.25v-24C34.474,5.855,32.567,3.948,30.224,3.948z M25.286,2.75c0-0.689,0.525-1.25,1.17-1.25 c0.646,0,1.17,0.561,1.17,1.25v4.896c0,0.689-0.524,1.25-1.17,1.25c-0.645,0-1.17-0.561-1.17-1.25V2.75z M17.206,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M9.125,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M31.974,32.198c0,0.965-0.785,1.75-1.75,1.75h-24c-0.965,0-1.75-0.785-1.75-1.75v-22h27.5V32.198z"
+                                    ></path>
+                                    <rect
+                                      x="6.724"
+                                      y="14.626"
+                                      width="4.595"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="14.626"
+                                      width="4.596"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="14.626"
+                                      width="4.595"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="14.626"
+                                      width="4.596"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="6.724"
+                                      y="20.084"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="20.084"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="20.084"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="20.084"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="6.724"
+                                      y="25.54"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="25.54"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="25.54"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="25.54"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                  </g>
+                                </g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                              </svg>
                             </div>
-                            <div class="tag-rivew">
-                              <ul class="list_tag_review">
-                                <li>02 Khách</li>
-
-                                <li>25m²</li>
-                              </ul>
-                            </div>
-                            <div class="product-info-room">
-                              <div class="price-room">
-                                <span class="price">700.000₫/Đêm</span>
-                              </div>
-                              <div class="booking-room">
-                                <a
-                                  href="room_detail.html?id=phong-don-view-thanh-pho"
-                                  title="Đặt phòng"
-                                  class="btn-booking"
-                                  >ÐẶT PHÒNG</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="alper-product-item">
-                          <div class="item-product-img">
-                            <a
-                              class="image_thumb"
-                              href="room_detail.html?id=phong-don-view-san-vuon"
-                              title="Ph&#242;ng đơn view s&#226;n vườn"
-                              ><img
-                                width="480"
-                                height="272"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11a713f0cbaa54ea595b6bb5e1b.jpg?v=1670338575473"
-                                alt="Ph&#242;ng đơn view s&#226;n vườn"
-                            /></a>
-                          </div>
-                          <div class="info-room clearfix">
-                            <h3 class="name-room">
-                              <a
-                                href="room_detail.html?id=phong-don-view-san-vuon"
-                                title="Ph&#242;ng đơn view s&#226;n vườn"
-                                >Ph&#242;ng đơn view s&#226;n vườn</a
-                              >
-                            </h3>
-                            <div class="tag-room">
-                              <ul class="list_tag_room">
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                                    alt="Cafe Buổi Sáng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                                    alt="Gọi Đồ Ăn Tại Phòng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                                    alt="Bồn Tắm Hoa Sen"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                                    alt="Internet Không Giây"
-                                  />
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="tag-rivew">
-                              <ul class="list_tag_review">
-                                <li>02 Khách</li>
-
-                                <li>25m²</li>
-                              </ul>
-                            </div>
-                            <div class="product-info-room">
-                              <div class="price-room">
-                                <span class="price">800.000₫/Đêm</span>
-                              </div>
-                              <div class="booking-room">
-                                <a
-                                  href="room_detail.html?id=phong-don-view-san-vuon"
-                                  title="Đặt phòng"
-                                  class="btn-booking"
-                                  >ÐẶT PHÒNG</a
-                                >
-                              </div>
+                            <div class="form-booking-date">
+                              <input
+                                type="text"
+                                id="fromDate"
+                                placeholder="YYYY-MM-DD"
+                                name="contact[Ngày nhận]"
+                                required
+                              />
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="alper-product-item">
-                          <div class="item-product-img">
-                            <a
-                              class="image_thumb"
-                              href="room_detail.html?id=phong-don-huong-bien"
-                              title="Ph&#242;ng đơn view biển"
-                              ><img
-                                width="480"
-                                height="272"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1eb6eb86adb63474a819ab595ee.jpg?v=1670338574237"
-                                alt="Ph&#242;ng đơn view biển"
-                            /></a>
-                          </div>
-                          <div class="info-room clearfix">
-                            <h3 class="name-room">
-                              <a
-                                href="room_detail.html?id=phong-don-huong-bien"
-                                title="Ph&#242;ng đơn view biển"
-                                >Ph&#242;ng đơn view biển</a
-                              >
-                            </h3>
-                            <div class="tag-room">
-                              <ul class="list_tag_room">
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_1.svg?1749443141671"
-                                    alt="Cafe Buổi Sáng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_2.svg?1749443141671"
-                                    alt="Gọi Đồ Ăn Tại Phòng"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_4.svg?1749443141671"
-                                    alt="Bồn Tắm Hoa Sen"
-                                  />
-                                </li>
-
-                                <li>
-                                  <img
-                                    width="32"
-                                    height="32"
-                                    src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_5.svg?1749443141671"
-                                    alt="Internet Không Dây"
-                                  />
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="tag-rivew">
-                              <ul class="list_tag_review">
-                                <li>01 Khách</li>
-
-                                <li>25m²</li>
-                              </ul>
-                            </div>
-                            <div class="product-info-room">
-                              <div class="price-room">
-                                <span class="price">900.000₫/Đêm</span>
-                              </div>
-                              <div class="booking-room">
-                                <a
-                                  href="room_detail.html?id=phong-don-huong-bien"
-                                  title="Đặt phòng"
-                                  class="btn-booking"
-                                  >ÐẶT PHÒNG</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                <div class="row product-tab">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="product-best">
-                      <a
-                        href="product.html?type=phong-vip"
-                        title="Phòng tốt nhất"
-                      >
-                        <div class="title-head">Phòng tốt nhất</div>
-                      </a>
-                      <div class="product-favi-content">
-                        <div class="product-view">
-                          <a
-                            class="image_thumb"
-                            href="room_detail.html?id=phong-don-vip"
-                            title="Ph&#242;ng đơn vip"
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
+                          <div
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
                           >
-                            <img
-                              width="370"
-                              height="480"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1a6283d038ec94b4abbca2d4e02.jpg?v=1670338568540"
-                              alt="Phòng đơn vip"
+                            <label class="title-date">Ngày trả</label>
+                          </div>
+                          <div class="form-booking">
+                            <div class="form-booking-icon">
+                              <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 36.447 36.447"
+                                style="enable-background: new 0 0 36.447 36.447"
+                                xml:space="preserve"
+                              >
+                                <g>
+                                  <g>
+                                    <path
+                                      d="M30.224,3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75c-1.474,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75 c0-1.517-1.197-2.75-2.67-2.75c-1.473,0-2.67,1.233-2.67,2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75 c-1.473,0-2.67,1.233-2.67,2.75v1.197H6.224c-2.343,0-4.25,1.907-4.25,4.25v24c0,2.343,1.907,4.25,4.25,4.25h24 c2.344,0,4.25-1.907,4.25-4.25v-24C34.474,5.855,32.567,3.948,30.224,3.948z M25.286,2.75c0-0.689,0.525-1.25,1.17-1.25 c0.646,0,1.17,0.561,1.17,1.25v4.896c0,0.689-0.524,1.25-1.17,1.25c-0.645,0-1.17-0.561-1.17-1.25V2.75z M17.206,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M9.125,2.75 c0-0.689,0.525-1.25,1.17-1.25s1.17,0.561,1.17,1.25v4.896c0,0.689-0.525,1.25-1.17,1.25s-1.17-0.561-1.17-1.25V2.75z M31.974,32.198c0,0.965-0.785,1.75-1.75,1.75h-24c-0.965,0-1.75-0.785-1.75-1.75v-22h27.5V32.198z"
+                                    ></path>
+                                    <rect
+                                      x="6.724"
+                                      y="14.626"
+                                      width="4.595"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="14.626"
+                                      width="4.596"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="14.626"
+                                      width="4.595"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="14.626"
+                                      width="4.596"
+                                      height="4.089"
+                                    ></rect>
+                                    <rect
+                                      x="6.724"
+                                      y="20.084"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="20.084"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="20.084"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="20.084"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="6.724"
+                                      y="25.54"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="12.857"
+                                      y="25.54"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="18.995"
+                                      y="25.54"
+                                      width="4.595"
+                                      height="4.086"
+                                    ></rect>
+                                    <rect
+                                      x="25.128"
+                                      y="25.54"
+                                      width="4.596"
+                                      height="4.086"
+                                    ></rect>
+                                  </g>
+                                </g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                              </svg>
+                            </div>
+                            <div class="form-booking-date">
+                              <input
+                                type="text"
+                                id="toDate"
+                                placeholder="YYYY-MM-DD"
+                                name="contact[Ngày trả]"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
+                          <div
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
+                          >
+                            <label class="title-date">Số người</label>
+                          </div>
+                          <div class="form-booking">
+                            <input
+                              required
+                              id="amount-people"
+                              type="number"
+                              min="1"
+                              value="1"
+                              placeholder="Số người"
+                              name="contact[Số người]"
                             />
-                          </a>
-                          <div class="product-info">
-                            <h3 class="product-name">
-                              <a
-                                href="room_detail.html?id=phong-don-vip"
-                                title="Ph&#242;ng đơn vip"
-                                >Ph&#242;ng đơn vip</a
-                              >
-                            </h3>
-                            <div class="price-box">2.500.000₫</div>
                           </div>
                         </div>
-
-                        <div class="product-view">
-                          <a
-                            class="image_thumb"
-                            href="room_detail.html?id=phong-gia-dinh"
-                            title="Ph&#242;ng gia đ&#236;nh"
+                        <div
+                          class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-12 margin-bottom-5"
+                        >
+                          <div
+                            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-left no-padding"
                           >
-                            <img
-                              width="370"
-                              height="480"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1b11858800dc04b9b99c8ef13c0.jpg?v=1670338567667"
-                              alt="Phòng gia đình"
-                            />
-                          </a>
-                          <div class="product-info">
-                            <h3 class="product-name">
-                              <a
-                                href="room_detail.html?id=phong-gia-dinh"
-                                title="Ph&#242;ng gia đ&#236;nh"
-                                >Ph&#242;ng gia đ&#236;nh</a
-                              >
-                            </h3>
-                            <div class="price-box">3.000.000₫</div>
+                            <label class="title-date">Chọn phòng</label>
                           </div>
-                        </div>
-
-                        <div class="product-view">
-                          <a
-                            class="image_thumb"
-                            href="room_detail.html?id=can-ho-chung-cu"
-                            title="Căn hộ chung cư"
-                          >
-                            <img
-                              width="370"
-                              height="480"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh153bb971e15444fefa78e4ae22b.jpg?v=1670338566430"
-                              alt="Căn hộ chung cư"
+                          <div class="form-booking">
+                            <input
+                              style="display: none"
+                              placeholder="Chọn phòng"
+                              type="text"
+                              autocomplete="off"
+                              class="form-control name-room form-control-lg"
+                              required=""
+                              value=" Phòng đơn tiêu chuẩn      "
+                              name="contact[Tên Phòng]"
                             />
-                          </a>
-                          <div class="product-info">
-                            <h3 class="product-name">
-                              <a
-                                href="room_detail.html?id=can-ho-chung-cu"
-                                title="Căn hộ chung cư"
-                                >Căn hộ chung cư</a
-                              >
-                            </h3>
-                            <div class="price-box">2.700.000₫</div>
+                            <select
+                              id="nameroom"
+                              name="adulteresa"
+                              class="bf_select-adults"
+                            >
+                              <option value="Phòng đơn tiêu chuẩn">
+                                Phòng đơn tiêu chuẩn
+                              </option>
+
+                              <option value="Phòng đơn view thành phố">
+                                Phòng đơn view thành phố
+                              </option>
+
+                              <option value="Phòng đôi tiêu chuẩn">
+                                Phòng đôi tiêu chuẩn
+                              </option>
+
+                              <option value="Phòng đôi nối liền">
+                                Phòng đôi nối liền
+                              </option>
+
+                              <option value="Phòng vip">Phòng vip</option>
+
+                              <option value="Phòng gia đình">
+                                Phòng gia đình
+                              </option>
+
+                              <option value="Phòng hạng sang">
+                                Phòng hạng sang
+                              </option>
+                            </select>
                           </div>
-                        </div>
-
-                        <div class="product-view">
-                          <a
-                            class="image_thumb"
-                            href="room_detail.html?id=phong-hang-sang"
-                            title="Ph&#242;ng hạng sang"
+                          <textarea
+                            placeholder="Nội dung *"
+                            name="contact[body]"
+                            id="comment"
+                            class="form-control content-area form-control-lg hidden"
+                            rows="5"
+                            required
                           >
-                            <img
-                              width="370"
-                              height="480"
-                              class="lazyload"
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                              data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267"
-                              alt="Phòng hạng sang"
-                            />
-                          </a>
-                          <div class="product-info">
-                            <h3 class="product-name">
-                              <a
-                                href="room_detail.html?id=phong-hang-sang"
-                                title="Ph&#242;ng hạng sang"
-                                >Ph&#242;ng hạng sang</a
-                              >
-                            </h3>
-                            <div class="price-box">3.500.000₫</div>
+Nội dung mặc định</textarea
+                          >
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                          <div class="div-tem-price">
+                            <button type="submit" class="a-btn a-dat-phong">
+                              Ðặt phòng
+                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1888,126 +1201,7 @@ Nội dung mặc định</textarea
         </div>
       </section>
       <script>
-        function temporary() {
-          var fromDate = $("#fromDate").val();
-          var toDate = $("#toDate").val();
-          var bigPle = $("#bigPle").val();
-          if (toDate <= fromDate) {
-            alert("Ngày trả phải lớn hơn ngày nhận");
-            return false;
-          }
-          if (bigPle == "" || bigPle < 1) {
-            alert("Chọn số người lớn");
-            return false;
-          }
-          var donG = $(".price.product-price").html();
-          var valuGia = $(".bost-price").html();
-          const thoiGianGiuaHaiNgay = (ngayDau, ngayCuoi) =>
-            (ngayCuoi - ngayDau) / (1000 * 3600 * 24);
-          var ngayDau = new Date(fromDate);
-          var ngayCuoi = new Date(toDate);
-          var ketQua = thoiGianGiuaHaiNgay(ngayDau, ngayCuoi);
-          var tongTien;
-          tongTien = ketQua * valuGia;
-          console.log(tongTien, "aaaa");
-          var tongtien_format = Bizweb.formatMoney(
-            tongTien,
-            "{{amount_no_decimals_with_comma_separator}}₫"
-          );
-          var headline = document.getElementById("roototal");
-          document
-            .getElementById("myprice")
-            .setAttribute("value", tongtien_format);
-          headline.innerHTML =
-            '<div class="div-tam-tinh"><div class="niem-yet">Giá niêm yết (' +
-            ketQua +
-            " x " +
-            donG +
-            ')</div><div class="niem_yet_price"><span>' +
-            tongtien_format +
-            '</span></div></div><div class="tong-gia"><div class="tille_tong">Tổng tiền </div><div class="tong-gia-price"><span>' +
-            tongtien_format +
-            "</span></div></div>";
-          $(".a-dat-phong").addClass("active_book");
-        }
         $(document).ready(function () {
-          function activeTab(obj) {
-            $(".product-tab ul .tab-link").removeClass("active");
-            $(obj).addClass("active");
-            var id = $(obj).attr("data-tab");
-            $(".tab-content").removeClass("active");
-            $(id).addClass("active");
-          }
-          $(".product-tab ul .tab-link").click(function () {
-            activeTab(this);
-            return false;
-          });
-          var gallerySlide = new Swiper("#slide_pro_room", {
-            speed: 400,
-            spaceBetween: 100,
-            initialSlide: 0,
-            autoHeight: false,
-            direction: "horizontal",
-            loop: true,
-            autoplay: 5000,
-            autoplayStopOnLast: false,
-            pagination: ".swiper-pagination",
-            paginationType: "bullets",
-            effect: "slide",
-            spaceBetween: 10,
-            slidesPerView: 1,
-            slidesOffsetBefore: 0,
-            grabCursor: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-              767: {
-                slidesPerView: 2,
-                centeredSlides: true,
-              },
-            },
-          });
-          var swiper = new Swiper(".product-relate-swiper", {
-            slidesPerView: 3,
-            loop: false,
-            grabCursor: true,
-            spaceBetween: 30,
-            roundLengths: true,
-            slideToClickedSlide: false,
-            navigation: {
-              nextEl: ".product-relate-swiper .swiper-button-next",
-              prevEl: ".product-relate-swiper .swiper-button-prev",
-            },
-            autoplay: false,
-            breakpoints: {
-              260: {
-                slidesPerView: 1.4,
-                spaceBetween: 15,
-              },
-              500: {
-                slidesPerView: 1.4,
-                spaceBetween: 15,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              991: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              1200: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-            },
-          });
           var bindDateRangeValidation = function (f, s, e) {
             if (!(f instanceof jQuery)) {
             }
@@ -2095,6 +1289,9 @@ Nội dung mặc định</textarea
             hookValidatorEvt();
           };
 
+          $("#nameroom").on("change", function () {
+            $(".name-room").attr("value", this.value);
+          });
           $(function () {
             var sd = new Date(),
               ed = new Date();
@@ -2174,20 +1371,11 @@ Nội dung mặc định</textarea
           });
         });
       </script>
-      <link
-        href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bpr-products-module.css?1749443141671"
-        rel="stylesheet"
-        type="text/css"
-        media="all"
-      />
-      <div class="sapo-product-reviews-module"></div>
 
       <footer
         class="footer lazyload"
-        data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1749443141671"
-        style="
-          background-image: url('//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1749443141671');
-        "
+        data-src="img/bg_footer_1.jpg"
+        style="background-image: url('img/bg_footer_1.jpg')"
       >
         <div class="footer-top hidden-sm hidden-xs">
           <div class="container">
@@ -2845,11 +2033,11 @@ Nội dung mặc định</textarea
     <link
       rel="preload"
       as="style"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/ajaxcart.scss.css?1749443141671"
+      href="css/ajaxcart.scss.css"
       type="text/css"
     />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/ajaxcart.scss.css?1749443141671"
+      href="css/ajaxcart.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -8854,8 +8042,8 @@ Nội dung mặc định</textarea
         ]);
       });
       /*============================================================================
-    Ajaxcartfy - thuongdq
-  ==============================================================================*/
+  Ajaxcartfy - thuongdq
+==============================================================================*/
       window.theme = window.theme || {};
       var wW = $(window).width();
       var timeout;
@@ -8890,11 +8078,11 @@ Nội dung mặc định</textarea
               AddCartMobile(line_item);
             }
             /*
-              else {
-                Bizweb.onItemAdded(line_item, form);
-                $('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
-              }
-              */
+      else {
+        Bizweb.onItemAdded(line_item, form);
+		$('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
+      }
+	  */
           },
           error: function (XMLHttpRequest, textStatus) {
             if (typeof errorCallback === "function") {
@@ -8908,8 +8096,8 @@ Nội dung mặc định</textarea
       };
 
       /*========================
-  Popup cart mobile
-  =========================*/
+Popup cart mobile
+=========================*/
       function AddCartMobile(line_item) {
         //console.log(line_item);
         $(".bodycart-mobile").html("");
@@ -8949,10 +8137,10 @@ Nội dung mặc định</textarea
       }
 
       /*============================================================================
-    Override POST to cart/change.js. Returns cart JSON.
-      - Use product's line in the cart instead of ID so custom
-        product properties are supported.
-  ==============================================================================*/
+  Override POST to cart/change.js. Returns cart JSON.
+    - Use product's line in the cart instead of ID so custom
+      product properties are supported.
+==============================================================================*/
       Bizweb.changeItem = function (line, quantity, callback) {
         var params = {
           type: "POST",
@@ -8974,8 +8162,8 @@ Nội dung mặc định</textarea
       };
 
       /*============================================================================
-    GET cart.js returns the cart in JSON.
-  ==============================================================================*/
+  GET cart.js returns the cart in JSON.
+==============================================================================*/
       Bizweb.getCart = function (callback) {
         jQuery.getJSON("/cart.js", function (cart, textStatus) {
           if (typeof callback === "function") {
@@ -8987,8 +8175,8 @@ Nội dung mặc định</textarea
       };
 
       /*============================================================================
-    Ajax Bizweb Add To Cart
-  ==============================================================================*/
+  Ajax Bizweb Add To Cart
+==============================================================================*/
       var ajaxCart = (function (module, $) {
         "use strict";
 
@@ -9028,8 +8216,8 @@ Nội dung mặc định</textarea
           validateQty;
 
         /*============================================================================
-        Initialise the plugin and define global options
-      ==============================================================================*/
+    Initialise the plugin and define global options
+  ==============================================================================*/
         init = function (options) {
           // Default settings
           settings = {
@@ -9966,6 +9154,7 @@ Nội dung mặc định</textarea
             viewBox="0 0 365.696 365.696"
             style="enable-background: new 0 0 512 512"
             xml:space="preserve"
+            class=""
           >
             <g>
               <path
@@ -9973,6 +9162,8 @@ Nội dung mặc định</textarea
                 d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"
                 fill="#ffffff"
                 data-original="#000000"
+                style=""
+                class=""
               />
             </g></svg
         ></a>
@@ -10030,417 +9221,8 @@ Nội dung mặc định</textarea
         </div>
       </div>
     </div>
-
-    <div
-      id="quick-view-product"
-      class="quickview-product"
-      style="display: none"
-    >
-      <div
-        class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"
-      ></div>
-      <div class="quick-view-product"></div>
-      <div id="quickview-modal" style="display: none">
-        <div class="block-quickview primary_block details-product">
-          <div class="row">
-            <div
-              class="product-left-column product-images col-xs-12 col-sm-4 col-md-4 col-lg-5 col-xl-4"
-            >
-              <div class="image-block large-image col_large_default">
-                <span class="view_full_size">
-                  <a
-                    class="img-product"
-                    title="Ảnh sản phẩm"
-                    href="javascript:;"
-                  >
-                    <img
-                      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
-                      id="product-featured-image-quickview"
-                      class="img-responsive product-featured-image-quickview"
-                      alt="quickview"
-                    />
-                  </a>
-                </span>
-                <div class="loading-imgquickview" style="display: none"></div>
-              </div>
-              <div class="more-view-wrapper clearfix">
-                <div
-                  class="thumbs_quickview owl_nav_custome1 swiper-container"
-                  id="thumbs_list_quickview"
-                >
-                  <ul
-                    class="product-photo-thumbs quickview-more-views-owlslider not-thuongdq swiper-wrapper"
-                    id="thumblist_quickview"
-                  ></ul>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="product-center-column product-info product-item col-xs-12 col-sm-6 col-md-8 col-lg-7 col-xl-8 details-pro style_product style_border"
-            >
-              <div class="head-qv group-status">
-                <h3 class="qwp-name title-product">abc</h3>
-                <div class="vend-qv group-status">
-                  <div class="left_vend">
-                    <div class="first_status">
-                      Thương hiệu:
-                      <span class="vendor_ status_name"></span>
-                    </div>
-                    <span class="line_tt">|</span>
-                    <div class="top_sku first_status">
-                      Mã sản phẩm:
-                      <span class="sku_ status_name"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="quickview-info">
-                <span class="prices price-box">
-                  <span class="price product-price"></span>
-                  <del class="old-price"></del>
-                </span>
-              </div>
-
-              <div class="product-description product-summary">
-                <div class="rte"></div>
-              </div>
-
-              <form
-                action="/cart/add"
-                method="post"
-                enctype="multipart/form-data"
-                class="quick_option variants form-ajaxtocart form-product"
-              >
-                <span class="price-product-detail d-none" style="opacity: 0">
-                  <span></span>
-                </span>
-                <select
-                  name="variantId"
-                  class="d-none"
-                  style="display: none"
-                ></select>
-                <div class="form_product_content">
-                  <div class="count_btn_style quantity_wanted_p">
-                    <div class="soluong1 clearfix">
-                      <div class="input_number_product">
-                        <a
-                          class="btn_num num_1 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if(!isNaN(qtyqv) && qtyqv > 1) { result.value--; } return false;"
-                          >-</a
-                        >
-                        <input
-                          type="text"
-                          id="quantity-detail"
-                          name="quantity"
-                          value="1"
-                          maxlength="2"
-                          class="form-control prd_quantity"
-                          onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-                          onchange="if(this.value == 0)this.value=1;"
-                        />
-                        <a
-                          class="btn_num num_2 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if(!isNaN(qtyqv)) { result.value++; } return false;"
-                          >+</a
-                        >
-                      </div>
-                    </div>
-                    <div class="button_actions clearfix">
-                      <button
-                        type="submit"
-                        class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail"
-                      >
-                        <span class="btn-content text_1"
-                          >Thêm vào giỏ hàng</span
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <a
-          title="Close"
-          class="quickview-close close-window"
-          href="javascript:;"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="far"
-            data-icon="times"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            class="svg-inline--fa fa-times fa-w-10"
-          >
-            <path
-              fill="currentColor"
-              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
-              class=""
-            ></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      Bizweb.doNotTriggerClickOnThumb = false;
-      function changeImageQuickView(img, selector) {
-        var src = $(img).attr("src");
-        src = src.replace("_compact", "");
-        $(selector).attr("src", src);
-      }
-      function validate(evt) {
-        var theEvent = evt || window.event;
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-        var regex = /[0-9]|\./;
-        if (!regex.test(key)) {
-          theEvent.returnValue = false;
-          if (theEvent.preventDefault) theEvent.preventDefault();
-        }
-      }
-      var selectCallbackQuickView = function (variant, selector) {
-        $("#quick-view-product form").show();
-        var productItem = jQuery(".quick-view-product .product-item"),
-          addToCart = productItem.find(".add_to_cart_detail"),
-          productPrice = productItem.find(".price"),
-          comparePrice = productItem.find(".old-price"),
-          form2 = jQuery(".soluong1"),
-          status = productItem.find(".soluong"),
-          sku = productItem.find(".sku_"),
-          totalPrice = productItem.find(".total-price span");
-
-        if (variant && variant.sku) {
-          sku.text(variant.sku);
-        } else {
-          sku.text("Đang cập nhật");
-        }
-        if (variant && variant.available) {
-          var form = jQuery("#" + selector.domIdPrefix).closest("form");
-          for (var i = 0, length = variant.options.length; i < length; i++) {
-            var radioButton = form.find(
-              '.swatch[data-option-index="' +
-                i +
-                '"] :radio[value="' +
-                variant.options[i] +
-                '"]'
-            );
-          }
-          addToCart.removeClass("disabled").removeAttr("disabled");
-          addToCart
-            .html('<span class="btn-content text_1">Thêm vào giỏ hàng</span>')
-            .removeAttr("disabled");
-          status.text("Còn hàng");
-          if (variant.price < 1) {
-            $("#quick-view-product .price").html("Liên hệ");
-            $(
-              "#quick-view-product del, #quick-view-product .quantity_wanted_p"
-            ).hide();
-            $("#quick-view-product .prices .old-price").hide();
-            form2.hide();
-          } else {
-            productPrice.html(
-              Bizweb.formatMoney(
-                variant.price,
-                "{{amount_no_decimals_with_comma_separator}}₫"
-              )
-            );
-            if (variant.compare_at_price > variant.price) {
-              comparePrice
-                .html(
-                  Bizweb.formatMoney(
-                    variant.compare_at_price,
-                    "{{amount_no_decimals_with_comma_separator}}₫"
-                  )
-                )
-                .show();
-              productPrice.addClass("on-sale");
-            } else {
-              comparePrice.hide();
-              productPrice.removeClass("on-sale");
-            }
-
-            $(".quantity_wanted_p").show();
-            $(".input_qty_qv_").show();
-            form2.show();
-          }
-
-          updatePricingQuickView();
-
-          /*begin variant image*/
-          if (variant && variant.featured_image) {
-            var originalImage = $("#product-featured-image-quickview");
-            var newImage = variant.featured_image;
-            var element = originalImage[0];
-            Bizweb.Image.switchImage(
-              newImage,
-              element,
-              function (newImageSizedSrc, newImage, element) {
-                $("#thumblist_quickview img").each(function () {
-                  var parentThumbImg = $(this).parent();
-                  var productImage = $(this).parent().data("image");
-                  if (newImageSizedSrc.includes(productImage)) {
-                    $(this).parent().trigger("click");
-                    return false;
-                  }
-                });
-              }
-            );
-            $("#product-featured-image-quickview").attr(
-              "src",
-              variant.featured_image.src
-            );
-          }
-        } else {
-          addToCart.addClass("disabled").attr("disabled", "disabled");
-          addToCart
-            .removeClass("d-none")
-            .addClass("btn_buy")
-            .attr("disabled", "disabled")
-            .html('<div class="disabled">Hết hàng</div>')
-            .show();
-          status.text("Hết hàng");
-          $(".quantity_wanted_p").show();
-          if (variant) {
-            if (variant.price < 1) {
-              $("#quick-view-product .price").html("Liên hệ");
-              $("#quick-view-product del").hide();
-              $("#quick-view-product .quantity_wanted_p").hide();
-              $("#quick-view-product .prices .old-price").hide();
-              form2.hide();
-              comparePrice.hide();
-              productPrice.removeClass("on-sale");
-              addToCart.addClass("disabled").attr("disabled", "disabled");
-              addToCart
-                .removeClass("d-none")
-                .addClass("btn_buy")
-                .attr("disabled", "disabled")
-                .html('<div class="disabled">Hết hàng</div>')
-                .show();
-            } else {
-              if (variant.compare_at_price > variant.price) {
-                comparePrice
-                  .html(
-                    Bizweb.formatMoney(
-                      variant.compare_at_price,
-                      "{{amount_no_decimals_with_comma_separator}}₫"
-                    )
-                  )
-                  .show();
-                productPrice.addClass("on-sale");
-              } else {
-                comparePrice.hide();
-                productPrice.removeClass("on-sale");
-                $("#quick-view-product .prices .old-price").html("");
-              }
-              $("#quick-view-product .price").html(
-                Bizweb.formatMoney(
-                  variant.price,
-                  "{{amount_no_decimals_with_comma_separator}}₫"
-                )
-              );
-              $("#quick-view-product del ").hide();
-              $("#quick-view-product .prices .old-price").show();
-              $(".input_qty_qv_").hide();
-              form2.hide();
-              addToCart.addClass("disabled").attr("disabled", "disabled");
-              addToCart
-                .removeClass("d-none")
-                .addClass("btn_buy")
-                .attr("disabled", "disabled")
-                .html('<div class="disabled">Hết hàng</div>')
-                .show();
-            }
-          } else {
-            $("#quick-view-product .price").html("Liên hệ");
-            $("#quick-view-product del").hide();
-            $("#quick-view-product .quantity_wanted_p").hide();
-            $("#quick-view-product .prices .old-price").hide();
-            form2.hide();
-            comparePrice.hide();
-            productPrice.removeClass("on-sale");
-            addToCart.addClass("disabled").attr("disabled", "disabled");
-            addToCart
-              .removeClass("d-none")
-              .addClass("btn_buy")
-              .attr("disabled", "disabled")
-              .html('<div class="disabled">Hết hàng</div>')
-              .show();
-          }
-        }
-        /*begin variant image*/
-        if (variant && variant.featured_image) {
-          var originalImage = $("#product-featured-image-quickview");
-          var newImage = variant.featured_image;
-          var element = originalImage[0];
-          Bizweb.Image.switchImage(
-            newImage,
-            element,
-            function (newImageSizedSrc, newImage, element) {
-              $("#thumblist_quickview img").each(function () {
-                var parentThumbImg = $(this).parent();
-                var productImage = $(this).parent().data("image");
-                if (newImageSizedSrc.includes(productImage)) {
-                  $(this).parent().trigger("click");
-                  return false;
-                }
-              });
-            }
-          );
-          $("#product-featured-image-quickview").attr(
-            "src",
-            variant.featured_image.src
-          );
-        }
-      };
-    </script>
-    <link
-      rel="preload"
-      as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickview.js?1749443141671"
-    />
-    <script
-      type="text/javascript"
-      defer
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickview.js?1749443141671"
-    ></script>
-
-    <link
-      rel="preload"
-      as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.js?1749443141671"
-    />
-    <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.js?1749443141671"
-      type="text/javascript"
-    ></script>
-    <script src="js/room-detail.js" type="text/javascript"></script>
-    <link
-      rel="preload"
-      as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/picbox.js?1749443141671"
-    />
-    <link
-      rel="preload"
-      as="style"
-      type="text/css"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/picbox.scss.css?1749443141671"
-    />
-    <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/picbox.scss.css?1749443141671"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-    <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/picbox.js?1749443141671"
-      type="text/javascript"
-    ></script>
+    <link rel="preload" as="script" href="js/main.js" />
+    <script src="js/main.js" type="text/javascript"></script>
     <div id="popupCartModal" class="modal fade" role="dialog"></div>
     <div class="jas-sale-pop flex pf middle-xs"></div>
     <script type="text/javascript">
@@ -10749,7 +9531,102 @@ Nội dung mặc định</textarea
         }
       });
     </script>
+    <div class="popup-sapo">
+      <div class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"
+          />
+        </svg>
+      </div>
+      <div class="content">
+        <div class="title">Tích hợp sẵn các ứng dụng</div>
+        <ul>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+              />
+            </svg>
+            <a
+              href="https://apps.sapo.vn/danh-gia-san-pham-v2"
+              target="_blank"
+              title="Đánh giá sản phẩm"
+              >Đánh giá sản phẩm</a
+            >
+          </li>
 
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+              />
+            </svg>
+            <a
+              href="https://apps.sapo.vn/ae-da-ngon-ngu"
+              target="_blank"
+              title="Đa ngôn ngữ"
+              >Đa ngôn ngữ</a
+            >
+          </li>
+
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+              />
+            </svg>
+            <a href="#" target="_blank" title="Tích hợp Livechat Facebook"
+              >Tích hợp Livechat Facebook</a
+            >
+          </li>
+        </ul>
+        <div class="ghichu">
+          Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này
+          trên App store Sapo để sử dụng ngay
+        </div>
+        <a title="Đóng" class="close-popup-sapo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512.001 512.001"
+            style="enable-background: new 0 0 512.001 512.001"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
     <script>
       $(".popup-sapo .icon").click(function () {
         $(".popup-sapo").toggleClass("active");
@@ -10801,67 +9678,7 @@ Nội dung mặc định</textarea
     </div>
 
     <a target="_blank" class="livechat-mes" href="https://m.me/sapo.vn">
-      <img
-        src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/messenger.svg?1749443141671"
-        alt="Messenger"
-      />
+      <img src="img/messenger.svg" alt="Messenger" />
     </a>
-
-    <!-- Script để đảm bảo tất cả các liên kết phòng được cập nhật đúng -->
-    <script>
-      $(document).ready(function () {
-        console.log(
-          "Đang cập nhật các liên kết phòng trong room_detail.html..."
-        );
-
-        // Cập nhật tất cả các liên kết phòng còn sót lại
-        $("a").each(function () {
-          const href = $(this).attr("href");
-
-          // Bỏ qua nếu không có href hoặc đã là đường dẫn đúng
-          if (
-            !href ||
-            href.includes("room_detail.html") ||
-            href.includes("product.html")
-          )
-            return;
-
-          // Xử lý liên kết bắt đầu bằng "/phong-" hoặc "phong-" hoặc "/can-ho-"
-          if (
-            href.startsWith("/phong-") ||
-            href.startsWith("phong-") ||
-            href.startsWith("/can-ho-") ||
-            href.startsWith("can-ho-")
-          ) {
-            // Bỏ qua các liên kết danh mục
-            if (
-              href === "/phong-don" ||
-              href === "/phong-doi" ||
-              href === "/phong-vip" ||
-              href === "phong-don" ||
-              href === "phong-doi" ||
-              href === "phong-vip"
-            ) {
-              // Đối với liên kết danh mục, chuyển hướng đến trang product với tham số lọc
-              const type = href.startsWith("/") ? href.substring(1) : href;
-              $(this).attr("href", `product.html?type=${type}`);
-              return;
-            }
-
-            // Trích xuất id phòng từ href
-            const roomId = href.startsWith("/") ? href.substring(1) : href;
-
-            // Cập nhật href mới trỏ đến room_detail.html với id phù hợp
-            $(this).attr("href", `room_detail.html?id=${roomId}`);
-            console.log(
-              `Đã cập nhật liên kết: ${href} -> room_detail.html?id=${roomId}`
-            );
-          }
-        });
-
-        console.log("Đã hoàn tất cập nhật các liên kết phòng");
-      });
-    </script>
-    <script src="js/fix-links.js"></script>
   </body>
 </html>
