@@ -24,29 +24,29 @@
 
     <meta
       property="og:image"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp3c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
     <meta
       property="og:image:secure_url"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp3c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
 
     <meta
       property="og:image"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp1c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
     <meta
       property="og:image:secure_url"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp1c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
 
     <meta
       property="og:image"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp2c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
     <meta
       property="og:image:secure_url"
-      content="https://bizweb.dktcdn.net/thumb/grande/100/472/947/products/sp2c.jpg?v=1670338561717"
+      content="img/sp21.webp"
     />
 
     <meta property="og:price:amount" content="80.000" />
@@ -60,67 +60,67 @@
     <meta property="og:site_name" content="Bean Hotel" />
     <link
       rel="icon"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/favicon.png?1749443141671"
+      href="img/favicon.png"
       type="image/x-icon"
     />
     <link
       rel="preload"
       as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/jquery.js?1749443141671"
+      href="js/jquery.js"
     />
     <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/jquery.js?1749443141671"
+      src="js/jquery.js"
       type="text/javascript"
     ></script>
     <link
       rel="preload"
       as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/swiper.js?1749443141671"
+      href="js/swiper.js"
     />
     <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/swiper.js?1749443141671"
+      src="js/swiper.js"
       type="text/javascript"
     ></script>
     <link
       rel="preload"
       as="script"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/lazy.js?1749443141671"
+      href="js/lazy.js"
     />
     <script
-      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/lazy.js?1749443141671"
+      src="js/lazy.js"
       type="text/javascript"
     ></script>
     <link
       rel="preload"
       as="style"
       type="text/css"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.scss.css?1749443141671"
+      href="css/main.scss.css"
     />
 
     <link
       rel="preload"
       as="style"
       type="text/css"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bootstrap-4-3-min.css?1749443141671"
+      href="css/bootstrap-4-3-min.css"
     />
     <link
       rel="preload"
       as="style"
       type="text/css"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickviews_popup_cart.scss.css?1749443141671"
+      href="css/quickviews_popup_cart.scss.css"
     />
     <link
       rel="stylesheet"
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bootstrap-4-3-min.css?1749443141671"
+      href="css/bootstrap-4-3-min.css"
     />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/main.scss.css?1749443141671"
+      href="css/main.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/breadcrumb_style.scss.css?1749443141671"
+      href="css/breadcrumb_style.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -134,7 +134,7 @@
     />
 
     <link
-      href="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/quickviews_popup_cart.scss.css?1749443141671"
+      href="css/quickviews_popup_cart.scss.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -280,6 +280,76 @@
     
     <!-- Script để thay đổi dữ liệu động từ food.json -->
     <script src="js/food-dynamic.js"></script>
+    
+    <!-- Script để load danh sách phòng cho phần "Có thể bạn thích" -->
+    <script>
+      // Function để load danh sách phòng
+      function loadRoomSuggestions() {
+        fetch('data/room.json')
+          .then(response => response.json())
+          .then(rooms => {
+            const container = document.getElementById('room-suggestions');
+            if (!container) return;
+            
+            // Lấy 4 phòng đầu tiên
+            const suggestedRooms = rooms.slice(0, 4);
+            
+            let html = '';
+            suggestedRooms.forEach((room, index) => {
+              const roomId = room.id; // Sử dụng ID thực từ JSON
+              const imageUrl = room.image?.[0] || ''; // Sử dụng hình ảnh từ JSON
+              
+              html += `
+                <div class="product-view">
+                  <a
+                    class="image_thumb"
+                    href="room_detail.html?id=${roomId}"
+                    title="${room.name}"
+                  >
+                    <img
+                      width="370"
+                      height="480"
+                      class="lazyload"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                      data-src="${imageUrl}"
+                      alt="${room.name}"
+                    />
+                  </a>
+                  <div class="product-info">
+                    <h3 class="product-name">
+                      <a
+                        href="room_detail.html?id=${roomId}"
+                        title="${room.name}"
+                      >${room.name}</a>
+                    </h3>
+                    <div class="price-box">${room.price}</div>
+                  </div>
+                </div>
+              `;
+            });
+            
+            container.innerHTML = html;
+            
+            // Trigger lazy loading cho hình ảnh mới
+            if (typeof LazyLoad !== 'undefined') {
+              const lazyLoadInstance = new LazyLoad({
+                elements_selector: ".lazyload"
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Lỗi khi load danh sách phòng:', error);
+            // Fallback: hiển thị nội dung mặc định
+            const container = document.getElementById('room-suggestions');
+            if (container) {
+              container.innerHTML = '<p>Không thể tải danh sách phòng</p>';
+            }
+          });
+      }
+      
+      // Load khi DOM ready
+      document.addEventListener('DOMContentLoaded', loadRoomSuggestions);
+    </script>
   </head>
   <body>
     <div class="opacity_menu"></div>
@@ -292,17 +362,17 @@
             </div>
             <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
               <ul class="account_header">
-                <li><a href="/account/register" title="Đăng ký">Đăng ký</a></li>
+                <li><a href="Register.html" title="Đăng ký">Đăng ký</a></li>
                 <li><span>&nbsp;|&nbsp;</span></li>
                 <li>
-                  <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                  <a href="login.html" title="Đăng nhập">Đăng nhập</a>
                 </li>
 
                 <li class="d-none d-lg-inline-block">
                   <span>&nbsp;|&nbsp;</span>
                 </li>
                 <li class="d-none d-lg-inline-block">
-                  <a class="top-cart" href="/cart" title="Giỏ hàng">
+                  <a class="top-cart" href="#" title="Giỏ hàng">
                     <img
                       width="24"
                       height="24"
@@ -494,35 +564,35 @@
                       <p class="title_keyword">TỪ KHÓA PHỔ BIẾN</p>
                       <ul class="ul_list_keyword">
                         <li>
-                          <a href="/search?query=Phòng%20đơn" title="Phòng đơn"
+                          <a href="room_detail.html?id=1" title="Phòng đơn"
                             >Phòng đơn</a
                           >
                         </li>
                         <li>
-                          <a href="/search?query=Phòng%20đôi" title="Phòng đôi"
+                          <a href="room_detail.html?id=2" title="Phòng đôi"
                             >Phòng đôi</a
                           >
                         </li>
                         <li>
-                          <a href="/search?query=Phòng%20vip" title="Phòng vip"
+                          <a href="room_detail.html?id=3" title="Phòng vip"
                             >Phòng vip</a
                           >
                         </li>
                         <li>
-                          <a href="/search?query=Hội%20nghị" title="Hội nghị"
+                          <a href="product.html" title="Hội nghị"
                             >Hội nghị</a
                           >
                         </li>
                         <li>
                           <a
-                            href="/search?query=Dịch%20vụ%20spa"
+                            href="product.html"
                             title="Dịch vụ spa"
                             >Dịch vụ spa</a
                           >
                         </li>
                         <li>
                           <a
-                            href="/search?query=Ẩm%20thực%20khách%20sạn"
+                            href="food.html"
                             title="Ẩm thực khách sạn"
                             >Ẩm thực khách sạn</a
                           >
@@ -1687,7 +1757,7 @@
                         <nav class="nav-category">
                           <ul class="nav navbar-pills">
                             <li class="nav-item relative">
-                              <a title="Trang chủ" class="nav-link" href="/"
+                              <a title="Trang chủ" class="nav-link" href="index.html"
                                 >Trang chủ
                               </a>
                             </li>
@@ -1695,14 +1765,14 @@
                               <a
                                 title="Về chúng tôi"
                                 class="nav-link"
-                                href="/ve-chung-toi"
+                                href="about.html"
                                 >Về chúng tôi
                               </a>
                             </li>
                             <li class="nav-item">
                               <a
                                 title="Phòng"
-                                href="/phong"
+                                href="room_detail.html"
                                 class="nav-link pr-5"
                                 >Phòng
                               </a>
@@ -1712,7 +1782,7 @@
                                   <a
                                     title="Phòng đơn"
                                     class="nav-link"
-                                    href="/phong-don"
+                                    href="room_detail.html?id=1"
                                     >Phòng đơn
                                   </a>
                                 </li>
@@ -1720,7 +1790,7 @@
                                   <a
                                     title="Phòng đôi"
                                     class="nav-link"
-                                    href="/phong-doi"
+                                    href="room_detail.html?id=2"
                                     >Phòng đôi
                                   </a>
                                 </li>
@@ -1728,7 +1798,7 @@
                                   <a
                                     title="Phòng vip"
                                     class="nav-link"
-                                    href="/phong-vip"
+                                    href="room_detail.html?id=3"
                                     >Phòng vip
                                   </a>
                                 </li>
@@ -1737,7 +1807,7 @@
                             <li class="nav-item">
                               <a
                                 title="Ẩm thực"
-                                href="/am-thuc"
+                                href="food.html"
                                 class="nav-link pr-5"
                                 >Ẩm thực
                               </a>
@@ -1747,7 +1817,7 @@
                                   <a
                                     title="Món ăn"
                                     class="nav-link"
-                                    href="/mon-an"
+                                    href="food.html?category=mon-an"
                                     >Món ăn
                                   </a>
                                 </li>
@@ -1755,7 +1825,7 @@
                                   <a
                                     title="Đồ uống"
                                     class="nav-link"
-                                    href="/do-uong"
+                                    href="food.html?category=do-uong"
                                     >Đồ uống
                                   </a>
                                 </li>
@@ -1763,7 +1833,7 @@
                                   <a
                                     title="Bánh ngọt"
                                     class="nav-link"
-                                    href="/banh-ngot"
+                                    href="food.html?category=banh-ngot"
                                     >Bánh ngọt
                                   </a>
                                 </li>
@@ -1773,7 +1843,7 @@
                               <a
                                 title="Dịch vụ"
                                 class="nav-link"
-                                href="/dich-vu"
+                                href="product.html"
                                 >Dịch vụ
                               </a>
                             </li>
@@ -1781,7 +1851,7 @@
                               <a
                                 title="Thư viện ảnh"
                                 class="nav-link"
-                                href="/thu-vien-anh"
+                                href="img.html"
                                 >Thư viện ảnh
                               </a>
                             </li>
@@ -1789,7 +1859,7 @@
                               <a
                                 title="Liên hệ"
                                 class="nav-link"
-                                href="/lien-he"
+                                href="contact.html"
                                 >Liên hệ
                               </a>
                             </li>
@@ -1804,117 +1874,11 @@
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                       <div class="product-favi">
-                        <a href="phong" title="Có thể bạn thích">
+                        <a href="room_detail.html" title="Có thể bạn thích">
                           <div class="title-head">Có thể bạn thích</div>
                         </a>
-                        <div class="product-favi-content">
-                          <div class="product-view">
-                            <a
-                              class="image_thumb"
-                              href="/phong-don-tieu-chuan"
-                              title="Ph&#242;ng đơn ti&#234;u chuẩn"
-                            >
-                              <img
-                                width="370"
-                                height="480"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1.jpg?v=1670338577307"
-                                alt="Phòng đơn tiêu chuẩn"
-                              />
-                            </a>
-                            <div class="product-info">
-                              <h3 class="product-name">
-                                <a
-                                  href="/phong-don-tieu-chuan"
-                                  title="Ph&#242;ng đơn ti&#234;u chuẩn"
-                                  >Ph&#242;ng đơn ti&#234;u chuẩn</a
-                                >
-                              </h3>
-                              <div class="price-box">500.000₫</div>
-                            </div>
-                          </div>
-
-                          <div class="product-view">
-                            <a
-                              class="image_thumb"
-                              href="/phong-don-view-thanh-pho"
-                              title="Ph&#242;ng đơn view th&#224;nh phố"
-                            >
-                              <img
-                                width="370"
-                                height="480"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/sp21.jpg?v=1670338576510"
-                                alt="Phòng đơn view thành phố"
-                              />
-                            </a>
-                            <div class="product-info">
-                              <h3 class="product-name">
-                                <a
-                                  href="/phong-don-view-thanh-pho"
-                                  title="Ph&#242;ng đơn view th&#224;nh phố"
-                                  >Ph&#242;ng đơn view th&#224;nh phố</a
-                                >
-                              </h3>
-                              <div class="price-box">700.000₫</div>
-                            </div>
-                          </div>
-
-                          <div class="product-view">
-                            <a
-                              class="image_thumb"
-                              href="/phong-don-view-san-vuon"
-                              title="Ph&#242;ng đơn view s&#226;n vườn"
-                            >
-                              <img
-                                width="370"
-                                height="480"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh11a713f0cbaa54ea595b6bb5e1b.jpg?v=1670338575473"
-                                alt="Phòng đơn view sân vườn"
-                              />
-                            </a>
-                            <div class="product-info">
-                              <h3 class="product-name">
-                                <a
-                                  href="/phong-don-view-san-vuon"
-                                  title="Ph&#242;ng đơn view s&#226;n vườn"
-                                  >Ph&#242;ng đơn view s&#226;n vườn</a
-                                >
-                              </h3>
-                              <div class="price-box">800.000₫</div>
-                            </div>
-                          </div>
-
-                          <div class="product-view">
-                            <a
-                              class="image_thumb"
-                              href="/phong-don-huong-bien"
-                              title="Ph&#242;ng đơn view biển"
-                            >
-                              <img
-                                width="370"
-                                height="480"
-                                class="lazyload"
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                data-src="//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1eb6eb86adb63474a819ab595ee.jpg?v=1670338574237"
-                                alt="Phòng đơn view biển"
-                              />
-                            </a>
-                            <div class="product-info">
-                              <h3 class="product-name">
-                                <a
-                                  href="/phong-don-huong-bien"
-                                  title="Ph&#242;ng đơn view biển"
-                                  >Ph&#242;ng đơn view biển</a
-                                >
-                              </h3>
-                              <div class="price-box">900.000₫</div>
-                            </div>
-                          </div>
+                        <div class="product-favi-content" id="room-suggestions">
+                          <!-- Sẽ được load dynamic từ room.json -->
                         </div>
                       </div>
                     </div>
