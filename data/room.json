@@ -181,13 +181,22 @@
             {
                 "name": "Tiện ích ngoài trời",
                 "items": [
-                    "Karaoke",
-                    "Truyền hình cáp free",
-                    "BBQ",
-                    "Bàn ghế ngoài trời",
                     "Ban công view vườn",
+                    "Bàn ghế ngoài trời",
+                    "BBQ",
                     "Sân hiên",
                     "Sân vườn & Cây xanh"
+                ]
+            },
+            {
+                "name": "Tiện ích phòng",
+                "items": [
+                    "Minibar",
+                    "Két sắt trong phòng",
+                    "Điều hòa nhiệt độ",
+                    "TV màn hình phẳng",
+                    "Bếp nhỏ",
+                    "Tủ lạnh"
                 ]
             },
             {
@@ -492,7 +501,7 @@
     {
         "id": "phong-doi-2-giuong-doi",
         "name": "Phòng đôi 2 giường đôi",
-        "type": "double-twin",
+        "type": "double",
         "url": "/phong-doi-2-giuong-doi",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1120e24401b1a4fb7b5535ae97a.jpg?v=1670338569467",
@@ -569,7 +578,7 @@
     {
         "id": "phong-don-vip",
         "name": "Phòng đơn vip",
-        "type": "single-vip",
+        "type": "vip",
         "url": "/phong-don-vip",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1a6283d038ec94b4abbca2d4e02.jpg?v=1670338568540",
@@ -652,7 +661,7 @@
     {
         "id": "phong-gia-dinh",
         "name": "Phòng gia đình",
-        "type": "family",
+        "type": "vip",
         "url": "/phong-gia-dinh",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh1b11858800dc04b9b99c8ef13c0.jpg?v=1670338567667",
@@ -733,7 +742,7 @@
     {
         "id": "can-ho-chung-cu",
         "name": "Căn hộ chung cư",
-        "type": "apartment",
+        "type": "vip",
         "url": "/can-ho-chung-cu",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh153bb971e15444fefa78e4ae22b.jpg?v=1670338566430",
@@ -814,7 +823,7 @@
     {
         "id": "phong-hang-sang",
         "name": "Phòng hạng sang",
-        "type": "luxury",
+        "type": "vip",
         "url": "/phong-hang-sang",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267",
@@ -901,7 +910,7 @@
     {
         "id": "phong-doi-noi-lien",
         "name": "Phòng đôi nối liền",
-        "type": "connecting",
+        "type": "double",
         "url": "/phong-doi-noi-lien",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267",
