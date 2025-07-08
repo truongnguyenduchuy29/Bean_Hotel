@@ -910,7 +910,7 @@
     {
         "id": "phong-doi-noi-lien",
         "name": "Phòng đôi nối liền",
-        "type": "double",
+        "type": "vip",
         "url": "/phong-doi-noi-lien",
         "image": [
             "//bizweb.dktcdn.net/thumb/large/100/472/947/products/anh2da652ce4feb54387b6a1dc3b39.jpg?v=1670338564267",
