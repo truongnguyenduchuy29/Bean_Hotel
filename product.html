@@ -9849,6 +9849,9 @@
                     // Bỏ qua nếu không có href hoặc đã là room_detail.html hoặc product.html?type=
                     if (!href || href.includes('room_detail.html') || href.includes('product.html?type=')) return;
                     
+                    // Bỏ qua các liên kết lọc phòng đã được cấu hình trong menu
+                    if ($(this).closest('.nav-item-lv2').length > 0) return;
+                    
                     // Xử lý liên kết bắt đầu bằng "/phong-" hoặc "phong-" hoặc "/can-ho-"
                     if (href.startsWith('/phong-') || href.startsWith('phong-') || 
                         href.startsWith('/can-ho-') || href.startsWith('can-ho-')) {
@@ -9900,7 +9903,7 @@
             console.log("Đã hoàn tất cập nhật các liên kết phòng");
         });
     </script>
-<script src="js/fix-links.js"></script>
+<!-- Script fix-links.js đã bị loại bỏ để tránh xung đột -->
 </body>
 
 </html>
