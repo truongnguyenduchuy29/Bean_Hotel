@@ -16,11 +16,13 @@ $(document).ready(function () {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('type')) {
         currentFilter = urlParams.get('type');
+        console.log('Đã phát hiện tham số type trong URL:', currentFilter);
     } else {
         // Check if we're on a specific room type page
         const pathname = window.location.pathname;
         if (pathname === '/phong-don' || pathname === '/phong-doi' || pathname === '/phong-vip') {
             currentFilter = pathname.substring(1); // Remove the leading slash
+            console.log('Đã phát hiện loại phòng từ pathname:', currentFilter);
         }
     }
 
@@ -31,6 +33,7 @@ $(document).ready(function () {
 
         $.getJSON('/data/room.json', function (data) {
             allRooms = data;
+            console.log('Đã tải dữ liệu phòng:', allRooms.length, 'phòng');
             applyFilterIfNeeded();
             initializeMenuHighlighting();
             roomContainer.removeClass('loading');
@@ -44,8 +47,10 @@ $(document).ready(function () {
     // Apply filter if URL has type parameter or if we're on a specific room type page
     function applyFilterIfNeeded() {
         if (currentFilter) {
+            console.log('Áp dụng bộ lọc:', currentFilter);
             filterRooms(currentFilter);
         } else {
+            console.log('Không có bộ lọc, hiển thị tất cả phòng');
             // If no filter is specified, show all rooms
             renderRooms(allRooms);
         }
@@ -58,6 +63,7 @@ $(document).ready(function () {
             return;
         }
 
+        console.log('Lọc phòng theo loại:', type);
         let filteredRooms = [];
 
         // Map the Vietnamese filter names from the menu to the type values in the JSON
@@ -65,21 +71,25 @@ $(document).ready(function () {
             case 'phong-don':
                 // Filter for single room types
                 filteredRooms = allRooms.filter(room => room.type === 'single');
+                console.log('Đã lọc phòng đơn:', filteredRooms.length, 'phòng');
                 break;
 
             case 'phong-doi':
                 // Filter for double room types
                 filteredRooms = allRooms.filter(room => room.type === 'double');
+                console.log('Đã lọc phòng đôi:', filteredRooms.length, 'phòng');
                 break;
 
             case 'phong-vip':
                 // Filter for VIP room types
                 filteredRooms = allRooms.filter(room => room.type === 'vip');
+                console.log('Đã lọc phòng vip:', filteredRooms.length, 'phòng');
                 break;
 
             default:
                 // If none of the above, show all rooms
                 filteredRooms = allRooms;
+                console.log('Loại không xác định, hiển thị tất cả phòng');
                 break;
         }
 
@@ -157,23 +167,31 @@ $(document).ready(function () {
         $('.nav-item-lv2 a').removeClass('active');
 
         if (currentFilter) {
-            // Add active class to the corresponding menu item
-            $(`.nav-item-lv2 a[href="/${currentFilter}"]`).addClass('active');
+            // Add active class to the corresponding menu item - phải tìm href có dạng product.html?type=phong-xxx
+            $(`.nav-item-lv2 a[href="product.html?type=${currentFilter}"]`).addClass('active');
+            console.log('Đã highlight menu cho loại phòng:', currentFilter);
         } else {
             // If no filter, highlight the "All Rooms" option if it exists
-            $('.nav-item-lv2 a[href="/phong"]').addClass('active');
+            $('.nav-item-lv2 a[href="product.html"]').addClass('active');
+            console.log('Không có bộ lọc, highlight menu "Tất cả phòng"');
         }
     }
 
     // Handle navigation menu item clicks for filtering
     $('.nav-item-lv2 a').click(function (e) {
         const hrefPath = $(this).attr('href');
+        console.log('Click menu với href:', hrefPath);
 
         // Check if we're already on the product page
-        if (window.location.pathname === '/phong' || window.location.pathname === '/product.html') {
-            if (hrefPath === '/phong-don' || hrefPath === '/phong-doi' || hrefPath === '/phong-vip') {
+        if (window.location.pathname === '/product.html' || window.location.pathname === '/phong') {
+            // Kiểm tra xem href có chứa tham số type không
+            if (hrefPath && hrefPath.includes('product.html?type=')) {
                 e.preventDefault();
-                const type = hrefPath.replace('/', '');
+                // Trích xuất loại phòng từ tham số URL
+                const urlParams = new URLSearchParams(hrefPath.split('?')[1]);
+                const type = urlParams.get('type');
+
+                console.log('Đã click menu lọc phòng:', type);
 
                 // Update active state for menu items
                 $('.nav-item-lv2 a').removeClass('active');
@@ -185,9 +203,11 @@ $(document).ready(function () {
                 // Update URL without reloading the page
                 const newUrl = window.location.pathname + '?type=' + type;
                 history.pushState({}, '', newUrl);
-            } else if (hrefPath === '/phong') {
+            } else if (hrefPath === 'product.html' || hrefPath === '/phong') {
                 // Show all rooms
                 e.preventDefault();
+
+                console.log('Đã click menu "Tất cả phòng"');
 
                 // Update active state for menu items
                 $('.nav-item-lv2 a').removeClass('active');
@@ -206,6 +226,8 @@ $(document).ready(function () {
     // Add handler for "Tất cả phòng" or any "All Rooms" option if it exists
     $('.all-rooms-link').click(function (e) {
         e.preventDefault();
+
+        console.log('Đã click "Tất cả phòng"');
 
         // Update active state for menu items
         $('.nav-item-lv2 a').removeClass('active');
