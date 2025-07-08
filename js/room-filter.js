@@ -111,58 +111,49 @@ $(document).ready(function () {
         updateRoomCount(rooms.length);
 
         rooms.forEach(room => {
-            // Tạo danh sách các dịch vụ phòng (tag icons)
-            let tagIcons = '';
-            if (room.freeServices && Array.isArray(room.freeServices)) {
-                room.freeServices.forEach(service => {
-                    let iconNumber = 1; // Mặc định icon 1
-                    if (service.includes("Đồ Ăn")) iconNumber = 2;
-                    else if (service.includes("Bếp")) iconNumber = 3;
-                    else if (service.includes("Bồn Tắm")) iconNumber = 4;
-                    else if (service.includes("Internet")) iconNumber = 5;
-
-                    tagIcons += `
+            // Xử lý các features cho icons
+            const featuresHtml = room.features && Array.isArray(room.features) ?
+                room.features.slice(0, 5).map((feature, index) => `
                     <li>
                         <img width="32" height="32"
-                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${iconNumber}.svg?1749443141671"
-                            alt="${service}" />
-                    </li>`;
-                });
-            }
+                            src="/img/tag_icon_${index + 1}.svg"
+                            alt="${feature}" />
+                    </li>
+                `).join('') : '';
 
-            // Tạo danh sách thông tin phòng (khách, diện tích)
-            let tagReviews = '';
-            if (room.details && Array.isArray(room.details)) {
-                room.details.forEach(detail => {
-                    tagReviews += `<li>${detail}</li>`;
-                });
-            }
+            // Tạo thông tin capacity và size từ room.details
+            const capacity = room.adults ? `${room.adults} Khách` : (room.details && room.details[0] ? room.details[0] : '');
+            const size = room.size || (room.details && room.details[1] ? room.details[1] : '');
 
+            // Tạo đường dẫn động
+            const dynamicUrl = `/room_detail.html?id=${room.id}`;
+
+            // Tạo HTML theo cấu trúc product.html
             let roomHtml = `
                 <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="item_product_main">
+                    <div class="item_product_main" data-room-id="${room.id}">
                         <div class="alper-product-item">
                             <div class="item-product-img">
-                                <a class="image_thumb" href="${room.url}"
-                                    title="${room.name}"><img width="480"
-                                        height="272" class="lazyload"
+                                <a class="image_thumb" href="${dynamicUrl}" title="${room.name}">
+                                    <img width="480" height="272" class="lazyload"
                                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
                                         data-src="${room.image[0]}"
-                                        alt="${room.name}" /></a>
+                                        alt="${room.name}" />
+                                </a>
                             </div>
                             <div class="info-room clearfix">
                                 <h3 class="name-room">
-                                    <a href="${room.url}"
-                                        title="${room.name}">${room.name}</a>
+                                    <a href="${dynamicUrl}" title="${room.name}">${room.name}</a>
                                 </h3>
                                 <div class="tag-room">
                                     <ul class="list_tag_room">
-                                        ${tagIcons}
+                                        ${featuresHtml}
                                     </ul>
                                 </div>
                                 <div class="tag-rivew">
                                     <ul class="list_tag_review">
-                                        ${tagReviews}
+                                        <li>${capacity}</li>
+                                        <li>${size}</li>
                                     </ul>
                                 </div>
                                 <div class="product-info-room">
@@ -170,8 +161,7 @@ $(document).ready(function () {
                                         <span class="price">${room.price}</span>
                                     </div>
                                     <div class="booking-room">
-                                        <a href="${room.url}" title="Đặt phòng"
-                                            class="btn-booking">ÐẶT PHÒNG</a>
+                                        <a href="${dynamicUrl}" title="Đặt phòng" class="btn-booking">ĐẶT PHÒNG</a>
                                     </div>
                                 </div>
                             </div>
