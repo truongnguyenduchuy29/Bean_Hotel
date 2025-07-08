@@ -9520,7 +9520,10 @@ Popup cart mobile
       />
     </a>
 
-    <!-- Inline JavaScript for food rendering with pagination -->
+    <!-- Load food-filter.js first to ensure it takes priority -->
+    <script src="js/food-filter.js"></script>
+    
+    <!-- Inline JavaScript for food rendering with pagination (fallback) -->
     <script type="text/javascript">
       let allFoodItems = [];
       let currentPage = 1;
@@ -9821,6 +9824,6 @@ Popup cart mobile
         };
       });
     </script>
-    <script src="js/food-filter.js"></script>
+    </script>
   </body>
 </html>

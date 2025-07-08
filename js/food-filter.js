@@ -1,7 +1,8 @@
 $(document).ready(function () {
     // Mark that the filter system is initialized so food-list.js doesn't duplicate loading
     window.foodFilterInitialized = true;
-    
+    console.log("Setting window.foodFilterInitialized = true to prevent food-list.js from loading");
+
     // Global variables to store all food items and current filter
     let allFoodItems = [];
     let currentFilter = '';
@@ -9,9 +10,30 @@ $(document).ready(function () {
     let currentPage = 1;
 
     // Initialize the filtering system if we're on the food.html page
-    if (window.location.pathname === '/food.html' || window.location.pathname === '/am-thuc') {
-        initializeFoodFilter();
+    if (window.location.pathname.includes('food.html') || window.location.pathname.includes('am-thuc')) {
+        // Sử dụng timeout nhỏ để đảm bảo các thành phần khác đã được tải
+        setTimeout(function () {
+            initializeFoodFilter();
+        }, 50);
     }
+
+    // Thêm sự kiện khi trang đã tải hoàn toàn
+    $(window).on('load', function () {
+        if (window.location.pathname.includes('food.html') || window.location.pathname.includes('am-thuc')) {
+            console.log("Window fully loaded - reinitializing filter if needed");
+            // Kiểm tra xem URL có tham số type không
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('type')) {
+                currentFilter = urlParams.get('type');
+                console.log('Window.onload - Filter detected in URL:', currentFilter);
+                // Gọi lại hàm lọc để đảm bảo kết quả hiển thị đúng
+                if (allFoodItems.length > 0) {
+                    filterFoodItems(currentFilter);
+                    initializeMenuHighlighting();
+                }
+            }
+        }
+    });
 
     function initializeFoodFilter() {
         console.log('Initializing food filter system...');
@@ -37,16 +59,28 @@ $(document).ready(function () {
         const productsContainer = $('.products-view-grid .row');
         productsContainer.html('<div id="loading-indicator" class="text-center w-100"><p>Đang tải dữ liệu...</p></div>');
 
+        // Lưu lại URL hiện tại để kiểm tra sau khi tải dữ liệu
+        const currentUrl = window.location.href;
+        console.log('Current URL when loading data:', currentUrl);
+
         // Fetch food data from JSON
         $.getJSON('/data/food.json', function (data) {
             allFoodItems = data;
             console.log('Food data loaded:', allFoodItems.length, 'items');
 
-            // Apply filter if URL has type parameter
-            applyFilterIfNeeded();
+            // Đảm bảo rằng URL hiện tại vẫn giống với URL khi bắt đầu tải
+            if (window.location.href === currentUrl) {
+                // Đặt timeout nhỏ để đảm bảo không có script nào khác ghi đè
+                setTimeout(function () {
+                    // Apply filter if URL has type parameter
+                    applyFilterIfNeeded();
 
-            // Initialize menu highlighting
-            initializeMenuHighlighting();
+                    // Initialize menu highlighting
+                    initializeMenuHighlighting();
+
+                    console.log('Filter applied after data load, currentFilter:', currentFilter);
+                }, 100);
+            }
         }).fail(function (error) {
             console.error('Error loading food data:', error);
             productsContainer.html('<div class="col-12 text-center"><p>Không thể tải dữ liệu món ăn</p></div>');
@@ -54,14 +88,23 @@ $(document).ready(function () {
     }
 
     function applyFilterIfNeeded() {
+        // Đảm bảo container được xóa sạch trước khi áp dụng bộ lọc
+        const productsContainer = $('.products-view-grid .row');
+        productsContainer.empty();
+        console.log('Container cleared before filtering');
+
         if (currentFilter) {
             console.log('Applying filter:', currentFilter);
+            // Gọi ngay lập tức để tránh bị script khác ghi đè
             filterFoodItems(currentFilter);
         } else {
             console.log('No filter applied, showing all food items');
             // If no filter specified, show all food items
             renderFoodItems(allFoodItems);
         }
+
+        // Đảm bảo menu được highlight đúng
+        initializeMenuHighlighting();
     }
 
     function filterFoodItems(type) {
@@ -386,6 +429,43 @@ $(document).ready(function () {
         return url;
     }
 });
+
+// Global scope for pagination function to be accessible
+window.changePage = function (pageNumber) {
+    // This will be overridden in the document ready function
+    console.log('Page changed to:', pageNumber);
+};
+
+// Thêm mã vô hiệu hóa script inline trong food.html
+(function () {
+    // Thiết lập biến trước khi bất kỳ script nào khác chạy
+    window.foodFilterInitialized = true;
+    console.log("food-filter.js loaded and set foodFilterInitialized = true");
+
+    // Khi trang tải xong, đảm bảo rằng food-filter.js có quyền ưu tiên
+    window.addEventListener('load', function () {
+        // Nếu có một script inline đã render items, xóa chúng để render lại
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('type')) {
+            console.log('Window fully loaded - detected type parameter, ensuring filter has priority');
+            // Xóa nội dung container để tránh hiển thị trùng lặp
+            const productsContainer = document.querySelector('.products-view-grid .row');
+            if (productsContainer) {
+                // Lưu lại tham chiếu đến container gốc
+                const parentContainer = productsContainer.parentNode;
+                // Xóa container cũ
+                productsContainer.remove();
+                // Tạo container mới với cùng class
+                const newContainer = document.createElement('div');
+                newContainer.className = 'row';
+                // Thêm lại vào DOM
+                parentContainer.appendChild(newContainer);
+
+                console.log('Reset products container to ensure clean rendering');
+            }
+        }
+    });
+})();
 
 // Global scope for pagination function to be accessible
 window.changePage = function (pageNumber) {
