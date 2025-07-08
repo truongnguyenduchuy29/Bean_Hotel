@@ -111,36 +111,80 @@ $(document).ready(function () {
         updateRoomCount(rooms.length);
 
         rooms.forEach(room => {
+            // Tạo danh sách các dịch vụ phòng (tag icons)
+            let tagIcons = '';
+            if (room.freeServices && Array.isArray(room.freeServices)) {
+                room.freeServices.forEach(service => {
+                    let iconNumber = 1; // Mặc định icon 1
+                    if (service.includes("Đồ Ăn")) iconNumber = 2;
+                    else if (service.includes("Bếp")) iconNumber = 3;
+                    else if (service.includes("Bồn Tắm")) iconNumber = 4;
+                    else if (service.includes("Internet")) iconNumber = 5;
+
+                    tagIcons += `
+                    <li>
+                        <img width="32" height="32"
+                            src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/tag_icon_${iconNumber}.svg?1749443141671"
+                            alt="${service}" />
+                    </li>`;
+                });
+            }
+
+            // Tạo danh sách thông tin phòng (khách, diện tích)
+            let tagReviews = '';
+            if (room.details && Array.isArray(room.details)) {
+                room.details.forEach(detail => {
+                    tagReviews += `<li>${detail}</li>`;
+                });
+            }
+
             let roomHtml = `
-                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-                    <div class="evo-product-block-item">
-                        <a href="room_detail.html?id=${room.id}" title="${room.name}" class="product__box-image">
-                            <img class="lazy loaded" src="${room.image[0]}" alt="${room.name}" />
-                        </a>
-                        <div class="product-meta">
-                            <h3 class="product-title"><a href="room_detail.html?id=${room.id}" title="${room.name}">${room.name}</a></h3>
-                            <div class="product-price">
-                                <span class="price">${room.price}</span>
+                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item_product_main">
+                        <div class="alper-product-item">
+                            <div class="item-product-img">
+                                <a class="image_thumb" href="${room.url}"
+                                    title="${room.name}"><img width="480"
+                                        height="272" class="lazyload"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        data-src="${room.image[0]}"
+                                        alt="${room.name}" /></a>
                             </div>
-                            <ul class="room-highlights">
-                                ${room.details.map(detail => `<li><i class="fa fa-check"></i> ${detail}</li>`).join('')}
-                            </ul>
-                            <ul class="product-features">
-                                ${room.freeServices ? room.freeServices.map(service => `<li>${service}</li>`).join('') : ''}
-                            </ul>
-                            <div class="product-actions">
-                                <a href="room_detail.html?id=${room.id}" class="btn btn-primary btn-view-detail" title="Xem chi tiết">
-                                    Xem chi tiết
-                                </a>
-                                <a href="/dat-phong?room=${room.id}" class="btn btn-outline-primary btn-book" title="Đặt ngay">
-                                    Đặt ngay
-                                </a>
+                            <div class="info-room clearfix">
+                                <h3 class="name-room">
+                                    <a href="${room.url}"
+                                        title="${room.name}">${room.name}</a>
+                                </h3>
+                                <div class="tag-room">
+                                    <ul class="list_tag_room">
+                                        ${tagIcons}
+                                    </ul>
+                                </div>
+                                <div class="tag-rivew">
+                                    <ul class="list_tag_review">
+                                        ${tagReviews}
+                                    </ul>
+                                </div>
+                                <div class="product-info-room">
+                                    <div class="price-room">
+                                        <span class="price">${room.price}</span>
+                                    </div>
+                                    <div class="booking-room">
+                                        <a href="${room.url}" title="Đặt phòng"
+                                            class="btn-booking">ÐẶT PHÒNG</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>`;
             roomContainer.append(roomHtml);
         });
+
+        // Khởi tạo lại lazy load cho các hình ảnh
+        if (window.awe_lazyloadImage && typeof window.awe_lazyloadImage === 'function') {
+            window.awe_lazyloadImage();
+        }
     }
 
     // Update the room count display
