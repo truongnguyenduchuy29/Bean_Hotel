@@ -471,7 +471,7 @@
                 </li>
               </ul>
               <div class="button-book">
-                <a class="btn_book_hea" href="booking.html" title="Đặt phòng">
+                <a class="btn_book_hea" href="dat-phong" title="Đặt phòng">
                   <svg
                     id="outline"
                     height="40"
@@ -1000,107 +1000,142 @@
                     <div class="aside-content aside-content-blog">
                       <div class="title-head">Danh mục</div>
                       <nav class="nav-category">
-                        <ul class="nav navbar-pills">
-                          <li class="nav-item relative">
+                        <ul id="nav" class="nav">
+                          <li class="nav-item active">
                             <a
-                              title="Trang chủ"
                               class="nav-link"
                               href="index.html"
+                              title="Trang chủ"
                               >Trang chủ</a
                             >
                           </li>
-                          <li class="nav-item relative">
+
+                          <li class="nav-item">
                             <a
-                              title="Về chúng tôi"
                               class="nav-link"
                               href="about.html"
+                              title="Về chúng tôi"
                               >Về chúng tôi</a
                             >
                           </li>
-                          <li class="nav-item relative">
+
+                          <li class="nav-item has-childs">
                             <a
-                              title="Phòng"
                               href="product.html"
-                              class="nav-link pr-5"
-                              >Phòng</a
-                            >
+                              class="nav-link"
+                              title="Phòng"
+                              >Phòng
+                              <svg
+                                width="8"
+                                height="17"
+                                viewBox="0 0 8 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"
+                                ></path></svg
+                            ></a>
                             <i class="open_mnu down_icon"></i>
-                            <ul class="menu_down" style="display: none">
-                              <li class="nav-item">
+                            <ul class="dropdown-menu">
+                              <li class="nav-item-lv2">
                                 <a
-                                  title="Phòng đơn"
                                   class="nav-link"
                                   href="product.html?type=phong-don"
+                                  title="Phòng đơn"
                                   >Phòng đơn</a
                                 >
                               </li>
-                              <li class="nav-item">
+
+                              <li class="nav-item-lv2">
                                 <a
-                                  title="Phòng đôi"
                                   class="nav-link"
                                   href="product.html?type=phong-doi"
+                                  title="Phòng đôi"
                                   >Phòng đôi</a
                                 >
                               </li>
-                              <li class="nav-item">
+
+                              <li class="nav-item-lv2">
                                 <a
-                                  title="Phòng vip"
                                   class="nav-link"
                                   href="product.html?type=phong-vip"
+                                  title="Phòng vip"
                                   >Phòng vip</a
                                 >
                               </li>
                             </ul>
                           </li>
-                          <li class="nav-item relative">
-                            <a
-                              title="Ẩm thực"
-                              href="food.html"
-                              class="nav-link pr-5"
-                              >Ẩm thực</a
-                            >
+
+                          <li class="nav-item has-childs">
+                            <a href="food.html" class="nav-link" title="Ẩm thực"
+                              >Ẩm thực
+                              <svg
+                                width="8"
+                                height="17"
+                                viewBox="0 0 8 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"
+                                ></path></svg
+                            ></a>
                             <i class="open_mnu down_icon"></i>
-                            <ul class="menu_down" style="display: none">
-                              <li class="nav-item">
+                            <ul class="dropdown-menu">
+                              <li class="nav-item-lv2">
                                 <a
-                                  title="Món ăn"
                                   class="nav-link"
                                   href="food.html?type=mon-an"
+                                  title="Món ăn"
                                   >Món ăn</a
                                 >
                               </li>
-                              <li class="nav-item">
+
+                              <li class="nav-item-lv2">
                                 <a
-                                  title="Đồ uống"
                                   class="nav-link"
                                   href="food.html?type=do-uong"
+                                  title="Đồ uống"
                                   >Đồ uống</a
                                 >
                               </li>
                             </ul>
                           </li>
-                          <li class="nav-item relative">
+
+                          <li class="nav-item">
                             <a
-                              title="Dịch vụ"
                               class="nav-link"
                               href="service.html"
+                              title="Dịch vụ"
                               >Dịch vụ</a
                             >
                           </li>
-                          <li class="nav-item relative">
+
+                          <li class="nav-item">
                             <a
-                              title="Thư viện ảnh"
                               class="nav-link"
                               href="img.html"
+                              title="Thư viện ảnh"
                               >Thư viện ảnh</a
                             >
                           </li>
-                          <li class="nav-item relative">
+
+                          <li class="nav-item">
                             <a
-                              title="Liên hệ"
                               class="nav-link"
                               href="contact.html"
+                              title="Liên hệ"
                               >Liên hệ</a
+                            >
+                          </li>
+
+                          <li class="nav-item d-lg-none">
+                            <a
+                              class="nav-link"
+                              href="booking.html"
+                              title="Đặt phòng"
+                              >Đặt phòng</a
                             >
                           </li>
                         </ul>
@@ -1152,7 +1187,7 @@
                           <div class="post-thumb">
                             <a
                               class="image-blog scale_hover"
-                              href="service_2022.html"
+                              href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
                               title="10 xu hướng thịnh hành trong ngành khách sạn 2022"
                             >
                               <img
@@ -1167,7 +1202,7 @@
                             <h3>
                               <a
                                 title="10 xu hướng thịnh hành trong ngành khách sạn 2022"
-                                href="service_2022.html"
+                                href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
                                 >10 xu hướng thịnh hành trong ngành khách sạn
                                 2022</a
                               >
@@ -1212,7 +1247,7 @@
                           <div class="post-thumb">
                             <a
                               class="image-blog scale_hover"
-                              href="service_toanthan.html"
+                              href="/tam-trang-va-ket-hop-duong-da-toan-than"
                               title="Tắm trắng và kết hợp dưỡng da toàn thân"
                             >
                               <img
@@ -1227,7 +1262,7 @@
                             <h3>
                               <a
                                 title="Tắm trắng và kết hợp dưỡng da toàn thân"
-                                href="service_toanthan.html"
+                                href="/tam-trang-va-ket-hop-duong-da-toan-than"
                                 >Tắm trắng và kết hợp dưỡng da toàn thân</a
                               >
                             </h3>
@@ -1241,7 +1276,7 @@
                           <div class="post-thumb">
                             <a
                               class="image-blog scale_hover"
-                              href="service_hoinuoc.html"
+                              href="/massage-body-toan-than-bang-tinh-dau-va-hoi-nuoc"
                               title="Massage body toàn thân bằng tinh dầu và hơi nước"
                             >
                               <img
@@ -1256,7 +1291,7 @@
                             <h3>
                               <a
                                 title="Massage body toàn thân bằng tinh dầu và hơi nước"
-                                href="service_hoinuoc.html"
+                                href="/massage-body-toan-than-bang-tinh-dau-va-hoi-nuoc"
                                 >Massage body toàn thân bằng tinh dầu và hơi
                                 nước</a
                               >
@@ -1271,7 +1306,7 @@
                           <div class="post-thumb">
                             <a
                               class="image-blog scale_hover"
-                              href="service_ngucoc.html"
+                              href="/tay-da-chet-toan-than-bang-tinh-chat-cam-gao-ngu-coc"
                               title="Tẩy da chết toàn thân bằng tinh chất cám gạo, ngũ cốc"
                             >
                               <img
@@ -1286,7 +1321,7 @@
                             <h3>
                               <a
                                 title="Tẩy da chết toàn thân bằng tinh chất cám gạo, ngũ cốc"
-                                href="service_ngucoc.html"
+                                href="/tay-da-chet-toan-than-bang-tinh-chat-cam-gao-ngu-coc"
                                 >Tẩy da chết toàn thân bằng tinh chất cám gạo,
                                 ngũ cốc</a
                               >
@@ -1855,7 +1890,7 @@
                     <div class="post-info">
                       <div class="enti-title">
                         <a
-                          href="service_2022.html"
+                          href="/10-xu-huong-thinh-hanh-trong-nganh-khach-san-2022"
                           title="10 xu hướng thịnh hành trong ngành khách sạn 2022"
                           >10 xu hướng thịnh hành trong ngành khách sạn 2022</a
                         >
@@ -1867,8 +1902,7 @@
                     <div class="post-info">
                       <div class="enti-title">
                         <a
-                          <a
-                          href="/service_nenbiet.html"
+                          href="/nhung-dieu-kieng-ki-khi-o-khach-san-ma-ban-nen-biet"
                           title="Những điều kiêng kị khi ở khách sạn mà bạn nên biết"
                           >Những điều kiêng kị khi ở khách sạn mà bạn nên
                           biết</a
@@ -1881,7 +1915,7 @@
                     <div class="post-info">
                       <div class="enti-title">
                         <a
-                          href="/service_chocolate.html"
+                          href="/y-nghia-viec-khach-san-de-chocolate-len-goi-khi-don-phong"
                           title="Ý nghĩa việc khách sạn để chocolate lên gối khi dọn phòng"
                           >Ý nghĩa việc khách sạn để chocolate lên gối khi dọn
                           phòng</a
