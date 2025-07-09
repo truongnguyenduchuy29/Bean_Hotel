@@ -10063,6 +10063,15 @@ Ajax Bizweb Add To Cart
   </script>
 <script src="js/fix-links.js"></script>
 <script src="js/food-list.js"></script>
+<script src="js/lazyload-fix.js"></script>
+<script>
+  // Force load images after a short delay
+  setTimeout(function() {
+    if (window.fixLazyImages) {
+      window.fixLazyImages();
+    }
+  }, 500);
+</script>
 </body>
 
 </html>
