@@ -10175,7 +10175,610 @@ Ajax Bizweb Add To Cart
   #quickview-modal, #quickview-modal * {
     box-sizing: border-box;
   }
+  
+  /* Cart Modal Styles */
+  .cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 100002;
+  }
+  
+  .cart-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .cart-modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .cart-modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .cart-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .cart-modal-body {
+    padding: 20px;
+  }
+  
+  .cart-product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-product-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+  }
+  
+  .cart-product-details h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .cart-price {
+    color: #cd9a2b;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .cart-old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  .cart-quantity {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .cart-modal-actions {
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .cart-modal-continue {
+    flex: 1;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .cart-modal-continue:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .cart-modal-checkout {
+    flex: 1;
+    padding: 10px;
+    background-color: #cd9a2b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-modal-checkout:hover {
+    background-color: #b58a25;
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 480px) {
+    .cart-modal-actions {
+      flex-direction: column;
+    }
+  }
 </style>
-</body>
 
+<!-- Quick View Modal -->
+<div class="quickview-modal" id="quickview-modal" style="display: none;">
+  <div class="quickview-overlay"></div>
+  <div class="quickview-container">
+    <div class="quickview-content">
+      <button class="quickview-close">
+        ×
+      </button>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="quickview-image">
+            <img id="product-featured-image-quickview" class="img-product" src="" alt="" />
+          </div>
+          <div id="thumbs_list_quickview">
+            <ul id="thumblist_quickview" class="product-thumb">
+              <!-- Thumb images will be dynamically populated here -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="quickview-product-info">
+            <h2 class="qwp-name">
+              <a href="#" title=""></a>
+            </h2>
+            <div class="prices">
+              <span class="price"></span>
+              <span class="old-price" style="display:none"></span>
+            </div>
+            <div class="product-description"></div>
+            <div class="quantity-area">
+              <label>Số lượng:</label>
+              <div class="quantity-input-container">
+                <div class="quantity-input">
+                  <button type="button" class="qty-btn decrease">-</button>
+                  <input type="number" id="quantity-input" name="quantity" value="1" min="1" class="quantity-selector">
+                  <button type="button" class="qty-btn increase">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="add_to_cart_detail" title="Thêm vào giỏ hàng">
+                THÊM VÀO GIỎ HÀNG
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Success Modal -->
+<div id="cart-success-modal" class="cart-modal" style="display: none;">
+  <div class="cart-modal-overlay"></div>
+  <div class="cart-modal-container">
+    <div class="cart-modal-header">
+      <h3>Thêm vào giỏ hàng thành công</h3>
+      <button class="cart-modal-close">×</button>
+    </div>
+    <div class="cart-modal-body">
+      <div class="cart-product-info">
+        <img id="cart-product-img" src="" alt="Product Image">
+        <div class="cart-product-details">
+          <h4 id="cart-product-name"></h4>
+          <div class="cart-product-price-container">
+            <span id="cart-product-price" class="cart-price"></span>
+            <span id="cart-product-old-price" class="cart-old-price"></span>
+          </div>
+          <p class="cart-quantity">Số lượng: <span id="cart-product-quantity">1</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cart-modal-actions">
+      <button class="cart-modal-continue">Tiếp tục mua hàng</button>
+      <a href="cart.html" class="cart-modal-checkout">Xem giỏ hàng</a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for Quick View and Cart -->
+<script>
+  $(document).ready(function() {
+    // Khởi tạo giỏ hàng trong localStorage nếu chưa tồn tại
+    if (!localStorage.getItem('beanHotelCart')) {
+      localStorage.setItem('beanHotelCart', JSON.stringify([]));
+    }
+    
+    // Cập nhật số lượng sản phẩm trong giỏ hàng
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('beanHotelCart')) || [];
+      const totalItems = cart.reduce((total, item) => total + (parseInt(item.quantity) || 0), 0);
+      $('.count_item_pr, .cart-count').text(totalItems);
+      console.log('Tổng số sản phẩm trong giỏ hàng:', totalItems);
+    }
+    
+    // Thêm sản phẩm vào giỏ hàng
+    function addToCart(product, quantity) {
+      // Đảm bảo quantity là số
+      const qtyToAdd = parseInt(quantity) || 1;
+      console.log(`Thêm sản phẩm: ${product.name}, số lượng: ${qtyToAdd}`);
+      
+      // Lấy giỏ hàng hiện tại
+      const cart = JSON.parse(localStorage.getItem('beanHotelCart')) || [];
+      
+      // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+      const existingItemIndex = cart.findIndex(item => item.id === product.id);
+      
+      if (existingItemIndex >= 0) {
+        // Cập nhật số lượng nếu sản phẩm đã có trong giỏ hàng
+        const currentQty = parseInt(cart[existingItemIndex].quantity) || 0;
+        cart[existingItemIndex].quantity = currentQty + qtyToAdd;
+        console.log(`Cập nhật sản phẩm hiện có, số lượng mới: ${cart[existingItemIndex].quantity}`);
+      } else {
+        // Thêm sản phẩm mới vào giỏ hàng
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          oldPrice: product.oldPrice || null,
+          image: product.image && product.image.length > 0 ? product.image[0] : '',
+          quantity: qtyToAdd
+        });
+        console.log('Đã thêm sản phẩm mới vào giỏ hàng');
+      }
+      
+      // Lưu giỏ hàng đã cập nhật
+      localStorage.setItem('beanHotelCart', JSON.stringify(cart));
+      console.log('Giỏ hàng sau khi cập nhật:', cart);
+      
+      // Cập nhật hiển thị số lượng sản phẩm
+      updateCartCount();
+      
+      // Hiển thị modal thông báo thêm vào giỏ hàng thành công
+      showCartModal(product, qtyToAdd);
+    }
+    
+    // Hiển thị modal giỏ hàng
+    function showCartModal(product, quantity) {
+      // Thiết lập thông tin sản phẩm trong modal
+      $('#cart-product-img').attr('src', product.image && product.image.length > 0 ? product.image[0] : '');
+      $('#cart-product-name').text(product.name);
+      $('#cart-product-price').text(product.price);
+      $('#cart-product-quantity').text(quantity);
+      
+      // Xử lý hiển thị giá cũ
+      if (product.oldPrice) {
+        $('#cart-product-old-price').text(product.oldPrice).show();
+      } else {
+        $('#cart-product-old-price').hide();
+      }
+      
+      // Hiển thị modal
+      $('#cart-success-modal').css({
+        'display': 'block',
+        'visibility': 'visible',
+        'opacity': '1'
+      });
+    }
+    
+    // Xử lý nút tăng/giảm số lượng
+    $(document).on('click', '.qty-btn', function() {
+      const $input = $(this).siblings('.quantity-selector');
+      let currentValue = parseInt($input.val());
+      
+      if ($(this).hasClass('decrease')) {
+        // Giảm số lượng nhưng không dưới 1
+        if (currentValue > 1) {
+          $input.val(currentValue - 1);
+        }
+      } else {
+        // Tăng số lượng
+        $input.val(currentValue + 1);
+      }
+    });
+    
+    // Xử lý xem nhanh sản phẩm
+    $(document).on('click', '.quick-view', function(e) {
+      e.preventDefault();
+      console.log('Đã nhấp vào nút xem nhanh');
+      
+      const productId = $(this).data('handle');
+      console.log('Sản phẩm ID:', productId);
+      
+      // Lấy dữ liệu sản phẩm
+      fetch('data/food.json')
+        .then(response => response.json())
+        .then(foodData => {
+          const product = foodData.find(item => item.id === productId);
+          
+          if (product) {
+            console.log('Đã tìm thấy sản phẩm:', product);
+            // Thiết lập thông tin sản phẩm trong modal
+            populateQuickViewModal(product);
+          } else {
+            console.error('Không tìm thấy sản phẩm với ID:', productId);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+        });
+    });
+    
+    // Điền thông tin sản phẩm vào modal xem nhanh
+    function populateQuickViewModal(product) {
+      console.log('Populating modal with product details');
+      // Populate modal with product details
+      $('#product-featured-image-quickview').attr('src', product.image && product.image.length > 0 ? product.image[0] : '');
+      $('.qwp-name a').attr('href', `food_detail.html?id=${product.id}`).attr('title', product.name).text(product.name);
+      $('.quickview-product-info .price').text(product.price);
+      
+      if (product.oldPrice) {
+        $('.quickview-product-info .old-price').text(product.oldPrice).show();
+      } else {
+        $('.quickview-product-info .old-price').hide();
+      }
+      
+      $('.product-description').html(product.shortDescription || product.description || '');
+      
+      // Create thumbnail list
+      let thumbListHtml = '';
+      if (product.image && product.image.length > 0) {
+        product.image.forEach((img, index) => {
+          thumbListHtml += `
+            <li class="${index === 0 ? 'active' : ''}">
+              <a href="javascript:void(0);" data-image="${img}">
+                <img src="${img}" alt="${product.name} - thumbnail ${index + 1}" />
+              </a>
+            </li>
+          `;
+        });
+      }
+      
+      $('#thumblist_quickview').html(thumbListHtml);
+      
+      // Show the modal with enhanced debugging
+      console.log('Showing modal');
+      
+      $('#quickview-modal').attr('style', 'display: block !important; visibility: visible !important; opacity: 1 !important;');
+      
+      // Store product ID in the add to cart button for later use
+      $('.add_to_cart_detail').attr('data-product-id', product.id);
+    }
+    
+    // Xử lý thêm vào giỏ hàng từ modal xem nhanh
+    $(document).on('click', '.add_to_cart_detail', function() {
+      console.log('Đã nhấp vào nút thêm vào giỏ hàng từ modal xem nhanh');
+      
+      // Lấy ID sản phẩm từ nút
+      const productId = $(this).data('product-id');
+      
+      // Lấy số lượng từ input
+      let quantity = 1;
+      const quantityInput = $('#quantity-input').val();
+      if (quantityInput && !isNaN(parseInt(quantityInput))) {
+        quantity = parseInt(quantityInput);
+      }
+      
+      console.log('Số lượng sản phẩm:', quantity);
+      
+      // Lấy dữ liệu sản phẩm
+      fetch('data/food.json')
+        .then(response => response.json())
+        .then(foodData => {
+          const product = foodData.find(item => item.id === productId);
+          if (product) {
+            // Thêm vào giỏ hàng
+            addToCart(product, quantity);
+            
+            // Ẩn modal xem nhanh
+            $('#quickview-modal').attr('style', 'display: none !important');
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+        });
+    });
+    
+    // Xử lý thêm vào giỏ hàng từ danh sách sản phẩm
+    $(document).on('click', '.add_to_cart', function(e) {
+      e.preventDefault();
+      console.log('Đã nhấp vào nút thêm vào giỏ hàng từ danh sách sản phẩm');
+      
+      const $form = $(this).closest('form');
+      const productId = $form.find('input[name="variantId"]').val();
+      
+      // Mặc định số lượng là 1 nếu không tìm thấy input số lượng
+      let quantity = 1;
+      
+      // Kiểm tra xem có input số lượng trong form không
+      const $quantityInput = $form.find('input[type="number"], input.quantity-input, input.prd_quantity');
+      if ($quantityInput.length > 0 && !isNaN(parseInt($quantityInput.val()))) {
+        quantity = parseInt($quantityInput.val());
+      }
+      
+      console.log('Sản phẩm ID:', productId, 'Số lượng:', quantity);
+      
+      // Lấy dữ liệu sản phẩm
+      fetch('data/food.json')
+        .then(response => response.json())
+        .then(foodData => {
+          const product = foodData.find(item => item.id === productId);
+          if (product) {
+            // Thêm vào giỏ hàng
+            addToCart(product, quantity);
+          } else {
+            console.error('Không tìm thấy sản phẩm với ID:', productId);
+          }
+        })
+        .catch(error => {
+          console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+        });
+    });
+    
+    // Đóng modal giỏ hàng
+    $(document).on('click', '.cart-modal-close, .cart-modal-overlay, .cart-modal-continue', function() {
+      $('#cart-success-modal').css('display', 'none');
+    });
+    
+    // Đóng modal xem nhanh
+    $(document).on('click', '.quickview-close, .quickview-overlay', function() {
+      $('#quickview-modal').attr('style', 'display: none !important');
+    });
+    
+    // Xử lý khi nhấp vào các hình thu nhỏ trong modal xem nhanh
+    $(document).on('click', '#thumblist_quickview li a', function(e) {
+      e.preventDefault();
+      
+      // Lấy đường dẫn hình ảnh
+      const image = $(this).data('image');
+      
+      // Cập nhật hình ảnh chính
+      $('#product-featured-image-quickview').attr('src', image);
+      $('#thumblist_quickview li').removeClass('active');
+      $(this).parent().addClass('active');
+    });
+    
+    // Cập nhật số lượng sản phẩm khi trang được tải
+    updateCartCount();
+    
+    // Load food items for the index page
+    loadFoodItems();
+    
+    function loadFoodItems() {
+      // Get the container for food items
+      const container = $('.section_am_thuc .tab-content.tab-1 .row');
+      if (!container.length) return;
+      
+      fetch('data/food.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Display only the first 4 items or less
+          const itemsToShow = data.slice(0, 4);
+          
+          // Clear the container
+          container.empty();
+          
+          // Create and append food item elements
+          itemsToShow.forEach(food => {
+            const foodElement = createFoodItemElement(food);
+            container.append(foodElement);
+          });
+        })
+        .catch(error => {
+          console.error('Error loading food data:', error);
+        });
+    }
+    
+    function createFoodItemElement(food) {
+      // Create element with the same structure as in food.html
+      const col = document.createElement('div');
+      col.className = 'col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 product-col';
+      
+      const saleLabel = food.oldPrice ?
+        `<div class="sale-label">
+          <span class="smart">- ${calculateDiscount(food.price, food.oldPrice)} </span>
+        </div>` : '';
+      
+      const comparePrice = food.oldPrice ?
+        `<span class="compare-price">${food.oldPrice}</span>` : '';
+      
+      // Ensure we have a valid image URL
+      let imageUrl = '';
+      if (food.image && food.image.length > 0) {
+        imageUrl = food.image[0];
+      } else {
+        imageUrl = 'img/sp21.webp';
+      }
+      
+      col.innerHTML = `
+        <div class="item_product_main">
+          <form action="/cart/add" method="post" class="variants product-action"
+            data-id="product-actions-${food.id}" enctype="multipart/form-data">
+            <div class="product-thumbnail">
+              <a class="image_thumb" href="food_detail.html?id=${food.id}" title="${food.name}">
+                <img width="480" height="360"
+                  src="${imageUrl}"
+                  alt="${food.name}"
+                  onerror="this.onerror=null;this.src='img/sp21.webp';" />
+              </a>
+              
+              ${saleLabel}
+              
+              <div class="group_action">
+                <input type="hidden" name="variantId" value="${food.id}" />
+                <button
+                  class="btn-anima hidden-xs btn-buy btn-cart btn-left btn btn-views left-to add_to_cart active"
+                  title="Mua ngay">
+                  <img width="24" height="24" src="img/cart-add.svg" alt="Mua ngay" />
+                </button>
+                
+                <a title="Xem nhanh" href="javascript:void(0);" data-handle="${food.id}"
+                  class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view">
+                  <img width="24" height="24" src="img/view.svg" alt="Xem nhanh" />
+                </a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                <a href="food_detail.html?id=${food.id}" title="${food.name}">${food.name}</a>
+              </h3>
+              <div class="price-box">
+                <span class="price">${food.price}</span>
+                ${comparePrice}
+              </div>
+            </div>
+          </form>
+        </div>
+      `;
+      
+      return col;
+    }
+    
+    function calculateDiscount(currentPrice, oldPrice) {
+      // Extract numeric values
+      const current = parseFloat(currentPrice.replace(/[^\d]/g, ''));
+      const old = parseFloat(oldPrice.replace(/[^\d]/g, ''));
+      
+      if (isNaN(current) || isNaN(old) || current >= old) {
+        return '0%';
+      }
+      
+      // Calculate discount percentage
+      const discountPercent = Math.round((1 - current / old) * 100);
+      return discountPercent + '%';
+    }
+  });
+</script>
+
+</body>
 </html>
