@@ -9938,5 +9938,393 @@ Popup cart mobile
       box-sizing: border-box;
     }
   </style>
+
+  <!-- Modal Giỏ Hàng -->
+  <div id="cart-success-modal" style="display: none;">
+    <div class="cart-modal-overlay"></div>
+    <div class="cart-modal-container">
+      <div class="cart-modal-header">
+        <div class="cart-modal-title">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
+            <path fill="#ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+          </svg>
+          <span>Mua hàng thành công</span>
+        </div>
+        <button class="cart-modal-close">×</button>
+      </div>
+      <div class="cart-modal-content">
+        <div class="cart-product-info">
+          <div class="cart-product-image">
+            <img id="cart-product-img" src="" alt="Sản phẩm" />
+          </div>
+          <div class="cart-product-details">
+            <h3 id="cart-product-name"></h3>
+            <div class="cart-product-price">
+              <span id="cart-product-price"></span>
+              <del id="cart-product-old-price"></del>
+            </div>
+            <div class="cart-product-quantity">
+              Số lượng: <span id="cart-product-quantity">1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-modal-footer">
+        <div class="cart-modal-summary">
+          Giỏ hàng của bạn hiện có <span class="cart-count">0</span> sản phẩm
+        </div>
+        <div class="cart-modal-actions">
+          <button class="cart-modal-continue">Tiếp tục mua hàng</button>
+          <a href="cart.html" class="cart-modal-checkout">Thanh toán ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS cho Modal Giỏ Hàng -->
+  <style>
+    #cart-success-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999999;
+      display: none;
+    }
+    
+    .cart-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000000;
+    }
+    
+    .cart-modal-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 500px;
+      width: 90%;
+      background-color: #fff;
+      z-index: 1000001;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .cart-modal-header {
+      padding: 15px 20px;
+      background-color: #cd9a2b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .cart-modal-title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .cart-modal-title svg {
+      margin-right: 10px;
+    }
+    
+    .cart-modal-close {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+    }
+    
+    .cart-modal-content {
+      padding: 20px;
+    }
+    
+    .cart-product-info {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .cart-product-image {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+    }
+    
+    .cart-product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1px solid #eee;
+    }
+    
+    .cart-product-details {
+      flex-grow: 1;
+    }
+    
+    .cart-product-details h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #333;
+    }
+    
+    .cart-product-price {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    
+    .cart-product-price span {
+      color: #cd9a2b;
+      font-weight: bold;
+    }
+    
+    .cart-product-price del {
+      color: #999;
+      margin-left: 10px;
+    }
+    
+    .cart-product-quantity {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .cart-modal-footer {
+      padding: 15px 20px;
+      border-top: 1px solid #eee;
+    }
+    
+    .cart-modal-summary {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .cart-modal-actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .cart-modal-continue {
+      flex: 1;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    
+    .cart-modal-continue:hover {
+      background-color: #eaeaea;
+    }
+    
+    .cart-modal-checkout {
+      flex: 1;
+      padding: 10px;
+      background-color: #cd9a2b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .cart-modal-checkout:hover {
+      background-color: #b58a25;
+      color: white;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 480px) {
+      .cart-modal-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <!-- JavaScript cho Giỏ Hàng -->
+  <script>
+    $(document).ready(function() {
+      // Khởi tạo giỏ hàng trong localStorage nếu chưa tồn tại
+      if (!localStorage.getItem('beanHotelCart')) {
+        localStorage.setItem('beanHotelCart', JSON.stringify([]));
+      }
+      
+      // Cập nhật số lượng sản phẩm trong giỏ hàng
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('beanHotelCart')) || [];
+        const totalItems = cart.reduce((total, item) => total + (parseInt(item.quantity) || 0), 0);
+        $('.count_item_pr, .cart-count').text(totalItems);
+        console.log('Tổng số sản phẩm trong giỏ hàng:', totalItems);
+      }
+      
+      // Thêm sản phẩm vào giỏ hàng
+      function addToCart(product, quantity) {
+        // Đảm bảo quantity là số
+        const qtyToAdd = parseInt(quantity) || 1;
+        console.log(`Thêm sản phẩm: ${product.name}, số lượng: ${qtyToAdd}`);
+        
+        // Lấy giỏ hàng hiện tại
+        const cart = JSON.parse(localStorage.getItem('beanHotelCart')) || [];
+        
+        // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+        const existingItemIndex = cart.findIndex(item => item.id === product.id);
+        
+        if (existingItemIndex >= 0) {
+          // Cập nhật số lượng nếu sản phẩm đã có trong giỏ hàng
+          const currentQty = parseInt(cart[existingItemIndex].quantity) || 0;
+          cart[existingItemIndex].quantity = currentQty + qtyToAdd;
+          console.log(`Cập nhật sản phẩm hiện có, số lượng mới: ${cart[existingItemIndex].quantity}`);
+        } else {
+          // Thêm sản phẩm mới vào giỏ hàng
+          cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            oldPrice: product.oldPrice || null,
+            image: product.image && product.image.length > 0 ? product.image[0] : '',
+            quantity: qtyToAdd
+          });
+          console.log('Đã thêm sản phẩm mới vào giỏ hàng');
+        }
+        
+        // Lưu giỏ hàng đã cập nhật
+        localStorage.setItem('beanHotelCart', JSON.stringify(cart));
+        console.log('Giỏ hàng sau khi cập nhật:', cart);
+        
+        // Cập nhật hiển thị số lượng sản phẩm
+        updateCartCount();
+        
+        // Hiển thị modal thông báo thêm vào giỏ hàng thành công
+        showCartModal(product, qtyToAdd);
+      }
+      
+      // Hiển thị modal giỏ hàng
+      function showCartModal(product, quantity) {
+        // Thiết lập thông tin sản phẩm trong modal
+        $('#cart-product-img').attr('src', product.image && product.image.length > 0 ? product.image[0] : '');
+        $('#cart-product-name').text(product.name);
+        $('#cart-product-price').text(product.price);
+        $('#cart-product-quantity').text(quantity);
+        
+        // Xử lý hiển thị giá cũ
+        if (product.oldPrice) {
+          $('#cart-product-old-price').text(product.oldPrice).show();
+        } else {
+          $('#cart-product-old-price').hide();
+        }
+        
+        // Hiển thị modal
+        $('#cart-success-modal').css({
+          'display': 'block',
+          'visibility': 'visible',
+          'opacity': '1'
+        });
+      }
+      
+      // Cập nhật số lượng sản phẩm khi trang được tải
+      updateCartCount();
+      
+      // Xử lý thêm vào giỏ hàng từ modal xem nhanh
+      $(document).on('click', '.add_to_cart_detail', function() {
+        console.log('Đã nhấp vào nút thêm vào giỏ hàng từ modal xem nhanh');
+        
+        // Lấy thông tin sản phẩm từ modal xem nhanh
+        const productId = $('.qwp-name a').attr('href').split('id=')[1];
+        
+        // Lấy số lượng từ input
+        let quantity = 1;
+        const quantityInput = $('#quantity-input').val();
+        if (quantityInput && !isNaN(parseInt(quantityInput))) {
+          quantity = parseInt(quantityInput);
+        } else {
+          // Nếu không tìm thấy input hoặc giá trị không hợp lệ, tìm kiếm input khác
+          const prdQuantity = $('.prd_quantity').val();
+          if (prdQuantity && !isNaN(parseInt(prdQuantity))) {
+            quantity = parseInt(prdQuantity);
+          }
+        }
+        
+        console.log('Số lượng sản phẩm:', quantity);
+        
+        // Lấy dữ liệu sản phẩm
+        fetch('data/food.json')
+          .then(response => response.json())
+          .then(foodData => {
+            const product = foodData.find(item => item.id === productId);
+            if (product) {
+              // Thêm vào giỏ hàng
+              addToCart(product, quantity);
+              
+              // Ẩn modal xem nhanh
+              $('#quickview-modal').attr('style', 'display: none !important');
+            }
+          })
+          .catch(error => {
+            console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+          });
+      });
+      
+      // Xử lý thêm vào giỏ hàng từ danh sách sản phẩm
+      $(document).on('click', '.add_to_cart', function(e) {
+        e.preventDefault();
+        console.log('Đã nhấp vào nút thêm vào giỏ hàng từ danh sách sản phẩm');
+        
+        const $form = $(this).closest('form');
+        const productId = $form.find('input[name="variantId"]').val();
+        
+        // Mặc định số lượng là 1 nếu không tìm thấy input số lượng
+        let quantity = 1;
+        
+        // Kiểm tra xem có input số lượng trong form không
+        const $quantityInput = $form.find('input[type="number"], input.quantity-input, input.prd_quantity');
+        if ($quantityInput.length > 0 && !isNaN(parseInt($quantityInput.val()))) {
+          quantity = parseInt($quantityInput.val());
+        }
+        
+        console.log('Sản phẩm ID:', productId, 'Số lượng:', quantity);
+        
+        // Lấy dữ liệu sản phẩm
+        fetch('data/food.json')
+          .then(response => response.json())
+          .then(foodData => {
+            const product = foodData.find(item => item.id === productId);
+            if (product) {
+              // Thêm vào giỏ hàng
+              addToCart(product, quantity);
+            } else {
+              console.error('Không tìm thấy sản phẩm với ID:', productId);
+            }
+          })
+          .catch(error => {
+            console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
+          });
+      });
+      
+      // Đóng modal giỏ hàng
+      $(document).on('click', '.cart-modal-close, .cart-modal-overlay, .cart-modal-continue', function() {
+        $('#cart-success-modal').css('display', 'none');
+      });
+    });
+  </script>
   </body>
 </html>
