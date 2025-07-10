@@ -8491,160 +8491,45 @@ Popup cart mobile
       </div>
     </div>
 
-    <div
-      id="quick-view-product"
-      class="quickview-product"
-      style="display: none"
-    >
-      <div
-        class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"
-      ></div>
-      <div class="quick-view-product"></div>
-      <div id="quickview-modal" style="display: none">
-        <div class="block-quickview primary_block details-product">
+    <div id="quickview-modal" style="display:none">
+      <div class="quickview-overlay"></div>
+      <div class="quickview-container">
+        <div class="quickview-content">
           <div class="row">
-            <div
-              class="product-left-column product-images col-xs-12 col-sm-4 col-md-4 col-lg-5 col-xl-4"
-            >
-              <div class="image-block large-image col_large_default">
-                <span class="view_full_size">
-                  <a
-                    class="img-product"
-                    title="Ảnh sản phẩm"
-                    href="javascript:;"
-                  >
-                    <img
-                      src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/logo.png?1749443141671"
-                      id="product-featured-image-quickview"
-                      class="img-responsive product-featured-image-quickview"
-                      alt="quickview"
-                    />
-                  </a>
-                </span>
-                <div class="loading-imgquickview" style="display: none"></div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+              <div class="quickview-image">
+                <img id="product-featured-image-quickview" src="" alt="Product Image" />
               </div>
-              <div class="more-view-wrapper clearfix">
-                <div
-                  class="thumbs_quickview owl_nav_custome1 swiper-container"
-                  id="thumbs_list_quickview"
-                >
-                  <ul
-                    class="product-photo-thumbs quickview-more-views-owlslider not-thuongdq swiper-wrapper"
-                    id="thumblist_quickview"
-                  ></ul>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
+              <div class="thumbnails">
+                <ul id="thumblist_quickview"></ul>
               </div>
             </div>
-            <div
-              class="product-center-column product-info product-item col-xs-12 col-sm-6 col-md-8 col-lg-7 col-xl-8 details-pro style_product style_border"
-            >
-              <div class="head-qv group-status">
-                <h3 class="qwp-name title-product">abc</h3>
-                <div class="vend-qv group-status">
-                  <div class="left_vend">
-                    <div class="first_status">
-                      Thương hiệu:
-                      <span class="vendor_ status_name"></span>
-                    </div>
-                    <span class="line_tt">|</span>
-                    <div class="top_sku first_status">
-                      Mã sản phẩm:
-                      <span class="sku_ status_name"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="quickview-info">
-                <span class="prices price-box">
-                  <span class="price product-price"></span>
+            <div class="col-xs-12 col-sm-6 col-md-7">
+              <div class="quickview-product-info">
+                <h3 class="qwp-name"></h3>
+                <div class="prices">
+                  <span class="price"></span>
                   <del class="old-price"></del>
-                </span>
-              </div>
-
-              <div class="product-description product-summary">
-                <div class="rte"></div>
-              </div>
-
-              <form
-                action="/cart/add"
-                method="post"
-                enctype="multipart/form-data"
-                class="quick_option variants form-ajaxtocart form-product"
-              >
-                <span class="price-product-detail d-none" style="opacity: 0">
-                  <span class=""></span>
-                </span>
-                <select
-                  name="variantId"
-                  class="d-none"
-                  style="display: none"
-                ></select>
-                <div class="form_product_content">
-                  <div class="count_btn_style quantity_wanted_p">
-                    <div class="soluong1 clearfix">
-                      <div class="input_number_product">
-                        <a
-                          class="btn_num num_1 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) && qtyqv > 1 ) result.value--;return false;"
-                          >-</a
-                        >
-                        <input
-                          type="text"
-                          id="quantity-detail"
-                          name="quantity"
-                          value="1"
-                          maxlength="2"
-                          class="form-control prd_quantity"
-                          onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-                          onchange="if(this.value == 0)this.value=1;"
-                        />
-                        <a
-                          class="btn_num num_2 button button_qty"
-                          onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;"
-                          >+</a
-                        >
-                      </div>
-                    </div>
-                    <div class="button_actions clearfix">
-                      <button
-                        type="submit"
-                        class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail"
-                      >
-                        <span class="btn-content text_1"
-                          >Thêm vào giỏ hàng</span
-                        >
-                      </button>
+                </div>
+                <div class="product-description"></div>
+                <div class="quantity-area">
+                  <label>Số lượng:</label>
+                  <div class="quantity-input-container">
+                    <div class="quantity-input">
+                      <button type="button" class="btn-minus">−</button>
+                      <input type="text" id="quantity-input" value="1" min="1" />
+                      <button type="button" class="btn-plus">+</button>
                     </div>
                   </div>
                 </div>
-              </form>
+                <div class="action-buttons">
+                  <button type="button" class="add_to_cart_detail">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
             </div>
           </div>
+          <button type="button" class="quickview-close">×</button>
         </div>
-        <a
-          title="Close"
-          class="quickview-close close-window"
-          href="javascript:;"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="far"
-            data-icon="times"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            class="svg-inline--fa fa-times fa-w-10"
-          >
-            <path
-              fill="currentColor"
-              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
-              class=""
-            ></path>
-          </svg>
-        </a>
       </div>
     </div>
     <script type="text/javascript">
@@ -8859,8 +8744,7 @@ Popup cart mobile
         }
       };
     </script>
-    <link rel="preload" as="script" href="js/quickview.js" />
-    <script type="text/javascript" defer src="js/quickview.js"></script>
+    <!-- Removed external quickview.js to use our custom implementation -->
 
     <link rel="preload" as="script" href="js/main.js" />
     <script src="js/main.js" type="text/javascript"></script>
@@ -9363,10 +9247,8 @@ Popup cart mobile
                                                 <img width="24" height="24" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/cart-add.svg?1749443141671" alt="Mua ngay" />
                                             </button>
                                             
-                                            <a title="Xem nhanh" href="food_detail.html?id=${
-                                              item.id
-                                            }" data-handle="${
-              item.url
+                                            <a title="Xem nhanh" href="javascript:void(0);" data-handle="${
+              item.id
             }" class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view">
                                                 <img width="24" height="24" src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/view.svg?1749443141671" alt="Xem nhanh" />
                                             </a>
@@ -9568,5 +9450,493 @@ Popup cart mobile
       });
     </script>
     </script>
+  <!-- Quick View Modal -->
+  <div class="quick-view-product"></div>
+  <div class="quickview-modal" id="quickview-modal" style="display: none;">
+    <div class="quickview-overlay"></div>
+    <div class="quickview-container">
+      <div class="quickview-content">
+        <button class="quickview-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="quickview-image">
+              <img id="product-featured-image-quickview" class="img-product" src="" alt="" />
+            </div>
+            <div id="thumbs_list_quickview">
+              <ul id="thumblist_quickview" class="product-thumb">
+                <!-- Thumbnails will be added dynamically -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="quickview-product-info">
+              <div class="qwp-name">
+                <!-- Product name will be inserted here -->
+              </div>
+              <div class="prices">
+                <span class="price"></span>
+                <del class="old-price"></del>
+              </div>
+              <div class="product-description rte">
+                <!-- Product description will be inserted here -->
+              </div>
+              <div class="quantity_wanted_p">
+                <label for="quantity-input">Số lượng:</label>
+                <div class="quantity-input">
+                  <button class="btn_num btn-minus" type="button">-</button>
+                  <input id="quantity-input" type="text" name="quantity" value="1" class="form-control prd_quantity">
+                  <button class="btn_num btn-plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="actions">
+                <button type="button" class="btn add_to_cart_detail">
+                  <span>THÊM VÀO GIỎ HÀNG</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View JS -->
+  <script>
+    // Mock Bizweb functions to prevent errors in local development
+    if (typeof Bizweb !== 'undefined') {
+      // Mock cart functions
+      Bizweb.getCart = function(callback) {
+        // Return empty cart
+        if (typeof callback === 'function') {
+          const mockCart = {
+            item_count: 0,
+            total_price: 0,
+            items: []
+          };
+          callback(mockCart);
+        }
+      };
+      
+      // Mock other Bizweb functions that might be causing errors
+      Bizweb.addItem = function(variant_id, quantity, callback) {
+        if (typeof callback === 'function') {
+          callback({ item_count: 1 });
+        }
+      };
+      
+      Bizweb.updateCartNote = function(note, callback) {
+        if (typeof callback === 'function') {
+          callback({});
+        }
+      };
+    }
+
+    $(document).ready(function() {
+      console.log('Document ready, setting up quick view handlers');
+      
+      // Quick view functionality - debug logging added
+      $(document).on('click', '.quick-view', function(e) {
+        e.preventDefault();
+        console.log('Quick view clicked');
+        var productId = $(this).data('handle');
+        console.log('Product ID:', productId);
+        
+        // Fetch product data from food.json
+        fetch('data/food.json')
+          .then(response => {
+            console.log('Response received:', response.status);
+            return response.json();
+          })
+          .then(foodData => {
+            console.log('Food data loaded, items:', foodData.length);
+            
+            // Find the product with the matching ID
+            const product = foodData.find(item => item.id === productId);
+            console.log('Found product:', product ? product.name : 'Not found');
+            
+            if (product) {
+              console.log('Populating modal with product details');
+              // Populate modal with product details
+              $('#product-featured-image-quickview').attr('src', product.image && product.image.length > 0 ? product.image[0] : '');
+              $('.qwp-name').html(`<a href="food_detail.html?id=${product.id}" title="${product.name}">${product.name}</a>`);
+              $('.price').text(product.price);
+              
+              // Handle old price display
+              if (product.oldPrice) {
+                $('.old-price').text(product.oldPrice).show();
+              } else {
+                $('.old-price').hide();
+              }
+              
+              // Set product description
+              $('.product-description').html(product.shortDescription || 'Đang cập nhật thông tin sản phẩm');
+              
+              // Reset quantity
+              $('#quantity-input').val(1);
+              
+              // Generate thumbnails if multiple images
+              var thumbListHtml = '';
+              if (product.image && product.image.length > 0) {
+                product.image.forEach((img, index) => {
+                  var activeClass = index === 0 ? 'active' : '';
+                  thumbListHtml += `
+                    <li class="${activeClass}">
+                      <a href="#" data-image="${img}">
+                        <img src="${img}" alt="${product.name}">
+                      </a>
+                    </li>
+                  `;
+                });
+                $('#thumblist_quickview').html(thumbListHtml);
+              }
+              
+              // Show the modal with enhanced debugging
+              console.log('Showing modal');
+              // Force display with !important to override any conflicting styles
+              $('#quickview-modal').attr('style', 'display: block !important; visibility: visible !important; opacity: 1 !important;');
+              
+              // Debug modal visibility
+              setTimeout(() => {
+                console.log('Modal display style:', $('#quickview-modal').css('display'));
+                console.log('Modal visibility:', $('#quickview-modal').css('visibility'));
+                console.log('Modal dimensions:', 
+                  'Width:', $('#quickview-modal').width(), 
+                  'Height:', $('#quickview-modal').height());
+                console.log('Modal container dimensions:',
+                  'Width:', $('.quickview-container').width(),
+                  'Height:', $('.quickview-container').height());
+                console.log('Modal z-index:', $('#quickview-modal').css('z-index'));
+              }, 100);
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching product data:', error);
+          });
+      });
+
+      // Close modal on click
+      $(document).on('click', '.quickview-close, .quickview-overlay', function() {
+        console.log('Close button clicked');
+        $('#quickview-modal').attr('style', 'display: none !important');
+      });
+      
+      // Quantity buttons
+      $(document).on('click', '.btn-plus', function() {
+        console.log('Plus button clicked');
+        var quantity = parseInt($('#quantity-input').val());
+        $('#quantity-input').val(quantity + 1);
+      });
+      
+      $(document).on('click', '.btn-minus', function() {
+        console.log('Minus button clicked');
+        var quantity = parseInt($('#quantity-input').val());
+        if (quantity > 1) {
+          $('#quantity-input').val(quantity - 1);
+        }
+      });
+      
+      // Thumbnail image click
+      $(document).on('click', '#thumblist_quickview li a', function(e) {
+        e.preventDefault();
+        console.log('Thumbnail clicked');
+        var image = $(this).data('image');
+        $('#product-featured-image-quickview').attr('src', image);
+        $('#thumblist_quickview li').removeClass('active');
+        $(this).parent().addClass('active');
+      });
+      
+                    // Add to cart button
+      $(document).on('click', '.add_to_cart_detail', function() {
+        console.log('Add to cart clicked');
+        // You can implement cart functionality here
+        alert('Sản phẩm đã được thêm vào giỏ hàng!');
+        $('#quickview-modal').attr('style', 'display: none !important');
+      });
+      
+      // Update button text to match the design
+      $('.add_to_cart_detail').text('Thêm vào giỏ hàng');
+      
+      // Fix for the count_item_pr issue
+      $('.count_item_pr').text('0');
+      
+      // Debug: Check if elements exist
+      console.log('Quick view buttons found:', $('.quick-view').length);
+      console.log('Modal exists:', $('#quickview-modal').length);
+    });
+  </script>
+
+  <!-- Quick View CSS -->
+  <style>
+    #quickview-modal {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      z-index: 99999 !important;
+      display: none; /* Hidden by default */
+    }
+    
+    .quickview-overlay {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      z-index: 100000 !important;
+    }
+    
+    .quickview-container {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      max-width: 900px !important;
+      width: 90% !important;
+      background-color: #fff !important;
+      z-index: 100001 !important;
+      border-radius: 4px !important;
+      overflow: hidden !important;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .quickview-content {
+      padding: 30px !important;
+      max-height: 90vh !important;
+      overflow-y: auto !important;
+    }
+    
+    .quickview-close {
+      position: absolute !important;
+      top: 10px !important;
+      right: 10px !important;
+      background: transparent !important;
+      border: none !important;
+      cursor: pointer !important;
+      z-index: 100002 !important;
+      font-size: 30px !important;
+      color: #333 !important;
+      width: 30px !important;
+      height: 30px !important;
+      line-height: 30px !important;
+      text-align: center !important;
+    }
+    
+    .quickview-image {
+      width: 100% !important;
+      text-align: center !important;
+      margin-bottom: 15px !important;
+    }
+    
+    .quickview-image img {
+      max-width: 100% !important;
+      height: auto !important;
+      max-height: 350px !important;
+      object-fit: cover !important;
+    }
+    
+    #thumblist_quickview {
+      display: flex !important;
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow-x: auto !important;
+    }
+    
+    #thumblist_quickview li {
+      margin-right: 10px !important;
+      cursor: pointer !important;
+      border: 1px solid #ddd !important;
+      padding: 2px !important;
+    }
+    
+    #thumblist_quickview li.active {
+      border: 2px solid #cd9a2b !important;
+    }
+    
+    #thumblist_quickview img {
+      width: 60px !important;
+      height: 60px !important;
+      object-fit: cover !important;
+    }
+    
+    .qwp-name {
+      font-size: 20px !important;
+      font-weight: bold !important;
+      margin-bottom: 15px !important;
+    }
+    
+    .qwp-name a {
+      color: #333 !important;
+      text-decoration: none !important;
+    }
+    
+    .prices {
+      margin-bottom: 15px !important;
+    }
+    
+    .quickview-product-info .price {
+      color: #cd9a2b !important;
+      font-size: 18px !important;
+      font-weight: bold !important;
+    }
+    
+    .quickview-product-info .old-price {
+      color: #999 !important;
+      text-decoration: line-through !important;
+      margin-left: 10px !important;
+    }
+    
+    .quantity-area {
+      margin-top: 20px !important;
+      margin-bottom: 25px !important;
+    }
+    
+    .quantity-area label {
+      display: block !important;
+      margin-bottom: 10px !important;
+      font-weight: 500 !important;
+      font-size: 15px !important;
+      color: #333 !important;
+    }
+    
+    .quantity-input-container {
+      display: flex !important;
+      align-items: center !important;
+      margin-top: 5px !important;
+    }
+    
+    .quantity-input {
+      display: flex !important;
+      align-items: center !important;
+      max-width: 120px !important;
+      border-radius: 3px !important;
+      overflow: hidden !important;
+      border: 1px solid #e0e0e0 !important;
+    }
+    
+    .quantity-input button {
+      width: 35px !important;
+      height: 35px !important;
+      background: #f5f5f5 !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 20px !important;
+      font-weight: bold !important;
+      color: #333 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: background-color 0.2s !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+    
+    .quantity-input button:hover {
+      background: #e0e0e0 !important;
+    }
+    
+    .quantity-input input {
+      width: 50px !important;
+      height: 35px !important;
+      text-align: center !important;
+      border: none !important;
+      border-left: 1px solid #e0e0e0 !important;
+      border-right: 1px solid #e0e0e0 !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      color: #333 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      outline: none !important;
+    }
+    
+    .action-buttons {
+      margin-top: 25px !important;
+    }
+    
+    .action-buttons button {
+      background: #cd9a2b !important;
+      color: white !important;
+      border: none !important;
+      padding: 12px 20px !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+      border-radius: 4px !important;
+      transition: all 0.3s ease !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+      width: 100% !important;
+    }
+    
+    .action-buttons button:hover {
+      background: #b58a25 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+    }
+    
+    .product-description {
+      margin-bottom: 20px !important;
+      line-height: 1.5 !important;
+    }
+    
+    .btn_num {
+      width: 30px;
+      height: 40px;
+      border: 1px solid #ddd;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+    
+    input.prd_quantity {
+      width: 60px;
+      height: 40px;
+      text-align: center;
+      border: 1px solid #ddd;
+      margin: 0;
+    }
+    
+    .add_to_cart_detail {
+      padding: 10px 20px;
+      background-color: #cd9a2b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+    
+    .add_to_cart_detail:hover {
+      background-color: #b38a22;
+    }
+    
+    @media (max-width: 768px) {
+      .quickview-container {
+        width: 95%;
+      }
+      
+      .quickview-content {
+        padding: 20px;
+      }
+    }
+    
+    /* We're using #quickview-modal instead */
+.hidden-element {
+      display: none;
+    }
+    
+    /* Fix for z-index issues */
+    #quickview-modal, #quickview-modal * {
+      box-sizing: border-box;
+    }
+  </style>
   </body>
 </html>
