@@ -69,6 +69,32 @@
       type="text/css"
       media="all"
     />
+    <!-- Notifications CSS -->
+    <link rel="stylesheet" href="css/notifications.css">
+    
+    <!-- DateTimePicker CSS -->
+    <style>
+      .bootstrap-datetimepicker-widget {
+        z-index: 9999 !important;
+      }
+      .form-booking-date input {
+        cursor: pointer;
+      }
+      .form-booking-date input::placeholder {
+        color: #999;
+        opacity: 1;
+      }
+      .form-booking-date input:focus::placeholder {
+        color: #ccc;
+      }
+      .bootstrap-datetimepicker-widget table td.active, 
+      .bootstrap-datetimepicker-widget table td.active:hover {
+        background-color: #cd9a2b !important;
+      }
+      .bootstrap-datetimepicker-widget table td.today:before {
+        border-bottom-color: #cd9a2b !important;
+      }
+    </style>
     <script>
       var Bizweb = Bizweb || {};
       Bizweb.store = "bean-hotel.mysapo.net";
@@ -191,7 +217,17 @@
     
     <!-- Script hiển thị số lượng giỏ hàng -->
     <script src="js/cart-count.js"></script>
-      <!-- Auth Management System -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Moment.js và Bootstrap DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    
+    <!-- Auth Management System -->
     <script src="js/auth.js" type="text/javascript"></script>
 </head>
   <body>
@@ -972,6 +1008,7 @@
                                 id="fromDate"
                                 placeholder="YYYY-MM-DD"
                                 name="contact[Ngày nhận]"
+                                readonly
                                 required
                               />
                             </div>
@@ -1099,6 +1136,7 @@
                                 id="toDate"
                                 placeholder="YYYY-MM-DD"
                                 name="contact[Ngày trả]"
+                                readonly
                                 required
                               />
                             </div>
@@ -1188,7 +1226,7 @@ Nội dung mặc định</textarea
                         </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                           <div class="div-tem-price">
-                            <button type="submit" class="a-btn a-dat-phong">
+                            <button type="submit" class="a-btn a-dat-phong" id="datPhongBtn">
                               Ðặt phòng
                             </button>
                           </div>
@@ -1204,6 +1242,47 @@ Nội dung mặc định</textarea
       </section>
       <script>
         $(document).ready(function () {
+          // Xử lý sự kiện khi submit form đặt phòng
+          $(".callmeback-form form#contact").submit(function(e) {
+            // Kiểm tra các điều kiện hợp lệ của form
+            var fromDate = $("#fromDate").val();
+            var toDate = $("#toDate").val();
+            var mobile = $("#phone").val();
+            var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            var customerName = $('input[name="contact[Name]"]').val();
+            var roomName = $('input[name="contact[Tên Phòng]"]').val() || $('#nameroom').val();
+            
+            if (fromDate == "" || toDate == "" || toDate < fromDate || vnf_regex.test(mobile) == false) {
+              // Nếu form không hợp lệ thì không hiện thông báo thành công
+              return true;
+            }
+            
+            // Nếu form hợp lệ, hiển thị modal thành công
+            e.preventDefault();
+            
+            // Tạo mã đặt phòng ngẫu nhiên
+            var bookingId = "BK" + new Date().getTime().toString().slice(-8);
+            
+            // Cập nhật thông tin vào modal
+            $("#bookingId").text(bookingId);
+            $("#bookingRoomName").text(roomName);
+            $("#bookingCheckIn").text(fromDate);
+            $("#bookingCheckOut").text(toDate);
+            
+            // Hiển thị modal thành công
+            $("#bookingSuccessModal").modal('show');
+            
+            // Xử lý khi nhấn nút quay về trang chủ
+            $("#returnToHome").on('click', function() {
+              window.location.href = "index.html";
+            });
+            
+            // Tự động chuyển hướng sau 8 giây
+            setTimeout(function() {
+              window.location.href = "index.html";
+            }, 8000);
+          });
+          
           var bindDateRangeValidation = function (f, s, e) {
             if (!(f instanceof jQuery)) {
             }
@@ -1299,19 +1378,63 @@ Nội dung mặc định</textarea
               ed = new Date();
             var tomorrow = new Date();
             tomorrow.setDate(ed.getDate() + 1);
+            
+            // Format ngày hiện tại và ngày mai theo định dạng YYYY-MM-DD
+            var formattedToday = moment(sd).format('YYYY-MM-DD');
+            var formattedTomorrow = moment(tomorrow).format('YYYY-MM-DD');
+            
+            // Đặt giá trị mặc định cho các trường ngày
+            $("#fromDate").val(formattedToday);
+            $("#toDate").val(formattedTomorrow);
+            
+            // Khởi tạo datepicker cho ngày nhận phòng
             $("#fromDate").datetimepicker({
-              pickTime: false,
               format: "YYYY-MM-DD",
               defaultDate: sd,
               minDate: sd,
+              useCurrent: false,
+              showClear: true,
+              ignoreReadonly: true
             });
+            
+            // Khởi tạo datepicker cho ngày trả phòng
             $("#toDate").datetimepicker({
-              pickTime: false,
               format: "YYYY-MM-DD",
               defaultDate: tomorrow,
               minDate: tomorrow,
+              useCurrent: false,
+              showClear: true,
+              ignoreReadonly: true
             });
-            bindDateRangeValidation($("#form"), "fromDate", "toDate");
+            
+            // Thiết lập ràng buộc giữa hai datepicker
+            $("#fromDate").on("dp.change", function (e) {
+              if (!e.date) {
+                // Nếu người dùng xóa ngày, đặt lại về ngày hiện tại
+                $(this).val(formattedToday);
+              } else {
+                // Cập nhật minDate cho toDate
+                var nextDay = moment(e.date).add(1, 'day');
+                $('#toDate').data("DateTimePicker").minDate(nextDay);
+                
+                // Nếu ngày trả nhỏ hơn ngày nhận + 1, cập nhật ngày trả
+                if ($('#toDate').val() && moment($('#toDate').val()).isBefore(nextDay)) {
+                  $('#toDate').val(nextDay.format('YYYY-MM-DD'));
+                }
+              }
+            });
+            
+            $("#toDate").on("dp.change", function (e) {
+              if (!e.date) {
+                // Nếu người dùng xóa ngày, đặt lại về ngày mai
+                $(this).val(formattedTomorrow);
+              } else {
+                // Cập nhật maxDate cho fromDate
+                $('#fromDate').data("DateTimePicker").maxDate(e.date);
+              }
+            });
+            
+            bindDateRangeValidation($("#contact"), "fromDate", "toDate");
           });
           $(document).ready(function () {
             $(".callmeback-form form#contact").submit(function (e) {
@@ -1794,6 +1917,85 @@ Nội dung mặc định</textarea
   <!-- Notifications CSS -->
   <link rel="stylesheet" href="css/notifications.css">
     <div class="backdrop__body-backdrop___1rvky"></div>
+    
+    <!-- Modal Thông Báo Đặt Phòng Thành Công -->
+    <div class="modal fade" id="bookingSuccessModal" tabindex="-1" role="dialog" aria-labelledby="bookingSuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #cd9a2b; color: white; border-bottom: none; position: relative; padding: 15px 0;">
+            <h5 class="modal-title" id="bookingSuccessModalLabel" style="font-weight: bold; font-size: 22px; width: 100%; text-align: center; margin: 0;">ĐẶT PHÒNG THÀNH CÔNG</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 1; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 28px; background: transparent; border: none; outline: none; box-shadow: none; padding: 0;">
+              <span aria-hidden="true" style="text-shadow: none;">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center" style="padding: 30px 20px;">
+            <div style="margin-bottom: 20px;">
+              <i class="fa fa-check-circle" style="font-size: 80px; color: #28a745;"></i>
+            </div>
+            <h4 style="margin-bottom: 15px; color: #333; font-weight: 600;">Cảm ơn quý khách đã đặt phòng!</h4>
+            <p style="color: #555; font-size: 16px; margin-bottom: 20px;">
+              Thông tin đặt phòng của quý khách đã được ghi nhận.<br>
+              Nhân viên Bean Hotel sẽ liên hệ với quý khách trong thời gian sớm nhất.
+            </p>
+            <div class="booking-details" style="background-color: #f8f9fa; border-radius: 8px; padding: 15px; margin-bottom: 20px; text-align: left;">
+              <p><strong>Mã đặt phòng:</strong> <span id="bookingId"></span></p>
+              <p><strong>Tên phòng:</strong> <span id="bookingRoomName"></span></p>
+              <p><strong>Thời gian nhận phòng:</strong> <span id="bookingCheckIn"></span></p>
+              <p><strong>Thời gian trả phòng:</strong> <span id="bookingCheckOut"></span></p>
+            </div>
+            <p style="color: #666; font-size: 14px;">
+              Mọi thắc mắc xin vui lòng liên hệ hotline: <strong>1900 6750</strong>
+            </p>
+          </div>
+          <div class="modal-footer" style="border-top: none; display: flex; justify-content: center; padding-bottom: 30px; width: 100%;">
+            <button type="button" class="btn" style="background-color: #cd9a2b; color: white; padding: 10px 30px; font-weight: bold; margin: 0 auto;" id="returnToHome">
+              QUAY VỀ TRANG CHỦ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      /* CSS tùy chỉnh cho modal đặt phòng thành công */
+      #bookingSuccessModal .modal-content {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      #bookingSuccessModal .fa-check-circle {
+        animation: scale-in 0.5s ease-out;
+      }
+      
+      @keyframes scale-in {
+        0% { transform: scale(0); opacity: 0; }
+        50% { transform: scale(1.2); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      
+      #bookingSuccessModal .booking-details p {
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+      
+      #bookingSuccessModal button.btn:hover {
+        background-color: #b7882a !important;
+        transition: background-color 0.3s;
+      }
+      
+      /* Hiệu ứng fade-in cho modal */
+      .modal.fade .modal-dialog {
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transform: translate(0, -50px);
+        opacity: 0;
+      }
+      
+      .modal.show .modal-dialog {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    </style>
     <script type="text/javascript">
       //api bizweb
       window.Bizweb || (window.Bizweb = {}),
