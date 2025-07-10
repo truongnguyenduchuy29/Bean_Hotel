@@ -136,7 +136,7 @@ function createFoodItemElement(food) {
               <img width="24" height="24" src="img/cart-add.svg" alt="Mua ngay" />
             </button>
 
-            <a title="Xem nhanh" href="food_detail.html?id=${food.id}" data-handle="${food.id}"
+            <a title="Xem nhanh" href="javascript:void(0);" data-handle="${food.id}"
               class="btn-anima hidden-xs xem_nhanh btn-circle btn-views btn_view btn right-to quick-view">
               <img width="24" height="24" src="img/view.svg" alt="Xem nhanh" />
             </a>
