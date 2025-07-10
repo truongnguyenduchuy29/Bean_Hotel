@@ -963,9 +963,7 @@
         });
         
         // Xử lý sự kiện thanh toán
-        $('.checkout-btn').on('click', function() {
-          alert('Chức năng thanh toán đang được phát triển!');
-        });
+        // Đã được xử lý bằng modal thanh toán mới
       }
       
       // Hàm định dạng tiền tệ
@@ -1974,6 +1972,8 @@
       type="text/css"
       media="all"
     />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- User Account CSS -->
   <link rel="stylesheet" href="css/user-account.css">
   <!-- Notifications CSS -->
@@ -9523,6 +9523,10 @@ Popup cart mobile
       />
     </a>
 
+    <!-- Bootstrap JS và Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
     <script
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
@@ -9530,5 +9534,263 @@ Popup cart mobile
       data-cf-beacon='{"rayId":"95ce9a6a1d2c08e1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"6c92bbc133584e029f09e826272d3606"}'
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Modal đặt hàng -->
+    <div id="orderModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Thông tin đặt hàng</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="orderForm">
+              <div class="form-group">
+                <label for="fullName">Họ và tên <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Số điện thoại <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Nhập email">
+              </div>
+              <div class="form-group">
+                <label for="address">Địa chỉ nhận hàng <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="address" rows="3" placeholder="Nhập địa chỉ nhận hàng" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="note">Ghi chú</label>
+                <textarea class="form-control" id="note" rows="3" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+              </div>
+              <div class="form-group">
+                <label>Phương thức thanh toán</label>
+                <div class="form-check">
+                  <input type="radio" id="payment1" name="payment" class="form-check-input" value="COD" checked>
+                  <label class="form-check-label" for="payment1">Thanh toán khi nhận hàng (COD)</label>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn px-4 mx-2" data-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-primary px-4 mx-2" id="processOrder">Xác nhận đặt hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal thông báo đặt hàng thành công -->
+    <div id="successModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Đặt hàng thành công</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body text-center">
+            <div class="success-icon mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h4 class="mb-3">Cảm ơn bạn đã đặt hàng!</h4>
+            <p>Đơn hàng của bạn đã được xác nhận.</p>
+            <p>Mã đơn hàng: <strong id="orderCode">DH-XXXX</strong></p>
+            <p>Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary px-5" data-dismiss="modal">Đồng ý</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS cho modal -->
+    <style>
+      .modal {
+        z-index: 9999;
+      }
+      
+      #orderModal .modal-content,
+      #successModal .modal-content {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      #orderModal .modal-header,
+      #successModal .modal-header {
+        background-color: #cd9a2b;
+        color: #fff;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+        padding: 15px 20px;
+      }
+      
+      #orderModal .modal-title,
+      #successModal .modal-title {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      
+      #orderModal .close,
+      #successModal .close {
+        color: #fff;
+        opacity: 1;
+      }
+      
+      #orderModal .form-group {
+        margin-bottom: 20px;
+      }
+      
+      #orderModal .form-control {
+        border-radius: 4px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      #orderModal .form-control:focus {
+        border-color: #cd9a2b;
+        box-shadow: 0 0 0 0.2rem rgba(205, 154, 43, 0.25);
+      }
+      
+      #orderModal .modal-footer,
+      #successModal .modal-footer {
+        border-top: none;
+        padding: 15px 20px;
+      }
+      
+      #orderModal .btn,
+      #successModal .btn {
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        min-width: 120px;
+        line-height: 1.5;
+      }
+      
+      #orderModal .btn-primary,
+      #successModal .btn-primary {
+        background-color: #cd9a2b;
+        border-color: #cd9a2b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      #orderModal .btn-primary:hover,
+      #successModal .btn-primary:hover {
+        background-color: #b58a25;
+        border-color: #b58a25;
+      }
+      
+      #orderModal .modal-footer,
+      #successModal .modal-footer {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: #cd9a2b;
+        background-color: #cd9a2b;
+      }
+      
+      .success-icon {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      
+      #successModal .modal-body {
+        padding: 30px;
+      }
+      
+      #successModal h4 {
+        color: #28a745;
+        font-weight: 600;
+      }
+      
+      #successModal p {
+        color: #555;
+        margin-bottom: 10px;
+      }
+      
+      #orderCode {
+        color: #cd9a2b;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        // Khi click vào nút Thanh toán trong giỏ hàng
+        $('.checkout-btn').on('click', function(e) {
+          e.preventDefault();
+          $('#orderModal').modal('show');
+        });
+        
+        // Xử lý sự kiện xác nhận đặt hàng
+        $('#processOrder').on('click', function() {
+          // Kiểm tra form hợp lệ
+          if(validateOrderForm()) {
+            // Đóng modal đặt hàng
+            $('#orderModal').modal('hide');
+            
+            // Tạo mã đơn hàng ngẫu nhiên
+            const orderCode = 'DH-' + Math.floor(Math.random() * 10000);
+            $('#orderCode').text(orderCode);
+            
+            // Hiển thị modal thành công sau 500ms
+            setTimeout(function() {
+              $('#successModal').modal('show');
+            }, 500);
+            
+            // Xóa giỏ hàng sau khi đặt hàng thành công
+            setTimeout(function() {
+              localStorage.setItem('beanHotelCart', JSON.stringify([]));
+              $('.count_item_pr').text(0);
+            }, 1000);
+          }
+        });
+        
+        // Đóng modal success và reload trang
+        $('#successModal').on('hidden.bs.modal', function () {
+          // Load lại trang
+          window.location.href = 'index.html';
+        });
+        
+        // Hàm kiểm tra form đặt hàng
+        function validateOrderForm() {
+          const fullName = $('#fullName').val().trim();
+          const phone = $('#phone').val().trim();
+          const address = $('#address').val().trim();
+          
+          if(fullName === '') {
+            alert('Vui lòng nhập họ và tên');
+            return false;
+          }
+          
+          if(phone === '') {
+            alert('Vui lòng nhập số điện thoại');
+            return false;
+          }
+          
+          if(address === '') {
+            alert('Vui lòng nhập địa chỉ nhận hàng');
+            return false;
+          }
+          
+          return true;
+        }
+      });
+    </script>
   </body>
 </html>
