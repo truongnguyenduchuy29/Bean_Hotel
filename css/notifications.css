@@ -1,0 +1,108 @@
+/* CSS cho các thành phần thông báo của Bean Hotel */
+
+/* Thông báo chung */
+.auth-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 10000;
+    font-family: Arial, sans-serif;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Thông báo lỗi */
+.auth-notification.error {
+    background: #f44336;
+}
+
+/* Thông báo cảnh báo */
+.auth-notification.warning {
+    background: #ff9800;
+}
+
+/* Thông báo thông tin */
+.auth-notification.info {
+    background: #2196F3;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Thêm CSS bổ sung cho user-dropdown để đảm bảo hiển thị đúng */
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    width: 220px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.user-account-container.active .user-dropdown,
+.user-account-container:hover .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Đảm bảo dropdown hiển thị đúng trên các trang */
+.user-dropdown:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    z-index: 2;
+}
+
+/* Đảm bảo các phần tử trong dropdown có thể click được */
+.user-dropdown a {
+    cursor: pointer !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Đảm bảo nút logout có thể click được */
+.logout-btn {
+    cursor: pointer !important;
+}
+
+/* Đảm bảo dropdown hiển thị trên các phần tử khác */
+.user-dropdown {
+    z-index: 9999 !important;
+} 
