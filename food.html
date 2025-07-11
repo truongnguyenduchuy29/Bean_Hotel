@@ -2,6 +2,19 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
+    <style>
+      /* CSS Animation for cart icon */
+      @keyframes cartPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+      }
+      
+      .cart-added {
+        animation: cartPulse 0.5s ease-in-out;
+        color: #cd9a2b !important;
+      }
+    </style>
     <meta name="theme-color" content="#cd9a2b" />
     <meta name="revisit-after" content="2 days" />
     <meta
@@ -9661,9 +9674,14 @@ Popup cart mobile
                     // Add to cart button
       $(document).on('click', '.add_to_cart_detail', function() {
         console.log('Add to cart clicked');
-        // You can implement cart functionality here
-        alert('Sản phẩm đã được thêm vào giỏ hàng!');
+        // Hide the quick view modal
         $('#quickview-modal').attr('style', 'display: none !important');
+        
+        // Hiệu ứng nhấp nháy giỏ hàng trên header
+        $('.top-cart').addClass('cart-added');
+        setTimeout(function() {
+          $('.top-cart').removeClass('cart-added');
+        }, 1000);
       });
       
       // Update button text to match the design
@@ -10281,11 +10299,17 @@ Popup cart mobile
           .then(foodData => {
             const product = foodData.find(item => item.id === productId);
             if (product) {
-              // Thêm vào giỏ hàng
-              addToCart(product, quantity);
-              
-              // Ẩn modal xem nhanh
-              $('#quickview-modal').attr('style', 'display: none !important');
+                              // Thêm vào giỏ hàng
+                addToCart(product, quantity);
+                
+                // Ẩn modal xem nhanh
+                $('#quickview-modal').attr('style', 'display: none !important');
+                
+                // Hiệu ứng nhấp nháy giỏ hàng trên header
+                $('.top-cart').addClass('cart-added');
+                setTimeout(function() {
+                  $('.top-cart').removeClass('cart-added');
+                }, 1000);
             }
           })
           .catch(error => {
@@ -10318,8 +10342,14 @@ Popup cart mobile
           .then(foodData => {
             const product = foodData.find(item => item.id === productId);
             if (product) {
-              // Thêm vào giỏ hàng
-              addToCart(product, quantity);
+                              // Thêm vào giỏ hàng
+                addToCart(product, quantity);
+                
+                // Hiệu ứng nhấp nháy giỏ hàng trên header
+                $('.top-cart').addClass('cart-added');
+                setTimeout(function() {
+                  $('.top-cart').removeClass('cart-added');
+                }, 1000);
             } else {
               console.error('Không tìm thấy sản phẩm với ID:', productId);
             }
