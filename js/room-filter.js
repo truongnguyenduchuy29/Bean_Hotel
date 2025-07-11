@@ -31,16 +31,25 @@ $(document).ready(function () {
         roomContainer.addClass('loading');
         roomContainer.empty().append('<div class="col-12 text-center"><h3>Đang tải dữ liệu phòng...</h3></div>');
 
-        $.getJSON('/data/room.json', function (data) {
+        $.getJSON('data/room.json', function (data) {
             allRooms = data;
             console.log('Đã tải dữ liệu phòng:', allRooms.length, 'phòng');
             applyFilterIfNeeded();
             initializeMenuHighlighting();
             roomContainer.removeClass('loading');
         }).fail(function () {
-            console.error('Error loading room data');
-            roomContainer.removeClass('loading');
-            roomContainer.html('<div class="col-12 text-center"><h3>Không thể tải dữ liệu phòng</h3></div>');
+            // Try alternative paths
+            $.getJSON('./data/room.json', function (data) {
+                allRooms = data;
+                console.log('Đã tải dữ liệu phòng:', allRooms.length, 'phòng');
+                applyFilterIfNeeded();
+                initializeMenuHighlighting();
+                roomContainer.removeClass('loading');
+            }).fail(function () {
+                console.error('Error loading room data');
+                roomContainer.removeClass('loading');
+                roomContainer.html('<div class="col-12 text-center"><h3>Không thể tải dữ liệu phòng</h3></div>');
+            });
         });
     }
 
@@ -116,7 +125,7 @@ $(document).ready(function () {
                 room.features.slice(0, 5).map((feature, index) => `
                     <li>
                         <img width="32" height="32"
-                            src="/img/tag_icon_${index + 1}.svg"
+                            src="img/tag_icon_${index + 1}.svg"
                             alt="${feature}" />
                     </li>
                 `).join('') : '';

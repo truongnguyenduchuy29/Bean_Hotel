@@ -49,7 +49,7 @@ $(document).ready(function () {
 
         console.log('Đang tải dữ liệu phòng từ file JSON...');
         // Đảm bảo đường dẫn tương đối với vị trí file HTML
-        $.getJSON('/data/room.json', function (data) {
+        $.getJSON('data/room.json', function (data) {
             console.log('Đã tải dữ liệu thành công, số lượng phòng:', data.length);
             const room = data.find(r => r.id === roomId);
 
@@ -61,8 +61,22 @@ $(document).ready(function () {
                 showErrorMessage("Không tìm thấy thông tin phòng với mã: " + roomId);
             }
         }).fail(function (jqXHR, textStatus, errorThrown) {
-            console.error('Lỗi khi tải file JSON:', textStatus, errorThrown);
-            showErrorMessage("Không thể tải dữ liệu phòng từ máy chủ. Lỗi: " + textStatus);
+            // Try alternative paths
+            $.getJSON('./data/room.json', function (data) {
+                console.log('Đã tải dữ liệu thành công từ path thay thế, số lượng phòng:', data.length);
+                const room = data.find(r => r.id === roomId);
+
+                if (room) {
+                    console.log('Tìm thấy thông tin phòng:', room.name);
+                    updateRoomDetails(room);
+                } else {
+                    console.error('Không tìm thấy phòng với ID:', roomId);
+                    showErrorMessage("Không tìm thấy thông tin phòng với mã: " + roomId);
+                }
+            }).fail(function () {
+                console.error('Lỗi khi tải file JSON:', textStatus, errorThrown);
+                showErrorMessage("Không thể tải dữ liệu phòng từ máy chủ. Lỗi: " + textStatus);
+            });
         });
     }
 
@@ -72,7 +86,7 @@ $(document).ready(function () {
             <div class="alert alert-danger" role="alert">
                 <h4>Có lỗi xảy ra</h4>
                 <p>${message}</p>
-                <a href="/product.html" class="btn btn-primary">Quay lại danh sách phòng</a>
+                <a href="product.html" class="btn btn-primary">Quay lại danh sách phòng</a>
             </div>
         `);
     }

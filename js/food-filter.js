@@ -63,28 +63,54 @@ $(document).ready(function () {
         const currentUrl = window.location.href;
         console.log('Current URL when loading data:', currentUrl);
 
-        // Fetch food data from JSON
-        $.getJSON('/data/food.json', function (data) {
-            allFoodItems = data;
-            console.log('Food data loaded:', allFoodItems.length, 'items');
+        // Fetch food data from JSON with fallback
+        function loadFoodData() {
+            const endpoints = [
+                'data/food.json',
+                './data/food.json',
+                '../data/food.json'
+            ];
+            
+            let currentEndpoint = 0;
+            
+            function tryNext() {
+                if (currentEndpoint >= endpoints.length) {
+                    console.error('All endpoints failed to load food data');
+                    productsContainer.html('<div class="col-12 text-center"><p>Không thể tải dữ liệu món ăn</p></div>');
+                    return;
+                }
+                
+                console.log('Trying to load from:', endpoints[currentEndpoint]);
+                $.getJSON(endpoints[currentEndpoint])
+                    .done(function(data) {
+                        allFoodItems = data;
+                        console.log('Food data loaded successfully:', allFoodItems.length, 'items');
+                        
+                        // Đảm bảo rằng URL hiện tại vẫn giống với URL khi bắt đầu tải
+                        if (window.location.href === currentUrl) {
+                            // Đặt timeout nhỏ để đảm bảo không có script nào khác ghi đè
+                            setTimeout(function () {
+                                // Apply filter if URL has type parameter
+                                applyFilterIfNeeded();
 
-            // Đảm bảo rằng URL hiện tại vẫn giống với URL khi bắt đầu tải
-            if (window.location.href === currentUrl) {
-                // Đặt timeout nhỏ để đảm bảo không có script nào khác ghi đè
-                setTimeout(function () {
-                    // Apply filter if URL has type parameter
-                    applyFilterIfNeeded();
+                                // Initialize menu highlighting
+                                initializeMenuHighlighting();
 
-                    // Initialize menu highlighting
-                    initializeMenuHighlighting();
-
-                    console.log('Filter applied after data load, currentFilter:', currentFilter);
-                }, 100);
+                                console.log('Filter applied after data load, currentFilter:', currentFilter);
+                            }, 100);
+                        }
+                    })
+                    .fail(function(error) {
+                        console.warn('Failed to load from:', endpoints[currentEndpoint], error);
+                        currentEndpoint++;
+                        tryNext();
+                    });
             }
-        }).fail(function (error) {
-            console.error('Error loading food data:', error);
-            productsContainer.html('<div class="col-12 text-center"><p>Không thể tải dữ liệu món ăn</p></div>');
-        });
+            
+            tryNext();
+        }
+        
+        loadFoodData();
     }
 
     function applyFilterIfNeeded() {
@@ -403,7 +429,7 @@ $(document).ready(function () {
     function formatImageUrl(url) {
         if (!url) {
             console.warn('Empty URL provided to formatImageUrl');
-            return '';
+            return 'img/placeholder.jpg'; // fallback image
         }
 
         // If the URL already has thumb/large, return as is
@@ -420,12 +446,13 @@ $(document).ready(function () {
             }
         }
 
-        // If it's a relative URL, make sure it has the correct prefix
+        // If it's a relative URL starting with '/', convert to relative path
         if (url.startsWith('/')) {
-            return `//bizweb.dktcdn.net/thumb/large/100/472/947/products${url}`;
+            // Remove leading slash and use relative path
+            return url.substring(1);
         }
 
-        // Return the original URL if we can't process it
+        // If it's already a relative path or absolute URL, return as is
         return url;
     }
 });
