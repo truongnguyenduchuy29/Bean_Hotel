@@ -272,9 +272,9 @@
                   </button>
                 </div>
                 <div class="top-search">
-                  <form action="/search" method="get" class="alper-search-form" role="search">
+                  <form class="alper-search-form" role="search">
                     <div class="input-group">
-                      <input required type="text" id="keyPopular" aria-label="Nhập từ khóa tìm kiếm" name="query"
+                      <input type="text" id="keyPopular" aria-label="Nhập từ khóa tìm kiếm" name="query"
                         class="search-auto form-control" placeholder="Nhập từ khóa tìm kiếm" autocomplete="off" />
                       <span class="input-group-append">
                         <button class="btn btn-default" type="submit" aria-label="Tìm kiếm">
@@ -323,22 +323,28 @@
                     <p class="title_keyword">TỪ KHÓA PHỔ BIẾN</p>
                     <ul class="ul_list_keyword">
                       <li>
-                        <a href="/search?query=Phòng%20đơn" title="Phòng đơn">Phòng đơn</a>
+                        <a href="room_detail.html?id=phong-don-tieu-chuan" data-product-id="phong-don-tieu-chuan" data-search="Phòng đơn" class="popular-search-item" title="Phòng đơn">Phòng đơn</a>
                       </li>
                       <li>
-                        <a href="/search?query=Phòng%20đôi" title="Phòng đôi">Phòng đôi</a>
+                        <a href="room_detail.html?id=phong-doi-2-giuong-don" data-product-id="phong-doi-2-giuong-don" data-search="Phòng đôi" class="popular-search-item" title="Phòng đôi">Phòng đôi</a>
                       </li>
                       <li>
-                        <a href="/search?query=Phòng%20vip" title="Phòng vip">Phòng vip</a>
+                        <a href="room_detail.html?id=phong-don-vip" data-product-id="phong-don-vip" data-search="Phòng vip" class="popular-search-item" title="Phòng vip">Phòng vip</a>
                       </li>
                       <li>
-                        <a href="/search?query=Hội%20nghị" title="Hội nghị">Hội nghị</a>
+                        <a href="food_detail.html?id=mi-xao-bo" data-product-id="mi-xao-bo" data-search="Mì xào bò" class="popular-search-item" title="Mì xào bò">Mì xào bò</a>
                       </li>
                       <li>
-                        <a href="/search?query=Dịch%20vụ%20spa" title="Dịch vụ spa">Dịch vụ spa</a>
+                        <a href="food_detail.html?id=bun-bo-hue" data-product-id="bun-bo-hue" data-search="Bún bò Huế" class="popular-search-item" title="Bún bò Huế">Bún bò Huế</a>
                       </li>
                       <li>
-                        <a href="/search?query=Ẩm%20thực%20khách%20sạn" title="Ẩm thực khách sạn">Ẩm thực khách sạn</a>
+                        <a href="service_hoinghi.html" data-search="Hội nghị" class="popular-search-item" title="Hội nghị">Hội nghị</a>
+                      </li>
+                      <li>
+                        <a href="service_toanthan.html" data-search="Dịch vụ spa" class="popular-search-item" title="Dịch vụ spa">Dịch vụ spa</a>
+                      </li>
+                      <li>
+                        <a href="food.html" data-search="Ẩm thực" class="popular-search-item" title="Ẩm thực">Ẩm thực</a>
                       </li>
                     </ul>
                   </div>
@@ -8403,4 +8409,10 @@ Ajax Bizweb Add To Cart
 <script src="js/fix-links.js"></script>
 </body>
 <script src="js/cart-count.js"></script>
+<!-- Script tìm kiếm độc lập -->
+<script src="js/search-function.js"></script>
+
+<!-- Script đồng bộ hóa tìm kiếm trên tất cả các trang -->
+<script src="js/add-scripts.js"></script>
+
 </html>
