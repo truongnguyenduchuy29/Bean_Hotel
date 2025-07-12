@@ -2,6 +2,12 @@ $(document).ready(function () {
     // Load rooms data from JSON file
     let allRooms = [];
     let currentFilter = '';
+    
+    // Pagination variables
+    let currentPage = 1;
+    const itemsPerPage = 12;
+    let totalPages = 1;
+    let currentRooms = [];
 
     // Check if we're on the product page or any room category page
     if (window.location.pathname === '/phong' ||
@@ -68,7 +74,7 @@ $(document).ready(function () {
     // Filter rooms based on type
     function filterRooms(type) {
         if (!type) {
-            renderRooms(allRooms);
+            renderRooms(allRooms, true); // Scroll when showing all rooms
             return;
         }
 
@@ -102,24 +108,62 @@ $(document).ready(function () {
                 break;
         }
 
-        renderRooms(filteredRooms);
+        renderRooms(filteredRooms, true); // Scroll when filtering
     }
 
-    // Render rooms to the page
-    function renderRooms(rooms) {
+    // Render rooms with pagination
+    function renderRooms(rooms, shouldScroll = false) {
+        currentRooms = rooms;
+        totalPages = Math.ceil(rooms.length / itemsPerPage);
+        
+        // Ensure currentPage is valid
+        if (currentPage > totalPages) {
+            currentPage = 1;
+        }
+        
+        // Scroll to top when filtering
+        if (shouldScroll) {
+            scrollToTop();
+        }
+        
+        renderRoomsByPage(currentPage, true); // Pass true to indicate this is initial render
+        updatePagination();
+    }
+
+    // Render rooms for a specific page
+    function renderRoomsByPage(pageNumber, isInitialRender = false) {
+        currentPage = pageNumber;
+        
+        // Scroll to top when changing pages (not on initial render)
+        if (!isInitialRender) {
+            scrollToTop();
+        }
+        
         const roomContainer = $('.room-container');
+        if (!roomContainer.length) {
+            console.error('Không tìm thấy .room-container');
+            return;
+        }
+        
         roomContainer.empty();
 
-        if (rooms.length === 0) {
+        if (currentRooms.length === 0) {
             roomContainer.html('<div class="col-12 text-center"><h3>Không tìm thấy phòng phù hợp</h3></div>');
             updateRoomCount(0);
             return;
         }
 
-        // Update room count display
-        updateRoomCount(rooms.length);
+        // Calculate start and end indices for current page
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, currentRooms.length);
+        const roomsToShow = currentRooms.slice(startIndex, endIndex);
 
-        rooms.forEach(room => {
+        console.log(`Hiển thị trang ${currentPage}: phòng từ ${startIndex + 1} đến ${endIndex} (tổng ${currentRooms.length} phòng)`);
+
+        // Update room count display
+        updateRoomCount(currentRooms.length);
+
+        roomsToShow.forEach(room => {
             // Xử lý các features cho icons
             const featuresHtml = room.features && Array.isArray(room.features) ?
                 room.features.slice(0, 5).map((feature, index) => `
@@ -135,7 +179,15 @@ $(document).ready(function () {
             const size = room.size || (room.details && room.details[1] ? room.details[1] : '');
 
             // Tạo đường dẫn động
-            const dynamicUrl = `/room_detail.html?id=${room.id}`;
+            const dynamicUrl = `room_detail.html?id=${room.id}`;
+            
+            // Xử lý đường dẫn hình ảnh
+            let imageUrl = room.image[0];
+            // Nếu image URL là từ bizweb, thay thế bằng local image
+            if (imageUrl.includes('bizweb.dktcdn.net')) {
+                // Sử dụng hình ảnh mặc định local
+                imageUrl = 'img/anh1.jpg';
+            }
 
             // Tạo HTML theo cấu trúc product.html
             let roomHtml = `
@@ -184,6 +236,73 @@ $(document).ready(function () {
         if (window.awe_lazyloadImage && typeof window.awe_lazyloadImage === 'function') {
             window.awe_lazyloadImage();
         }
+        
+        updatePagination();
+    }
+
+    // Update pagination UI
+    function updatePagination() {
+        let paginationContainer = document.getElementById('pagination-container');
+        
+        // Create pagination container if it doesn't exist
+        if (!paginationContainer) {
+            const paginationDiv = document.createElement('div');
+            paginationDiv.className = 'pagination';
+            paginationDiv.innerHTML = `<div id="pagination-container" class="pagination-links"></div>`;
+            
+            const productsContainer = document.querySelector('.products-view');
+            if (productsContainer) {
+                productsContainer.appendChild(paginationDiv);
+                paginationContainer = document.getElementById('pagination-container');
+            }
+        }
+        
+        if (!paginationContainer) return;
+        
+        // Clear existing pagination
+        paginationContainer.innerHTML = '';
+        
+        // Don't show pagination if only 1 page or no rooms
+        if (totalPages <= 1) return;
+        
+        // Previous button
+        const prevButton = document.createElement('a');
+        prevButton.href = '#';
+        prevButton.className = 'pagination-link prev-page' + (currentPage === 1 ? ' disabled' : '');
+        prevButton.innerHTML = '&laquo;';
+        prevButton.onclick = function(e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                renderRoomsByPage(currentPage - 1);
+            }
+        };
+        paginationContainer.appendChild(prevButton);
+        
+        // Page number buttons
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('a');
+            pageButton.href = '#';
+            pageButton.className = 'pagination-link page-number' + (i === currentPage ? ' active' : '');
+            pageButton.textContent = i;
+            pageButton.onclick = function(e) {
+                e.preventDefault();
+                renderRoomsByPage(i);
+            };
+            paginationContainer.appendChild(pageButton);
+        }
+        
+        // Next button
+        const nextButton = document.createElement('a');
+        nextButton.href = '#';
+        nextButton.className = 'pagination-link next-page' + (currentPage === totalPages ? ' disabled' : '');
+        nextButton.innerHTML = '&raquo;';
+        nextButton.onclick = function(e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                renderRoomsByPage(currentPage + 1);
+            }
+        };
+        paginationContainer.appendChild(nextButton);
     }
 
     // Update the room count display
@@ -242,6 +361,7 @@ $(document).ready(function () {
 
                 filterRooms(type);
                 currentFilter = type;
+                currentPage = 1; // Reset to page 1 when filtering
 
                 // Update URL without reloading the page
                 const newUrl = window.location.pathname + '?type=' + type;
@@ -258,6 +378,7 @@ $(document).ready(function () {
 
                 filterRooms('');
                 currentFilter = '';
+                currentPage = 1; // Reset to page 1
 
                 // Update URL without reloading the page to remove the type parameter
                 const newUrl = window.location.pathname;
@@ -278,9 +399,18 @@ $(document).ready(function () {
 
         filterRooms('');
         currentFilter = '';
+        currentPage = 1; // Reset to page 1
 
         // Update URL without reloading the page
         const newUrl = window.location.pathname;
         history.pushState({}, '', newUrl);
     });
+
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 });

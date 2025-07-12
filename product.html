@@ -481,10 +481,7 @@
                                                     <a class="nav-link" href="food.html?type=do-uong" title="Đồ uống">Đồ uống</a>
                                                 </li>
 
-                                                <li class="nav-item-lv2">
-                                                    <a class="nav-link" href="/banh-ngot" title="Bánh ngọt">Bánh
-                                                        ngọt</a>
-                                                </li>
+                                               
                                             </ul>
                                         </li>
 
@@ -9614,8 +9611,8 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
                 }
             }
 
-            // Fetch dữ liệu từ room.json
-            fetch('/data/room.json')
+            // Fetch dữ liệu từ room.json với fallback paths
+            fetch('data/room.json')
                 .then(response => response.json())
                 .then(rooms => {
                     // Lưu danh sách phòng
@@ -9626,7 +9623,18 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
                     applyFilterAndPagination();
                 })
                 .catch(error => {
-                    console.error('Lỗi khi tải dữ liệu phòng:', error);
+                    console.error('Lỗi khi tải dữ liệu phòng từ data/room.json:', error);
+                    // Try alternative path
+                    fetch('./data/room.json')
+                        .then(response => response.json())
+                        .then(rooms => {
+                            allRooms = rooms;
+                            console.log('Đã tải dữ liệu phòng từ path dự phòng:', allRooms.length, 'phòng');
+                            applyFilterAndPagination();
+                        })
+                        .catch(error => {
+                            console.error('Lỗi khi tải dữ liệu phòng từ ./data/room.json:', error);
+                        });
                 });
 
             // Hàm áp dụng bộ lọc và phân trang
@@ -9690,6 +9698,9 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
 
             // Hàm render phòng theo trang
             function renderRoomsByPage(pageNumber) {
+                // Cập nhật trang hiện tại
+                currentPage = pageNumber;
+                
                 // Scroll lên đầu trang
                 scrollToTop();
 
@@ -9878,7 +9889,7 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
                     const hrefPath = this.getAttribute('href');
                     
                     // Kiểm tra nếu đang ở trang product.html
-                    if (window.location.pathname === '/product.html' || window.location.pathname === '/phong') {
+                    if (window.location.pathname === '/product.html' || window.location.pathname === '/phong' || window.location.pathname.includes('product.html')) {
                         // Kiểm tra xem href có chứa tham số type không
                         if (hrefPath && hrefPath.includes('product.html?type=')) {
                             e.preventDefault();
@@ -9955,8 +9966,8 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
             pointer-events: none;
         }
     </style>
-    <!-- Script filter phòng -->
-    <script src="js/room-filter.js"></script>
+    <!-- Script filter phòng - Tạm thời comment để sử dụng logic cũ -->
+    <!-- <script src="js/room-filter.js"></script> -->
     
     <!-- Script cập nhật liên kết phòng -->
     <script>
