@@ -1425,22 +1425,23 @@
                 e.preventDefault();
                 var $this = $(this);
                 var form = $this.parents("form");
-                $.ajax({
-                    type: "POST",
-                    url: "/cart/add.js",
-                    async: false,
-                    data: form.serialize(),
-                    dataType: "json",
-                    beforeSend: function () { },
-                    success: function (line_item) {
-                        ajaxCart.load();
-                        $(
-                            ".popup-cart-mobile, .backdrop__body-backdrop___1rvky"
-                        ).addClass("active");
-                        AddCartMobile(line_item);
-                    },
-                    cache: false,
-                });
+                
+                // Mock add to cart for local development to avoid 404 error
+                var mockLineItem = {
+                    id: Math.random().toString(36).substr(2, 9),
+                    title: "Mock Product",
+                    quantity: 1,
+                    price: 100000,
+                    variant_title: "",
+                    image: "",
+                    url: ""
+                };
+                
+                ajaxCart.load();
+                $(
+                    ".popup-cart-mobile, .backdrop__body-backdrop___1rvky"
+                ).addClass("active");
+                AddCartMobile(mockLineItem);
             });
         </script>
 
@@ -2296,9 +2297,18 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
                 jQuery.ajax(e);
             }),
             (Bizweb.getCart = function (t) {
-                jQuery.getJSON("/cart.js", function (r) {
-                    "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r);
-                });
+                // Mock empty cart for local development to avoid 404 error
+                var mockCart = {
+                    item_count: 0,
+                    items: [],
+                    total_price: 0,
+                    note: ""
+                };
+                if ("function" == typeof t) {
+                    t(mockCart);
+                } else {
+                    Bizweb.onCartUpdate(mockCart);
+                }
             }),
             (Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) {
                 e = e || Bizweb.onError;
@@ -7873,35 +7883,24 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
         );
 
         Bizweb.addItemFromForm = function (form, callback, errorCallback) {
-            var params = {
-                type: "POST",
-                url: "/cart/add.js",
-                data: jQuery(form).serialize(),
-                dataType: "json",
-                success: function (line_item) {
-                    if (typeof callback === "function") {
-                        callback(line_item, form);
-                        $(
-                            ".popup-cart-mobile, .backdrop__body-backdrop___1rvky"
-                        ).addClass("active");
-                        AddCartMobile(line_item);
-                    }
-                    /*
-              else {
-                Bizweb.onItemAdded(line_item, form);
-                $('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
-              }
-              */
-                },
-                error: function (XMLHttpRequest, textStatus) {
-                    if (typeof errorCallback === "function") {
-                        errorCallback(XMLHttpRequest, textStatus);
-                    } else {
-                        Bizweb.onError(XMLHttpRequest, textStatus);
-                    }
-                },
+            // Mock add to cart for local development to avoid 404 error
+            var mockLineItem = {
+                id: Math.random().toString(36).substr(2, 9),
+                title: "Mock Product",
+                quantity: 1,
+                price: 100000,
+                variant_title: "",
+                image: "",
+                url: ""
             };
-            jQuery.ajax(params);
+            
+            if (typeof callback === "function") {
+                callback(mockLineItem, form);
+                $(
+                    ".popup-cart-mobile, .backdrop__body-backdrop___1rvky"
+                ).addClass("active");
+                AddCartMobile(mockLineItem);
+            }
         };
 
         /*========================
@@ -7951,36 +7950,44 @@ data-src="//bizweb.dktcdn.net/100/472/947/themes/888072/assets/bg_footer_1.jpg?1
         product properties are supported.
   ==============================================================================*/
         Bizweb.changeItem = function (line, quantity, callback) {
-            var params = {
-                type: "POST",
-                url: "/cart/change.js",
-                data: "quantity=" + quantity + "&line=" + line,
-                dataType: "json",
-                success: function (cart) {
-                    if (typeof callback === "function") {
-                        callback(cart);
-                    } else {
-                        Bizweb.onCartUpdate(cart);
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus) {
-                    Bizweb.onError(XMLHttpRequest, textStatus);
-                },
+            // Mock cart change for local development to avoid 404 error
+            var mockCart = {
+                item_count: quantity > 0 ? 1 : 0,
+                items: quantity > 0 ? [{
+                    id: line,
+                    quantity: quantity,
+                    title: "Mock Product",
+                    price: 100000,
+                    variant_title: "",
+                    image: ""
+                }] : [],
+                total_price: quantity > 0 ? quantity * 100000 : 0,
+                note: ""
             };
-            jQuery.ajax(params);
+            
+            if (typeof callback === "function") {
+                callback(mockCart);
+            } else {
+                Bizweb.onCartUpdate(mockCart);
+            }
         };
 
         /*============================================================================
     GET cart.js returns the cart in JSON.
   ==============================================================================*/
         Bizweb.getCart = function (callback) {
-            jQuery.getJSON("/cart.js", function (cart, textStatus) {
-                if (typeof callback === "function") {
-                    callback(cart);
-                } else {
-                    Bizweb.onCartUpdate(cart);
-                }
-            });
+            // Mock empty cart for local development to avoid 404 error
+            var mockCart = {
+                item_count: 0,
+                items: [],
+                total_price: 0,
+                note: ""
+            };
+            if (typeof callback === "function") {
+                callback(mockCart);
+            } else {
+                Bizweb.onCartUpdate(mockCart);
+            }
         };
 
         /*============================================================================

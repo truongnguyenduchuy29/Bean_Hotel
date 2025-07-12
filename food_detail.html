@@ -3347,9 +3347,18 @@
           jQuery.ajax(e);
         }),
         (Bizweb.getCart = function (t) {
-          jQuery.getJSON("/cart.js", function (r) {
-            "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r);
-          });
+          // Mock empty cart for local development to avoid 404 error
+          var mockCart = {
+            item_count: 0,
+            items: [],
+            total_price: 0,
+            note: ""
+          };
+          if ("function" == typeof t) {
+            t(mockCart);
+          } else {
+            Bizweb.onCartUpdate(mockCart);
+          }
         }),
         (Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) {
           e = e || Bizweb.onError;
@@ -9021,18 +9030,23 @@ Popup cart mobile
         jQuery.ajax(params);
       };
 
-      /*============================================================================
+    /*============================================================================
   GET cart.js returns the cart in JSON.
-==============================================================================*/
-      Bizweb.getCart = function (callback) {
-        jQuery.getJSON("/cart.js", function (cart, textStatus) {
-          if (typeof callback === "function") {
-            callback(cart);
-          } else {
-            Bizweb.onCartUpdate(cart);
-          }
-        });
+  ==============================================================================*/
+    Bizweb.getCart = function (callback) {
+      // Mock empty cart for local development to avoid 404 error
+      var mockCart = {
+        item_count: 0,
+        items: [],
+        total_price: 0,
+        note: ""
       };
+      if (typeof callback === "function") {
+        callback(mockCart);
+      } else {
+        Bizweb.onCartUpdate(mockCart);
+      }
+    };
 
       /*============================================================================
   Ajax Bizweb Add To Cart
