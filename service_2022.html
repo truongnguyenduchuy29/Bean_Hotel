@@ -834,7 +834,7 @@
             </li>
 
             <li>
-              <a href="/tin-tuc" title="Tin tức"><span>Tin tức</span></a>
+              <a href="service.html" title="Tin tức"><span>Tin tức</span></a>
               <span class="mr_lr"
                 >&nbsp;<svg
                   aria-hidden="true"
@@ -2094,7 +2094,7 @@
                     <div class="post-info">
                       <div class="enti-title">
                         <a
-                          href="/service_nenbiet.html"
+                          href="service_nenbiet.html"
                           title="Những điều kiêng kị khi ở khách sạn mà bạn nên biết"
                           >Những điều kiêng kị khi ở khách sạn mà bạn nên
                           biết</a
@@ -2107,7 +2107,7 @@
                     <div class="post-info">
                       <div class="enti-title">
                         <a
-                          href="/service_chocolate.html"
+                          href="service_chocolate.html"
                           title="Ý nghĩa việc khách sạn để chocolate lên gối khi dọn phòng"
                           >Ý nghĩa việc khách sạn để chocolate lên gối khi dọn
                           phòng</a
@@ -2675,10 +2675,10 @@
             t(mockCart);
           } else {
             Bizweb.onCartUpdate(mockCart);
-          }
-          });
-        }),
-        (Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) {
+          };
+        
+        
+        Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) {
           e = e || Bizweb.onError;
           var o = function () {
             jQuery.ajax("/cart/async_shipping_rates", {
@@ -2694,8 +2694,8 @@
             });
           };
           return o;
-        }),
-        (Bizweb.getCartShippingRatesForDestination = function (t, r, e) {
+        };
+        Bizweb.getCartShippingRatesForDestination = function (t, r, e) {
           e = e || Bizweb.onError;
           var o = {
             type: "POST",
@@ -2705,13 +2705,13 @@
             error: e,
           };
           jQuery.ajax(o);
-        }),
-        (Bizweb.getProduct = function (t, r) {
+        };
+        Bizweb.getProduct = function (t, r) {
           jQuery.getJSON("/products/" + t + ".js", function (t) {
             "function" == typeof r ? r(t) : Bizweb.onProduct(t);
           });
-        }),
-        (Bizweb.changeItem = function (t, r, e) {
+        };
+        Bizweb.changeItem = function (t, r, e) {
           var o = {
             type: "POST",
             url: "/cart/change.js",
@@ -2725,8 +2725,8 @@
             },
           };
           jQuery.ajax(o);
-        }),
-        (Bizweb.removeItem = function (t, r) {
+        };
+        Bizweb.removeItem = function (t, r) {
           var e = {
             type: "POST",
             url: "/cart/change.js",
@@ -2740,27 +2740,27 @@
             },
           };
           jQuery.ajax(e);
-        }),
-        (Bizweb.clear = function (t) {
+        };
+        Bizweb.clear = function (t) {
           var r = {
             type: "POST",
             url: "/cart/clear.js",
             data: "",
             dataType: "json",
             success: function (r) {
-              "function" == typeof t) {
-            t(mockCart);
-          } else {
-            Bizweb.onCartUpdate(mockCart);
-          }
+              if ("function" == typeof t) {
+                t(r);
+              } else {
+                Bizweb.onCartUpdate(r);
+              }
             },
             error: function (t, r) {
               Bizweb.onError(t, r);
             },
           };
           jQuery.ajax(r);
-        }),
-        (Bizweb.updateCartFromForm = function (t, r) {
+        };
+        Bizweb.updateCartFromForm = function (t, r) {
           var e = {
             type: "POST",
             url: "/cart/update.js",
@@ -2774,8 +2774,8 @@
             },
           };
           jQuery.ajax(e);
-        }),
-        (Bizweb.updateCartAttributes = function (t, r) {
+        };
+        Bizweb.updateCartAttributes = function (t, r) {
           var e = "";
           jQuery.isArray(t)
             ? jQuery.each(t, function (t, r) {
@@ -2811,8 +2811,8 @@
             },
           };
           jQuery.ajax(o);
-        }),
-        (Bizweb.updateCartNote = function (t, r) {
+        };
+        Bizweb.updateCartNote = function (t, r) {
           var e = {
             type: "POST",
             url: "/cart/update.js",
@@ -2826,7 +2826,7 @@
             },
           };
           jQuery.ajax(e);
-        }),
+        };
         jQuery.fn.jquery >= "1.4"
           ? (Bizweb.param = jQuery.param)
           : ((Bizweb.param = function (t) {
@@ -8357,16 +8357,16 @@ Popup cart mobile
 ==============================================================================*/
       Bizweb.getCart = function (callback) {
         // Mock empty cart for local development to avoid 404 error
-          var mockCart = {
-            item_count: 0,
-            items: [],
-            total_price: 0,
-            note: ""
-          };
-          if (typeof callback === "function") {
-            callback(cart);
-          } else {
-            Bizweb.onCartUpdate(cart);
+        jQuery.ajax({
+          type: "GET",
+          url: "/cart.js",
+          dataType: "json",
+          success: function(cart) {
+            if (typeof callback === "function") {
+              callback(cart);
+            } else {
+              Bizweb.onCartUpdate(cart);
+            }
           }
         });
       };
@@ -9789,11 +9789,11 @@ Popup cart mobile
       data-cf-beacon='{"rayId":"95c5f869febba8eb","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"6c92bbc133584e029f09e826272d3606"}'
       crossorigin="anonymous"
     ></script>
-  </body>
-  <script src="js/cart-count.js"></script>
+     <script src="js/cart-count.js"></script>
   <!-- Script tìm kiếm độc lập -->
   <script src="js/search-function.js"></script>
 
   <!-- Script đồng bộ hóa tìm kiếm trên tất cả các trang -->
   <script src="js/add-scripts.js"></script>
+  </body>
 </html>
